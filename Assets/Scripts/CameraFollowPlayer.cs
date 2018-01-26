@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterCameraCreature : MonoBehaviour {
+public class CameraFollowPlayer : MonoBehaviour {
   void Update () {
-    if(PlayerInfo.selectedCreature != -1)
+    GameObject playerCreature = GameObject.Find("Player");
+    if (playerCreature)
     {
-        GameObject currentCreature = GameObject.Find("Player");
-        if (currentCreature)
-        {
-            Vector3 newCameraPosition = new Vector3(currentCreature.transform.position.x, gameObject.transform.position.y, currentCreature.transform.position.z - 60);
-            gameObject.transform.position = newCameraPosition;
-        }
+        Vector3 newCameraPosition = new Vector3(playerCreature.transform.position.x, gameObject.transform.position.y, playerCreature.transform.position.z - 60);
+        gameObject.transform.position = newCameraPosition;
     }
   }
 }
