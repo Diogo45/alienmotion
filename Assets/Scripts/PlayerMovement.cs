@@ -13,38 +13,30 @@ public class PlayerMovement : MonoBehaviour {
 
   void Update()
   {
-    if (Input.GetKey(KeyCode.W))
+    if (PlayerInfo.chestBeingPlayed == -1)
     {
-      anim.SetBool("walking", true);
-      Vector3 position = this.transform.position;
-      position.z = (float)(position.z + 0.1);
-      this.transform.position = position;
-    }
-    if (Input.GetKey(KeyCode.A))
-    {
-      anim.SetBool("walking", true);
-      Vector3 position = this.transform.position;
-      position.x = (float)(position.x - 0.1);
-      this.transform.position = position;
-      sprite.flipX = true;
-    }
-    if (Input.GetKey(KeyCode.S))
-    {
-      anim.SetBool("walking", true);
-      Vector3 position = this.transform.position;
-      position.z = (float)(position.z - 0.1);
-      this.transform.position = position;
-    }
-    if (Input.GetKey(KeyCode.D))
-    {
-      anim.SetBool("walking", true);
-      Vector3 position = this.transform.position;
-      position.x = (float)(position.x + 0.1);
-      this.transform.position = position;
-      sprite.flipX = false;
-    }
+      var x = Input.GetAxis("Horizontal") * Time.deltaTime * 30.0f;
+      var z = Input.GetAxis("Vertical") * Time.deltaTime * 30.0f;
 
-    if ((!Input.GetKey(KeyCode.W)) & (!Input.GetKey(KeyCode.A)) & (!Input.GetKey(KeyCode.S)) & (!Input.GetKey(KeyCode.D)))
+      if (x != 0 || z != 0)
+      {
+        if (x < 0)
+        {
+          sprite.flipX = true;
+        }
+        else
+        {
+          sprite.flipX = false;
+        }
+        anim.SetBool("walking", true);
+        transform.Translate(x, 0, z);
+      }
+      else
+      {
+        anim.SetBool("walking", false);
+      }
+    }
+    else
     {
       anim.SetBool("walking", false);
     }

@@ -6,5 +6,7 @@ public class SpeciesSetter : MonoBehaviour {
   void Start() {
     anim = GetComponent<Animator>();
     anim.SetInteger("selectedAge", PlayerInfo.selectedSpecies);
+    Transform hud = GameObject.Find("HUD/Image").transform;
+    hud.Find("speciesIcon" + PlayerInfo.selectedSpecies).gameObject.SetActive(true);
   }
 }
