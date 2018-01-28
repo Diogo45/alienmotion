@@ -11,7 +11,7 @@ public class CloseEmotion : MonoBehaviour {
   public void close()
   {
     Transform container = transform.Find("Image");
-    container.Find("chest" + PlayerInfo.chestBeingPlayed.ToString() + "Message").gameObject.SetActive(false);
+    // container.Find("chest" + PlayerInfo.chestBeingPlayed.ToString() + "Message").gameObject.SetActive(false);
     container.gameObject.SetActive(false);
     PlayerInfo.chestBeingPlayed = -1;
 
@@ -21,6 +21,7 @@ public class CloseEmotion : MonoBehaviour {
     if (PlayerInfo.chestsFound == PlayerInfo.CHESTS_TO_WIN)
     {
       endgameMessage.gameObject.SetActive(true);
+      PlayerInfo.chestBeingPlayed = 99;
     }
   }
 }

@@ -5,5 +5,6 @@ using UnityEngine;
 public class CloseObject : MonoBehaviour {
   public void close() {
     gameObject.SetActive(false);
+    PlayerInfo.chestBeingPlayed = -1;
   }
 }
