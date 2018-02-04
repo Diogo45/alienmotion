@@ -4,11 +4,13 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
   private SpriteRenderer sprite;
   private Animator anim;
+  private CharacterController controller;
 
   void Start()
   {
     sprite = gameObject.GetComponent<SpriteRenderer>();
     anim = GetComponent<Animator>();
+    controller = GetComponent<CharacterController>();
   }
 
   void Update()
@@ -29,7 +31,8 @@ public class PlayerMovement : MonoBehaviour {
           sprite.flipX = false;
         }
         anim.SetBool("walking", true);
-        transform.Translate(x, 0, z);
+        controller.Move(new Vector3(x, 0, z));
+        // transform.Translate(x, 0, z);
       }
       else
       {

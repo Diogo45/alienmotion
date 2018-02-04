@@ -19,7 +19,7 @@ public class ChestFound : MonoBehaviour
     chestText = scrollViewTransform.Find("Viewport/Content/chestMessage").GetComponent<Text>();
   }
 
-  void OnCollisionEnter(Collision target)
+  void OnControllerColliderHit(ControllerColliderHit target)
   {
     if (target.gameObject.tag.Equals("Chest") == true)
     {
