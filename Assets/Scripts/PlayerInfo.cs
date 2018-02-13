@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -9,13 +10,23 @@ public class PlayerInfo : MonoBehaviour
   public static int lastChestFound = -1;
   public static int chestBeingPlayed = 99; // -1: Nenhum diálogo na tela / 99: História / 0 ~ 6: Baú
 
+  public static int current_step_game = -1;
+  public const int STEP_NOT_PLAYING = -1;
+  public const int STEP_LEARNING_EMOTION = 0;
+  public const int STEP_LEARNING_MINIGAME = 1;
+  public const int STEP_PLAYING_MINIGAME = 2;
+  public const int STEP_FINISHED_MINIGAME = 3;
+  public const int WRONG_ANSWEAR = -2;
+  public const int NOT_SELECTED_ANSWEAR = -1;
+  public const int CORRECT_ANSWEAR = 1;
+
   public static string[] CHESTS_TITLE = new string[6]{
-    "Emoção 1",
-    "Emoção 2",
-    "Emoção 3",
-    "Emoção 4",
-    "Emoção 5",
-    "Emoção 6",
+    "Alegria",
+    "Tristeza",
+    "Medo",
+    "Nojo",
+    "Raiva",
+    "Surpresa",
   };
 
   public static string[] CHESTS_TEXT = new string[6]{
@@ -27,7 +38,147 @@ public class PlayerInfo : MonoBehaviour
     "Emoção 6 Lorem ipsum potenti tortor taciti phasellus praesent eget conubia feugiat, integer blandit venenatis integer bibendum ante ullamcorper class cursus lobortis, eu quisque rutrum etiam nisi condimentum vehicula sociosqu. hac lorem orci magna aliquet lectus molestie eget senectus aenean, elementum porta suspendisse enim luctus ad sed. accumsan vel diam aliquam nisi aenean aliquet fames arcu, turpis cubilia erat integer blandit sociosqu mattis class accumsan, commodo tortor lacus cubilia quisque morbi curae. placerat pellentesque rutrum amet malesuada velit, placerat sed taciti habitasse, bibendum dapibus dolor aliquam. tortor consequat cras sollicitudin elit quis taciti tempor facilisis conubia habitasse, faucibus primis donec pulvinar duis est mi est euismod facilisis, semper tincidunt ut congue sodales auctor quis blandit at. \n\nClass posuere aenean enim sit vel ipsum, commodo in purus sapien a donec euismod, dictumst sapien ut vestibulum imperdiet. eros arcu velit tortor magna metus accumsan dapibus, sollicitudin dictumst sollicitudin cubilia nibh convallis, etiam nullam lorem odio eleifend donec. varius quis facilisis feugiat id justo sit amet sit risus aliquam, consectetur vivamus odio velit porta aenean lobortis vestibulum eleifend, nostra netus elementum tristique lobortis habitasse erat egestas nunc. aenean posuere erat sagittis aliquet tincidunt porta purus, ornare aliquet enim dictumst euismod etiam sollicitudin nostra, non ante augue facilisis ad pulvinar.\n\nHabitasse litora ut malesuada et purus quisque ipsum fringilla litora, ut ipsum at justo commodo molestie rutrum himenaeos curabitur gravida, ornare aptent ullamcorper imperdiet eros metus turpis suscipit. tortor fusce aliquam class ante convallis eleifend aliquet egestas eleifend etiam tellus tempor donec, consequat adipiscing porta faucibus elementum pharetra augue himenaeos dapibus est tristique rhoncus.pulvinar ut placerat mauris platea aliquam nullam lacinia, etiam aliquam fermentum dictum vitae facilisis nulla, et nunc id libero aenean torquent. porta per magna vitae etiam placerat iaculis cras conubia, id vestibulum pretium mollis aenean aliquam quisque fermentum ultricies, pharetra massa est maecenas consequat fringilla tellus.\n\nOrci vestibulum nulla aliquam ac cursus ultricies sit diam tellus, scelerisque eu pharetra ut nulla lectus elementum donec in, egestas mauris vulputate aliquam tortor nibh vehicula potenti. integer ornare a dapibus eu vestibulum tristique ac tempus ullamcorper morbi, vivamus nunc gravida at luctus turpis congue venenatis ligula sodales, fames vitae proin lorem aenean congue fringilla fames quam.dui mauris feugiat nostra ornare, amet lobortis justo himenaeos mauris, etiam tellus malesuada.conubia commodo dictumst donec sapien ante iaculis potenti egestas lorem, fames torquent donec auctor mollis convallis ut vulputate. velit cras auctor torquent class conubia lectus, blandit enim diam dictum proin purus sollicitudin, nulla venenatis mauris interdum pulvinar.\n\nMauris libero ut viverra mi tempus varius lectus blandit consectetur ipsum, tempus accumsan torquent blandit sociosqu ante integer quam.aptent vehicula sagittis vel aenean sit per luctus placerat, aenean ullamcorper aenean erat fringilla feugiat ante fames dictum, quisque massa lorem curabitur fames nulla tempor.imperdiet integer dictumst curabitur leo dapibus proin at integer, taciti vel felis aliquam himenaeos vehicula ultrices blandit et, bibendum sodales ipsum accumsan dapibus per nisi.massa morbi varius himenaeos morbi etiam a congue ante, accumsan magna sit sociosqu etiam placerat nisi tortor ornare, molestie suspendisse vitae quisque imperdiet nunc tortor.\n\nAliquam augue himenaeos quisque platea eget porta class ad phasellus sagittis, class luctus libero tristique tincidunt quis sociosqu laoreet facilisis fusce quisque, placerat orci elementum enim vestibulum lectus libero potenti commodo.dolor vulputate tincidunt platea eu volutpat elit donec, cubilia non vel at mi praesent et rhoncus, bibendum turpis donec tempor massa egestas.sodales nulla sem curae donec quam vulputate leo conubia pellentesque interdum, tristique sed sodales arcu faucibus viverra sodales dolor mattis, feugiat pharetra eu quam potenti sagittis sodales mollis curabitur.condimentum pellentesque mi donec faucibus purus amet aliquet, arcu sit aenean semper lacinia. ",
   };
 
+  public static MiniGame game0 = new MiniGameType0(
+    "Selecione a Emoção",
+    "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Clique apenas nas expressões faciais de ",
+    GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
+    new MiniGame0Image[][]{
+      new MiniGame0Image[4]{
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false),
+      },
+      new MiniGame0Image[4] {
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false),
+      },
+      new MiniGame0Image[4] {
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true),
+      }
+    }
+  );
+
+  public static Emotion[] EMOTIONS = new Emotion[6]{
+    new Emotion(CHESTS_TITLE[0], CHESTS_TEXT[0], game0),
+    new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], game0),
+    new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], game0),
+    new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], game0),
+    new Emotion(CHESTS_TITLE[4], CHESTS_TEXT[4], game0),
+    new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], game0),
+  };
+
   void Awake() {
     DontDestroyOnLoad(transform.gameObject);
+  }
+}
+
+public class Emotion
+{
+  public string name;
+  public string description;
+  public MiniGame game;
+
+  public Emotion(string name, string description, MiniGame game)
+  {
+    this.name = name;
+    this.description = description;
+    this.game = game;
+  }
+}
+
+abstract public class MiniGame
+{
+  public string name;
+  public string explanation;
+  public Transform sceneElement;
+  protected int currentChallenge = 0;
+
+  public MiniGame(string name, string explanation, Transform sceneElement)
+  {
+    this.name = name;
+    this.explanation = explanation;
+    this.sceneElement = sceneElement;
+  }
+
+  public void SetUIExplanationText(string emotionName)
+  {
+    sceneElement.Find("miniGameExplanation").GetComponent<Text>().text = this.explanation + emotionName + ".";
+  }
+
+  public void HideUIExplanation()
+  {
+    sceneElement.Find("miniGameExplanation").gameObject.SetActive(false);
+  }
+
+  public void ShowMiniGame()
+  {
+    sceneElement.Find("MiniGame").gameObject.SetActive(true);
+  }
+
+  abstract public int ValidateAnswear();
+  abstract public bool HasNextChallenge();
+  abstract public void NextChallenge();
+
+  abstract public void SetupMiniGame();
+}
+
+public class MiniGame0Image
+{
+  public Sprite image;
+  public bool isCorrect;
+
+  public MiniGame0Image(Sprite image, bool isCorrect)
+  {
+    this.image = image;
+    this.isCorrect = isCorrect;
+  }
+}
+
+public class MiniGameType0: MiniGame
+{
+  public MiniGame0Image[][] images;
+
+  public MiniGameType0(string name, string explanation, Transform sceneElement, MiniGame0Image[][] images) : base(name, explanation, sceneElement)
+  {
+    this.images = images;
+  }
+
+  public override void SetupMiniGame()
+  {
+    ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    sceneElement.Find("MiniGame/image0").GetComponent<Image>().sprite = images[this.currentChallenge][0].image;
+    sceneElement.Find("MiniGame/image1").GetComponent<Image>().sprite = images[this.currentChallenge][1].image;
+    sceneElement.Find("MiniGame/image2").GetComponent<Image>().sprite = images[this.currentChallenge][2].image;
+    sceneElement.Find("MiniGame/image3").GetComponent<Image>().sprite = images[this.currentChallenge][3].image;
+  }
+
+  public override bool HasNextChallenge()
+  {
+    return this.currentChallenge < (images.Length - 1);
+  }
+
+  public override void NextChallenge()
+  {
+    this.currentChallenge++;
+    SetupMiniGame();
+  }
+
+  public override int ValidateAnswear()
+  {
+    if (ImageSelection.selectedImage == PlayerInfo.NOT_SELECTED_ANSWEAR)
+    {
+      return PlayerInfo.NOT_SELECTED_ANSWEAR;
+    }
+    else if (images[this.currentChallenge][ImageSelection.selectedImage].isCorrect)
+    {
+      return PlayerInfo.CORRECT_ANSWEAR;
+    }
+    return PlayerInfo.WRONG_ANSWEAR;
   }
 }

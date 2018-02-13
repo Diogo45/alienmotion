@@ -24,8 +24,8 @@ public class ChestFound : MonoBehaviour
     if (target.gameObject.tag.Equals("Chest") == true)
     {
       int chestFoundNumber = target.gameObject.GetComponent<ChestInfo>().chestNumber;
-      chestTitle.text = PlayerInfo.CHESTS_TITLE[chestFoundNumber];
-      chestText.text = PlayerInfo.CHESTS_TEXT[chestFoundNumber];
+      chestTitle.text = PlayerInfo.EMOTIONS[chestFoundNumber].name;
+      chestText.text = PlayerInfo.EMOTIONS[chestFoundNumber].description;
       scrollView.verticalNormalizedPosition = 1f;
       PlayerInfo.chestBeingPlayed = chestFoundNumber;
 
