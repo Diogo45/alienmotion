@@ -25,12 +25,24 @@ public class CloseEmotion : MonoBehaviour {
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HideUIExplanation();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetupMiniGame();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ShowMiniGame();
+    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetShortExplanation(PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name);
     PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
   }
 
   public void selectEmotion()
   {
-    if (PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear() == PlayerInfo.CORRECT_ANSWEAR) {
+    int responseCode = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().code;
+    string responseMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().message;
+
+    Transform resultMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/resultMessage");
+    resultMessage.gameObject.SetActive(true);
+
+    Transform wrongMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/wrongMessage");
+    wrongMessage.gameObject.SetActive(true);
+    wrongMessage.GetComponent<Text>().text = responseMessage;
+
+    if (responseCode == PlayerInfo.CORRECT_ANSWEAR) {
+      resultMessage.GetComponent<Text>().text = "Parabéns! Você acertou!";
       bool hasNextChallenge = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HasNextChallenge();
       if (hasNextChallenge)
       {
@@ -39,9 +51,24 @@ public class CloseEmotion : MonoBehaviour {
       else
       {
         PlayerInfo.current_step_game = PlayerInfo.STEP_FINISHED_MINIGAME;
+        ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
+        resultMessage.GetComponent<Text>().text = "";
+        wrongMessage.GetComponent<Text>().text = "";
+        resultMessage.gameObject.SetActive(false);
+        wrongMessage.gameObject.SetActive(false);
         ok_click();
+        return;
       }
     }
+    else if(responseCode == PlayerInfo.NOT_SELECTED_ANSWEAR)
+    {
+      resultMessage.GetComponent<Text>().text = "Selecione uma imagem!";
+    }
+    else
+    {
+      resultMessage.GetComponent<Text>().text = "Que pena! Você errou!";
+    }
+    ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
   }
 
   public void close()
@@ -76,6 +103,7 @@ public class CloseEmotion : MonoBehaviour {
         selectEmotion();
         break;
       case PlayerInfo.STEP_FINISHED_MINIGAME:
+        PlayerInfo.current_step_game = PlayerInfo.STEP_NOT_PLAYING;
         close();
         break;
       default:

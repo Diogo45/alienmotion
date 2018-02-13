@@ -40,26 +40,27 @@ public class PlayerInfo : MonoBehaviour
 
   public static MiniGame game0 = new MiniGameType0(
     "Selecione a Emoção",
-    "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Clique apenas nas expressões faciais de ",
+    "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de ",
     GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
+    "Selecione apenas as expressões faciais de ",
     new MiniGame0Image[][]{
       new MiniGame0Image[4]{
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
       },
       new MiniGame0Image[4] {
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
       },
       new MiniGame0Image[4] {
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false),
-        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+        new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
       }
     }
   );
@@ -96,19 +97,21 @@ abstract public class MiniGame
 {
   public string name;
   public string explanation;
+  public string shortExplanation;
   public Transform sceneElement;
   protected int currentChallenge = 0;
 
-  public MiniGame(string name, string explanation, Transform sceneElement)
+  public MiniGame(string name, string explanation, Transform sceneElement, string shortExplanation)
   {
     this.name = name;
     this.explanation = explanation;
     this.sceneElement = sceneElement;
+    this.shortExplanation = shortExplanation;
   }
 
   public void SetUIExplanationText(string emotionName)
   {
-    sceneElement.Find("miniGameExplanation").GetComponent<Text>().text = this.explanation + emotionName + ".";
+    sceneElement.Find("miniGameExplanation").GetComponent<Text>().text = this.explanation + emotionName.ToLower() + ".";
   }
 
   public void HideUIExplanation()
@@ -121,7 +124,12 @@ abstract public class MiniGame
     sceneElement.Find("MiniGame").gameObject.SetActive(true);
   }
 
-  abstract public int ValidateAnswear();
+  public void SetShortExplanation(string emotionName)
+  {
+    sceneElement.Find("MiniGame/shortExplanation").GetComponent<Text>().text = shortExplanation + emotionName.ToLower() + ".";
+  }
+
+  abstract public MiniGameResponse ValidateAnswear();
   abstract public bool HasNextChallenge();
   abstract public void NextChallenge();
 
@@ -132,11 +140,13 @@ public class MiniGame0Image
 {
   public Sprite image;
   public bool isCorrect;
+  public string wrongMessage;
 
-  public MiniGame0Image(Sprite image, bool isCorrect)
+  public MiniGame0Image(Sprite image, bool isCorrect, string wrongMessage)
   {
     this.image = image;
     this.isCorrect = isCorrect;
+    this.wrongMessage = wrongMessage;
   }
 }
 
@@ -144,7 +154,7 @@ public class MiniGameType0: MiniGame
 {
   public MiniGame0Image[][] images;
 
-  public MiniGameType0(string name, string explanation, Transform sceneElement, MiniGame0Image[][] images) : base(name, explanation, sceneElement)
+  public MiniGameType0(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame0Image[][] images) : base(name, explanation, sceneElement, shortExplanation)
   {
     this.images = images;
   }
@@ -169,16 +179,28 @@ public class MiniGameType0: MiniGame
     SetupMiniGame();
   }
 
-  public override int ValidateAnswear()
+  public override MiniGameResponse ValidateAnswear()
   {
     if (ImageSelection.selectedImage == PlayerInfo.NOT_SELECTED_ANSWEAR)
     {
-      return PlayerInfo.NOT_SELECTED_ANSWEAR;
+      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "");
     }
     else if (images[this.currentChallenge][ImageSelection.selectedImage].isCorrect)
     {
-      return PlayerInfo.CORRECT_ANSWEAR;
+      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "");
     }
-    return PlayerInfo.WRONG_ANSWEAR;
+    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage].wrongMessage);
+  }
+}
+
+public class MiniGameResponse
+{
+  public int code;
+  public string message;
+
+  public MiniGameResponse(int code, string message)
+  {
+    this.code = code;
+    this.message = message;
   }
 }
