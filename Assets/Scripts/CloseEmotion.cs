@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class CloseEmotion : MonoBehaviour {
 	Transform endgameMessage;
   Transform chestMessage;
-  Transform miniGameExplanation;
+  Transform resultMessage;
+  Transform wrongMessage;
+
 	public void Start() {
 		endgameMessage = GameObject.Find("EndgameCanvas").transform.Find("EndgameMessage");
     chestMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/chestMessage");
+    wrongMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/wrongMessage");
+    resultMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/resultMessage");
   }
 
   public void showMiniGameExplanation()
@@ -34,12 +38,16 @@ public class CloseEmotion : MonoBehaviour {
     int responseCode = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().code;
     string responseMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().message;
 
-    Transform resultMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/resultMessage");
     resultMessage.gameObject.SetActive(true);
-
-    Transform wrongMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/wrongMessage");
-    wrongMessage.gameObject.SetActive(true);
-    wrongMessage.GetComponent<Text>().text = responseMessage;
+    if (responseMessage.Length > 0)
+    {
+      wrongMessage.gameObject.SetActive(true);
+      wrongMessage.GetComponent<Text>().text = responseMessage;
+    }
+    else
+    {
+      wrongMessage.gameObject.SetActive(false);
+    }
 
     if (responseCode == PlayerInfo.CORRECT_ANSWEAR) {
       resultMessage.GetComponent<Text>().text = "Parabéns! Você acertou!";
@@ -50,6 +58,9 @@ public class CloseEmotion : MonoBehaviour {
       }
       else
       {
+        chestMessage.gameObject.SetActive(true);
+        PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.gameObject.SetActive(false);
+        PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.FinishGame();
         PlayerInfo.current_step_game = PlayerInfo.STEP_FINISHED_MINIGAME;
         ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
         resultMessage.GetComponent<Text>().text = "";
@@ -103,7 +114,6 @@ public class CloseEmotion : MonoBehaviour {
         selectEmotion();
         break;
       case PlayerInfo.STEP_FINISHED_MINIGAME:
-        PlayerInfo.current_step_game = PlayerInfo.STEP_NOT_PLAYING;
         close();
         break;
       default:
