@@ -35,6 +35,7 @@ public class CloseEmotion : MonoBehaviour {
 
   public void selectEmotion()
   {
+    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ClearImagesColors();
     int responseCode = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().code;
     string responseMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().message;
 
@@ -50,7 +51,7 @@ public class CloseEmotion : MonoBehaviour {
     }
 
     if (responseCode == PlayerInfo.CORRECT_ANSWEAR) {
-      resultMessage.GetComponent<Text>().text = "Parabéns! Você acertou!";
+      resultMessage.GetComponent<Text>().text = "";
       bool hasNextChallenge = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HasNextChallenge();
       if (hasNextChallenge)
       {
@@ -62,7 +63,9 @@ public class CloseEmotion : MonoBehaviour {
         PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.gameObject.SetActive(false);
         PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.FinishGame();
         PlayerInfo.current_step_game = PlayerInfo.STEP_FINISHED_MINIGAME;
-        ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
+        ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+        ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+        ImageSelection.selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
         resultMessage.GetComponent<Text>().text = "";
         wrongMessage.GetComponent<Text>().text = "";
         resultMessage.gameObject.SetActive(false);
@@ -73,13 +76,15 @@ public class CloseEmotion : MonoBehaviour {
     }
     else if(responseCode == PlayerInfo.NOT_SELECTED_ANSWEAR)
     {
-      resultMessage.GetComponent<Text>().text = "Selecione uma imagem!";
+      resultMessage.GetComponent<Text>().text = "";
     }
     else
     {
       resultMessage.GetComponent<Text>().text = "Que pena! Você errou!";
     }
-    ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
   }
 
   public void close()

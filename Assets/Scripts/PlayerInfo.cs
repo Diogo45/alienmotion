@@ -39,6 +39,7 @@ public class PlayerInfo : MonoBehaviour
   };
 
   public static MiniGame game0;
+  public static MiniGame game1;
   public static Emotion[] EMOTIONS;
 
   public static void SetMiniGames()
@@ -51,36 +52,95 @@ public class PlayerInfo : MonoBehaviour
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
         "Selecione apenas as expressões faciais de ",
         new MiniGame0Image[][]{
-        new MiniGame0Image[4]{
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-        },
-        new MiniGame0Image[8] {
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
-        },
-        new MiniGame0Image[12] {
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          new MiniGame0Image[4]{
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+          },
+          new MiniGame0Image[8] {
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          },
+          new MiniGame0Image[12] {
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          }
         }
+      );
+      game1 = new MiniGameType1(
+        "Montando a Face",
+        "TODO",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
+        "Monte uma expressão de ",
+        new MiniGame1Image[][][]{
+          new MiniGame1Image[][]{
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            }
+          },
+          new MiniGame1Image[][]{
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            }
+          },
+          new MiniGame1Image[][]{
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            }
+          }
         }
       );
     }
@@ -92,46 +152,105 @@ public class PlayerInfo : MonoBehaviour
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
         "Selecione apenas as expressões faciais de ",
         new MiniGame0Image[][]{
-        new MiniGame0Image[4]{
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "AEsta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-        },
-        new MiniGame0Image[8] {
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "AEsta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
-        },
-        new MiniGame0Image[12] {
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "AEsta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
-          new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          new MiniGame0Image[4]{
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "AEsta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+          },
+          new MiniGame0Image[8] {
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "AEsta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), true, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          },
+          new MiniGame0Image[12] {
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "AEsta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/1"), false, "Esta expressão é de tristeza.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/2"), false, "Esta expressão é de a.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/3"), false, "Esta expressão é de b.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo"),
+            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/0"), true, "Esta expressão é de c.\nExpressões de tristeza: pálpebras caídas e cantos da boca ligeiramente para baixo")
+          }
         }
+      );
+      game1 = new MiniGameType1(
+        "Montando a Face",
+        "TODO",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
+        "Monte uma expressão de ",
+        new MiniGame1Image[][][]{
+          new MiniGame1Image[][]{
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[2]{
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            }
+          },
+          new MiniGame1Image[][]{
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[3] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), true, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente.")
+            }
+          },
+          new MiniGame1Image[][]{
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            },
+            new MiniGame1Image[4] {
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
+            }
+          }
         }
       );
     }
     EMOTIONS = new Emotion[6]{
       new Emotion(CHESTS_TITLE[0], CHESTS_TEXT[0], game0),
-      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], game0),
+      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], game1),
       new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], game0),
-      new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], game0),
+      new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], game1),
       new Emotion(CHESTS_TITLE[4], CHESTS_TEXT[4], game0),
-      new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], game0),
+      new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], game1),
     };
   }
 
@@ -198,6 +317,7 @@ abstract public class MiniGame
 
   abstract public void SetupMiniGame();
   abstract public void FinishGame();
+  abstract public void ClearImagesColors();
 }
 
 public class MiniGame0Image
@@ -207,6 +327,20 @@ public class MiniGame0Image
   public string wrongMessage;
 
   public MiniGame0Image(Sprite image, bool isCorrect, string wrongMessage)
+  {
+    this.image = image;
+    this.isCorrect = isCorrect;
+    this.wrongMessage = wrongMessage;
+  }
+}
+
+public class MiniGame1Image
+{
+  public Sprite image;
+  public bool isCorrect;
+  public string wrongMessage;
+
+  public MiniGame1Image(Sprite image, bool isCorrect, string wrongMessage)
   {
     this.image = image;
     this.isCorrect = isCorrect;
@@ -225,7 +359,7 @@ public class MiniGameType0: MiniGame
 
   public override void SetupMiniGame()
   {
-    ImageSelection.selectedImage = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     int i = 0;
     while (i < images[this.currentChallenge].Length)
     {
@@ -260,15 +394,93 @@ public class MiniGameType0: MiniGame
 
   public override MiniGameResponse ValidateAnswear()
   {
-    if (ImageSelection.selectedImage == PlayerInfo.NOT_SELECTED_ANSWEAR)
+    if (ImageSelection.selectedImage0 == PlayerInfo.NOT_SELECTED_ANSWEAR)
     {
-      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "");
+      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Selecione uma imagem!");
     }
-    else if (images[this.currentChallenge][ImageSelection.selectedImage].isCorrect)
+    else if (images[this.currentChallenge][ImageSelection.selectedImage0].isCorrect)
     {
-      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "");
+      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
     }
-    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage].wrongMessage);
+    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage0].wrongMessage);
+  }
+
+  public override void ClearImagesColors()
+  {
+    for (int i = 0; i < images[this.currentChallenge].Length; i++)
+      ImageSelection.SetImageColor(i, new Color(255, 255, 255, 255));
+  }
+}
+
+public class MiniGameType1 : MiniGame
+{
+  public MiniGame1Image[][][] images;
+
+  public MiniGameType1(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame1Image[][][] images) : base(name, explanation, sceneElement, shortExplanation)
+  {
+    this.images = images;
+  }
+
+  public override void SetupMiniGame()
+  {
+    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    int i = 0;
+
+    for (int j = 0; j < 3; j++)
+    {
+      while (i < images[this.currentChallenge][j].Length)
+      {
+        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).gameObject.SetActive(true);
+        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][j][i].image;
+        i++;
+      }
+      while (i < 4)
+      {
+        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).gameObject.SetActive(false);
+        i++;
+      }
+      i = 0;
+    }
+  }
+
+  public override bool HasNextChallenge()
+  {
+    return this.currentChallenge < (images.Length - 1);
+  }
+
+  public override void NextChallenge()
+  {
+    this.currentChallenge++;
+    SetupMiniGame();
+  }
+
+  public override void FinishGame()
+  {
+    sceneElement.Find("MiniGame").gameObject.SetActive(false);
+    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
+    this.currentChallenge = 0;
+  }
+
+  public override MiniGameResponse ValidateAnswear()
+  {
+    if ((ImageSelection.selectedImage0 == PlayerInfo.NOT_SELECTED_ANSWEAR) || (ImageSelection.selectedImage1 == PlayerInfo.NOT_SELECTED_ANSWEAR) || (ImageSelection.selectedImage2 == PlayerInfo.NOT_SELECTED_ANSWEAR))
+    {
+      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Selecione uma de cada categoria!");
+    }
+    else if (images[this.currentChallenge][0][ImageSelection.selectedImage0].isCorrect && images[this.currentChallenge][1][ImageSelection.selectedImage1].isCorrect && images[this.currentChallenge][2][ImageSelection.selectedImage2].isCorrect)
+    {
+      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
+    }
+    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, "Tente novamente.");
+  }
+
+  public override void ClearImagesColors()
+  {
+    for (int i = 0; i < 3; i++)
+      for (int j = 0; j < images[this.currentChallenge][i].Length; j++)
+        ImageSelection.SetImageOfMultiplesColor(i, j, new Color(255, 255, 255, 255));
   }
 }
 
