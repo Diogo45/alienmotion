@@ -34,18 +34,41 @@ public class ImageSelection : MonoBehaviour
 
   public static void SetImageColor(int imageNumber, Color color)
   {
-    Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/image" + imageNumber).GetComponent<Button>();
-    ColorBlock cb = btn.colors;
-    cb.normalColor = color;
-    btn.colors = cb;
+    for (int i = 0; i < 12; i ++) {
+      if (i == imageNumber)
+      {
+        Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/image" + i).GetComponent<Button>();
+        ColorBlock cb = btn.colors;
+        cb.normalColor = color;
+        btn.colors = cb;
+      }
+      else
+      {
+        Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/image" + i).GetComponent<Button>();
+        ColorBlock cb = btn.colors;
+        cb.normalColor = new Color32(255, 255, 255, 255);
+        btn.colors = cb;
+      }
+    }
   }
 
   public static void SetImageOfMultiplesColor(int index, int imageNumber, Color color)
   {
-    Debug.Log(color);
-    Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/bodyPart" + index + "/image" + imageNumber).GetComponent<Button>();
-    ColorBlock cb = btn.colors;
-    cb.normalColor = color;
-    btn.colors = cb;
+    for (int i = 0; i < 4; i++)
+    {
+      if (i == imageNumber) {
+        Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/bodyPart" + index + "/image" + i).GetComponent<Button>();
+        ColorBlock cb = btn.colors;
+        cb.normalColor = color;
+        btn.colors = cb;
+      }
+      else
+      {
+        Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/bodyPart" + index + "/image" + i).GetComponent<Button>();
+        ColorBlock cb = btn.colors;
+        cb.normalColor = new Color32(255, 255, 255, 255);
+        btn.colors = cb;
+      }
+    }
   }
 }
