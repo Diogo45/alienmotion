@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class PlayerInfo : MonoBehaviour
   public static MiniGame gameType0Alegria;
   public static MiniGame gameType0Raiva;
   public static MiniGame game1;
+  public static MiniGame game2;
   public static Emotion[] EMOTIONS;
 
   public static void SetMiniGames()
@@ -179,6 +181,44 @@ public class PlayerInfo : MonoBehaviour
               new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/3"), false, "Que pena, você errou! Tente novamente."),
               new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/0"), true, "Que pena, você errou! Tente novamente.")
             }
+          }
+        }
+      );
+      game2 = new MiniGameType2(
+        "Selecione a Emoção",
+        "TODO",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
+        "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
+        new MiniGame2Image[][]{
+          new MiniGame2Image[4]{
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_00"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/correto_0"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_01"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_02"), false, "")
+          },
+          new MiniGame2Image[8] {
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_10"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_10"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_11"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_12"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_13"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_11"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_14"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_15"), false, "")
+          },
+          new MiniGame2Image[12] {
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_20"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_21"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_25"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_22"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_20"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_23"), true, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_24"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_21"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_28"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_26"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_27"), false, ""),
+            new MiniGame2Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_22"), false, "")
           }
         }
       );
@@ -339,8 +379,8 @@ public class PlayerInfo : MonoBehaviour
     }
     EMOTIONS = new Emotion[6]{
       new Emotion(CHESTS_TITLE[0], CHESTS_TEXT[0], gameType0Alegria),
-      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], game1),
-      new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], game1),
+      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], game2),
+      new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], game2),
       new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], game1),
       new Emotion(CHESTS_TITLE[4], CHESTS_TEXT[4], gameType0Raiva),
       new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], game1),
@@ -434,6 +474,20 @@ public class MiniGame1Image
   public string wrongMessage;
 
   public MiniGame1Image(Sprite image, bool isCorrect, string wrongMessage)
+  {
+    this.image = image;
+    this.isCorrect = isCorrect;
+    this.wrongMessage = wrongMessage;
+  }
+}
+
+public class MiniGame2Image
+{
+  public Sprite image;
+  public bool isCorrect;
+  public string wrongMessage;
+
+  public MiniGame2Image(Sprite image, bool isCorrect, string wrongMessage)
   {
     this.image = image;
     this.isCorrect = isCorrect;
@@ -575,6 +629,123 @@ public class MiniGameType1 : MiniGame
       for (int j = 0; j < images[this.currentChallenge][i].Length; j++)
         ImageSelection.SetImageOfMultiplesColor(i, j, new Color(255, 255, 255, 255));
   }
+}
+
+public class MiniGameType2 : MiniGame
+{
+  public MiniGame2Image[][] images;
+  GameObject imageCellGameObject;
+
+  public MiniGameType2(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame2Image[][] images) : base(name, explanation, sceneElement, shortExplanation)
+  {
+    this.images = images;
+    imageCellGameObject = sceneElement.Find("MiniGame").Find("imageCell").gameObject;
+  }
+
+  private void cleanCells() {
+    for (int i = 0; i < 12; i++) {
+      Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
+      if (cellContainer.childCount == 0)
+      {
+        GameObject newImageCell = GameObject.Instantiate(imageCellGameObject);
+        newImageCell.name = "image" + i;
+        newImageCell.transform.parent = cellContainer;
+      }
+
+      Transform cellEmotionsContainer = sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images/image" + i);
+      if (cellEmotionsContainer.childCount > 0)
+      {
+        foreach (Transform emotionCell in cellEmotionsContainer)
+        {
+          GameObject.Destroy(emotionCell);
+        }
+      }
+
+      Transform cellNeutralContainer = sceneElement.Find("MiniGame/Emotions/NeutralContainer/Images/image" + i);
+      if (cellNeutralContainer.childCount > 0)
+      {
+        foreach (Transform emotionCell in cellNeutralContainer)
+        {
+          GameObject.Destroy(emotionCell);
+        }
+      }
+    }
+  }
+
+  public override void SetupMiniGame()
+  {
+    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    cleanCells();
+    int i = 0;
+    while (i < images[this.currentChallenge].Length)
+    {
+      Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
+      cellContainer.Find("image" + i).gameObject.SetActive(true);
+      cellContainer.Find("image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
+      i++;
+    }
+    while (i < 12)
+    {
+      sceneElement.Find("MiniGame/Images/image" + i + "/image" + i).gameObject.SetActive(false);
+      i++;
+    }
+  }
+
+  public override bool HasNextChallenge()
+  {
+    return this.currentChallenge < (images.Length - 1);
+  }
+
+  public override void NextChallenge()
+  {
+    this.currentChallenge++;
+    SetupMiniGame();
+  }
+
+  public override void FinishGame()
+  {
+    cleanCells();
+    sceneElement.Find("MiniGame").gameObject.SetActive(false);
+    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
+    this.currentChallenge = 0;
+  }
+
+  private bool isCellBeingUsed(Transform cell) {
+    if (cell.childCount == 0) {
+      return false;
+    }
+
+    Transform[] cellChildren = new Transform[cell.childCount];
+    for (int i = 0; i < cell.childCount; i++)
+    {
+      cellChildren[i] = cell.GetChild(i);
+    }
+
+    return Array.FindIndex(cellChildren, child => child.gameObject.activeSelf) != -1;
+  }
+
+  public override MiniGameResponse ValidateAnswear()
+  {
+    Transform imageCellsContainersContainer = sceneElement.Find("MiniGame/Images");
+    Transform[] imagesCellContainers = new Transform[imageCellsContainersContainer.childCount];
+    for (int i = 0; i < imageCellsContainersContainer.childCount; i++)
+    {
+      imagesCellContainers[i] = imageCellsContainersContainer.GetChild(i);
+    }
+
+    if (Array.FindIndex(imagesCellContainers, cell => isCellBeingUsed(cell)) != -1)
+    {
+      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Separe todas as imagens arrastando!");
+    }
+    // else if (images[this.currentChallenge][ImageSelection.selectedImage0].isCorrect)
+    // {
+    //   return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
+    // }
+    // return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage0].wrongMessage);
+    return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
+  }
+
+  public override void ClearImagesColors() {  }
 }
 
 public class MiniGameResponse

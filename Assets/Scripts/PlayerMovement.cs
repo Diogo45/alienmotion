@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour {
         }
         anim.SetBool("walking", true);
         controller.Move(new Vector3(x, 0, z));
-        // transform.Translate(x, 0, z);
       }
       else
       {
