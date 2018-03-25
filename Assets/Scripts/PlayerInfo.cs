@@ -647,9 +647,9 @@ public class MiniGameType2 : MiniGame
       Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
       if (cellContainer.childCount == 0)
       {
-        GameObject newImageCell = GameObject.Instantiate(imageCellGameObject);
+        GameObject newImageCell = GameObject.Instantiate(imageCellGameObject, cellContainer);
         newImageCell.name = "image" + i;
-        newImageCell.transform.parent = cellContainer;
+        newImageCell.transform.localPosition = new Vector3(0, 0, 0);
       }
 
       Transform cellEmotionsContainer = sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images/image" + i);
@@ -657,7 +657,7 @@ public class MiniGameType2 : MiniGame
       {
         foreach (Transform emotionCell in cellEmotionsContainer)
         {
-          GameObject.Destroy(emotionCell);
+          GameObject.Destroy(emotionCell.gameObject);
         }
       }
 
@@ -666,7 +666,7 @@ public class MiniGameType2 : MiniGame
       {
         foreach (Transform emotionCell in cellNeutralContainer)
         {
-          GameObject.Destroy(emotionCell);
+          GameObject.Destroy(emotionCell.gameObject);
         }
       }
     }
@@ -680,8 +680,10 @@ public class MiniGameType2 : MiniGame
     while (i < images[this.currentChallenge].Length)
     {
       Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
-      cellContainer.Find("image" + i).gameObject.SetActive(true);
-      cellContainer.Find("image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
+      Transform cellItem = cellContainer.Find("image" + i);
+      cellItem.gameObject.SetActive(true);
+      cellItem.GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
+      cellItem.GetComponent<DraggableImageCellInfo>().isMainEmotion = images[this.currentChallenge][i].isCorrect;
       i++;
     }
     while (i < 12)
@@ -724,24 +726,33 @@ public class MiniGameType2 : MiniGame
     return Array.FindIndex(cellChildren, child => child.gameObject.activeSelf) != -1;
   }
 
-  public override MiniGameResponse ValidateAnswear()
-  {
-    Transform imageCellsContainersContainer = sceneElement.Find("MiniGame/Images");
-    Transform[] imagesCellContainers = new Transform[imageCellsContainersContainer.childCount];
-    for (int i = 0; i < imageCellsContainersContainer.childCount; i++)
+  private static Transform[] getChildren(Transform originalObject) {
+    Transform[] arrayToReturn = new Transform[originalObject.childCount];
+    for (int i = 0; i < originalObject.childCount; i++)
     {
-      imagesCellContainers[i] = imageCellsContainersContainer.GetChild(i);
+      arrayToReturn[i] = originalObject.GetChild(i);
     }
 
+    return arrayToReturn;
+  }
+
+  private static bool isCellWrong(Transform cell) {
+    return cell.childCount > 0 && !cell.GetChild(0).GetComponent<DraggableImageCellInfo>().isMainEmotion;
+  }
+
+  public override MiniGameResponse ValidateAnswear()
+  {
+    Transform[] imagesCellContainers = getChildren(sceneElement.Find("MiniGame/Images"));
     if (Array.FindIndex(imagesCellContainers, cell => isCellBeingUsed(cell)) != -1)
     {
       return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Separe todas as imagens arrastando!");
     }
-    // else if (images[this.currentChallenge][ImageSelection.selectedImage0].isCorrect)
-    // {
-    //   return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
-    // }
-    // return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage0].wrongMessage);
+
+    Transform[] answearImagesCellContainers = getChildren(sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images"));
+    if (Array.FindIndex(answearImagesCellContainers, cell => isCellWrong(cell)) != -1)
+    {
+      return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, "Pelo menos uma imagem foi colocada no grupo errado. Tente novamente!");
+    }
     return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
   }
 
