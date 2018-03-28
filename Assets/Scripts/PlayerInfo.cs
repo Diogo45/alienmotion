@@ -17,6 +17,8 @@ public class PlayerInfo : MonoBehaviour
   public const int STEP_LEARNING_MINIGAME = 1;
   public const int STEP_PLAYING_MINIGAME = 2;
   public const int STEP_FINISHED_MINIGAME = 3;
+  public const int STEP_RECEIVING_POSITIVE_FEEDBACK = 4;
+  public const int STEP_RECEIVING_NEGATIVE_FEEDBACK = 5;
   public const int WRONG_ANSWEAR = -2;
   public const int NOT_SELECTED_ANSWEAR = -1;
   public const int CORRECT_ANSWEAR = 1;
