@@ -8,13 +8,9 @@ public class InitialMessage : MonoBehaviour
   public static int initialTextStep = 0;
   public static Transform initialTextField;
 
-  void Start()
-  {
-    initialTextField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Text").transform;
-  }
-
   public static void setInitialText()
   {
+    initialTextField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Text").transform;
     initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[0];
   }
 

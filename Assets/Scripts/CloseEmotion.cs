@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class CloseEmotion : MonoBehaviour {
 	Transform endgameMessage;
@@ -35,6 +36,13 @@ public class CloseEmotion : MonoBehaviour {
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ShowMiniGame();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetShortExplanation(PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name);
     PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
+
+    string path = "historico.txt";
+    using (var tw = new StreamWriter(path, true))
+    {
+      tw.WriteLine(Time.time + " segundos: Começou minigame. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+      tw.WriteLine(Time.time + " segundos: Começou desafio número 1. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+    }
   }
 
   public void proceedGame()
@@ -52,6 +60,11 @@ public class CloseEmotion : MonoBehaviour {
       // ir para próxima etapa
       PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
       PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.NextChallenge();
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time + " segundos: Começou desafio número " + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.currentChallenge+1+". (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+      }
     }
     else
     {
@@ -61,6 +74,11 @@ public class CloseEmotion : MonoBehaviour {
       PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.FinishGame();
       PlayerInfo.current_step_game = PlayerInfo.STEP_FINISHED_MINIGAME;
       resultMessage.GetComponent<Text>().text = "";
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time + " segundos: Finalizou o minigame. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+      }
       ok_click();
     }
   }
@@ -88,6 +106,11 @@ public class CloseEmotion : MonoBehaviour {
     resultScreen.gameObject.SetActive(true);
     if (responseCode == PlayerInfo.CORRECT_ANSWEAR)
     {
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time + " segundos: Acertou a resposta. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+      }
       PlayerInfo.current_step_game = PlayerInfo.STEP_RECEIVING_POSITIVE_FEEDBACK;
       bool hasNextChallenge = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HasNextChallenge();
       if (hasNextChallenge)
@@ -104,6 +127,11 @@ public class CloseEmotion : MonoBehaviour {
     else
     {
       PlayerInfo.current_step_game = PlayerInfo.STEP_RECEIVING_NEGATIVE_FEEDBACK;
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time + " segundos: Errou a resposta. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
+      }
       // mensagem de falha (não selecionou ou selecionou errado)
       if (responseCode == PlayerInfo.WRONG_ANSWEAR)
       {
@@ -131,6 +159,11 @@ public class CloseEmotion : MonoBehaviour {
 
     if (PlayerInfo.chestsFound == PlayerInfo.CHESTS_TO_WIN)
     {
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time + " segundos: Finalizou todos os minigames\nFim de jogo.");
+      }
       endgameMessage.gameObject.SetActive(true);
       PlayerInfo.chestBeingPlayed = 99;
     }

@@ -1,0 +1,82 @@
+Idade escolhida: Adulto
+Idade escolhida: Adulto
+Idade escolhida: Criança
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Adulto
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Adulto
+
+
+Começo de jogo!
+Idade escolhida: Criança
+12.19259 segundos: Baú encontrado. (Nojo)
+17.69695 segundos: Começou minigame. (Nojo)
+17.69695 segundos: Começou desafio número 1. (Nojo)
+24.37757 segundos: Acertou a resposta. (Nojo)
+27.39272 segundos: Começou desafio número 11. (Nojo)
+34.40041 segundos: Acertou a resposta. (Nojo)
+35.84267 segundos: Começou desafio número 21. (Nojo)
+38.91959 segundos: Acertou a resposta. (Nojo)
+40.47696 segundos: Finalizou o minigame. (Nojo)
+47.34745 segundos: Baú encontrado. (Alegria)
+50.03114 segundos: Começou minigame. (Alegria)
+50.03114 segundos: Começou desafio número 1. (Alegria)
+52.77279 segundos: Acertou a resposta. (Alegria)
+53.89932 segundos: Começou desafio número 11. (Alegria)
+56.11971 segundos: Acertou a resposta. (Alegria)
+57.61071 segundos: Começou desafio número 21. (Alegria)
+61.58671 segundos: Acertou a resposta. (Alegria)
+63.27651 segundos: Finalizou o minigame. (Alegria)
+75.27143 segundos: Baú encontrado. (Raiva)
+77.72298 segundos: Começou minigame. (Raiva)
+77.72298 segundos: Começou desafio número 1. (Raiva)
+79.32996 segundos: Acertou a resposta. (Raiva)
+80.02575 segundos: Começou desafio número 11. (Raiva)
+84.48341 segundos: Acertou a resposta. (Raiva)
+85.06324 segundos: Começou desafio número 21. (Raiva)
+88.23297 segundos: Acertou a resposta. (Raiva)
+89.47569 segundos: Finalizou o minigame. (Raiva)
+94.24945 segundos: Baú encontrado. (Surpresa)
+96.35304 segundos: Começou minigame. (Surpresa)
+96.35304 segundos: Começou desafio número 1. (Surpresa)
+98.97058 segundos: Errou a resposta. (Surpresa)
+102.3851 segundos: Errou a resposta. (Surpresa)
+106.2777 segundos: Errou a resposta. (Surpresa)
+110.6844 segundos: Acertou a resposta. (Surpresa)
+111.7613 segundos: Começou desafio número 11. (Surpresa)
+114.0642 segundos: Acertou a resposta. (Surpresa)
+115.3893 segundos: Começou desafio número 21. (Surpresa)
+117.4105 segundos: Acertou a resposta. (Surpresa)
+119.0454 segundos: Finalizou o minigame. (Surpresa)
+127.1661 segundos: Baú encontrado. (Medo)
+130.6322 segundos: Começou minigame. (Medo)
+130.6322 segundos: Começou desafio número 1. (Medo)
+135.7178 segundos: Acertou a resposta. (Medo)
+136.5459 segundos: Começou desafio número 11. (Medo)
+138.3364 segundos: Errou a resposta. (Medo)
+145.9843 segundos: Errou a resposta. (Medo)
+148.1729 segundos: Acertou a resposta. (Medo)
+148.8533 segundos: Começou desafio número 21. (Medo)
+161.4961 segundos: Acertou a resposta. (Medo)
+162.3581 segundos: Finalizou o minigame. (Medo)
+166.9999 segundos: Baú encontrado. (Tristeza)
+169.1204 segundos: Começou minigame. (Tristeza)
+169.1204 segundos: Começou desafio número 1. (Tristeza)
+172.7651 segundos: Acertou a resposta. (Tristeza)
+173.1346 segundos: Começou desafio número 11. (Tristeza)
+180.8268 segundos: Acertou a resposta. (Tristeza)
+181.4232 segundos: Começou desafio número 21. (Tristeza)
+192.9753 segundos: Acertou a resposta. (Tristeza)
+193.9195 segundos: Finalizou o minigame. (Tristeza)
+193.9195 segundos: Finalizou todos os minigames
+Fim de jogo.

@@ -441,7 +441,7 @@ abstract public class MiniGame
   public string explanation;
   public string shortExplanation;
   public Transform sceneElement;
-  protected int currentChallenge = 0;
+  public int currentChallenge = 0;
 
   public MiniGame(string name, string explanation, Transform sceneElement, string shortExplanation)
   {

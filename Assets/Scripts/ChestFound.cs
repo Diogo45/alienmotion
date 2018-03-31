@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.IO;
 
 public class ChestFound : MonoBehaviour
 {
@@ -32,6 +33,13 @@ public class ChestFound : MonoBehaviour
       chestAnim = target.gameObject.GetComponent<Animator>();
       chestAnim.SetBool("found", true);
       target.gameObject.tag = "ChestFound";
+
+      string path = "historico.txt";
+      using (var tw = new StreamWriter(path, true))
+      {
+        tw.WriteLine(Time.time+" segundos: Baú encontrado. ("+PlayerInfo.EMOTIONS[chestFoundNumber].name+")");
+      }
+
       StartCoroutine(ShowChestInfo());
     }
   }

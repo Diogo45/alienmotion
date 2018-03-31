@@ -8,13 +8,9 @@ public class FinalMessage : MonoBehaviour
   public static int finalTextStep = 0;
   public static Transform finalTextField;
 
-  void Start()
-  {
-    finalTextField = transform.Find("EndgameMessage/Scroll View/Viewport/Content/Text").transform;
-  }
-
   public static void setFinalText()
   {
+    finalTextField = GameObject.Find("EndgameCanvas").transform.Find("EndgameMessage/Scroll View/Viewport/Content/Text").transform;
     finalTextField.GetComponent<Text>().text = PlayerInfo.finalTexts[0];
   }
 
