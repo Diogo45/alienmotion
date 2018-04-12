@@ -54,7 +54,6 @@ public class CloseEmotion : MonoBehaviour {
 
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    ImageSelection.selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     if (hasNextChallenge)
     {
       // ir para próxima etapa
@@ -92,7 +91,6 @@ public class CloseEmotion : MonoBehaviour {
     PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    ImageSelection.selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
   }
 
   public void selectEmotion()

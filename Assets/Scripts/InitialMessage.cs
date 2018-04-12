@@ -16,6 +16,9 @@ public class InitialMessage : MonoBehaviour
 
   public void okClick()
   {
+    Debug.Log(Resources.Load<AudioClip>("Audio/Intro/1A"));
+    GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Intro/1A");
+    // GetComponent<AudioSource>().Play();
     if (initialTextStep + 1 == PlayerInfo.initialTexts.Length)
     {
       gameObject.SetActive(false);

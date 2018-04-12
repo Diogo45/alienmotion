@@ -6,7 +6,6 @@ public class ImageSelection : MonoBehaviour
 {
   public static int selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
   public static int selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-  public static int selectedImage2 = PlayerInfo.NOT_SELECTED_ANSWEAR;
 
   public void SelectImage(int imageNumber)
   {
@@ -25,9 +24,6 @@ public class ImageSelection : MonoBehaviour
         break;
       case 1:
         selectedImage1 = imageNumber;
-        break;
-      case 2:
-        selectedImage2 = imageNumber;
         break;
     }
   }
@@ -54,7 +50,7 @@ public class ImageSelection : MonoBehaviour
 
   public static void SetImageOfMultiplesColor(int index, int imageNumber, Color color)
   {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 6; i++)
     {
       if (i == imageNumber) {
         Button btn = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.Find("MiniGame/bodyPart" + index + "/image" + i).GetComponent<Button>();
