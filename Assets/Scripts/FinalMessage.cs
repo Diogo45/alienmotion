@@ -16,6 +16,7 @@ public class FinalMessage : MonoBehaviour
 
   public void okButton()
   {
+    GameObject.Find("EndgameMessage/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
     if (finalTextStep + 1 == PlayerInfo.finalTexts.Length)
     {
       Application.Quit();

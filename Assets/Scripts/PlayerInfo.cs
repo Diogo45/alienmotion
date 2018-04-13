@@ -47,9 +47,9 @@ public class PlayerInfo : MonoBehaviour
     if (selectedSpecies == 0)
     {
       initialTexts = new string[4]{
-        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
-        "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando foi falar algo constrangedor? Isso já aconteceu, não é?\nPois então, alguns cientistas já pesquisam isso há muitos anos!\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
-        "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções básicas ou primárias. Isso porque existem muuuuitas outras emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e várias outras. Mas porque chamamos secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Faz sentido, não é?!\nQuando dizemos então que estamos ansiosos: isso significa que na verdade o que sentimos por trás disso é medo. Medo de algo ruim que pode acontecer no futuro. Entendeu?\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem a tal emoção.\nVamos pensar:\nQuando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade já não é tão fácil assim, não é? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como acabamos de ver.\nAlém disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções? ",
+        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
+        "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando foi falar algo constrangedor? Isso já aconteceu, não é?\n\nPois então, alguns cientistas já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
+        "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções básicas ou primárias. Isso porque existem muuuuitas outras emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e várias outras. Mas porque chamamos secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Faz sentido, não é?!\n\nQuando dizemos então que estamos ansiosos: isso significa que na verdade o que sentimos por trás disso é medo. Medo de algo ruim que pode acontecer no futuro. Entendeu?\n\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem a tal emoção.\n\nVamos pensar:\n\nQuando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade já não é tão fácil assim, não é? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como acabamos de ver.\n\nAlém disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.\n\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções? ",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
       finalTexts = new string[1]{
@@ -335,9 +335,9 @@ public class PlayerInfo : MonoBehaviour
     else if (selectedSpecies == 1)
     {
       initialTexts = new string[4]{
-        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
-        "Você já se perguntou alguma vez o motivo pelo qual temos emoções? E porque choramos? Você já se pegou repensando algo que ia dizer por causa da expressão facial que um amigo fez pra você? E aquele momento em que você foi falar algo em público e ficou com o rosto vermelho? Isso já aconteceu, não é mesmo?\nPois então, cientistas como Darwin já pesquisam isso há muitos anos!\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
-        "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções consideradas básicas ou primárias. Isso porque existem outras centenas de emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e tantas outras. Mas porque secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Ou então quando dizemos que estamos ansiosos: isso significa que na verdade o que estamos sentindo primariamente é medo. Medo de algo que pode acontecer em um futuro breve. Entendeu?\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais. Quando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade, por exemplo, já não é tão fácil assim, não é mesmo? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como já vimos anteriormente.\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
+        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
+        "Você já se perguntou alguma vez o motivo pelo qual temos emoções? E porque choramos? Você já se pegou repensando algo que ia dizer por causa da expressão facial que um amigo fez pra você? E aquele momento em que você foi falar algo em público e ficou com o rosto vermelho? Isso já aconteceu, não é mesmo?\n\nPois então, cientistas como Darwin já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
+        "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções consideradas básicas ou primárias. Isso porque existem outras centenas de emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e tantas outras. Mas porque secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Ou então quando dizemos que estamos ansiosos: isso significa que na verdade o que estamos sentindo primariamente é medo. Medo de algo que pode acontecer em um futuro breve. Entendeu?\n\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais. Quando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade, por exemplo, já não é tão fácil assim, não é mesmo? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como já vimos anteriormente.\n\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
       finalTexts = new string[1]{
@@ -445,7 +445,7 @@ public class PlayerInfo : MonoBehaviour
       );
       gameType1Nojo = new MiniGameType1(
         "Montando a Face",
-        "TODO",
+        "Precisamos de uma descrição para o mini-jogo montando a face para a emoção ",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
         "Monte uma expressão de ",
         new MiniGame1Image[][][]{
@@ -499,7 +499,7 @@ public class PlayerInfo : MonoBehaviour
       );
       gameType1Surpresa = new MiniGameType1(
         "Montando a Face",
-        "TODO",
+        "Precisamos de uma descrição para o mini-jogo montando a face para a emoção ",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
         "Monte uma expressão de ",
         new MiniGame1Image[][][]{
@@ -552,8 +552,8 @@ public class PlayerInfo : MonoBehaviour
         }
       );
       gameType2Medo = new MiniGameType2(
-        "Selecione a Emoção",
-        "TODO",
+        "Precisamos de um título para este jogo",
+        "Precisamos de uma descrição para este mini-jogo para a emoção ",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
         "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
         new MiniGame2Image[][]{
@@ -594,8 +594,8 @@ public class PlayerInfo : MonoBehaviour
         }
       );
       gameType2Tristeza = new MiniGameType2(
-        "Selecione a Emoção",
-        "TODO",
+        "Precisamos de um título para este jogo",
+        "Precisamos de uma descrição para este mini-jogo para a emoção ",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
         "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
         new MiniGame2Image[][]{
@@ -908,6 +908,8 @@ public class MiniGameType2 : MiniGame
         GameObject newImageCell = GameObject.Instantiate(imageCellGameObject, cellContainer);
         newImageCell.name = "image" + i;
         newImageCell.transform.localPosition = new Vector3(0, 0, 0);
+        newImageCell.transform.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
+        newImageCell.transform.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
       }
 
       Transform cellEmotionsContainer = sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images/image" + i);

@@ -16,7 +16,7 @@ public class InitialMessage : MonoBehaviour
 
   public void okClick()
   {
-    Debug.Log(Resources.Load<AudioClip>("Audio/Intro/1A"));
+    GameObject.Find("NewGameCanvas/Image/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
     GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Intro/1A");
     // GetComponent<AudioSource>().Play();
     if (initialTextStep + 1 == PlayerInfo.initialTexts.Length)
