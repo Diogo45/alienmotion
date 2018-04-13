@@ -102,7 +102,7 @@ public class CloseEmotion : MonoBehaviour {
     mainScrollView.gameObject.SetActive(false);
     shortExplanation.gameObject.SetActive(false);
     resultScreen.gameObject.SetActive(true);
-    if (true) // (responseCode == PlayerInfo.CORRECT_ANSWEAR)
+    if (responseCode == PlayerInfo.CORRECT_ANSWEAR)
     {
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
