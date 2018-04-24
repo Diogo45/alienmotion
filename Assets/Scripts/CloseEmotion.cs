@@ -7,6 +7,9 @@ using System.IO;
 public class CloseEmotion : MonoBehaviour {
 	Transform endgameMessage;
   Transform chestMessage;
+  Transform faceExplanationContainer;
+  Transform faceExplanation;
+  Transform faceExplanationTitle;
   Transform resultMessage;
   Transform shortExplanation;
   Transform mainScrollView;
@@ -15,16 +18,32 @@ public class CloseEmotion : MonoBehaviour {
   public void Start() {
 		endgameMessage = GameObject.Find("EndgameCanvas").transform.Find("EndgameMessage");
     chestMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/chestMessage");
+    faceExplanationContainer = GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/faceContainer");
+    faceExplanation = faceExplanationContainer.Find("faceExplanation");
+    faceExplanationTitle = faceExplanationContainer.Find("faceExplanationTitle");
     shortExplanation = GameObject.Find("MinigameCanvas").transform.Find("Image/shortExplanation");
     mainScrollView = GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View");
     resultScreen = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen");
     resultMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen/resultMessage");
   }
 
+  public void showFaceInformation()
+  {
+    faceExplanationContainer.gameObject.SetActive(true);
+    chestMessage.gameObject.SetActive(false);
+    faceExplanationTitle.GetComponent<Text>().text = "Sinais de " + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name.ToLower();
+    faceExplanation.GetComponent<Image>().sprite = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.faceInformation;
+    faceExplanation.gameObject.SetActive(true);
+    faceExplanationTitle.gameObject.SetActive(true);
+    PlayerInfo.current_step_game = PlayerInfo.STEP_LEARNING_FACE;
+  }
+
   public void showMiniGameExplanation()
   {
-    chestMessage.gameObject.SetActive(false);
-    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetUIExplanationText(PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name);
+    faceExplanation.gameObject.SetActive(false);
+    faceExplanationTitle.gameObject.SetActive(false);
+    faceExplanationContainer.gameObject.SetActive(false);
+    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetUIExplanationText();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.sceneElement.gameObject.SetActive(true);
     PlayerInfo.current_step_game = PlayerInfo.STEP_LEARNING_MINIGAME;
   }
@@ -34,7 +53,7 @@ public class CloseEmotion : MonoBehaviour {
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HideUIExplanation();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetupMiniGame();
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ShowMiniGame();
-    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetShortExplanation(PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name);
+    PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.SetShortExplanation();
     PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
 
     string path = "historico.txt";
@@ -54,6 +73,7 @@ public class CloseEmotion : MonoBehaviour {
 
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImages = new LinkedList<int>();
     if (hasNextChallenge)
     {
       // ir para próxima etapa
@@ -91,10 +111,18 @@ public class CloseEmotion : MonoBehaviour {
     PlayerInfo.current_step_game = PlayerInfo.STEP_PLAYING_MINIGAME;
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
+    ImageSelection.selectedImages = new LinkedList<int>();
   }
 
   public void selectEmotion()
   {
+    LinkedListNode<int> aa =ImageSelection.selectedImages.First;
+    while (aa != null)
+    {
+      Debug.Log(aa.Value);
+      aa = aa.Next;
+    }
+
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ClearImagesColors();
     int responseCode = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().code;
     string responseMessage = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().message;
@@ -172,6 +200,9 @@ public class CloseEmotion : MonoBehaviour {
     switch (PlayerInfo.current_step_game)
     {
       case PlayerInfo.STEP_NOT_PLAYING:
+        showFaceInformation();
+        break;
+      case PlayerInfo.STEP_LEARNING_FACE:
         showMiniGameExplanation();
         break;
       case PlayerInfo.STEP_LEARNING_MINIGAME:

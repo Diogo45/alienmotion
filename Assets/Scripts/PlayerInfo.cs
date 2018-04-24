@@ -5,7 +5,7 @@ using System;
 
 public class PlayerInfo : MonoBehaviour
 {
-  public static int selectedSpecies = 1; // TODO: Trocar para -1
+  public static int selectedSpecies = 0; // TODO: Trocar para -1
   public static int chestsFound = 0;
   public static int CHESTS_TO_WIN = 6;
   public static int lastChestFound = -1;
@@ -18,6 +18,7 @@ public class PlayerInfo : MonoBehaviour
   public const int STEP_FINISHED_MINIGAME = 3;
   public const int STEP_RECEIVING_POSITIVE_FEEDBACK = 4;
   public const int STEP_RECEIVING_NEGATIVE_FEEDBACK = 5;
+  public const int STEP_LEARNING_FACE = 6;
   public const int WRONG_ANSWEAR = -2;
   public const int NOT_SELECTED_ANSWEAR = -1;
   public const int CORRECT_ANSWEAR = 1;
@@ -63,271 +64,277 @@ public class PlayerInfo : MonoBehaviour
         "O papel da <b>raiva</b> aparece naquelas situações que temos que avaliar se algo vale a pena. Quando nos sentimos prejudicados ou injustiçados, por exemplo, e queremos mostrar que não devemos mais passar por isso. Como quando alguém faz chacota com a nossa cara em público. Podemos reagir na hora e brigar ou então ficar quietos, mas se isso acontece normalmente ficamos um tempãaao pensando no que devíamos ter respondido. Tanto o que nos faz discutir com alguém quanto o que nos move a ficar remoendo uma situação é a raiva.",
         "A <b>surpresa</b> tem bastante a ver com o medo. Inclusive, as vezes podemos confundir essas emoções. Por exemplo, podemos acabar chorando de susto, mesmo que seja uma surpresa boa, como quando gritam “Surpresa!” em uma festa de aniversário. Quando sentimos surpresa é como se o nosso corpo se preparasse pra sentir medo, mas o nosso pensamento nos diz que nada de ruim vai acontecer. É como um medo bom. É por isso também, por tudo acontecer tão rápido dentro da gente, que muitas vezes não conseguimos fingir gostar daquela meia sem graça que uma tia nos dá de natal. A nossa cara entrega que não gostamos do presente."
       };
-      gameType0Alegria = new MiniGameType0(
+      gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de ",
-        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
-        "Selecione apenas as expressões faciais de ",
-        new MiniGame0Image[][]{
-          new MiniGame0Image[4]{
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_00"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_01"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_02"), false, "Esta expressão é de raiva.\n")
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de alegria.",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
+        "Selecione apenas as expressões faciais de alegria.",
+        Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[4]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_0_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/certo_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_2_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/0/errado_1_surpresa"), false, "Esta expressão é de surpresa.\n")
           },
-          new MiniGame0Image[8] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_10"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_10"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_11"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_12"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_13"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_11"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_14"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_15"), false, "Esta expressão é de medo.\n")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_10"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_10"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_11"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_12"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_13"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/correto_11"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_14"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/1/errado_15"), false, "Esta expressão é de medo.\n")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_20"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_21"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_25"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_22"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_20"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_23"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_24"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_21"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_28"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_26"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_27"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_22"), true, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_20"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_21"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_25"), false, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_22"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_20"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_23"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_24"), false, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_21"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_28"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_26"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/errado_27"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/2/correto_22"), true, "")
           }
         }
       );
-      gameType0Raiva = new MiniGameType0(
+      gameType0Raiva = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de ",
-        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
-        "Selecione apenas as expressões faciais de ",
-        new MiniGame0Image[][]{
-          new MiniGame0Image[4]{
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_0_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_1_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_2_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/correto_0"), true, "")
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de raiva.",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
+        "Selecione apenas as expressões faciais de raiva.",
+        Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[4]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_0_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_1_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/errado_2_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/0/correto_0"), true, "")
           },
-          new MiniGame0Image[8] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_0_alegreia"), false, "Esta expressão é de alegria.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_1_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/correto_1"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_3_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_4_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_5_tristeza"), false, "Esta expressão é de tristeza.\n")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_0_alegreia"), false, "Esta expressão é de alegria.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_1_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_3_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_4_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/1/errado_5_tristeza"), false, "Esta expressão é de tristeza.\n")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_0_alegria"), false, "Esta expressão é de alegria.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_1_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_4_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_3_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_6_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_5_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 1"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_8_alegria"), false, "Esta expressão é de alegria.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 2"), true, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_0_alegria"), false, "Esta expressão é de alegria.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_1_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_4_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_3_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_6_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_5_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/errado_8_alegria"), false, "Esta expressão é de alegria.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/2/correto_ 2"), true, "")
           }
         }
       );
       gameType1Nojo = new MiniGameType1(
         "Montando a Face",
-        "TODO",
+        "A seguir você encontrará imagens de olhos e bocas de diferentes emoções. Selecione as duas partes que representam nojo.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
-        "Monte uma expressão de ",
-        new MiniGame1Image[][][]{
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
+        "Monte uma expressão de nojo.",
+        Resources.Load<Sprite>("MiniGame1Images/Nojo/crianca/faceInfo"),
+        new MiniGameImage[][][]{
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/certo_0"), true, "")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/certo_0"), true, "")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, "")
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, "")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_5"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_5"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
             }
           }
         }
       );
       gameType1Surpresa = new MiniGameType1(
         "Montando a Face",
-        "TODO",
+        "A seguir você encontrará imagens de olhos e bocas de diferentes emoções. Selecione as duas partes que representam surpresa.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
-        "Monte uma expressão de ",
-        new MiniGame1Image[][][]{
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/certo_0"), true, "")
+        "Monte uma expressão de surpresa.",
+        Resources.Load<Sprite>("MiniGame1Images/Surpresa/crianca/faceInfo"),
+        new MiniGameImage[][][]{
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/certo_0"), true, "")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_5"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_5"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
             }
           }
         }
       );
       gameType2Medo = new MiniGameType2(
-        "Selecione a Emoção",
-        "TODO",
+        "Separe as Emoções",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
-        "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
-        new MiniGame2Image[][]{
-          new MiniGame2Image[8]{
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_2"), true, "")
+        "Arraste as emoções para as caixas corretas.",
+        Resources.Load<Sprite>("MiniGame2Images/Medo/crianca/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_2"), true, "")
           },
-          new MiniGame2Image[8] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_3"), false, "")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_3"), false, "")
           },
-          new MiniGame2Image[12] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_4"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_4"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_4"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_4"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
           }
         }
       );
       gameType2Tristeza = new MiniGameType2(
-        "Selecione a Emoção",
-        "TODO",
+        "Separe as Emoções",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
-        "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
-        new MiniGame2Image[][]{
-          new MiniGame2Image[8]{
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_2"), true, "")
+        "Arraste as emoções para as caixas corretas.",
+        Resources.Load<Sprite>("MiniGame2Images/Tristeza/crianca/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_2"), true, "")
           },
-          new MiniGame2Image[8] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_2"), false, "")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_2"), false, "")
           },
-          new MiniGame2Image[12] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_4"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_5"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_4"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_5"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
           }
         }
       );
@@ -351,287 +358,293 @@ public class PlayerInfo : MonoBehaviour
         "O papel evolutivo da <b>raiva</b> está relacionado a situações nas quais temos que avaliar o custo-benefício de algo. Quando nos sentimos de alguma forma prejudicados, por exemplo, e queremos mostrar que não devemos ser colocados naquela posição novamente. É isso que acontece naquelas momentos que passamos por uma situação desconfortável e depois ficamos um tempão pensando no que devíamos ter respondido pra aquela pessoa que nos desrespeitou de alguma forma.",
         "A <b>surpresa</b> tem bastante a ver com o medo. Inclusive, quando somos crianças, essas são as emoções mais difíceis de se distinguir. É por isso que muitas vezes uma criança pode chorar de susto, mesmo que seja uma surpresa boa, como uma festa de aniversário. Quando sentimos surpresa é como se o nosso corpo se preparasse pra sentir medo, mas o nosso pensamento nos diz que nada de ruim vai acontecer. É como um medo bom. É por isso também, por ser um sistema muito rápido a ser ativado, que muitas vezes não conseguimos fingir gostar de algo que não gostamos quando somos pegos de surpresa.",
       };
-      gameType0Alegria = new MiniGameType0(
+      gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de ",
-        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
-        "Selecione apenas as expressões faciais de ",
-        new MiniGame0Image[][]{
-          new MiniGame0Image[8]{
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_3"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_6"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_9"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_11"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_12"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_18"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_20"), false, "Esta expressão é neutra.\n")
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de alegria.",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
+        "Selecione apenas as expressões faciais de alegria.",
+        Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_3"), true, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_6"), true, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_9"), false, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_11"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_12"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/correto_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_18"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/0/errado_20"), false, "Esta expressão é neutra.\n")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_19"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_25"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_27"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_21"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_29"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_23"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_24"), false, "Esta expressão é de raiva.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_17"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_26"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_22"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_28"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/correto_0"), true, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_19"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_25"), false, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_27"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_21"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_29"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_23"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_24"), false, "Esta expressão é de raiva.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_17"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_26"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_22"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/errado_28"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/1/correto_0"), true, "")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_2"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_13"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_14"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_10"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_0"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_1"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_16"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_7"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_5"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_8"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_15"), false, "Esta expressão é de raiva.\n")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_2"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_13"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_14"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_10"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_0"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_1"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_16"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_7"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_5"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_8"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Alegria/adulto/2/errado_15"), false, "Esta expressão é de raiva.\n")
           }
         }
       );
-      gameType0Raiva = new MiniGameType0(
+      gameType0Raiva = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de ",
-        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame0"),
-        "Selecione apenas as expressões faciais de ",
-        new MiniGame0Image[][]{
-          new MiniGame0Image[8]{
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_0_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_5_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_6_surpresa"), false, "Esta expressão é surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_1_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_4_nojo"), false, "Esta expressão é de nojo.\n")
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de raiva.",
+        GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
+        "Selecione apenas as expressões faciais de raiva.",
+        Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_0_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_5_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_6_surpresa"), false, "Esta expressão é surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_1_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/0/errado_4_nojo"), false, "Esta expressão é de nojo.\n")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_1_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_4_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_9_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_8_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_5_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_10_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_6_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_0_medo"), false, "Esta expressão é de medo.\n")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_1_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_4_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_9_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_8_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_5_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_10_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_6_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/1/errado_0_medo"), false, "Esta expressão é de medo.\n")
           },
-          new MiniGame0Image[12] {
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_6_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_8_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/correto_0"), true, ""),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_1_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_5_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_9_surpresa"), false, "Esta expressão é de surpresa.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_0_medo"), false, "Esta expressão é de medo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_4_nojo"), false, "Esta expressão é de nojo.\n"),
-            new MiniGame0Image(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_10_surpresa"), false, "Esta expressão é de surpresa.\n")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_6_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_2_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_8_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_1_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_5_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_3_neutra"), false, "Esta expressão é neutra.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_9_surpresa"), false, "Esta expressão é de surpresa.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_7_tristeza"), false, "Esta expressão é de tristeza.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_0_medo"), false, "Esta expressão é de medo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_4_nojo"), false, "Esta expressão é de nojo.\n"),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame0Images/Raiva/adulto/2/errado_10_surpresa"), false, "Esta expressão é de surpresa.\n")
           }
         }
       );
       gameType1Nojo = new MiniGameType1(
         "Montando a Face",
-        "Precisamos de uma descrição para o mini-jogo montando a face para a emoção ",
+        "A seguir você encontrará imagens de olhos e bocas de diferentes emoções. Selecione as duas partes que representam nojo.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
-        "Monte uma expressão de ",
-        new MiniGame1Image[][][]{
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
+        "Monte uma expressão de nojo. ",
+        Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/faceInfo"),
+        new MiniGameImage[][][]{
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/certo_0"), true, "")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/0/parte1/certo_0"), true, "")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, "")
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte0/certo_0"), true, "")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_4"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte0/errado_4"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/Cortado/2/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
             }
           }
         }
       );
       gameType1Surpresa = new MiniGameType1(
         "Montando a Face",
-        "Precisamos de uma descrição para o mini-jogo montando a face para a emoção ",
+        "A seguir você encontrará imagens de olhos e bocas de diferentes emoções. Selecione as duas partes que representam surpresa.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
-        "Monte uma expressão de ",
-        new MiniGame1Image[][][]{
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/certo_0"), true, "")
+        "Monte uma expressão de surpresa.",
+        Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/faceInfo"),
+        new MiniGameImage[][][]{
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte0/certo_0"), true, "")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/0/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte0/errado_2"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[4]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[4]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/1/parte1/errado_2"), false, "Que pena, você errou! Tente novamente.")
             }
           },
-          new MiniGame1Image[][]{
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_4"), false, "Que pena, você errou! Tente novamente.")
+          new MiniGameImage[][]{
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte0/errado_4"), false, "Que pena, você errou! Tente novamente.")
             },
-            new MiniGame1Image[6]{
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/certo_0"), true, ""),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
-              new MiniGame1Image(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
+            new MiniGameImage[6]{
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_0"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_1"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/certo_0"), true, ""),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_2"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_3"), false, "Que pena, você errou! Tente novamente."),
+              new MiniGameImage(Resources.Load<Sprite>("MiniGame1Images/Surpresa/adulto/Cortado/2/parte1/errado_4"), false, "Que pena, você errou! Tente novamente.")
             }
           }
         }
       );
       gameType2Medo = new MiniGameType2(
-        "Precisamos de um título para este jogo",
-        "Precisamos de uma descrição para este mini-jogo para a emoção ",
+        "Separe as Emoções",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
-        "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
-        new MiniGame2Image[][]{
-          new MiniGame2Image[8]{
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_2"), true, "")
+        "Arraste as emoções para as caixas corretas.",
+        Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/0/correto_2"), true, "")
           },
-          new MiniGame2Image[8] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_3"), false, "")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/1/errado_3"), false, "")
           },
-          new MiniGame2Image[12] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_4"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_4"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_4"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_4"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
           }
         }
       );
       gameType2Tristeza = new MiniGameType2(
-        "Precisamos de um título para este jogo",
-        "Precisamos de uma descrição para este mini-jogo para a emoção ",
+        "Separe as Emoções",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
-        "Arraste as emoções para as caixas corretas. Emoções neutras e de ",
-        new MiniGame2Image[][]{
-          new MiniGame2Image[8]{
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_2"), true, "")
+        "Arraste as emoções para as caixas corretas.",
+        Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/faceInfo"),
+        new MiniGameImage[][]{
+          new MiniGameImage[8]{
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/0/correto_2"), true, "")
           },
-          new MiniGame2Image[8] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_2"), false, "")
+          new MiniGameImage[8] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/1/errado_2"), false, "")
           },
-          new MiniGame2Image[12] {
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_1"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_1"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_2"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_2"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_3"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_0"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_4"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_0"), false, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_5"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_3"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
-            new MiniGame2Image(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
+          new MiniGameImage[12] {
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_1"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_1"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_2"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_2"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_3"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_0"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_4"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_0"), false, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_5"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_3"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
+            new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
           }
         }
       );
@@ -651,382 +664,3 @@ public class PlayerInfo : MonoBehaviour
   }
 }
 
-public class Emotion
-{
-  public string name;
-  public string description;
-  public MiniGame game;
-
-  public Emotion(string name, string description, MiniGame game)
-  {
-    this.name = name;
-    this.description = description;
-    this.game = game;
-  }
-}
-
-abstract public class MiniGame
-{
-  public string name;
-  public string explanation;
-  public string shortExplanation;
-  public Transform sceneElement;
-  public int currentChallenge = 0;
-
-  public MiniGame(string name, string explanation, Transform sceneElement, string shortExplanation)
-  {
-    this.name = name;
-    this.explanation = explanation;
-    this.sceneElement = sceneElement;
-    this.shortExplanation = shortExplanation;
-  }
-
-  public void SetUIExplanationText(string emotionName)
-  {
-    sceneElement.Find("miniGameExplanation").gameObject.SetActive(true);
-    sceneElement.Find("miniGameExplanation").GetComponent<Text>().text = this.explanation + emotionName.ToLower() + ".";
-  }
-
-  public void HideUIExplanation()
-  {
-    sceneElement.Find("miniGameExplanation").gameObject.SetActive(false);
-  }
-
-  public void ShowMiniGame()
-  {
-    sceneElement.Find("MiniGame").gameObject.SetActive(true);
-  }
-
-  public void SetShortExplanation(string emotionName)
-  {
-    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(true);
-    GameObject.Find("MinigameCanvas/Image/shortExplanation").GetComponent<Text>().text = shortExplanation + emotionName.ToLower() + ".";
-  }
-
-  abstract public MiniGameResponse ValidateAnswear();
-  abstract public bool HasNextChallenge();
-  abstract public void NextChallenge();
-
-  abstract public void SetupMiniGame();
-  abstract public void FinishGame();
-  abstract public void ClearImagesColors();
-}
-
-public class MiniGame0Image
-{
-  public Sprite image;
-  public bool isCorrect;
-  public string wrongMessage;
-
-  public MiniGame0Image(Sprite image, bool isCorrect, string wrongMessage)
-  {
-    this.image = image;
-    this.isCorrect = isCorrect;
-    this.wrongMessage = wrongMessage;
-  }
-}
-
-public class MiniGame1Image
-{
-  public Sprite image;
-  public bool isCorrect;
-  public string wrongMessage;
-
-  public MiniGame1Image(Sprite image, bool isCorrect, string wrongMessage)
-  {
-    this.image = image;
-    this.isCorrect = isCorrect;
-    this.wrongMessage = wrongMessage;
-  }
-}
-
-public class MiniGame2Image
-{
-  public Sprite image;
-  public bool isCorrect;
-  public string wrongMessage;
-
-  public MiniGame2Image(Sprite image, bool isCorrect, string wrongMessage)
-  {
-    this.image = image;
-    this.isCorrect = isCorrect;
-    this.wrongMessage = wrongMessage;
-  }
-}
-
-public class MiniGameType0: MiniGame
-{
-  public MiniGame0Image[][] images;
-
-  public MiniGameType0(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame0Image[][] images) : base(name, explanation, sceneElement, shortExplanation)
-  {
-    this.images = images;
-  }
-
-  public override void SetupMiniGame()
-  {
-    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    int i = 0;
-    while (i < images[this.currentChallenge].Length)
-    {
-      sceneElement.Find("MiniGame/image" + i).gameObject.SetActive(true);
-      sceneElement.Find("MiniGame/image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
-      i++;
-    }
-    while (i < 12)
-    {
-      sceneElement.Find("MiniGame/image" + i).gameObject.SetActive(false);
-      i++;
-    }
-  }
-
-  public override bool HasNextChallenge()
-  {
-    return this.currentChallenge < (images.Length - 1);
-  }
-
-  public override void NextChallenge()
-  {
-    this.currentChallenge++;
-    SetupMiniGame();
-  }
-
-  public override void FinishGame()
-  {
-    sceneElement.Find("MiniGame").gameObject.SetActive(false);
-    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
-    this.currentChallenge = 0;
-  }
-
-  public override MiniGameResponse ValidateAnswear()
-  {
-    if (ImageSelection.selectedImage0 == PlayerInfo.NOT_SELECTED_ANSWEAR)
-    {
-      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Selecione uma imagem!");
-    }
-    else if (images[this.currentChallenge][ImageSelection.selectedImage0].isCorrect)
-    {
-      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
-    }
-    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, images[this.currentChallenge][ImageSelection.selectedImage0].wrongMessage);
-  }
-
-  public override void ClearImagesColors()
-  {
-    for (int i = 0; i < images[this.currentChallenge].Length; i++)
-      ImageSelection.SetImageColor(i, new Color(255, 255, 255, 255));
-  }
-}
-
-public class MiniGameType1 : MiniGame
-{
-  public MiniGame1Image[][][] images;
-
-  public MiniGameType1(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame1Image[][][] images) : base(name, explanation, sceneElement, shortExplanation)
-  {
-    this.images = images;
-  }
-
-  public override void SetupMiniGame()
-  {
-    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    int i = 0;
-
-    for (int j = 0; j < 2; j++)
-    {
-      while (i < images[this.currentChallenge][j].Length)
-      {
-        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).gameObject.SetActive(true);
-        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][j][i].image;
-        i++;
-      }
-      while (i < 6)
-      {
-        sceneElement.Find("MiniGame/bodyPart" + j + "/image" + i).gameObject.SetActive(false);
-        i++;
-      }
-      i = 0;
-    }
-  }
-
-  public override bool HasNextChallenge()
-  {
-    return this.currentChallenge < (images.Length - 1);
-  }
-
-  public override void NextChallenge()
-  {
-    this.currentChallenge++;
-    SetupMiniGame();
-  }
-
-  public override void FinishGame()
-  {
-    sceneElement.Find("MiniGame").gameObject.SetActive(false);
-    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
-    this.currentChallenge = 0;
-  }
-
-  public override MiniGameResponse ValidateAnswear()
-  {
-    if ((ImageSelection.selectedImage0 == PlayerInfo.NOT_SELECTED_ANSWEAR) || (ImageSelection.selectedImage1 == PlayerInfo.NOT_SELECTED_ANSWEAR))
-    {
-      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Selecione uma de cada categoria!");
-    }
-    else if (images[this.currentChallenge][0][ImageSelection.selectedImage0].isCorrect && images[this.currentChallenge][1][ImageSelection.selectedImage1].isCorrect)
-    {
-      return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
-    }
-    return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, "Tente novamente.");
-  }
-
-  public override void ClearImagesColors()
-  {
-    for (int i = 0; i < 2; i++)
-      for (int j = 0; j < images[this.currentChallenge][i].Length; j++)
-        ImageSelection.SetImageOfMultiplesColor(i, j, new Color(255, 255, 255, 255));
-  }
-}
-
-public class MiniGameType2 : MiniGame
-{
-  public MiniGame2Image[][] images;
-  GameObject imageCellGameObject;
-
-  public MiniGameType2(string name, string explanation, Transform sceneElement, string shortExplanation, MiniGame2Image[][] images) : base(name, explanation, sceneElement, shortExplanation)
-  {
-    this.images = images;
-    imageCellGameObject = sceneElement.Find("MiniGame").Find("imageCell").gameObject;
-  }
-
-  private void cleanCells() {
-    for (int i = 0; i < 12; i++) {
-      Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
-      if (cellContainer.childCount == 0)
-      {
-        GameObject newImageCell = GameObject.Instantiate(imageCellGameObject, cellContainer);
-        newImageCell.name = "image" + i;
-        newImageCell.transform.localPosition = new Vector3(0, 0, 0);
-        newImageCell.transform.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
-        newImageCell.transform.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
-      }
-
-      Transform cellEmotionsContainer = sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images/image" + i);
-      if (cellEmotionsContainer.childCount > 0)
-      {
-        foreach (Transform emotionCell in cellEmotionsContainer)
-        {
-          GameObject.Destroy(emotionCell.gameObject);
-        }
-      }
-
-      Transform cellNeutralContainer = sceneElement.Find("MiniGame/Emotions/NeutralContainer/Images/image" + i);
-      if (cellNeutralContainer.childCount > 0)
-      {
-        foreach (Transform emotionCell in cellNeutralContainer)
-        {
-          GameObject.Destroy(emotionCell.gameObject);
-        }
-      }
-    }
-  }
-
-  public override void SetupMiniGame()
-  {
-    ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
-    cleanCells();
-    int i = 0;
-    while (i < images[this.currentChallenge].Length)
-    {
-      Transform cellContainer = sceneElement.Find("MiniGame/Images/image" + i);
-      Transform cellItem = cellContainer.Find("image" + i);
-      cellItem.gameObject.SetActive(true);
-      cellItem.GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
-      cellItem.GetComponent<DraggableImageCellInfo>().isMainEmotion = images[this.currentChallenge][i].isCorrect;
-      i++;
-    }
-    while (i < 12)
-    {
-      sceneElement.Find("MiniGame/Images/image" + i + "/image" + i).gameObject.SetActive(false);
-      i++;
-    }
-  }
-
-  public override bool HasNextChallenge()
-  {
-    return this.currentChallenge < (images.Length - 1);
-  }
-
-  public override void NextChallenge()
-  {
-    this.currentChallenge++;
-    SetupMiniGame();
-  }
-
-  public override void FinishGame()
-  {
-    cleanCells();
-    sceneElement.Find("MiniGame").gameObject.SetActive(false);
-    GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
-    this.currentChallenge = 0;
-  }
-
-  private bool isCellBeingUsed(Transform cell) {
-    if (cell.childCount == 0) {
-      return false;
-    }
-
-    Transform[] cellChildren = new Transform[cell.childCount];
-    for (int i = 0; i < cell.childCount; i++)
-    {
-      cellChildren[i] = cell.GetChild(i);
-    }
-
-    return Array.FindIndex(cellChildren, child => child.gameObject.activeSelf) != -1;
-  }
-
-  private static Transform[] getChildren(Transform originalObject) {
-    Transform[] arrayToReturn = new Transform[originalObject.childCount];
-    for (int i = 0; i < originalObject.childCount; i++)
-    {
-      arrayToReturn[i] = originalObject.GetChild(i);
-    }
-
-    return arrayToReturn;
-  }
-
-  private static bool isCellWrong(Transform cell) {
-    return cell.childCount > 0 && !cell.GetChild(0).GetComponent<DraggableImageCellInfo>().isMainEmotion;
-  }
-
-  public override MiniGameResponse ValidateAnswear()
-  {
-    Transform[] imagesCellContainers = getChildren(sceneElement.Find("MiniGame/Images"));
-    if (Array.FindIndex(imagesCellContainers, cell => isCellBeingUsed(cell)) != -1)
-    {
-      return new MiniGameResponse(PlayerInfo.NOT_SELECTED_ANSWEAR, "Separe todas as imagens arrastando!");
-    }
-
-    Transform[] answearImagesCellContainers = getChildren(sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Images"));
-    if (Array.FindIndex(answearImagesCellContainers, cell => isCellWrong(cell)) != -1)
-    {
-      return new MiniGameResponse(PlayerInfo.WRONG_ANSWEAR, "Pelo menos uma imagem foi colocada no grupo errado. Tente novamente!");
-    }
-    return new MiniGameResponse(PlayerInfo.CORRECT_ANSWEAR, "Parabéns! Você acertou!");
-  }
-
-  public override void ClearImagesColors() {  }
-}
-
-public class MiniGameResponse
-{
-  public int code;
-  public string message;
-
-  public MiniGameResponse(int code, string message)
-  {
-    this.code = code;
-    this.message = message;
-  }
-}
