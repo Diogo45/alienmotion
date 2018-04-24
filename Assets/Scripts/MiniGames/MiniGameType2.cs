@@ -7,11 +7,13 @@ public class MiniGameType2 : MiniGame
 {
   public MiniGameImage[][] images;
   GameObject imageCellGameObject;
+  public string[] oppositeEmotionNames;
 
-  public MiniGameType2(string name, string explanation, Transform sceneElement, string shortExplanation, Sprite faceInformation, MiniGameImage[][] images) : base(name, explanation, sceneElement, shortExplanation, faceInformation)
+  public MiniGameType2(string name, string explanation, Transform sceneElement, string shortExplanation, Sprite faceInformation, MiniGameImage[][] images, string[] oppositeEmotionNames) : base(name, explanation, sceneElement, shortExplanation, faceInformation)
   {
     this.images = images;
     imageCellGameObject = sceneElement.Find("MiniGame").Find("imageCell").gameObject;
+    this.oppositeEmotionNames = oppositeEmotionNames;
   }
 
   private void cleanCells()
@@ -51,6 +53,7 @@ public class MiniGameType2 : MiniGame
   public override void SetupMiniGame()
   {
     sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Text").GetComponent<Text>().text = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name;
+    sceneElement.Find("MiniGame/Emotions/NeutralContainer/Text").GetComponent<Text>().text = oppositeEmotionNames[this.currentChallenge];
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     cleanCells();
     int i = 0;

@@ -5,7 +5,7 @@ using System;
 
 public class PlayerInfo : MonoBehaviour
 {
-  public static int selectedSpecies = 0; // TODO: Trocar para -1
+  public static int selectedSpecies = 1; // TODO: Trocar para -1
   public static int chestsFound = 0;
   public static int CHESTS_TO_WIN = 6;
   public static int lastChestFound = -1;
@@ -48,21 +48,21 @@ public class PlayerInfo : MonoBehaviour
     if (selectedSpecies == 0)
     {
       initialTexts = new string[4]{
-        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
+        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
         "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando foi falar algo constrangedor? Isso já aconteceu, não é?\n\nPois então, alguns cientistas já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
-        "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções básicas ou primárias. Isso porque existem muuuuitas outras emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e várias outras. Mas porque chamamos secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Faz sentido, não é?!\n\nQuando dizemos então que estamos ansiosos: isso significa que na verdade o que sentimos por trás disso é medo. Medo de algo ruim que pode acontecer no futuro. Entendeu?\n\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem a tal emoção.\n\nVamos pensar:\n\nQuando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade já não é tão fácil assim, não é? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como acabamos de ver.\n\nAlém disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.\n\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções? ",
+        "Alegria, medo, tristeza, raiva, nojo e surpresa. Essas são as emoções básicas ou primárias. Isso porque existem muuuuitas outras emoções que chamamos de secundárias, que são basicamente uma mistura das emoções primárias. Por exemplo, quando sentimos inveja, que é uma emoção secundária, é como se sentíssemos raiva e tristeza ao mesmo tempo.\n\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem alguma dessas emoções.\n\nVamos pensar:\n\nNão é mais fácil saber quando alguém sente tristeza do que quando alguém sente saudade? Por exemplo, quando você  perde algo que você gosta muuuuuito, que cara você faz? É fácil de fazer, não é? Isso porque a tristeza é uma emoção primária que pode ser facilmente vista no rosto.\n\nAlém disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.\n\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
       finalTexts = new string[1]{
         "Agora que já passamos por todas as emoções básicas e aprendemos sobre elas, você ganhou o título de Mestre das Emoções e auxiliou Alfred a entender tudo sobre as emoções! Obrigado pela ajuda e espero que o treinamento tenha contribuído para o seu crescimento assim como contribuiu para o Alfred ser um etzinho melhor!"
       };
       CHESTS_TEXT = new string[6]{
-        "<b>Alegria</b> é a emoção que mais gostamos de sentir. Ela aparece quando sentimos prazer em algo; e por isso, acaba guiando nossas escolhas e decisões. Estamos sempre na busca de sentir alegria. Ela faz com que sintamos que nossa vida vale a pena e, através do sorriso, podemos transmitir aos outros quando estamos contentes. Além disso, a alegria nos ajuda a criar laços afetivos desde que somos bebês; pois quando sorrimos recebemos mais atenção e afeto de quem está a nossa volta.",
-        "A <b>tristeza</b> é a emoção mais difícil de sentir. Ninguém gosta de ficar triste, não é mesmo? Apesar disso, esta é uma emoção tão importante quanto todas as outras. Desde que somos bebês ela nos ajuda a mostrar quando não estamos bem, através do choro. Depois que aprendemos a falar, ela continua nos ajudando a aprender com nossos erros, a pensarmos de forma mais profunda e criativa e a nos colocarmos no lugar do outro.  Além disso, o choro, que é uma manifestação da tristeza, também ajuda a chamar a atenção de alguém que possa nos dar apoio.",
-        "O <b>medo</b> é a emoção que mais sentimos no corpo. Quando sentimos essa emoção, os nossos pensamentos quase que param e ficamos naquele estado chamado de luta ou fuga. O nosso corpo se prepara pra reagir antes mesmo de pensarmos o que seria mais correto. Viram como nosso corpo é inteligente? É por isso que muitas vezes podemos fazer coisas estúpidas quando estamos com medo. Porque nos preparamos pra lutar, pra fugir ou pra congelar. Essa emoção é muito importante porque é ela que nos impede de atravessar a rua, por exemplo, quando vemos um carro vindo muito rápido. Também é ela que nos faz correr de um cachorro raivoso pra ele não nos alcançar.",
-        "O <b>nojo</b> existe pra nos prevenir do risco de contaminação. É ele que nos impede de comer alimentos que poderiam nos fazer mal ou de tocar em coisas que poderiam nos passar doenças. Resumidamente, ele nos protege de bactérias e de doenças e começa a aparecer quando estamos nos preparando pra engatinhar, ainda na infância. Não faz sentido? Porque até engatinharmos é só a nossa mãe que cuida o que a gente come ou no que podemos tocar. Mas falando nisso, sabia que existem dois tipos de nojo?\n\nIsso mesmo. Além deste nojo que estávamos falando, existe também o nojo moral; que é aquele nojo que sentimos quando alguém faz algo muito errado, como roubar ou mal-tratar os animais. E sabe o que é mais interessante? Que a nossa reação aos dois tipos de nojo é a mesma. Sempre queremos nos afastar do que nos dá nojo.",
-        "O papel da <b>raiva</b> aparece naquelas situações que temos que avaliar se algo vale a pena. Quando nos sentimos prejudicados ou injustiçados, por exemplo, e queremos mostrar que não devemos mais passar por isso. Como quando alguém faz chacota com a nossa cara em público. Podemos reagir na hora e brigar ou então ficar quietos, mas se isso acontece normalmente ficamos um tempãaao pensando no que devíamos ter respondido. Tanto o que nos faz discutir com alguém quanto o que nos move a ficar remoendo uma situação é a raiva.",
-        "A <b>surpresa</b> tem bastante a ver com o medo. Inclusive, as vezes podemos confundir essas emoções. Por exemplo, podemos acabar chorando de susto, mesmo que seja uma surpresa boa, como quando gritam “Surpresa!” em uma festa de aniversário. Quando sentimos surpresa é como se o nosso corpo se preparasse pra sentir medo, mas o nosso pensamento nos diz que nada de ruim vai acontecer. É como um medo bom. É por isso também, por tudo acontecer tão rápido dentro da gente, que muitas vezes não conseguimos fingir gostar daquela meia sem graça que uma tia nos dá de natal. A nossa cara entrega que não gostamos do presente."
+        "<b>Alegria</b> é a emoção que mais gostamos de sentir. Ela aparece quando sentimos prazer em algo. Estamos sempre na busca de sentir alegria. Ela faz com que sintamos que nossa vida vale a pena e, através do sorriso, podemos mostrar aos outros quando estamos felizes. Sentimos muuuuita alegria, por exemplo, quando brincamos com os nossos melhores amigos.",
+        "A <b>tristeza</b> é a emoção que menos gostamos de sentir. Apesar disso, essa é uma emoção tão importante quanto todas as outras. Desde que somos bebês ela nos ajuda a mostrar quando não estamos bem, através do choro. Quando choramos, fica fácil das outras pessoas perceberem que precisamos de ajuda. Você já deve ter sentido tristeza quando perdeu alguma coisa que gostava muito.",
+        "O <b>medo</b> é a emoção que mais sentimos no corpo. Quando sentimos medo, os nossos pensamentos quase que param e ficamos num estado chamado de luta ou fuga.Essa emoção é muito importante porque é ela que nos impede, por exemplo,  de atravessar a rua quando vemos um carro vindo muito rápido. Também é ela que nos faz correr de um cachorro raivoso pra ele não nos alcançar.",
+        "O <b>nojo</b> existe pra nos afastar de coisas que podem nos deixar doentes. É ele que faz com que a gente não coma comida estragada ou tape o nariz quando sentimos um cheiro muuuito ruim. A gente costuma ficar longe de coisas nojentas, não é mesmo?",
+        "A <b>raiva</b> aparece quando sentimos que alguém foi injusto com a gente. Por exemplo, quando nos chamam de algum apelido que não gostamos. Na hora podemos brigar ou então ficar quietos, mas depois ficamos um tempãaao pensando no que devíamos ter respondido.",
+        "A <b>surpresa</b> é parecida com o medo e é bem comum que a gente confunda essas duas emoções. Para não confundir, lembre-se: sentimos surpresa quando acontecem coisas que não estamos esperando. Por exemplo, quando você ganha um presente que você não imaginava que ganharia."
       };
       gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
@@ -293,7 +293,8 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
           }
-        }
+        },
+        new string[] { "Neutras", "Neutras", "Neutras" }
       );
       gameType2Tristeza = new MiniGameType2(
         "Separe as Emoções",
@@ -336,13 +337,14 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
           }
-        }
+        },
+        new string[] { "Neutras", "Neutras", "Neutras" }
       );
     }
     else if (selectedSpecies == 1)
     {
       initialTexts = new string[4]{
-        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred. Ele precisará da sua ajuda.",
+        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
         "Você já se perguntou alguma vez o motivo pelo qual temos emoções? E porque choramos? Você já se pegou repensando algo que ia dizer por causa da expressão facial que um amigo fez pra você? E aquele momento em que você foi falar algo em público e ficou com o rosto vermelho? Isso já aconteceu, não é mesmo?\n\nPois então, cientistas como Darwin já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
         "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções consideradas básicas ou primárias. Isso porque existem outras centenas de emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e tantas outras. Mas porque secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza. Ou então quando dizemos que estamos ansiosos: isso significa que na verdade o que estamos sentindo primariamente é medo. Medo de algo que pode acontecer em um futuro breve. Entendeu?\n\nUma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais. Quando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade, por exemplo, já não é tão fácil assim, não é mesmo? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como já vimos anteriormente.\n\nAs emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
@@ -456,7 +458,7 @@ public class PlayerInfo : MonoBehaviour
         "Montando a Face",
         "A seguir você encontrará imagens de olhos e bocas de diferentes emoções. Selecione as duas partes que representam nojo.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame1"),
-        "Monte uma expressão de nojo. ",
+        "Monte uma expressão de nojo.",
         Resources.Load<Sprite>("MiniGame1Images/Nojo/adulto/faceInfo"),
         new MiniGameImage[][][]{
           new MiniGameImage[][]{
@@ -603,7 +605,8 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/errado_5"), false, ""),
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/2/correto_5"), true, "")
           }
-        }
+        },
+        new string[]{"Neutras", "Neutras", "Neutras"}
       );
       gameType2Tristeza = new MiniGameType2(
         "Separe as Emoções",
@@ -646,7 +649,8 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/correto_4"), true, ""),
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/2/errado_5"), false, "")
           }
-        }
+        },
+        new string[] { "Neutras", "Neutras", "Neutras" }
       );
     }
     EMOTIONS = new Emotion[6]{
