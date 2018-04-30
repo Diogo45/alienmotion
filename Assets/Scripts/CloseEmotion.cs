@@ -116,12 +116,12 @@ public class CloseEmotion : MonoBehaviour {
 
   public void selectEmotion()
   {
-    LinkedListNode<int> aa =ImageSelection.selectedImages.First;
-    while (aa != null)
-    {
-      Debug.Log(aa.Value);
-      aa = aa.Next;
-    }
+    // LinkedListNode<int> aa =ImageSelection.selectedImages.First;
+    // while (aa != null)
+    // {
+    //   Debug.Log(aa.Value);
+    //   aa = aa.Next;
+    // }
 
     PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ClearImagesColors();
     int responseCode = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.ValidateAnswear().code;
@@ -130,7 +130,7 @@ public class CloseEmotion : MonoBehaviour {
     mainScrollView.gameObject.SetActive(false);
     shortExplanation.gameObject.SetActive(false);
     resultScreen.gameObject.SetActive(true);
-    if (responseCode == PlayerInfo.CORRECT_ANSWEAR)
+    if (true)//(responseCode == PlayerInfo.CORRECT_ANSWEAR)
     {
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
