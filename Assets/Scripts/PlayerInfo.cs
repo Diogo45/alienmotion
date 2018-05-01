@@ -549,7 +549,7 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/crianca/5/certo_1"), true, ""),
           },
         },
-        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Neutras" }
+        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Tristeza" }
       );
       gameType2Tristeza = new MiniGameType2(
         "Separe as Emoções",
@@ -625,7 +625,7 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/crianca/5/errado_4"), false, ""),
           },
         },
-        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Neutras" }
+        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Medo" }
       );
     }
     else if (selectedSpecies == 1)
@@ -1154,7 +1154,7 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Medo/adulto/5/certo_2"), true, ""),
           }
         },
-        new string[]{"Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Neutras" }
+        new string[]{"Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Tristeza" }
       );
       gameType2Tristeza = new MiniGameType2(
         "Separe as Emoções",
@@ -1240,7 +1240,7 @@ public class PlayerInfo : MonoBehaviour
             new MiniGameImage(Resources.Load<Sprite>("MiniGame2Images/Tristeza/adulto/5/errado_5"), false, ""),
           },
         },
-        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Neutras" }
+        new string[] { "Neutras", "Neutras", "Neutras", "Neutras", "Neutras", "Medo" }
       );
     }
     EMOTIONS = new Emotion[6]{
