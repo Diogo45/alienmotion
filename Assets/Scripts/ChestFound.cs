@@ -27,6 +27,8 @@ public class ChestFound : MonoBehaviour
       int chestFoundNumber = target.gameObject.GetComponent<ChestInfo>().chestNumber;
       chestTitle.text = PlayerInfo.EMOTIONS[chestFoundNumber].name;
       chestText.text = PlayerInfo.EMOTIONS[chestFoundNumber].description;
+      Audio.component.clip = PlayerInfo.EMOTIONS[chestFoundNumber].audioDescription;
+      Audio.component.Play();
       scrollView.verticalNormalizedPosition = 1f;
       PlayerInfo.chestBeingPlayed = chestFoundNumber;
 

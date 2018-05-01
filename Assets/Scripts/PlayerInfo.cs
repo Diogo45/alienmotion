@@ -36,6 +36,7 @@ public class PlayerInfo : MonoBehaviour
   };
 
   public static string[] CHESTS_TEXT;
+  public static AudioClip[] AUDIO_DESCRIPTION;
 
   public static MiniGame gameType0Alegria;
   public static MiniGame gameType0Raiva;
@@ -84,6 +85,14 @@ public class PlayerInfo : MonoBehaviour
         "O <b>nojo</b> existe pra nos afastar de coisas que podem nos deixar doentes. É ele que faz com que a gente não coma comida estragada ou tape o nariz quando sentimos um cheiro muuuito ruim. A gente costuma ficar longe de coisas nojentas, não é mesmo?",
         "A <b>raiva</b> aparece quando sentimos que alguém foi injusto com a gente. Por exemplo, quando nos chamam de algum apelido que não gostamos. Na hora podemos brigar ou então ficar quietos, mas depois ficamos um tempãaao pensando no que devíamos ter respondido.",
         "A <b>surpresa</b> é parecida com o medo e é bem comum que a gente confunda essas duas emoções. Para não confundir, lembre-se: sentimos surpresa quando acontecem coisas que não estamos esperando. Por exemplo, quando você ganha um presente que você não imaginava que ganharia."
+      };
+      AUDIO_DESCRIPTION = new AudioClip[6]{
+        Resources.Load<AudioClip>("Audio/Alegria/C"),
+        Resources.Load<AudioClip>("Audio/Tristeza/C"),
+        Resources.Load<AudioClip>("Audio/Medo/C"),
+        Resources.Load<AudioClip>("Audio/Nojo/C"),
+        Resources.Load<AudioClip>("Audio/Raiva/C"),
+        Resources.Load<AudioClip>("Audio/Surpresa/C"),
       };
       gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
@@ -657,6 +666,14 @@ public class PlayerInfo : MonoBehaviour
         "O papel evolutivo da <b>raiva</b> está relacionado a situações nas quais temos que avaliar o custo-benefício de algo. Quando nos sentimos de alguma forma prejudicados, por exemplo, e queremos mostrar que não devemos ser colocados naquela posição novamente. É isso que acontece naquelas momentos que passamos por uma situação desconfortável e depois ficamos um tempão pensando no que devíamos ter respondido pra aquela pessoa que nos desrespeitou de alguma forma.",
         "A <b>surpresa</b> tem bastante a ver com o medo. Inclusive, quando somos crianças, essas são as emoções mais difíceis de se distinguir. É por isso que muitas vezes uma criança pode chorar de susto, mesmo que seja uma surpresa boa, como uma festa de aniversário. Quando sentimos surpresa é como se o nosso corpo se preparasse pra sentir medo, mas o nosso pensamento nos diz que nada de ruim vai acontecer. É como um medo bom. É por isso também, por ser um sistema muito rápido a ser ativado, que muitas vezes não conseguimos fingir gostar de algo que não gostamos quando somos pegos de surpresa.",
       };
+      AUDIO_DESCRIPTION = new AudioClip[6]{
+        Resources.Load<AudioClip>("Audio/Alegria/A"),
+        Resources.Load<AudioClip>("Audio/Tristeza/A"),
+        Resources.Load<AudioClip>("Audio/Medo/A"),
+        Resources.Load<AudioClip>("Audio/Nojo/A"),
+        Resources.Load<AudioClip>("Audio/Raiva/A"),
+        Resources.Load<AudioClip>("Audio/Surpresa/A"),
+      };
       gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
         "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de alegria.",
@@ -1227,12 +1244,12 @@ public class PlayerInfo : MonoBehaviour
       );
     }
     EMOTIONS = new Emotion[6]{
-      new Emotion(CHESTS_TITLE[0], CHESTS_TEXT[0], gameType0Alegria),
-      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], gameType2Tristeza),
-      new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], gameType2Medo),
-      new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], gameType1Nojo),
-      new Emotion(CHESTS_TITLE[4], CHESTS_TEXT[4], gameType0Raiva),
-      new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], gameType1Surpresa),
+      new Emotion(CHESTS_TITLE[0], CHESTS_TEXT[0], gameType0Alegria, AUDIO_DESCRIPTION[0]),
+      new Emotion(CHESTS_TITLE[1], CHESTS_TEXT[1], gameType2Tristeza, AUDIO_DESCRIPTION[1]),
+      new Emotion(CHESTS_TITLE[2], CHESTS_TEXT[2], gameType2Medo, AUDIO_DESCRIPTION[2]),
+      new Emotion(CHESTS_TITLE[3], CHESTS_TEXT[3], gameType1Nojo, AUDIO_DESCRIPTION[3]),
+      new Emotion(CHESTS_TITLE[4], CHESTS_TEXT[4], gameType0Raiva, AUDIO_DESCRIPTION[4]),
+      new Emotion(CHESTS_TITLE[5], CHESTS_TEXT[5], gameType1Surpresa, AUDIO_DESCRIPTION[5]),
     };
   }
 

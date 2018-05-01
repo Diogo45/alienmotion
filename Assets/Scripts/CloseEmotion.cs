@@ -31,6 +31,7 @@ public class CloseEmotion : MonoBehaviour {
   {
     faceExplanationContainer.gameObject.SetActive(true);
     chestMessage.gameObject.SetActive(false);
+    Audio.component.Stop();
     faceExplanationTitle.GetComponent<Text>().text = "Sinais de " + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name.ToLower();
     faceExplanation.GetComponent<Image>().sprite = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.faceInformation;
     faceExplanation.gameObject.SetActive(true);
@@ -130,7 +131,8 @@ public class CloseEmotion : MonoBehaviour {
     mainScrollView.gameObject.SetActive(false);
     shortExplanation.gameObject.SetActive(false);
     resultScreen.gameObject.SetActive(true);
-    if (true)//(responseCode == PlayerInfo.CORRECT_ANSWEAR)
+    // if (true)
+    if (responseCode == PlayerInfo.CORRECT_ANSWEAR)
     {
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
@@ -183,7 +185,7 @@ public class CloseEmotion : MonoBehaviour {
 
     PlayerInfo.current_step_game = PlayerInfo.STEP_NOT_PLAYING;
 
-    if (PlayerInfo.chestsFound != PlayerInfo.CHESTS_TO_WIN)
+    if (PlayerInfo.chestsFound == PlayerInfo.CHESTS_TO_WIN)
     {
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
