@@ -183,13 +183,14 @@ public class CloseEmotion : MonoBehaviour {
 
     PlayerInfo.current_step_game = PlayerInfo.STEP_NOT_PLAYING;
 
-    if (PlayerInfo.chestsFound == PlayerInfo.CHESTS_TO_WIN)
+    if (PlayerInfo.chestsFound != PlayerInfo.CHESTS_TO_WIN)
     {
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
       {
         tw.WriteLine(Time.time + " segundos: Finalizou todos os minigames\nFim de jogo.");
       }
+      FinalMessage.setFinalAudio();
       endgameMessage.gameObject.SetActive(true);
       PlayerInfo.chestBeingPlayed = 99;
     }

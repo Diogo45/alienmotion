@@ -14,9 +14,16 @@ public class FinalMessage : MonoBehaviour
     finalTextField.GetComponent<Text>().text = PlayerInfo.finalTexts[0];
   }
 
+  public static void setFinalAudio()
+  {
+    Audio.component.clip = PlayerInfo.finalAudios[0];
+    Audio.component.Play();
+  }
+
   public void okButton()
   {
     GameObject.Find("EndgameMessage/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
+    Audio.component.Stop();
     if (finalTextStep + 1 == PlayerInfo.finalTexts.Length)
     {
       Application.Quit();
@@ -24,6 +31,8 @@ public class FinalMessage : MonoBehaviour
     else
     {
       finalTextStep++;
+      Audio.component.clip = PlayerInfo.finalAudios[finalTextStep];
+      Audio.component.Play();
       finalTextField.GetComponent<Text>().text = PlayerInfo.finalTexts[finalTextStep];
     }
   }

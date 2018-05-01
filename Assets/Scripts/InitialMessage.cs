@@ -14,11 +14,16 @@ public class InitialMessage : MonoBehaviour
     initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[0];
   }
 
+  public static void setInitialAudio()
+  {
+    Audio.component.clip = PlayerInfo.initialAudios[0];
+    Audio.component.Play();
+  }
+
   public void okClick()
   {
     GameObject.Find("NewGameCanvas/Image/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
-    GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Intro/1A");
-    // GetComponent<AudioSource>().Play();
+    Audio.component.Stop();
     if (initialTextStep + 1 == PlayerInfo.initialTexts.Length)
     {
       gameObject.SetActive(false);
@@ -27,6 +32,8 @@ public class InitialMessage : MonoBehaviour
     else
     {
       initialTextStep++;
+      Audio.component.clip = PlayerInfo.initialAudios[initialTextStep];
+      Audio.component.Play();
       initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[initialTextStep];
     }
   }
