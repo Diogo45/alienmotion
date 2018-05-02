@@ -21,6 +21,7 @@ public class MiniGameType3 : MiniGame
     {
       sceneElement.Find("MiniGame/image" + i).gameObject.SetActive(true);
       sceneElement.Find("MiniGame/image" + i).GetComponent<Image>().sprite = images[this.currentChallenge][i].image;
+      ImageSelection.SetSingleImageHighlightColor(i, new Color32(255, 255, 255, 255));
       i++;
     }
     while (i < 12)
