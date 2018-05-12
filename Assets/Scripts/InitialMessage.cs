@@ -7,11 +7,14 @@ public class InitialMessage : MonoBehaviour
 {
   public static int initialTextStep = 0;
   public static Transform initialTextField;
+  public static Transform initialImageField;
 
   public static void setInitialText()
   {
     initialTextField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Text").transform;
     initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[0];
+    initialImageField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Image").transform;
+    initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[0];
   }
 
   public static void setInitialAudio()
@@ -35,6 +38,7 @@ public class InitialMessage : MonoBehaviour
       Audio.component.clip = PlayerInfo.initialAudios[initialTextStep];
       Audio.component.Play();
       initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[initialTextStep];
+      initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[initialTextStep];
     }
   }
 }

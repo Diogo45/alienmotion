@@ -11,9 +11,12 @@ public class CloseEmotion : MonoBehaviour {
   Transform faceExplanation;
   Transform faceExplanationTitle;
   Transform resultMessage;
+  Transform resultImage;
   Transform shortExplanation;
   Transform mainScrollView;
   Transform resultScreen;
+  Sprite wrongImage;
+  Sprite correctImage;
 
   public void Start() {
 		endgameMessage = GameObject.Find("EndgameCanvas").transform.Find("EndgameMessage");
@@ -25,6 +28,9 @@ public class CloseEmotion : MonoBehaviour {
     mainScrollView = GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View");
     resultScreen = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen");
     resultMessage = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen/resultMessage");
+    resultImage = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen/resultImage");
+    wrongImage = Resources.Load<Sprite>("UI/erro");
+    correctImage = Resources.Load<Sprite>("UI/acerto");
   }
 
   public void showFaceInformation()
@@ -72,6 +78,7 @@ public class CloseEmotion : MonoBehaviour {
     shortExplanation.gameObject.SetActive(true);
     resultScreen.gameObject.SetActive(false);
 
+    PlayerInfo.challenge_atempts = 0;
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImage1 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     ImageSelection.selectedImages = new LinkedList<int>();
@@ -94,6 +101,7 @@ public class CloseEmotion : MonoBehaviour {
       PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.FinishGame();
       PlayerInfo.current_step_game = PlayerInfo.STEP_FINISHED_MINIGAME;
       resultMessage.GetComponent<Text>().text = "";
+      resultImage.GetComponent<Image>().sprite = null;
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
       {
@@ -141,6 +149,7 @@ public class CloseEmotion : MonoBehaviour {
       }
       PlayerInfo.current_step_game = PlayerInfo.STEP_RECEIVING_POSITIVE_FEEDBACK;
       bool hasNextChallenge = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HasNextChallenge();
+      resultImage.GetComponent<Image>().sprite = correctImage;
       if (hasNextChallenge)
       {
         // responseMessage + próxima etapa
@@ -160,11 +169,20 @@ public class CloseEmotion : MonoBehaviour {
       {
         tw.WriteLine(Time.time + " segundos: Errou a resposta. (" + PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name + ")");
       }
+      resultImage.GetComponent<Image>().sprite = wrongImage;
       // mensagem de falha (não selecionou ou selecionou errado)
       if (responseCode == PlayerInfo.WRONG_ANSWEAR)
       {
-        // "Que pena! Você errou!" + responseMessage
-        resultMessage.GetComponent<Text>().text = "Que pena! Você errou!\n" + responseMessage + "\n\nClique em OK para tentar novamente.";
+        PlayerInfo.challenge_atempts++;
+        if (PlayerInfo.challenge_atempts > PlayerInfo.ATTEMPTS_BEFORE_FAIL)
+        {
+          PlayerInfo.current_step_game = PlayerInfo.STEP_RECEIVING_POSITIVE_FEEDBACK;
+          resultMessage.GetComponent<Text>().text = "Que pena! Você errou pela terceira vez.\n\nClique em OK para seguir para o próximo desafio.";
+        }
+        else {
+          // "Que pena! Você errou!" + responseMessage
+          resultMessage.GetComponent<Text>().text = "Que pena! Você errou!\n" + responseMessage + "\n\nClique em OK para tentar novamente.";
+        }
       }
       else
       {

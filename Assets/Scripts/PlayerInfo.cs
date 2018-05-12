@@ -10,6 +10,8 @@ public class PlayerInfo : MonoBehaviour
   public static int CHESTS_TO_WIN = 6;
   public static int lastChestFound = -1;
   public static int chestBeingPlayed = 99; // -1: Nenhum diálogo na tela / 99: História / 0 ~ 6: Baú
+  public static int challenge_atempts = 0;
+  public const int ATTEMPTS_BEFORE_FAIL = 2;
   public static int current_step_game = -1;
   public const int STEP_NOT_PLAYING = -1;
   public const int STEP_LEARNING_EMOTION = 0;
@@ -18,14 +20,17 @@ public class PlayerInfo : MonoBehaviour
   public const int STEP_FINISHED_MINIGAME = 3;
   public const int STEP_RECEIVING_POSITIVE_FEEDBACK = 4;
   public const int STEP_RECEIVING_NEGATIVE_FEEDBACK = 5;
+  public const int STEP_RECEIVING_NO_MORE_ATEMPTS_FEEDBACK = 7;
   public const int STEP_LEARNING_FACE = 6;
   public const int WRONG_ANSWEAR = -2;
   public const int NOT_SELECTED_ANSWEAR = -1;
   public const int CORRECT_ANSWEAR = 1;
   public static string[] initialTexts;
   public static AudioClip[] initialAudios;
+  public static Sprite[] initialImages;
   public static AudioClip[] finalAudios;
   public static string[] finalTexts;
+  public static Sprite[] finalImages;
   public static string[] CHESTS_TITLE = new string[6]{
     "Alegria",
     "Tristeza",
@@ -50,7 +55,7 @@ public class PlayerInfo : MonoBehaviour
   {
     if (selectedSpecies == 0)
     {
-      initialTexts = new string[]{
+      initialTexts = new string[9]{
         "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.",
         "No entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
         "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando foi falar algo constrangedor? Isso já aconteceu, não é?\n\nPois então, alguns cientistas já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
@@ -61,7 +66,7 @@ public class PlayerInfo : MonoBehaviour
         "As emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
-      initialAudios = new AudioClip[]{
+      initialAudios = new AudioClip[9]{
         Resources.Load<AudioClip>("Audio/Intro/1AC"),
         Resources.Load<AudioClip>("Audio/Intro/2AC"),
         Resources.Load<AudioClip>("Audio/Intro/1C"),
@@ -72,11 +77,25 @@ public class PlayerInfo : MonoBehaviour
         Resources.Load<AudioClip>("Audio/Intro/4AC"),
         Resources.Load<AudioClip>("Audio/Intro/5AC"),
       };
+      initialImages = new Sprite[9]{
+        Resources.Load<Sprite>("UI/Alfred_crianca_ola"),
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        Resources.Load<Sprite>("UI/minimapa"),
+      };
       finalTexts = new string[1]{
         "Agora que já passamos por todas as emoções básicas e aprendemos sobre elas, você ganhou o título de Mestre das Emoções e auxiliou Alfred a entender tudo sobre as emoções! Obrigado pela ajuda e espero que o treinamento tenha contribuído para o seu crescimento assim como contribuiu para o Alfred ser um etzinho melhor!"
       };
-      finalAudios = new AudioClip[]{
+      finalAudios = new AudioClip[1]{
         Resources.Load<AudioClip>("Audio/Ending/6AC"),
+      };
+      finalImages = new Sprite[1]{
+        Resources.Load<Sprite>("UI/fim"),
       };
       CHESTS_TEXT = new string[6]{
         "<b>Alegria</b> é a emoção que mais gostamos de sentir. Ela aparece quando sentimos prazer em algo. Estamos sempre na busca de sentir alegria. Ela faz com que sintamos que nossa vida vale a pena e, através do sorriso, podemos mostrar aos outros quando estamos felizes. Sentimos muuuuita alegria, por exemplo, quando brincamos com os nossos melhores amigos.",
@@ -630,7 +649,7 @@ public class PlayerInfo : MonoBehaviour
     }
     else if (selectedSpecies == 1)
     {
-      initialTexts = new string[]{
+      initialTexts = new string[9]{
         "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.",
         "No entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
         "Você já se perguntou alguma vez o motivo pelo qual temos emoções? E porque choramos? Você já se pegou repensando algo que ia dizer por causa da expressão facial que um amigo fez pra você? E aquele momento em que você foi falar algo em público e ficou com o rosto vermelho? Isso já aconteceu, não é mesmo?",
@@ -641,7 +660,7 @@ public class PlayerInfo : MonoBehaviour
         "As emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
-      initialAudios = new AudioClip[]{
+      initialAudios = new AudioClip[9]{
         Resources.Load<AudioClip>("Audio/Intro/1AC"),
         Resources.Load<AudioClip>("Audio/Intro/2AC"),
         Resources.Load<AudioClip>("Audio/Intro/1A"),
@@ -652,11 +671,25 @@ public class PlayerInfo : MonoBehaviour
         Resources.Load<AudioClip>("Audio/Intro/4AC"),
         Resources.Load<AudioClip>("Audio/Intro/5AC"),
       };
+      initialImages = new Sprite[9]{
+        Resources.Load<Sprite>("UI/Alfred_adulto_ola"),
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        Resources.Load<Sprite>("UI/minimapa"),
+      };
       finalTexts = new string[1]{
         "Pronto! Agora já passamos por todas as emoções básicas e aprendemos sobre elas. Você ganhou o título de Mestre das Emoções e auxiliou Alfred a entender tudo sobre as emoções! Obrigado pela ajuda e espero que o treinamento tenha contribuído para o seu crescimento assim como contribuiu para o Alfred ser um etzinho melhor! Esperamos que você se sinta mais apto a reconhecer e entender as emoções e expressões faciais no seu contexto do dia-a-dia."
       };
-      finalAudios = new AudioClip[]{
+      finalAudios = new AudioClip[1]{
         Resources.Load<AudioClip>("Audio/Ending/6AC"),
+      };
+      finalImages = new Sprite[1]{
+        Resources.Load<Sprite>("UI/fim"),
       };
       CHESTS_TEXT = new string[6]{
         "<b>Alegria</b> é a emoção que mais gostamos de sentir. Ela aparece quando sentimos prazer em algo; e por isso, acaba guiando nossas escolhas e decisões. Ela faz com que sintamos que nossa vida vale a pena e, através do sorriso, podemos transmitir socialmente nosso contentamento. Além disso, a alegria nos ajuda na criação de laços afetivos desde que somos bebês; pois quando sorrimos recebemos mais atenção e afeto de quem está a nossa volta.",
