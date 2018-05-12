@@ -17,6 +17,7 @@ public class CloseEmotion : MonoBehaviour {
   Transform resultScreen;
   Sprite wrongImage;
   Sprite correctImage;
+  AudioClip victorySound;
 
   public void Start() {
 		endgameMessage = GameObject.Find("EndgameCanvas").transform.Find("EndgameMessage");
@@ -31,6 +32,7 @@ public class CloseEmotion : MonoBehaviour {
     resultImage = GameObject.Find("MinigameCanvas").transform.Find("Image/ResultScreen/resultImage");
     wrongImage = Resources.Load<Sprite>("UI/erro");
     correctImage = Resources.Load<Sprite>("UI/acerto");
+    victorySound = Resources.Load<AudioClip>("Audio/tada");
   }
 
   public void showFaceInformation()
@@ -142,6 +144,9 @@ public class CloseEmotion : MonoBehaviour {
     // if (true)
     if (responseCode == PlayerInfo.CORRECT_ANSWEAR)
     {
+      Audio.component.Stop();
+      Audio.component.clip = victorySound;
+      Audio.component.Play();
       string path = "historico.txt";
       using (var tw = new StreamWriter(path, true))
       {
@@ -176,10 +181,21 @@ public class CloseEmotion : MonoBehaviour {
         PlayerInfo.challenge_atempts++;
         if (PlayerInfo.challenge_atempts > PlayerInfo.ATTEMPTS_BEFORE_FAIL)
         {
+          bool hasNextChallenge = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].game.HasNextChallenge();
           PlayerInfo.current_step_game = PlayerInfo.STEP_RECEIVING_POSITIVE_FEEDBACK;
-          resultMessage.GetComponent<Text>().text = "Que pena! Você errou pela terceira vez.\n\nClique em OK para seguir para o próximo desafio.";
+          if (hasNextChallenge)
+          {
+            resultMessage.GetComponent<Text>().text = "Que pena! Você errou pela terceira vez.\n\nClique em OK para seguir para o próximo desafio.";
+          }
+          else
+          {
+            // final de minigame
+            resultImage.GetComponent<Image>().sprite = correctImage;
+            resultMessage.GetComponent<Text>().text = "Que pena! Você errou pela terceira vez.\n\nVocê finalizou todas as etapas deste mini-jogo!\nClique em OK para continuar.";
+          }
         }
-        else {
+        else
+        {
           // "Que pena! Você errou!" + responseMessage
           resultMessage.GetComponent<Text>().text = "Que pena! Você errou!\n" + responseMessage + "\n\nClique em OK para tentar novamente.";
         }
@@ -203,6 +219,7 @@ public class CloseEmotion : MonoBehaviour {
 
     PlayerInfo.current_step_game = PlayerInfo.STEP_NOT_PLAYING;
 
+    // if (true)
     if (PlayerInfo.chestsFound == PlayerInfo.CHESTS_TO_WIN)
     {
       string path = "historico.txt";

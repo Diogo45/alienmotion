@@ -5,7 +5,7 @@ using System;
 
 public class PlayerInfo : MonoBehaviour
 {
-  public static int selectedSpecies = 1; // TODO: Trocar para -1
+  public static int selectedSpecies = 0; // TODO: Trocar para -1
   public static int chestsFound = 0;
   public static int CHESTS_TO_WIN = 6;
   public static int lastChestFound = -1;
@@ -115,7 +115,7 @@ public class PlayerInfo : MonoBehaviour
       };
       gameType0Alegria = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de alegria.",
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione as <b>duas</b> expressões faciais de alegria.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
         "Selecione apenas as expressões faciais de alegria.",
         Resources.Load<Sprite>("MiniGame0Images/Alegria/crianca/faceInfo"),
@@ -196,7 +196,7 @@ public class PlayerInfo : MonoBehaviour
       );
       gameType0Raiva = new MiniGameType3(
         "Selecione a Emoção",
-        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione apenas as expressões faciais de raiva.",
+        "Neste jogo, você encontrará diferentes expressões faciais de uma ou mais emoções. Selecione as <b>duas</b> expressões faciais de raiva.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame3"),
         "Selecione apenas as expressões faciais de raiva.",
         Resources.Load<Sprite>("MiniGame0Images/Raiva/crianca/faceInfo"),
@@ -496,7 +496,7 @@ public class PlayerInfo : MonoBehaviour
       );
       gameType2Medo = new MiniGameType2(
         "Separe as Emoções",
-        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação. Os dois blocos devem conter o mesmo número de imagens.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
         "Arraste as emoções para as caixas corretas.",
         Resources.Load<Sprite>("MiniGame2Images/Medo/crianca/faceInfo"),
@@ -572,7 +572,7 @@ public class PlayerInfo : MonoBehaviour
       );
       gameType2Tristeza = new MiniGameType2(
         "Separe as Emoções",
-        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação.",
+        "A seguir você encontrará várias imagens. Arraste as imagens para o bloco conforme sua classificação. Os dois blocos devem conter o mesmo número de imagens.",
         GameObject.Find("MinigameCanvas").transform.Find("Image/Scroll View/Viewport/Content/MiniGame2"),
         "Arraste as emoções para as caixas corretas.",
         Resources.Load<Sprite>("MiniGame2Images/Tristeza/crianca/faceInfo"),
@@ -693,8 +693,8 @@ public class PlayerInfo : MonoBehaviour
       };
       CHESTS_TEXT = new string[6]{
         "<b>Alegria</b> é a emoção que mais gostamos de sentir. Ela aparece quando sentimos prazer em algo; e por isso, acaba guiando nossas escolhas e decisões. Ela faz com que sintamos que nossa vida vale a pena e, através do sorriso, podemos transmitir socialmente nosso contentamento. Além disso, a alegria nos ajuda na criação de laços afetivos desde que somos bebês; pois quando sorrimos recebemos mais atenção e afeto de quem está a nossa volta.",
-        "A <b>tristeza</b> é a emoção que mais evitamos sentir, afinal, ninguém gosta de ficar triste. Porem, essa é uma emoção tão importante quanto todas as outras. Desde que somos bebês ela nos ajuda na comunicação dos nossos desconfortos, através do choro. Depois que aprendemos a falar, ela continua nos ajudando a aprender com nossos erros e a pensarmos de forma mais profunda e criativa. É a tristeza que nos move a introspecção, a pensarmos melhor sobre os caminhos que a vida nos oferece e a nos colocarmos no lugar do outro. Além disso, o choro, manifestação da tristeza, também facilita a busca por apoio, já que quando choramos aumentamos a probabilidade de chamar a atenção de alguém que possa nos ajudar. Sendo assim, podemos dizer que quando evitamos sentir tristeza a qualquer custo, também nos afastamos de nós mesmos, somos menos autênticos e podemos até nos distanciarmos de quem amamos.",
-        "O <b>medo</b> é a emoção que mais sentimos de forma física. Quando o nosso sistema dessa emoção se ativa, os nossos pensamentos quase que se bloqueiam e utilizamos o sistema de luta ou suga. O nosso corpo se prepara pra reagir antes mesmo de pensarmos o que seria mais correto. Viram como nosso corpo é inteligente? É por isso que muitas vezes podemos fazer coisas estúpidas quando estamos com medo. Porque nos preparamos pra lutar, pra fugir ou pra congelar. Nesse sentido, podemos dizer que quando estamos com medo nós sentimos, agimos e só depois pensamos no que aconteceu.",
+        "A <b>tristeza</b> é a emoção que mais evitamos sentir, afinal, ninguém gosta de ficar triste. Porém, essa é uma emoção tão importante quanto todas as outras. Desde que somos bebês ela nos ajuda na comunicação dos nossos desconfortos, através do choro. Depois que aprendemos a falar, ela continua nos ajudando a aprender com nossos erros e a pensarmos de forma mais profunda e criativa. É a tristeza que nos move a introspecção, a pensarmos melhor sobre os caminhos que a vida nos oferece e a nos colocarmos no lugar do outro. Além disso, o choro, manifestação da tristeza, também facilita a busca por apoio, já que quando choramos aumentamos a probabilidade de chamar a atenção de alguém que possa nos ajudar. Sendo assim, podemos dizer que quando evitamos sentir tristeza a qualquer custo, também nos afastamos de nós mesmos, somos menos autênticos e podemos até nos distanciarmos de quem amamos.",
+        "O <b>medo</b> é a emoção que mais sentimos de forma física. Quando o nosso sistema dessa emoção se ativa, os nossos pensamentos quase que se bloqueiam e utilizamos o sistema de luta ou fuga. O nosso corpo se prepara pra reagir antes mesmo de pensarmos o que seria mais correto. Viram como nosso corpo é inteligente? É por isso que muitas vezes podemos fazer coisas estúpidas quando estamos com medo. Porque nos preparamos pra lutar, pra fugir ou pra congelar. Nesse sentido, podemos dizer que quando estamos com medo nós sentimos, agimos e só depois pensamos no que aconteceu.",
         "O <b>nojo</b> existe pra nos prevenir do risco de contaminação. É ele que nos impede de comer alimentos que poderiam ser tóxicos ou coisas que nos fariam mal. Ele nos protege de bactérias e de doenças e começa a se desenvolver exatamente quando a criança está se preparando pra caminhar; por volta dos dois anos. Não faz todo sentido? Isso porque até ali o bebê era exclusivamente dependente do fornecimento de alimento e cuidados maternos. É por isso que bebês pequenos parecem não sentir nojo de colocar nada na boca. Mas falando nisso, você sabia que existem dois tipos de nojo?\n\nIsso mesmo. Além deste nojo que estávamos falando, existe também o nojo moral; que é aquele nojo que sentimos de um político corrupto ou de um pedófilo, por exemplo, ou de alguém que consideramos que fez algo muito errado. E sabe o que é mais interessante? Que a nossa reação frente aos dois tipos de nojo é a mesma, a de evitação. Queremos nos afastar daquele objeto que nos desperta essa emoção e nossa expressão facial também é a mesma quando estamos falando de algo muito nojento ou de uma pessoa que julgamos da mesma forma. Isso porque o sistema ativado é o mesmo. ",
         "O papel evolutivo da <b>raiva</b> está relacionado a situações nas quais temos que avaliar o custo-benefício de algo. Quando nos sentimos de alguma forma prejudicados, por exemplo, e queremos mostrar que não devemos ser colocados naquela posição novamente. É isso que acontece naquelas momentos que passamos por uma situação desconfortável e depois ficamos um tempão pensando no que devíamos ter respondido pra aquela pessoa que nos desrespeitou de alguma forma.",
         "A <b>surpresa</b> tem bastante a ver com o medo. Inclusive, quando somos crianças, essas são as emoções mais difíceis de se distinguir. É por isso que muitas vezes uma criança pode chorar de susto, mesmo que seja uma surpresa boa, como uma festa de aniversário. Quando sentimos surpresa é como se o nosso corpo se preparasse pra sentir medo, mas o nosso pensamento nos diz que nada de ruim vai acontecer. É como um medo bom. É por isso também, por ser um sistema muito rápido a ser ativado, que muitas vezes não conseguimos fingir gostar de algo que não gostamos quando somos pegos de surpresa.",

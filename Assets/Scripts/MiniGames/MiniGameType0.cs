@@ -14,6 +14,7 @@ public class MiniGameType0: MiniGame
 
   public override void SetupMiniGame()
   {
+    // ativar Progress
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     int i = 0;
     while (i < images[this.currentChallenge].Length)
@@ -26,6 +27,18 @@ public class MiniGameType0: MiniGame
     {
       sceneElement.Find("MiniGame/image" + i).gameObject.SetActive(false);
       i++;
+    }
+
+    int j = 0;
+    while (j <= this.currentChallenge)
+    {
+      // trocar p[j] por imagem preenchida
+      j++;
+    }
+    while (j < images.Length)
+    {
+      // trocar p[j] por imagem oca
+      j++;
     }
   }
 
@@ -42,6 +55,7 @@ public class MiniGameType0: MiniGame
 
   public override void FinishGame()
   {
+    // desativar Progress
     sceneElement.Find("MiniGame").gameObject.SetActive(false);
     GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
     this.currentChallenge = 0;
