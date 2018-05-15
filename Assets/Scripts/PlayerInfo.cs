@@ -13,6 +13,8 @@ public class PlayerInfo : MonoBehaviour
   public static int challenge_atempts = 0;
   public const int ATTEMPTS_BEFORE_FAIL = 2;
   public static int current_step_game = -1;
+  public static Sprite miniGameDoneImg;
+  public static Sprite miniGameToDoImg;
   public const int STEP_NOT_PLAYING = -1;
   public const int STEP_LEARNING_EMOTION = 0;
   public const int STEP_LEARNING_MINIGAME = 1;
@@ -53,38 +55,40 @@ public class PlayerInfo : MonoBehaviour
 
   public static void SetMiniGames()
   {
+    miniGameDoneImg = Resources.Load<Sprite>("UI/progresso_cheio");
+    miniGameToDoImg = Resources.Load<Sprite>("UI/progresso_vazio");
     if (selectedSpecies == 0)
     {
-      initialTexts = new string[9]{
+      initialTexts = new string[6]{
         "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.",
         "No entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
-        "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando foi falar algo constrangedor? Isso já aconteceu, não é?\n\nPois então, alguns cientistas já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
+        "Você sabe porque sentimos as emoções? E porque choramos? Você já estranhou a cara que um amigo fez depois de algo que você disse? Você já ficou vermelho quando falou algo vergonhoso? Isso já aconteceu, não é?\n\nPois então, alguns cientistas já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
         "Alegria, medo, tristeza, raiva, nojo e surpresa. Essas são as emoções básicas ou primárias. Isso porque existem muuuuitas outras emoções que chamamos de secundárias, que são basicamente uma mistura das emoções primárias. Por exemplo, quando sentimos inveja, que é uma emoção secundária, é como se sentíssemos raiva e tristeza ao mesmo tempo.",
-        "Uma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem alguma dessas emoções.",
-        "Vamos pensar:\n\nNão é mais fácil saber quando alguém sente tristeza do que quando alguém sente saudade? Por exemplo, quando você perde algo que você gosta muuuuuito, que cara você faz? É fácil de fazer, não é? Isso porque a tristeza é uma emoção primária que pode ser facilmente vista no rosto.",
-        "Além disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.",
+        // "Uma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais, ou seja, na cara que as pessoas fazem quando sentem alguma dessas emoções.",
+        // "Vamos pensar:\n\nNão é mais fácil saber quando alguém sente tristeza do que quando alguém sente saudade? Por exemplo, quando você perde algo que você gosta muuuuuito, que cara você faz? É fácil de fazer, não é? Isso porque a tristeza é uma emoção primária que pode ser facilmente vista no rosto.",
+        // "Além disso, outra coisa importante de sabermos é que todas as emoções que sentimos tem um por quê. E a partir de agora vamos falar sobre isso.",
         "As emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
-      initialAudios = new AudioClip[9]{
+      initialAudios = new AudioClip[6]{
         Resources.Load<AudioClip>("Audio/Intro/1AC"),
         Resources.Load<AudioClip>("Audio/Intro/2AC"),
         Resources.Load<AudioClip>("Audio/Intro/1C"),
         Resources.Load<AudioClip>("Audio/Intro/2C"),
-        Resources.Load<AudioClip>("Audio/Intro/3C"),
-        Resources.Load<AudioClip>("Audio/Intro/4C"),
-        Resources.Load<AudioClip>("Audio/Intro/5C"),
+        // Resources.Load<AudioClip>("Audio/Intro/3C"),
+        // Resources.Load<AudioClip>("Audio/Intro/4C"),
+        // Resources.Load<AudioClip>("Audio/Intro/5C"),
         Resources.Load<AudioClip>("Audio/Intro/4AC"),
         Resources.Load<AudioClip>("Audio/Intro/5AC"),
       };
-      initialImages = new Sprite[9]{
+      initialImages = new Sprite[6]{
         Resources.Load<Sprite>("UI/Alfred_crianca_ola"),
         null,
         null,
         null,
-        null,
-        null,
-        null,
+        // null,
+        // null,
+        // null,
         null,
         Resources.Load<Sprite>("UI/minimapa"),
       };
@@ -649,37 +653,36 @@ public class PlayerInfo : MonoBehaviour
     }
     else if (selectedSpecies == 1)
     {
-      initialTexts = new string[9]{
-        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.",
-        "No entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
+      initialTexts = new string[6]{
+        "Olá! Este é o Alfred. Ele vem de um planeta muito distante chamado Ogle-TR e foi escolhido, entre muitos, para passar algumas horas aqui no Planeta Terra para virar um mestre das emoções! Se ele conseguir alcançar este objetivo, ele poderá retornar ao seu lar e ensinar para seus amigos como eles podem se relacionar melhor.\n\nNo entanto, o caminho para virar mestre das emoções é muito difícil para um etzinho como Alfred e ele precisará de sua ajuda! Vamos começar!",
         "Você já se perguntou alguma vez o motivo pelo qual temos emoções? E porque choramos? Você já se pegou repensando algo que ia dizer por causa da expressão facial que um amigo fez pra você? E aquele momento em que você foi falar algo em público e ficou com o rosto vermelho? Isso já aconteceu, não é mesmo?",
         "Pois então, cientistas como Darwin já pesquisam isso há muitos anos!\n\nE é sobre isso que queremos falar hoje, sobre as emoções e as expressões faciais delas.",
         "Alegria, medo, tristeza, raiva, nojo e surpresa. Já ouviu falar? Essas são as emoções consideradas básicas ou primárias. Isso porque existem outras centenas de emoções que chamamos de secundárias, como saudade, ansiedade, tranquilidade, inveja, ciúme, e tantas outras. Mas porque secundárias? Secundárias a que? Àquelas primeiras! As básicas. Isso quer dizer que quando sentimos inveja, por exemplo, existe outra emoção por trás disso. Talvez uma raiva misturada com tristeza.",
-        "Ou então quando dizemos que estamos ansiosos: isso significa que na verdade o que estamos sentindo primariamente é medo. Medo de algo que pode acontecer em um futuro breve. Entendeu?",
+        // "Ou então quando dizemos que estamos ansiosos: isso significa que na verdade o que estamos sentindo primariamente é medo. Medo de algo que pode acontecer em um futuro breve. Entendeu?",
         "Uma forma fácil de saber se uma emoção é primária ou secundária é pensando nas expressões faciais. Quando pensamos em raiva, por exemplo, é fácil imaginar alguém expressando essa emoção através do rosto, não é? Mas quando pensamos em fazer cara de tranquilidade, por exemplo, já não é tão fácil assim, não é mesmo? Isso porque raiva é uma emoção primária e tranquilidade é secundária, como já vimos anteriormente.",
-        "As emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
+        // "As emoções primárias tem uma função importante na nossa vida e tiveram um papel muito relevante para a evolução da nossa espécie. Vamos aprender um pouco mais sobre cada uma delas e virar mestre das emoções?",
         "Estamos na Fazenda das Emoções. Nesta fazenda, 6 baús escondem segredos e premiações sobre cada uma das seis emoções básicas. Vença as tarefas escondidas e acumule pontos até se tornar o verdadeiro mestre das emoções.\n\nQual será o primeiro baú?"
       };
-      initialAudios = new AudioClip[9]{
-        Resources.Load<AudioClip>("Audio/Intro/1AC"),
-        Resources.Load<AudioClip>("Audio/Intro/2AC"),
+      initialAudios = new AudioClip[6]{
+        Resources.Load<AudioClip>("Audio/Intro/1AC2AC"),
+        // Resources.Load<AudioClip>("Audio/Intro/2AC"),
         Resources.Load<AudioClip>("Audio/Intro/1A"),
         Resources.Load<AudioClip>("Audio/Intro/2A"),
         Resources.Load<AudioClip>("Audio/Intro/3A"),
-        Resources.Load<AudioClip>("Audio/Intro/4A"),
+        // Resources.Load<AudioClip>("Audio/Intro/4A"),
         Resources.Load<AudioClip>("Audio/Intro/5A"),
-        Resources.Load<AudioClip>("Audio/Intro/4AC"),
+        // Resources.Load<AudioClip>("Audio/Intro/4AC"),
         Resources.Load<AudioClip>("Audio/Intro/5AC"),
       };
-      initialImages = new Sprite[9]{
+      initialImages = new Sprite[6]{
         Resources.Load<Sprite>("UI/Alfred_adulto_ola"),
+        // null,
         null,
         null,
         null,
+        // null,
         null,
-        null,
-        null,
-        null,
+        // null,
         Resources.Load<Sprite>("UI/minimapa"),
       };
       finalTexts = new string[1]{

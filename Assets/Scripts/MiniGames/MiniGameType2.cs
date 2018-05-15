@@ -8,12 +8,14 @@ public class MiniGameType2 : MiniGame
   public MiniGameImage[][] images;
   GameObject imageCellGameObject;
   public string[] oppositeEmotionNames;
+  private Transform progress;
 
   public MiniGameType2(string name, string explanation, Transform sceneElement, string shortExplanation, Sprite faceInformation, MiniGameImage[][] images, string[] oppositeEmotionNames) : base(name, explanation, sceneElement, shortExplanation, faceInformation)
   {
     this.images = images;
     imageCellGameObject = sceneElement.Find("MiniGame").Find("imageCell").gameObject;
     this.oppositeEmotionNames = oppositeEmotionNames;
+    this.progress = GameObject.Find("MinigameCanvas").transform.Find("Image/Progress");
   }
 
   private void cleanCells()
@@ -52,6 +54,7 @@ public class MiniGameType2 : MiniGame
 
   public override void SetupMiniGame()
   {
+    progress.gameObject.SetActive(true);
     sceneElement.Find("MiniGame/Emotions/EmotionsContainer/Text").GetComponent<Text>().text = PlayerInfo.EMOTIONS[PlayerInfo.chestBeingPlayed].name;
     sceneElement.Find("MiniGame/Emotions/NeutralContainer/Text").GetComponent<Text>().text = oppositeEmotionNames[this.currentChallenge];
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
@@ -76,6 +79,19 @@ public class MiniGameType2 : MiniGame
       // sceneElement.Find("MiniGame/Images/image" + i + "/image" + i).gameObject.SetActive(false);
       i++;
     }
+
+
+    int k = 0;
+    while (k <= this.currentChallenge)
+    {
+      progress.Find("p" + k).GetComponent<Image>().sprite = PlayerInfo.miniGameDoneImg;
+      k++;
+    }
+    while (k < images.Length)
+    {
+      progress.Find("p" + k).GetComponent<Image>().sprite = PlayerInfo.miniGameToDoImg;
+      k++;
+    }
   }
 
   public override bool HasNextChallenge()
@@ -91,6 +107,7 @@ public class MiniGameType2 : MiniGame
 
   public override void FinishGame()
   {
+    progress.gameObject.SetActive(false);
     cleanCells();
     sceneElement.Find("MiniGame").gameObject.SetActive(false);
     GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);

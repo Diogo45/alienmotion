@@ -6,15 +6,17 @@ using System;
 public class MiniGameType0: MiniGame
 {
   public MiniGameImage[][] images;
+  private Transform progress;
 
   public MiniGameType0(string name, string explanation, Transform sceneElement, string shortExplanation, Sprite faceInformation, MiniGameImage[][] images) : base(name, explanation, sceneElement, shortExplanation, faceInformation)
   {
     this.images = images;
+    this.progress = GameObject.Find("MinigameCanvas").transform.Find("Image/Progress");
   }
 
   public override void SetupMiniGame()
   {
-    // ativar Progress
+    progress.gameObject.SetActive(true);
     ImageSelection.selectedImage0 = PlayerInfo.NOT_SELECTED_ANSWEAR;
     int i = 0;
     while (i < images[this.currentChallenge].Length)
@@ -32,12 +34,12 @@ public class MiniGameType0: MiniGame
     int j = 0;
     while (j <= this.currentChallenge)
     {
-      // trocar p[j] por imagem preenchida
+      progress.Find("p" + j).GetComponent<Image>().sprite = PlayerInfo.miniGameDoneImg;
       j++;
     }
     while (j < images.Length)
     {
-      // trocar p[j] por imagem oca
+      progress.Find("p" + j).GetComponent<Image>().sprite = PlayerInfo.miniGameToDoImg;
       j++;
     }
   }
@@ -55,7 +57,7 @@ public class MiniGameType0: MiniGame
 
   public override void FinishGame()
   {
-    // desativar Progress
+    progress.gameObject.SetActive(false);
     sceneElement.Find("MiniGame").gameObject.SetActive(false);
     GameObject.Find("MinigameCanvas/Image/shortExplanation").gameObject.SetActive(false);
     this.currentChallenge = 0;
