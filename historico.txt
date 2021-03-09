@@ -3237,3 +3237,25 @@ Fim de jogo.
 5.41239 segundos: Baú encontrado. (Alegria)
 7.97878 segundos: Começou minigame. (Alegria)
 7.97878 segundos: Começou desafio número 1. (Alegria)
+
+
+Começo de jogo!
+Idade escolhida: Criança
+46.96317 segundos: Baú encontrado. (Tristeza)
+52.5685 segundos: Começou minigame. (Tristeza)
+52.5685 segundos: Começou desafio número 1. (Tristeza)
+77.53804 segundos: Errou a resposta. (Tristeza)
+84.16969 segundos: Acertou a resposta. (Tristeza)
+85.02657 segundos: Começou desafio número 11. (Tristeza)
+
+
+Começo de jogo!
+Idade escolhida: Criança
+56.58374 segundos: Baú encontrado. (Raiva)
+60.56399 segundos: Começou minigame. (Raiva)
+60.56399 segundos: Começou desafio número 1. (Raiva)
+61.05648 segundos: Errou a resposta. (Raiva)
+70.45812 segundos: Errou a resposta. (Raiva)
+77.02571 segundos: Errou a resposta. (Raiva)
+86.13199 segundos: Errou a resposta. (Raiva)
+88.37634 segundos: Começou desafio número 11. (Raiva)
