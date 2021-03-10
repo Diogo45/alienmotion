@@ -3259,3 +3259,31 @@ Idade escolhida: Criança
 77.02571 segundos: Errou a resposta. (Raiva)
 86.13199 segundos: Errou a resposta. (Raiva)
 88.37634 segundos: Começou desafio número 11. (Raiva)
+17.93134 segundos: Baú encontrado. (Raiva)
+21.14481 segundos: Começou minigame. (Raiva)
+21.14481 segundos: Começou desafio número 1. (Raiva)
+27.60284 segundos: Errou a resposta. (Raiva)
+28.14309 segundos: Errou a resposta. (Raiva)
+28.49487 segundos: Errou a resposta. (Raiva)
+28.85309 segundos: Errou a resposta. (Raiva)
+29.179 segundos: Errou a resposta. (Raiva)
+29.53276 segundos: Errou a resposta. (Raiva)
+29.90603 segundos: Errou a resposta. (Raiva)
+30.29086 segundos: Errou a resposta. (Raiva)
+30.66402 segundos: Errou a resposta. (Raiva)
+31.04273 segundos: Errou a resposta. (Raiva)
+31.38096 segundos: Errou a resposta. (Raiva)
+31.70993 segundos: Errou a resposta. (Raiva)
+32.02514 segundos: Errou a resposta. (Raiva)
+
+
+Começo de jogo!
+Idade escolhida: Adulto
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Adulto

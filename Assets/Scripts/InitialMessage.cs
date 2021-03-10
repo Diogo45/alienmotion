@@ -5,40 +5,40 @@ using UnityEngine.UI;
 
 public class InitialMessage : MonoBehaviour
 {
-  public static int initialTextStep = 0;
-  public static Transform initialTextField;
-  public static Transform initialImageField;
+    public static int initialTextStep = 0;
+    public static Transform initialTextField;
+    public static Transform initialImageField;
 
-  public static void setInitialText()
-  {
-    initialTextField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Text").transform;
-    initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[0];
-    initialImageField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Image").transform;
-    initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[0];
-  }
-
-  public static void setInitialAudio()
-  {
-    Audio.component.clip = PlayerInfo.initialAudios[0];
-    Audio.component.Play();
-  }
-
-  public void okClick()
-  {
-    GameObject.Find("NewGameCanvas/Image/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
-    Audio.component.Stop();
-    if (initialTextStep + 1 == PlayerInfo.initialTexts.Length)
+    public static void setInitialText()
     {
-      gameObject.SetActive(false);
-      PlayerInfo.chestBeingPlayed = -1;
+        initialTextField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Text").transform;
+        initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[0];
+        initialImageField = GameObject.Find("NewGameCanvas/Image/Scroll View/Viewport/Content/Image").transform;
+        initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[0];
     }
-    else
+
+    public static void setInitialAudio()
     {
-      initialTextStep++;
-      Audio.component.clip = PlayerInfo.initialAudios[initialTextStep];
-      Audio.component.Play();
-      initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[initialTextStep];
-      initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[initialTextStep];
+        Audio.component.clip = PlayerInfo.initialAudios[0];
+        Audio.component.Play();
     }
-  }
+
+    public void okClick()
+    {
+        GameObject.Find("NewGameCanvas/Image/Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
+        Audio.component.Stop();
+        if (initialTextStep + 1 == PlayerInfo.initialTexts.Length)
+        {
+            gameObject.SetActive(false);
+            PlayerInfo.chestBeingPlayed = -1;
+        }
+        else
+        {
+            initialTextStep++;
+            Audio.component.clip = PlayerInfo.initialAudios[initialTextStep];
+            Audio.component.Play();
+            initialTextField.GetComponent<Text>().text = PlayerInfo.initialTexts[initialTextStep];
+            initialImageField.GetComponent<Image>().sprite = PlayerInfo.initialImages[initialTextStep];
+        }
+    }
 }
