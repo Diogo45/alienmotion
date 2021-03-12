@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class QuestionnaireManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     [System.Serializable]
     public struct QuestionnaireUI
     {
@@ -26,7 +25,6 @@ public class QuestionnaireManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
