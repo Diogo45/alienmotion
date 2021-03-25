@@ -10,22 +10,21 @@ namespace Questionnaire
     public class ScreenManager : MonoBehaviour
     {
 
-#if UNITY_EDITOR
         [field: SerializeField]
-#endif
         public int _currentScreen { get; private set; }
 
         [SerializeField]
         private int _screenQuantity;
 
         [SerializeField]
-        private GameObject NextButton, PreviousButton;
+        private TMP_Text PageCounter;
 
         void Start()
         {
             _currentScreen = 0;
             // -2 for the Next and Previous buttons
             _screenQuantity = transform.childCount - 2;
+            PageCounter.text = _currentScreen + "/" + _screenQuantity;
         }
 
         public void Next()
@@ -41,6 +40,9 @@ namespace Questionnaire
                 transform.GetChild(0).gameObject.SetActive(true);
                 QuestionnaireUI.instance.SDData_Final();
             }
+
+            PageCounter.text = _currentScreen + "/" + _screenQuantity;
+
         }
 
 
@@ -51,10 +53,8 @@ namespace Questionnaire
                 transform.GetChild(_currentScreen).gameObject.SetActive(false);
                 transform.GetChild(--_currentScreen).gameObject.SetActive(true);
             }
-            else
-            {
-                
-            }
+
+            PageCounter.text = _currentScreen + "/" + _screenQuantity;
         }
 
 

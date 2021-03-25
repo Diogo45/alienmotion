@@ -33,6 +33,24 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.Register.SetActive(true);
         }
 
+        public void Info_Login()
+        {
+            QuestionnaireManager.instance.UI.Info.SetActive(false);
+            QuestionnaireManager.instance.UI.Login.SetActive(true);
+        }
+
+        public void Login_Info()
+        {
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Login.SetActive(false);
+        }
+
+        public void Login_Game()
+        {
+            QuestionnaireManager.instance.UI.Login.SetActive(false);
+            QuestionnaireManager.instance.Game.SetActive(true);
+        }
+
         public void RegisterType_RegisterTeen()
         {
             QuestionnaireManager.instance.UI.Register.SetActive(false);

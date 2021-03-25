@@ -14,6 +14,7 @@ namespace Questionnaire
         {
             public GameObject WelcomePage;
             public GameObject Info;
+            public GameObject Login;
             public GameObject Register;
             public GameObject LoginParent;
             public GameObject RegisterParent;
@@ -51,6 +52,7 @@ namespace Questionnaire
         public static QuestionnaireManager instance;
 
         [SerializeField] private GameObject Title;
+        [field: SerializeField] public GameObject Game { get; private set; }
 
         private QState _state;
 
@@ -67,6 +69,8 @@ namespace Questionnaire
             {
                 Destroy(gameObject);
             }
+
+           
         }
 
         void Update()

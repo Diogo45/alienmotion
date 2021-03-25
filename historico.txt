@@ -3287,3 +3287,8 @@ Idade escolhida: Criança
 
 Começo de jogo!
 Idade escolhida: Adulto
+
+
+Começo de jogo!
+Idade escolhida: Criança
+18.62563 segundos: Baú encontrado. (Raiva)
