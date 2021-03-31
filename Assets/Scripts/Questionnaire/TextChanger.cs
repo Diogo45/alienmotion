@@ -9,7 +9,6 @@ public class TextChanger : MonoBehaviour
 
     [SerializeField] private TMPro.TMP_Text OutText;
 
-    // Start is called before the first frame update
     void Start()
     {
         OutText.text = _textAsset.Text;
@@ -18,6 +17,7 @@ public class TextChanger : MonoBehaviour
     public void SetText(TextAsset text)
     {
         _textAsset = text;
+        
     }
 
     public void UpdateText()

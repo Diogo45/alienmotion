@@ -7,16 +7,13 @@ using System;
 [CreateAssetMenu()]
 public class RegisterData : ScriptableObject
 {
-    [SerializeField]
-    public string Name;
-    [SerializeField]
     public string CPF;
-    [SerializeField]
     public string BirthDate;
-    [SerializeField]
     public string Email;
 
     [SerializeField]
+    private string _password;
+
     public string Password
     {
         get { return Password; }
@@ -26,8 +23,11 @@ public class RegisterData : ScriptableObject
             {
                 byte[] hashPassword = SHA256.ComputeHash(Encoding.UTF8.GetBytes(value));
 
-                Debug.Log(BitConverter.ToString(hashPassword));
+                _password = BitConverter.ToString(hashPassword);
 
+                //Debug.Log(Password);
+
+                SHA256.Dispose();
             }
         }
     }
@@ -35,13 +35,5 @@ public class RegisterData : ScriptableObject
 
 
 
-    public static void PrintByteArray(byte[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            Debug.Log($"{array[i]:X2}");
-            if ((i % 4) == 3) Debug.Log(" ");
-        }
-
-    }
+    
 }

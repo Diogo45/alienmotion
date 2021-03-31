@@ -17,14 +17,14 @@ namespace Questionnaire
         private int _screenQuantity;
 
         [SerializeField]
-        private TMP_Text PageCounter;
+        private TMP_Text _pageCounter;
 
         void Start()
         {
             _currentScreen = 0;
             // -2 for the Next and Previous buttons
             _screenQuantity = transform.childCount - 2;
-            PageCounter.text = _currentScreen + "/" + _screenQuantity;
+            _pageCounter.text = _currentScreen + "/" + _screenQuantity;
         }
 
         public void Next()
@@ -41,7 +41,7 @@ namespace Questionnaire
                 QuestionnaireUI.instance.SDData_Final();
             }
 
-            PageCounter.text = _currentScreen + "/" + _screenQuantity;
+            _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
 
         }
 
@@ -54,7 +54,7 @@ namespace Questionnaire
                 transform.GetChild(--_currentScreen).gameObject.SetActive(true);
             }
 
-            PageCounter.text = _currentScreen + "/" + _screenQuantity;
+            _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
         }
 
 

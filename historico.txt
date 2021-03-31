@@ -3292,3 +3292,23 @@ Idade escolhida: Adulto
 Começo de jogo!
 Idade escolhida: Criança
 18.62563 segundos: Baú encontrado. (Raiva)
+
+
+Começo de jogo!
+Idade escolhida: Criança
+68.06241 segundos: Baú encontrado. (Raiva)
+75.88792 segundos: Começou minigame. (Raiva)
+75.88792 segundos: Começou desafio número 1. (Raiva)
+77.68304 segundos: Errou a resposta. (Raiva)
+80.77587 segundos: Errou a resposta. (Raiva)
+82.0455 segundos: Errou a resposta. (Raiva)
+84.08418 segundos: Errou a resposta. (Raiva)
+86.92288 segundos: Errou a resposta. (Raiva)
+
+
+Começo de jogo!
+Idade escolhida: Criança
+16.25375 segundos: Baú encontrado. (Surpresa)
+33.8168 segundos: Começou minigame. (Surpresa)
+33.8168 segundos: Começou desafio número 1. (Surpresa)
+34.3236 segundos: Errou a resposta. (Surpresa)

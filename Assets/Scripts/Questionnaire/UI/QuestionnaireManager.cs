@@ -9,18 +9,19 @@ namespace Questionnaire
 {
     public class QuestionnaireManager : MonoBehaviour
     {
+        public static QuestionnaireManager instance;
+
         [System.Serializable]
         public struct QuestionnaireObj
         {
+            public GameObject Title;
             public GameObject WelcomePage;
             public GameObject Info;
             public GameObject Login;
             public GameObject Register;
-            public GameObject LoginParent;
             public GameObject RegisterParent;
             public GameObject TCLE;
             public GameObject SDData;
-            public GameObject LoginTeen;
             public GameObject RegisterTeen;
             public GameObject RegisterFinalScreen;
         }
@@ -48,10 +49,6 @@ namespace Questionnaire
             LoginTeen = Teen & Login,
         }
 
-
-        public static QuestionnaireManager instance;
-
-        [SerializeField] private GameObject Title;
         [field: SerializeField] public GameObject Game { get; private set; }
 
         private QState _state;
@@ -61,7 +58,7 @@ namespace Questionnaire
 
         void Awake()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = this;
             }
@@ -70,11 +67,6 @@ namespace Questionnaire
                 Destroy(gameObject);
             }
 
-           
-        }
-
-        void Update()
-        {
 
         }
 

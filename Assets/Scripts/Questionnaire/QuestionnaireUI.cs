@@ -6,7 +6,7 @@ namespace Questionnaire
 {
     public class QuestionnaireUI : MonoBehaviour
     {
-
+        
         public static QuestionnaireUI instance;
 
         public void Awake()
@@ -31,24 +31,28 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.Info.SetActive(false);
             QuestionnaireManager.instance.UI.Register.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(false);
         }
 
         public void Info_Login()
         {
             QuestionnaireManager.instance.UI.Info.SetActive(false);
             QuestionnaireManager.instance.UI.Login.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(false);
         }
 
         public void Login_Info()
         {
             QuestionnaireManager.instance.UI.Info.SetActive(true);
             QuestionnaireManager.instance.UI.Login.SetActive(false);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
         public void Login_Game()
         {
             QuestionnaireManager.instance.UI.Login.SetActive(false);
             QuestionnaireManager.instance.Game.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
         public void RegisterType_RegisterTeen()
@@ -75,6 +79,22 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.SDData.SetActive(true);
         }
 
+        public void RegisterParent_Info()
+        {
+            QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
+        }
+
+        public void RegisterTeen_Info()
+        {
+            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
+        }
+
+
+
         public void TCLE_RegisterParent()
         {
             QuestionnaireManager.instance.UI.TCLE.SetActive(false);
@@ -91,6 +111,8 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.TCLE.SetActive(false);
             QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
+
         }
 
         public void SDData_Final()
@@ -103,10 +125,12 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.RegisterFinalScreen.SetActive(false);
             QuestionnaireManager.instance.UI.Info.SetActive(false);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
+
         }
 
 
 
-        bool IsNull(GameObject obj) { return obj == null ? true : false; }
+
     } 
 }
