@@ -13,6 +13,8 @@ public class ResgisterParentManager : RegisterManager
 
     [SerializeField] private RegisterData _registerDataTeen;
 
+    //  128             64          32      16          8           4       2      1
+    // [ emailTeen  birthDayTeen  cpfTeen password confirmPassword email birthDate CPF].sum = 255
 
     private void Awake()
     {
@@ -28,16 +30,21 @@ public class ResgisterParentManager : RegisterManager
     private void TeenInputCPF(string arg0)
     {
         _registerDataTeen.CPF = arg0;
+        _fieldsFilled |= 32;
     }
 
     private void TeenInputBirthDate(string arg0)
     {
         _registerDataTeen.BirthDate = arg0;
+        _fieldsFilled |= 64;
+
     }
 
     private void TeenInputEmail(string arg0)
     {
         _registerDataTeen.Email = arg0;
+        _fieldsFilled |= 128;
+
     }
 
     private void Update()

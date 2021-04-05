@@ -29,7 +29,7 @@ public class RegisterManager : MonoBehaviour
 
     //  128 64 32   16          8           4       2      1
     // [ 0  0  0 password confirmPassword email birthDate CPF].sum = 31
-    private byte _fieldsFilled = 0;
+    protected byte _fieldsFilled = 0;
     [SerializeField]
     private byte _fieldsFilledTotal;
 
@@ -95,15 +95,41 @@ public class RegisterManager : MonoBehaviour
 
     public void InputConfirmationPassword(string password)
     {
+        bool mismatch, requirements;
+
         if (!DoesPasswordMatch())
-            _passwordWarning.gameObject.SetActive(true);
+            mismatch = true;
+        else
+            mismatch = false;
+
+        if (!DoesPasswordMeetRequirements())
+            requirements = true;
+        else
+            requirements = false;
+
+
+        if (mismatch || requirements)
+        {
+            _passwordWarning.SetActive(true);
+            if (mismatch && requirements)
+            {
+                _passwordWarningText.text = _passwordMismatchAndRequirements.Text;
+
+            }
+            else if (mismatch)
+            {
+                _passwordWarningText.text = _passwordMismatch.Text;
+            }
+            else if (requirements)
+            {
+                _passwordWarningText.text = _passwordRequirements.Text;
+            }
+        }
         else
         {
-            _registerData.Password = password;
-            _passwordWarning.gameObject.SetActive(false);
+            _passwordWarning.SetActive(false);
 
             _fieldsFilled |= 24;
-           
         }
 
     }
