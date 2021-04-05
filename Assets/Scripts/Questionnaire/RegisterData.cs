@@ -16,7 +16,7 @@ public class RegisterData : ScriptableObject
 
     public string Password
     {
-        get { return Password; }
+        get { return _password; }
         set
         {
             using (SHA256 SHA256 = SHA256.Create())

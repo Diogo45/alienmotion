@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RegisterManager : MonoBehaviour
 {
@@ -23,8 +24,18 @@ public class RegisterManager : MonoBehaviour
     [SerializeField] private TextAsset _passwordRequirements;
     [SerializeField] private TextAsset _passwordMismatchAndRequirements;
 
-    private void Awake()
+
+    [SerializeField] private Button _nextButton;
+
+    //  128 64 32   16          8           4       2      1
+    // [ 0  0  0 password confirmPassword email birthDate CPF].sum = 31
+    private byte _fieldsFilled = 0;
+    [SerializeField]
+    private byte _fieldsFilledTotal;
+
+    protected void Awake()
     {
+       
         _cpfInput.onEndEdit.AddListener(InputCPF);
         _bithDateInput.onEndEdit.AddListener(InputBirthDate);
         _emailInput.onEndEdit.AddListener(InputEmail);
@@ -32,20 +43,37 @@ public class RegisterManager : MonoBehaviour
         _confirmPasswordInput.onEndEdit.AddListener(InputConfirmationPassword);    
     }
 
+    protected void Update()
+    {
+        if(_fieldsFilled == _fieldsFilledTotal) 
+        {
+            _nextButton.interactable = true;
+        }
+        else
+        {
+            _nextButton.interactable = false;
+        }
+    }
+
 
     public void InputCPF(string cpf)
     {
         _registerData.CPF = cpf;
+        _fieldsFilled |= 1;
     }
 
     public void InputBirthDate(string birthDate)
     {
         _registerData.BirthDate = birthDate;
+        _fieldsFilled |= 2;
+
     }
 
     public void InputEmail(string email)
     {
         _registerData.Email = email;
+        _fieldsFilled |= 4;
+
     }
 
     private bool DoesPasswordMatch ()
@@ -73,6 +101,9 @@ public class RegisterManager : MonoBehaviour
         {
             _registerData.Password = password;
             _passwordWarning.gameObject.SetActive(false);
+
+            _fieldsFilled |= 24;
+           
         }
 
     }
@@ -112,6 +143,8 @@ public class RegisterManager : MonoBehaviour
         else
         {
             _passwordWarning.SetActive(false);
+           
+
         }
 
     }
