@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace Questionnaire
 {
-    public class QuestionnaireManager : MonoBehaviour
+    public class QuestionnaireManager : Singleton<QuestionnaireManager>
     {
-        public static QuestionnaireManager instance;
+       
 
         [System.Serializable]
         public struct QuestionnaireObj
@@ -56,18 +56,10 @@ namespace Questionnaire
         [field: SerializeField] public QuestionnaireObj UI { get; private set; }
 
 
-        void Awake()
+
+        public void Awake()
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-
-
+            base.Awake();
         }
 
     }

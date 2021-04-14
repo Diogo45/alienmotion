@@ -4,21 +4,14 @@ using UnityEngine;
 
 namespace Questionnaire
 {
-    public class QuestionnaireUI : MonoBehaviour
+    public class QuestionnaireUI : Singleton<QuestionnaireUI>
     {
         
-        public static QuestionnaireUI instance;
+        
 
         public void Awake()
         {
-            if(instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            base.Awake();
         }
 
         public void Welcome_Info()
@@ -48,11 +41,39 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
-        public void Login_Game()
+        public void LoginWrapper()
         {
-            QuestionnaireManager.instance.UI.Login.SetActive(false);
-            QuestionnaireManager.instance.Game.SetActive(true);
-            QuestionnaireManager.instance.UI.Title.SetActive(true);
+            StartCoroutine(Login_Game());
+        }
+
+
+        public IEnumerator Login_Game()
+        {
+
+            Debug.Log("QUI Waiting " + LoginManager.instance._loginState);
+            StartCoroutine(LoginManager.instance.Login());
+
+            yield return new WaitWhile(() => LoginManager.instance._loginState == LoginManager.LoginState.None);
+
+            Debug.Log("QUI Finised Waiting" + LoginManager.instance._loginState);
+
+            if (LoginManager.instance._loginState == LoginManager.LoginState.Successful)
+            {
+                QuestionnaireManager.instance.UI.Login.SetActive(false);
+                QuestionnaireManager.instance.Game.SetActive(true);
+                QuestionnaireManager.instance.UI.Title.SetActive(true);
+            }
+            else if(LoginManager.instance._loginState == LoginManager.LoginState.PasswordDoesNotMatch)
+            {
+                Debug.LogError("Password Mismatch");
+            }
+            else if (LoginManager.instance._loginState == LoginManager.LoginState.MissingFromDataBase)
+            {
+                Debug.LogError("Missing from Database");
+            }
+
+
+
         }
 
         public void RegisterType_RegisterTeen()
@@ -77,6 +98,8 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);
             QuestionnaireManager.instance.UI.SDData.SetActive(true);
+
+            FirestoreManager.instance.WriteRegisterData();
         }
 
         public void RegisterParent_Info()

@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(), System.Serializable]
 public class RegisterData : ScriptableObject
 {
     public string CPF;
@@ -12,7 +12,8 @@ public class RegisterData : ScriptableObject
     public string Email;
 
     [SerializeField]
-    private string _password;
+    protected string _password;
+
 
     public string Password
     {

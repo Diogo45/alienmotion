@@ -18,7 +18,7 @@ public class RegisterManager : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text _passwordWarningText;
 
 
-    [SerializeField] private RegisterData _registerData;
+    [SerializeField] protected RegisterData _registerData;
 
     [SerializeField] private TextAsset _passwordMismatch;
     [SerializeField] private TextAsset _passwordRequirements;
@@ -128,7 +128,7 @@ public class RegisterManager : MonoBehaviour
         else
         {
             _passwordWarning.SetActive(false);
-
+            _registerData.Password = password;
             _fieldsFilled |= 24;
         }
 
@@ -169,7 +169,7 @@ public class RegisterManager : MonoBehaviour
         else
         {
             _passwordWarning.SetActive(false);
-           
+            _registerData.Password = password;
 
         }
 
