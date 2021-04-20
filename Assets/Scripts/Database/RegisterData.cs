@@ -26,14 +26,19 @@ public class RegisterData : ScriptableObject
 
                 _password = BitConverter.ToString(hashPassword);
 
-                //Debug.Log(Password);
-
                 SHA256.Dispose();
             }
         }
     }
 
+    public void Reset()
+    {
+        CPF = "";
+        BirthDate = "";
+        Email = "";
 
+        _password = "";
+    }
 
 
     

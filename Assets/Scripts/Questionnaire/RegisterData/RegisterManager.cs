@@ -35,7 +35,7 @@ public class RegisterManager : MonoBehaviour
 
     protected void Awake()
     {
-       
+        _registerData.Reset();
         _cpfInput.onEndEdit.AddListener(InputCPF);
         _bithDateInput.onEndEdit.AddListener(InputBirthDate);
         _emailInput.onEndEdit.AddListener(InputEmail);

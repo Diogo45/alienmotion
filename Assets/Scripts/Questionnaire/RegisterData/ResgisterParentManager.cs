@@ -11,6 +11,10 @@ public class ResgisterParentManager : RegisterManager
 
     [SerializeField] private TMPro.TMP_InputField _teenEmailInput;
 
+    [SerializeField] private RegisterDataTeen _teenData;
+
+    private int _teenListIndex = 0;
+
     //[SerializeField] private RegisterDataParent _registerDataParent;
 
     //  128             64          32      16          8           4       2      1
@@ -19,30 +23,42 @@ public class ResgisterParentManager : RegisterManager
     private void Awake()
     {
         base.Awake();
-
+        _teenData.ResetTeen();
+        ((RegisterDataParent)_registerData).ResetParent();
         _teenCpfInput.onEndEdit.AddListener(TeenInputCPF);
         _teenBirthDateInput.onEndEdit.AddListener(TeenInputBirthDate);
         _teenEmailInput.onEndEdit.AddListener(TeenInputEmail);
 
-
     }
+
+
+ 
 
     private void TeenInputCPF(string arg0)
     {
-        ((RegisterDataParent)_registerData).TeenCPF = arg0;
+        ((RegisterDataParent)_registerData).TeenCPF.Add(arg0);
+
+        _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
+        _teenData.CPF = ((RegisterDataParent)_registerData).TeenCPF[_teenListIndex];
+
         _fieldsFilled |= 32;
     }
 
     private void TeenInputBirthDate(string arg0)
     {
-        ((RegisterDataParent)_registerData).TeenBirthDate = arg0;
+        ((RegisterDataParent)_registerData).TeenBirthDate.Add(arg0);
+        _teenData.BirthDate = ((RegisterDataParent)_registerData).TeenBirthDate[_teenListIndex];
         _fieldsFilled |= 64;
 
     }
 
     private void TeenInputEmail(string arg0)
     {
-        ((RegisterDataParent)_registerData).TeenEmail = arg0;
+        ((RegisterDataParent)_registerData).TeenEmail.Add(arg0);
+        _teenData.Email = ((RegisterDataParent)_registerData).TeenEmail[_teenListIndex];
+
+        _teenData.ParentEmail = ((RegisterDataParent)_registerData).Email;
+
         _fieldsFilled |= 128;
 
     }

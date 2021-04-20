@@ -5,7 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(), System.Serializable]
 public class RegisterDataParent : RegisterData
 {
-    public string TeenCPF;
-    public string TeenBirthDate;
-    public string TeenEmail;
+    public List<string> TeenCPF = new List<string>();
+    public List<string> TeenBirthDate = new List<string>();
+    public List<string> TeenEmail = new List<string>();
+
+    public List<string> SocioeconomicAnswers;
+    public List<string> SociodemographicAnswers;
+
+
+    public void ResetParent()
+    {
+        TeenCPF = new List<string>();
+        TeenBirthDate = new List<string>();
+        TeenEmail = new List<string>();
+
+        SociodemographicAnswers = new List<string>();
+        SocioeconomicAnswers = new List<string>();
+
+    }
+
+
 }

@@ -6,8 +6,6 @@ namespace Questionnaire
 {
     public class QuestionnaireUI : Singleton<QuestionnaireUI>
     {
-        
-        
 
         public void Awake()
         {
@@ -99,7 +97,7 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);
             QuestionnaireManager.instance.UI.SDData.SetActive(true);
 
-            FirestoreManager.instance.WriteRegisterData();
+            //FirestoreManager.instance.WriteRegisterData();
         }
 
         public void RegisterParent_Info()
@@ -114,8 +112,9 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
             QuestionnaireManager.instance.UI.Info.SetActive(true);
             QuestionnaireManager.instance.UI.Title.SetActive(true);
-        }
+            StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
 
+        }
 
 
         public void TCLE_RegisterParent()
@@ -142,12 +141,13 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.SDData.SetActive(false);
             QuestionnaireManager.instance.UI.RegisterFinalScreen.SetActive(true);
+            StartCoroutine(FirestoreManager.instance.WriteRegisterParentData());
         }
 
         public void Final_Info()
         {
             QuestionnaireManager.instance.UI.RegisterFinalScreen.SetActive(false);
-            QuestionnaireManager.instance.UI.Info.SetActive(false);
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
             QuestionnaireManager.instance.UI.Title.SetActive(true);
 
         }

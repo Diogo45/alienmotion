@@ -11,7 +11,7 @@ public class LoginManager : Singleton<LoginManager>
     }
 
     [SerializeField] private RegisterData _loginContainer;
-    [SerializeField] private RegisterDataParent _teenData;
+    [SerializeField] private RegisterDataTeen _teenData;
 
     [SerializeField] private TMPro.TMP_InputField _cpfInput;
     [SerializeField] private TMPro.TMP_InputField _passwordInput;
@@ -54,13 +54,13 @@ public class LoginManager : Singleton<LoginManager>
     {
         Reset();
 
-        FirestoreManager.instance.GetLoginData(_loginContainer);
+        FirestoreManager.instance.GetData<RegisterDataTeen>(_loginContainer.CPF);
 
-        yield return new WaitWhile(() => FirestoreManager.instance._responseParent == null);
+        yield return new WaitWhile(() => FirestoreManager.instance._response == null);
 
-        _teenData = FirestoreManager.instance._responseParent;
+        _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
-        if (!_teenData)
+        if (_teenData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
             _loginState = LoginState.MissingFromDataBase;

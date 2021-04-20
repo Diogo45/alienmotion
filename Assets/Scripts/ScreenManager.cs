@@ -13,8 +13,7 @@ namespace Questionnaire
         [field: SerializeField]
         public int _currentScreen { get; private set; }
 
-        [SerializeField]
-        private int _screenQuantity;
+        [field: SerializeField] public int _screenQuantity { get; private set; }
 
         [SerializeField]
         private TMP_Text _pageCounter;
