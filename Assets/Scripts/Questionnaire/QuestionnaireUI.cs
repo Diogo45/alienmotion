@@ -69,6 +69,10 @@ namespace Questionnaire
             {
                 Debug.LogError("Missing from Database");
             }
+            else if (LoginManager.instance._loginState == LoginManager.LoginState.NotAuthorized)
+            {
+                Debug.LogError("Teen is not Authorized");
+            }
 
 
 

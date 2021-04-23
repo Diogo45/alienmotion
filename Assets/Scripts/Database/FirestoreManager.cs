@@ -10,6 +10,9 @@ public class FirestoreManager : Singleton<FirestoreManager>
     [SerializeField] private RegisterDataParent _parentData;
     [SerializeField] private RegisterDataTeen _teenData;
 
+
+    [SerializeField] private SubquestionnaireManager _parentQuestions;
+
     public RegisterData _response { get; private set; }
     [field: SerializeField] public RegisterData _errorData { get; private set; }
 
@@ -47,6 +50,9 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     public IEnumerator WriteRegisterParentData()
     {
+
+        _parentQuestions.WriteAnswers();
+
         RestClient.Put(_firebaseURL + _parentData.CPF + ".json", _parentData);
 
         GetData<RegisterData>(_teenData.CPF);
@@ -71,11 +77,13 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     public void GetData<T>(string cpf) where T : RegisterData
     {
+        _response = null;
+
         Debug.Log("Getting register data for " + cpf);
         RestClient.Get(_firebaseURL + cpf + ".json").Then(response =>
         {
 
-            Debug.Log(response.Text);
+            //Debug.Log(response.Text);
             try
             {
                 T resp = ScriptableObject.CreateInstance<T>();

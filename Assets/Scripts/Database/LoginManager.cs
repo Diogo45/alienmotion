@@ -7,11 +7,12 @@ public class LoginManager : Singleton<LoginManager>
 
     public enum LoginState
     {
-        None, PasswordDoesNotMatch, MissingFromDataBase, Successful
+        None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, Successful
     }
 
     [SerializeField] private RegisterData _loginContainer;
     [SerializeField] private RegisterDataTeen _teenData;
+    [SerializeField] private RegisterDataParent _parentData;
 
     [SerializeField] private TMPro.TMP_InputField _cpfInput;
     [SerializeField] private TMPro.TMP_InputField _passwordInput;
@@ -21,7 +22,7 @@ public class LoginManager : Singleton<LoginManager>
     [SerializeField] private byte _fieldsFilledTotal;
 
     public LoginState _loginState { get; private set; }
-    
+
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class LoginManager : Singleton<LoginManager>
         _fieldsFilled |= 2;
     }
 
-    
+
 
     public IEnumerator Login()
     {
@@ -60,12 +61,25 @@ public class LoginManager : Singleton<LoginManager>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
+        FirestoreManager.instance.GetData<RegisterDataParent>(_teenData.ParentCPF);
+
+        yield return new WaitWhile(() => FirestoreManager.instance._response == null);
+
+        _parentData = FirestoreManager.instance._response as RegisterDataParent;
+
+        if (_parentData.CPF == FirestoreManager.instance._errorData.CPF)
+        {
+            _loginState = LoginState.NotAuthorized;
+
+            yield return null;
+        }
+
         if (_teenData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
             _loginState = LoginState.MissingFromDataBase;
         }
-
+        else
         if (_teenData.Password == _loginContainer.Password)
         {
             _loginState = LoginState.Successful;

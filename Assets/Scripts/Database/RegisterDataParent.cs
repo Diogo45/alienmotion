@@ -9,8 +9,8 @@ public class RegisterDataParent : RegisterData
     public List<string> TeenBirthDate = new List<string>();
     public List<string> TeenEmail = new List<string>();
 
-    public List<string> SocioeconomicAnswers;
-    public List<string> SociodemographicAnswers;
+    public List<string> Questions;
+    public List<string> Answers;
 
 
     public void ResetParent()
@@ -19,8 +19,8 @@ public class RegisterDataParent : RegisterData
         TeenBirthDate = new List<string>();
         TeenEmail = new List<string>();
 
-        SociodemographicAnswers = new List<string>();
-        SocioeconomicAnswers = new List<string>();
+        Answers = new List<string>();
+        Questions = new List<string>();
 
     }
 
