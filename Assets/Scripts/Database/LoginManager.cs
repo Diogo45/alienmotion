@@ -17,6 +17,13 @@ public class LoginManager : Singleton<LoginManager>
     [SerializeField] private TMPro.TMP_InputField _cpfInput;
     [SerializeField] private TMPro.TMP_InputField _passwordInput;
 
+    [SerializeField] private GameObject _warningMessage;
+
+    [SerializeField] private TextAsset _teenNotAuthorized;
+    [SerializeField] private TextAsset _passwordMismatch;
+    [SerializeField] private TextAsset _notRegistered;
+
+
 
     protected byte _fieldsFilled = 0;
     [SerializeField] private byte _fieldsFilledTotal;
@@ -35,6 +42,7 @@ public class LoginManager : Singleton<LoginManager>
     private void Reset()
     {
         _loginState = LoginState.None;
+        _warningMessage.SetActive(false);
     }
 
     public void InputCPF(string cpf)
@@ -70,7 +78,8 @@ public class LoginManager : Singleton<LoginManager>
         if (_parentData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             _loginState = LoginState.NotAuthorized;
-
+            _warningMessage.SetActive(true);
+            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _teenNotAuthorized.Text;
             yield return null;
         }
 
@@ -78,6 +87,8 @@ public class LoginManager : Singleton<LoginManager>
         {
             //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
             _loginState = LoginState.MissingFromDataBase;
+            _warningMessage.SetActive(true);
+            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _notRegistered.Text;
         }
         else
         if (_teenData.Password == _loginContainer.Password)
@@ -88,6 +99,8 @@ public class LoginManager : Singleton<LoginManager>
         {
             //Debug.LogError("The passwords don't match");
             _loginState = LoginState.PasswordDoesNotMatch;
+            _warningMessage.SetActive(true);
+            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _passwordMismatch.Text;
 
         }
 
