@@ -83,7 +83,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
         RestClient.Get(_firebaseURL + cpf + ".json").Then(response =>
         {
 
-            //Debug.Log(response.Text);
+            Debug.Log(response.Text);
             try
             {
                 T resp = ScriptableObject.CreateInstance<T>();
