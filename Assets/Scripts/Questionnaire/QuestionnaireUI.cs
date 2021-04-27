@@ -120,6 +120,14 @@ namespace Questionnaire
 
         }
 
+        public void BackRegisterTeen_Info()
+        {
+            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
+
+        }
+
 
         public void TCLE_RegisterParent()
         {

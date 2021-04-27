@@ -15,11 +15,11 @@ G:/UnityProjects/alienmotion
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53519
+28613
 Successfully changed project path to: G:/UnityProjects/alienmotion
 G:/UnityProjects/alienmotion
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 68.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 27.10 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,1027 @@ Initialize mono
 Mono path[0] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56528
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56704
 Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001045 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 23.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.745 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000504 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.657 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1198 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.5 MB.
+System memory in use after: 67.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1652.
+Total: 1.211000 ms (FindLiveObjects: 0.105900 ms CreateObjectMapping: 0.027600 ms MarkObjects: 1.024900 ms  DeleteObjects: 0.051900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/NewLayer.terrainlayer
+  artifactKey: Guid(a22003fba72f49641a32847188e1295b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NewLayer.terrainlayer using Guid(a22003fba72f49641a32847188e1295b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a74ee66d583270c4b6cb433f1c2ac4f') in 0.087590 seconds
+  Import took 0.091990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 252.148038 seconds.
+  path: Assets/Scripts/EmotionTasks
+  artifactKey: Guid(08ebe8bfcbd12ec498299534762a3d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks using Guid(08ebe8bfcbd12ec498299534762a3d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c76f23c8afc103e2814bb4f9544431') in 0.005718 seconds
+  Import took 0.010394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Scripts/EmotionTasks
+  artifactKey: Guid(08ebe8bfcbd12ec498299534762a3d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks using Guid(08ebe8bfcbd12ec498299534762a3d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c76f23c8afc103e2814bb4f9544431') in 0.002591 seconds
+  Import took 0.004411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.910658 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c632f6011b0516b3d9ebc4e99bc2b7') in 0.021756 seconds
+  Import took 0.023651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 272.576986 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8335cc2ac2f03a10dff64e34ce60eb4') in 0.002108 seconds
+  Import took 0.006339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001067 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8335cc2ac2f03a10dff64e34ce60eb4') in 0.001360 seconds
+  Import took 0.003071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.879239 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3d8d46bb65c1066793d60268237167') in 0.001513 seconds
+  Import took 0.004991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.369939 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6991757f834dddeef9d9ea880dc81f8b') in 0.002303 seconds
+  Import took 0.004162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001293 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6991757f834dddeef9d9ea880dc81f8b') in 0.001431 seconds
+  Import took 0.003240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.090397 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '847c4688e2bf617c279cd9a8e038b99e') in 0.002979 seconds
+  Import took 0.004643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.918903 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '085674f4826097a4f96d3a0ed282ecc8') in 0.002153 seconds
+  Import took 0.006084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.205887 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc10e4c181fdf8c9a22a4eb047d2fe2e') in 0.002059 seconds
+  Import took 0.003908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.494310 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e510ac6dd5298092f04271b116676fd4') in 0.001807 seconds
+  Import took 0.005143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.267211 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122a7fe05fa2060f14aa4cb3a402ddcd') in 0.003138 seconds
+  Import took 0.007420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.153133 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '449199c132e5f47a9aa89283f2b6f217') in 0.002102 seconds
+  Import took 0.005714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001398 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '449199c132e5f47a9aa89283f2b6f217') in 0.001327 seconds
+  Import took 0.002984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.391568 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4030e3718fbb213b5392f5759a96d40d') in 0.001527 seconds
+  Import took 0.005045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.226946 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c188d3ba453b4b91699f1583a36a4de') in 0.005203 seconds
+  Import took 0.006876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.396747 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a04b7aa47508dda603379a48006a3ab') in 0.002609 seconds
+  Import took 0.004242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.238690 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fe0ee45e9b97bc0a53cf0c566dc6867') in 0.002916 seconds
+  Import took 0.006312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.146504 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c59f5a516bf4c42c8f61ca38f75936b') in 0.005738 seconds
+  Import took 0.007367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.058323 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6015a2dc7e17906c17af06fd7851ae6e') in 0.001539 seconds
+  Import took 0.004744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.707069 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d820ac73085e9aec3ac0984481edea') in 0.004253 seconds
+  Import took 0.005862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.449956 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a93b8c627a5404491d8ff22f64ee044f') in 0.003010 seconds
+  Import took 0.006098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.768145 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0119b3ebd8261d6283051b3e93db1350') in 0.002399 seconds
+  Import took 0.004866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.036259 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431c4b852b7840280248ff8afe21f62a') in 0.002796 seconds
+  Import took 0.006105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 152.693017 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5cddc03e3b7fe90be887f588073ca3') in 0.002110 seconds
+  Import took 0.004409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 305.462191 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7566eeda9a5ff5d9528f1a9a6f32487') in 0.003153 seconds
+  Import took 0.006033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000846 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7566eeda9a5ff5d9528f1a9a6f32487') in 0.001900 seconds
+  Import took 0.004209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.680751 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1679300f2e3cf3a47bc57b5425733ec') in 0.002723 seconds
+  Import took 0.006556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.831136 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5a57ed4fbc51968c1f9674a8a90320f') in 0.002246 seconds
+  Import took 0.004123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5a57ed4fbc51968c1f9674a8a90320f') in 0.001416 seconds
+  Import took 0.003060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.752662 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1c4e68f461e65aa0bf5d4b2a562415') in 0.001635 seconds
+  Import took 0.005511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.469772 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23214e7d38198f7c1a79eff8ae3552ae') in 0.002821 seconds
+  Import took 0.006124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000709 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23214e7d38198f7c1a79eff8ae3552ae') in 0.005367 seconds
+  Import took 0.012603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.781534 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ece60aefdd510973ed6294d9e444007') in 0.002467 seconds
+  Import took 0.004252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000660 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ece60aefdd510973ed6294d9e444007') in 0.002901 seconds
+  Import took 0.004843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.697228 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121ac50833d876ab0c2a2850f441b7e1') in 0.003721 seconds
+  Import took 0.005504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.335826 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7adde6f450c9b4688df511c004c060af') in 0.001792 seconds
+  Import took 0.003598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001524 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7adde6f450c9b4688df511c004c060af') in 0.002257 seconds
+  Import took 0.003953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.363772 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c48f9abc1268a8f648a658ad47ac43') in 0.002334 seconds
+  Import took 0.003921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.982577 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4582952e082651ba2811f2c612479cf7') in 0.002198 seconds
+  Import took 0.003849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.638961 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3f78fc22112d6808f5b72f2cf44452') in 0.001770 seconds
+  Import took 0.003436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000865 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3f78fc22112d6808f5b72f2cf44452') in 0.001391 seconds
+  Import took 0.003225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.220551 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544aafe9d13a9a520179d1d3e4b59a07') in 0.002823 seconds
+  Import took 0.006263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.962250 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7558fa9ebef00e0f335984ff560b99d1') in 0.002491 seconds
+  Import took 0.007984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.134306 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a8b675dc03bfe29791ba1d744140c8') in 0.001697 seconds
+  Import took 0.005315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.067964 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a0f5e7e726d93926ff4a7428818a39') in 0.003041 seconds
+  Import took 0.004749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.958837 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7009f12780528a85f24d07c4bf530739') in 0.001897 seconds
+  Import took 0.004124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.314571 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5652725cbeea701883fa80cfaf291e55') in 0.002251 seconds
+  Import took 0.003902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.180714 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb99e2b796a1374e2d4cdda0117a72c') in 0.001863 seconds
+  Import took 0.003501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.017604 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da51a73b55ee9595e8400f6d86ead81c') in 0.004424 seconds
+  Import took 0.008025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.220955 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795744a64044534fa31f62d3dfecf50e') in 0.005731 seconds
+  Import took 0.008261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.557380 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76b38584fcc593302efaf9c2186fd16b') in 0.003297 seconds
+  Import took 0.005384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000613 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76b38584fcc593302efaf9c2186fd16b') in 0.003668 seconds
+  Import took 0.006087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.804165 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba05c857c9732837a3231d7fb500115') in 0.001811 seconds
+  Import took 0.003780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000997 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba05c857c9732837a3231d7fb500115') in 0.001633 seconds
+  Import took 0.003317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.774855 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643628519bdad21e7efa4881b4708647') in 0.002428 seconds
+  Import took 0.005830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000844 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643628519bdad21e7efa4881b4708647') in 0.001696 seconds
+  Import took 0.003365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.011084 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f72e6a6f23889adba61203dd38f501b9') in 0.001725 seconds
+  Import took 0.003533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001485 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f72e6a6f23889adba61203dd38f501b9') in 0.001541 seconds
+  Import took 0.003586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.386933 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e9b06969e93964221c982d8f5073dc') in 0.003213 seconds
+  Import took 0.005061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.779911 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a05328ab8b92b3161dbf93551db6f4') in 0.001973 seconds
+  Import took 0.003736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.309703 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e99c6b995d5ec1d86284faad4682f4') in 0.002434 seconds
+  Import took 0.004216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.786772 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb25a1a323fd442dc2ff7108e9d05ec9') in 0.003704 seconds
+  Import took 0.007718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.789949 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5658d3866a728ca23518e3e55afb29ec') in 0.002497 seconds
+  Import took 0.004290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000707 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5658d3866a728ca23518e3e55afb29ec') in 0.001318 seconds
+  Import took 0.003197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.840216 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b512e2fa71709ad809a8542efebf2c24') in 0.001878 seconds
+  Import took 0.003591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.776900 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a4d62352c07714f333af6d4b6388cd0') in 0.001884 seconds
+  Import took 0.005607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.701136 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28347ce7a1ad32e834a081572615865b') in 0.004642 seconds
+  Import took 0.007436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002067 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28347ce7a1ad32e834a081572615865b') in 0.001381 seconds
+  Import took 0.003786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.216270 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e28b2f6d037da57f7cc04b8084fb923') in 0.002539 seconds
+  Import took 0.004286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.488747 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9a9eeaeba1e5c796cbc99545f781485') in 0.002886 seconds
+  Import took 0.004803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001199 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9a9eeaeba1e5c796cbc99545f781485') in 0.001592 seconds
+  Import took 0.003485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.470694 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af782b7868f3c9697ceac204f7f3dce') in 0.001629 seconds
+  Import took 0.005022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af782b7868f3c9697ceac204f7f3dce') in 0.001252 seconds
+  Import took 0.002907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.597568 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '097c21e4d9a3c58446b7236da3d21b58') in 0.006103 seconds
+  Import took 0.008335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '097c21e4d9a3c58446b7236da3d21b58') in 0.002106 seconds
+  Import took 0.004342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.061331 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6e91baa36d031efc0bcb88707f8127') in 0.002037 seconds
+  Import took 0.003841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001282 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6e91baa36d031efc0bcb88707f8127') in 0.001439 seconds
+  Import took 0.003352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.789675 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b9079d3fa20b2c43630b24a1dcdfc1') in 0.002791 seconds
+  Import took 0.004395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.296794 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0959d2a02e27e557e8fa9afbce2c540d') in 0.002127 seconds
+  Import took 0.003896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.855920 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e389cede424353e20e666a9f439694e') in 0.003460 seconds
+  Import took 0.005234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.632996 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129f55ff7dcf139cc6a6bd10d4348fa6') in 0.002537 seconds
+  Import took 0.004896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000475 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129f55ff7dcf139cc6a6bd10d4348fa6') in 0.001386 seconds
+  Import took 0.003066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.524889 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba1c5bd92a27fe93021adbdfdd794b4') in 0.001911 seconds
+  Import took 0.004136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000916 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba1c5bd92a27fe93021adbdfdd794b4') in 0.001418 seconds
+  Import took 0.003241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.819095 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b90da749f2ab906ce26df813e25eea') in 0.004469 seconds
+  Import took 0.006772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001187 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b90da749f2ab906ce26df813e25eea') in 0.003293 seconds
+  Import took 0.005135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 277.877484 seconds.
+  path: Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs
+  artifactKey: Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EmotionTasks/EmotionCategorizationTask.cs using Guid(86432adc070719e4d865c7f0f3f0f850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e3e4e2b6b941e99642ee9f09ef14467') in 0.001869 seconds
+  Import took 0.003860 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.4 MB.
+System memory in use after: 69.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1661.
+Total: 1.318200 ms (FindLiveObjects: 0.168200 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.095100 ms  DeleteObjects: 0.013400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001677 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.168 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1664.
+Total: 2.158900 ms (FindLiveObjects: 0.182200 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.909700 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002418 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.804 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1667.
+Total: 2.079800 ms (FindLiveObjects: 0.263300 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.726800 ms  DeleteObjects: 0.031100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000507 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.601 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1670.
+Total: 1.154200 ms (FindLiveObjects: 0.120000 ms CreateObjectMapping: 0.029600 ms MarkObjects: 0.992100 ms  DeleteObjects: 0.011000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000562 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.648 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1673.
+Total: 1.206900 ms (FindLiveObjects: 0.118500 ms CreateObjectMapping: 0.030600 ms MarkObjects: 1.045300 ms  DeleteObjects: 0.011600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000682 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.626 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1676.
+Total: 1.296300 ms (FindLiveObjects: 0.125200 ms CreateObjectMapping: 0.033900 ms MarkObjects: 1.122100 ms  DeleteObjects: 0.013500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000616 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.646 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1679.
+Total: 1.586100 ms (FindLiveObjects: 0.139100 ms CreateObjectMapping: 0.044700 ms MarkObjects: 1.388300 ms  DeleteObjects: 0.012800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.588 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1682.
+Total: 1.217500 ms (FindLiveObjects: 0.120700 ms CreateObjectMapping: 0.033400 ms MarkObjects: 1.049400 ms  DeleteObjects: 0.012900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000516 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.557 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1685.
+Total: 1.107700 ms (FindLiveObjects: 0.106900 ms CreateObjectMapping: 0.028400 ms MarkObjects: 0.961400 ms  DeleteObjects: 0.010400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000507 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.607 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1688.
+Total: 1.227800 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.035300 ms MarkObjects: 1.024300 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000478 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.575 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1181 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.5 MB.
+System memory in use after: 69.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1691.
+Total: 1.282900 ms (FindLiveObjects: 0.112200 ms CreateObjectMapping: 0.030600 ms MarkObjects: 1.128500 ms  DeleteObjects: 0.010500 ms)
+

@@ -79,17 +79,23 @@ public class FirestoreManager : Singleton<FirestoreManager>
     {
         _response = null;
 
+        if(cpf == "")
+        {
+            _response = _errorData;
+            return;
+        }
+
+
         Debug.Log("Getting register data for " + cpf);
         RestClient.Get(_firebaseURL + cpf + ".json").Then(response =>
         {
-
-            Debug.Log(response.Text);
+            // Debug.Log(response.Text);
             try
             {
                 T resp = ScriptableObject.CreateInstance<T>();
                 JsonUtility.FromJsonOverwrite(response.Text, resp);
                 _response = resp;
-                Debug.Log(_response.CPF);
+                //Debug.Log(_response.CPF);
             }
             catch (Exception e)
             {
