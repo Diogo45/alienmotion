@@ -27,6 +27,7 @@ public class EmotionCategorizationTask : MonoBehaviour
     [SerializeField] private GameObject _expScreen;
     [SerializeField] private GameObject _trialCompleteScreen;
     [SerializeField] private GameObject _halfPointScreen;
+    [SerializeField] private GameObject _endScreen;
 
     [SerializeField] private Button _nextButton;
 
@@ -63,21 +64,12 @@ public class EmotionCategorizationTask : MonoBehaviour
             return;
         }
 
-
         _emotionChoiceShow.SetActive(false);
-
-
 
         _trialCompleteScreen.SetActive(true);
 
         _nextButton.onClick.RemoveAllListeners();
         _nextButton.onClick.AddListener(Next);
-
-        //foreach (var item in _toggleList)
-        //{
-        //    item.isOn = false;
-        //}
-
 
     }
 
@@ -128,7 +120,7 @@ public class EmotionCategorizationTask : MonoBehaviour
             _currentImageIndex++;
         else
         {
-            Debug.Log("End");
+            _endScreen.SetActive(true);
             return;
         }
 
