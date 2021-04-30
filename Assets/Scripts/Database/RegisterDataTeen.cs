@@ -9,6 +9,7 @@ public class RegisterDataTeen : RegisterData
     public string ParentCPF;
     public string ParentEmail;
 
+    public int Week;
     public void ResetTeen()
     {
         Reset();

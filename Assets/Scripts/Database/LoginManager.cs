@@ -94,6 +94,7 @@ public class LoginManager : Singleton<LoginManager>
         if (_teenData.Password == _loginContainer.Password)
         {
             _loginState = LoginState.Successful;
+            PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
         }
         else
         {

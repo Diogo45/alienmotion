@@ -7,12 +7,7 @@ using UnityEngine.UI;
 
 public class EmotionCategorizationTask : MonoBehaviour
 {
-    [System.Serializable]
-    public struct Answer
-    {
-        public string file;
-        public string emotion;
-    }
+    
 
     [SerializeField] private ToggleGroup toggleGroup;
     //For some reason unity's toggleGroup.SetAllOff does not work
@@ -35,8 +30,11 @@ public class EmotionCategorizationTask : MonoBehaviour
     private float _showCrossForSeconds = 1f;
 
     [SerializeField] private Image _imageField;
-    [SerializeField] private List<Sprite> _emotionList;
+    private List<Sprite> _emotionList;
 
+    [SerializeField] private List<Sprite> _emotionList01;
+    [SerializeField] private List<Sprite> _emotionList02;
+    [SerializeField] private List<Sprite> _emotionList03;
 
     [SerializeField] private Answer[] _emotionAnswers;
     private string _emotionAnswer;
@@ -49,11 +47,27 @@ public class EmotionCategorizationTask : MonoBehaviour
 
     private void Awake()
     {
+        switch (EmotionHuntersController.instance.Week)
+        {
+            case 1:
+                _emotionList = _emotionList01;
+                break;
+            case 2:
+                _emotionList = _emotionList02;
+                break;
+            case 3:
+                _emotionList = _emotionList03;
+                break;
+        }
+
+
         _emotionList = _emotionList.OrderBy(a => Guid.NewGuid()).ToList();
         _imageField.sprite = _emotionList[0];
         _emotionAnswers = new Answer[_emotionList.Count];
         _emotionAnswer = "";
     }
+
+    
 
 
     public void NextTrial()
@@ -97,7 +111,7 @@ public class EmotionCategorizationTask : MonoBehaviour
     {
         if (_currentImageIndex >= _emotionList.Count / 2 && !_halfPoint)
         {
-            _showImageForSeconds = 0.5f;
+            _showImageForSeconds = 1f;
             _halfPointScreen.SetActive(true);
             _halfPoint = true;
             return;
