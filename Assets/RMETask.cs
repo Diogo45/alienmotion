@@ -57,7 +57,6 @@ public class RMETask : MonoBehaviour
     public void RunImage()
     {
         _imageField.sprite = _imageList[_currentImageIndex];
-        _currentImageIndex++;
     }
 
     public void Next()
@@ -69,6 +68,18 @@ public class RMETask : MonoBehaviour
         }
 
         _RMETAnswers[_currentImageIndex] = new Answer { file = _imageField.sprite.name, emotion = _answer };
+
+        _answer = "";
+
+        if (_currentImageIndex + 1 < _imageList.Count)
+            _currentImageIndex++;
+        else
+        {
+            _endScreen.SetActive(true);
+            return;
+        }
+
+        RunImage();
 
 
     }

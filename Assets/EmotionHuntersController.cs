@@ -21,8 +21,8 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     private void Awake()
     {
         base.Awake();
-
-        StartCoroutine(GetTeenData());
+        Week = 1;
+        // StartCoroutine(GetTeenData());
     }
 
     private IEnumerator GetTeenData()
