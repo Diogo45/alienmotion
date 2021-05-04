@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class RMETask : MonoBehaviour
 {
     [SerializeField] private GameObject _beginScreen;
-    [SerializeField] private GameObject _expScreen;
-    [SerializeField] private GameObject _trialCompleteScreen;
-    [SerializeField] private GameObject _halfPointScreen;
+    [SerializeField] private GameObject _imageScreen;
+    [SerializeField] private GameObject _trialCorrect;
+    [SerializeField] private GameObject _trialIncorrect;
     [SerializeField] private GameObject _endScreen;
 
     [SerializeField] private Button _nextButton;
+    [SerializeField] private Button _nextTrialButton;
 
     [SerializeField] private Image _imageField;
     private List<Sprite> _imageList;
@@ -26,6 +27,7 @@ public class RMETask : MonoBehaviour
     [field: SerializeField]
     public int _currentImageIndex { get; private set; }
 
+    private string _trialAnswer = "2";
 
     private void Awake()
     {
@@ -50,9 +52,68 @@ public class RMETask : MonoBehaviour
 
     public void StartTrial()
     {
-        _expScreen.SetActive(false);
+        _beginScreen.SetActive(false);
+        _imageScreen.SetActive(true);
+        RunImageTrial();
+    }
+
+
+    public void NextFromTrial()
+    {
+
+        if (_answer == _trialAnswer)
+        {
+            _imageScreen.SetActive(false);
+            _trialCorrect.SetActive(true);
+
+            
+            
+
+        }
+        else
+        {
+            _imageScreen.SetActive(false);
+            _trialIncorrect.SetActive(true);
+        }
+
+        _answer = "";
+
+
+    }
+
+
+    public void TrialIncorretTrialAgain()
+    {
+        _trialIncorrect.SetActive(false);
+        _imageScreen.SetActive(true);
+    }
+
+    public void TrialCorrect()
+    {
+        _trialCorrect.SetActive(false);
+        _imageScreen.SetActive(true);
+        _currentImageIndex++;
+        
+        _nextButton.gameObject.SetActive(true);
+        _nextTrialButton.gameObject.SetActive(false);
+
         RunImage();
     }
+
+
+    public void RunImageTrial()
+    {
+        _imageField.sprite = _imageList[0];
+    }
+
+    public void StartTest()
+    {
+        //_beginScreen.SetActive(false);
+        _imageScreen.SetActive(true);
+
+        RunImage();
+    }
+
 
     public void RunImage()
     {
@@ -61,7 +122,7 @@ public class RMETask : MonoBehaviour
 
     public void Next()
     {
-        if(_answer == "")
+        if (_answer == "")
         {
             _nextButton.interactable = false;
             return;
@@ -87,15 +148,19 @@ public class RMETask : MonoBehaviour
 
     public void Answer01()
     {
+
+
+
         _answer = "1";
         _nextButton.interactable = true;
+
+
 
     }
 
     public void Answer02()
     {
         _answer = "2";
-        _RMETAnswers[_currentImageIndex] = new Answer { file = _imageField.sprite.name, emotion = _answer };
         _nextButton.interactable = true;
 
     }
@@ -103,7 +168,6 @@ public class RMETask : MonoBehaviour
     public void Answer03()
     {
         _answer = "3";
-        _RMETAnswers[_currentImageIndex] = new Answer { file = _imageField.sprite.name, emotion = _answer };
         _nextButton.interactable = true;
 
     }
@@ -111,7 +175,6 @@ public class RMETask : MonoBehaviour
     public void Answer04()
     {
         _answer = "4";
-        _RMETAnswers[_currentImageIndex] = new Answer { file = _imageField.sprite.name, emotion = _answer };
         _nextButton.interactable = true;
 
     }

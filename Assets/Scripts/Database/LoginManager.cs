@@ -58,6 +58,27 @@ public class LoginManager : Singleton<LoginManager>
     }
 
 
+    public void WriteGameData()
+    {
+
+        if(_teenData.Week == 0)
+        {
+            _teenData.Week = 1;
+
+            _teenData.ECTAnswers01 = new List<Answer>();
+            _teenData.ECTAnswers02 = new List<Answer>();
+            _teenData.ECTAnswers03 = new List<Answer>();
+
+            _teenData.RMETAnswers01 = new List<Answer>();
+            _teenData.RMETAnswers02 = new List<Answer>();
+            _teenData.RMETAnswers03 = new List<Answer>();
+
+        }
+
+        FirestoreManager.instance.WriteGameTeenData(_teenData);
+
+
+    }
 
     public IEnumerator Login()
     {
@@ -95,6 +116,11 @@ public class LoginManager : Singleton<LoginManager>
         {
             _loginState = LoginState.Successful;
             PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
+
+            // Write new data such as week  if not written before
+
+            WriteGameData();
+
         }
         else
         {
