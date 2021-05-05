@@ -7,7 +7,7 @@ public class LoginManager : Singleton<LoginManager>
 
     public enum LoginState
     {
-        None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, Successful
+        None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, WeekLimit , Successful
     }
 
     [SerializeField] private RegisterData _loginContainer;
@@ -22,6 +22,7 @@ public class LoginManager : Singleton<LoginManager>
     [SerializeField] private TextAsset _teenNotAuthorized;
     [SerializeField] private TextAsset _passwordMismatch;
     [SerializeField] private TextAsset _notRegistered;
+    [SerializeField] private TextAsset _weekLimit;
 
 
 
@@ -58,27 +59,7 @@ public class LoginManager : Singleton<LoginManager>
     }
 
 
-    public void WriteGameData()
-    {
 
-        if(_teenData.Week == 0)
-        {
-            _teenData.Week = 1;
-
-            _teenData.ECTAnswers01 = new List<Answer>();
-            _teenData.ECTAnswers02 = new List<Answer>();
-            _teenData.ECTAnswers03 = new List<Answer>();
-
-            _teenData.RMETAnswers01 = new List<Answer>();
-            _teenData.RMETAnswers02 = new List<Answer>();
-            _teenData.RMETAnswers03 = new List<Answer>();
-
-        }
-
-        FirestoreManager.instance.WriteGameTeenData(_teenData);
-
-
-    }
 
     public IEnumerator Login()
     {
@@ -114,12 +95,38 @@ public class LoginManager : Singleton<LoginManager>
         else
         if (_teenData.Password == _loginContainer.Password)
         {
-            _loginState = LoginState.Successful;
-            PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
 
-            // Write new data such as week  if not written before
+            if (_teenData.Date == System.DateTime.MinValue)
+            {
+                _teenData.ECTAnswers01 = new List<Answer>();
+                _teenData.ECTAnswers02 = new List<Answer>();
+                _teenData.ECTAnswers03 = new List<Answer>();
 
-            WriteGameData();
+                _teenData.RMETAnswers01 = new List<Answer>();
+                _teenData.RMETAnswers02 = new List<Answer>();
+                _teenData.RMETAnswers03 = new List<Answer>();
+
+                _teenData.Week = 1;
+
+                FirestoreManager.instance.WriteGameTeenData(_teenData);
+
+            }
+            else
+            {
+                if (System.DateTime.Now.Subtract(_teenData.Date).Days < 7)
+                {
+                    _warningMessage.SetActive(true);
+                    _warningMessage.GetComponent<TMPro.TMP_Text>().text = _weekLimit.Text;
+                    _loginState = LoginState.WeekLimit;
+                    
+                }
+                else
+                {
+                    _loginState = LoginState.Successful;
+                    PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
+
+                }
+            }
 
         }
         else

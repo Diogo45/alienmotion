@@ -30,6 +30,8 @@ public class EDAETask : MonoBehaviour
 
     private void Awake()
     {
+
+
         _pageCount = _questions.Count / _questionUI.Count;
         _questionDropdown = new TMPro.TMP_Dropdown[_questionUI.Count];
         _questionText = new TMPro.TMP_Text[_questionUI.Count];

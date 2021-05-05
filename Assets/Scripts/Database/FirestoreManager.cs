@@ -25,6 +25,11 @@ public class FirestoreManager : Singleton<FirestoreManager>
     }
 
     
+    public void WriteTeenUpdate(RegisterDataTeen data)
+    {
+        RestClient.Put(_firebaseURL + data.CPF + ".json", data);
+    }
+
     public IEnumerator WriteRegisterTeenData()
     {
 
