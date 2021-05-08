@@ -53,7 +53,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     public void WriteGameTeenData(RegisterDataTeen _data)
     {
-        RestClient.Put(_firebaseURL + _data.CPF + ".json", _teenData);
+        RestClient.Put(_firebaseURL + _data.CPF + ".json", _data);
     }
 
 
@@ -95,7 +95,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
         }
 
 
-        Debug.Log("Getting register data for " + cpf);
+        //Debug.Log("Getting register data for " + cpf);
         RestClient.Get(_firebaseURL + cpf + ".json").Then(response =>
         {
             // Debug.Log(response.Text);

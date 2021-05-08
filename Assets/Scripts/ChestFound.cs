@@ -20,31 +20,31 @@ public class ChestFound : MonoBehaviour
         chestText = scrollViewTransform.Find("Viewport/Content/chestMessage").GetComponent<Text>();
     }
 
-    void OnControllerColliderHit(ControllerColliderHit target)
-    {
-        if (target.gameObject.tag.Equals("Chest") == true)
-        {
-            int chestFoundNumber = target.gameObject.GetComponent<ChestInfo>().chestNumber;
-            chestTitle.text = PlayerInfo.EMOTIONS[chestFoundNumber].name;
-            chestText.text = PlayerInfo.EMOTIONS[chestFoundNumber].description;
-            Audio.component.clip = PlayerInfo.EMOTIONS[chestFoundNumber].audioDescription;
-            Audio.component.Play();
-            scrollView.verticalNormalizedPosition = 1f;
-            PlayerInfo.chestBeingPlayed = chestFoundNumber;
+    //void OnControllerColliderHit(ControllerColliderHit target)
+    //{
+    //    if (target.gameObject.tag.Equals("Chest") == true)
+    //    {
+    //        int chestFoundNumber = target.gameObject.GetComponent<ChestInfo>().chestNumber;
+    //        chestTitle.text = PlayerInfo.EMOTIONS[chestFoundNumber].name;
+    //        chestText.text = PlayerInfo.EMOTIONS[chestFoundNumber].description;
+    //        Audio.component.clip = PlayerInfo.EMOTIONS[chestFoundNumber].audioDescription;
+    //        Audio.component.Play();
+    //        scrollView.verticalNormalizedPosition = 1f;
+    //        PlayerInfo.chestBeingPlayed = chestFoundNumber;
 
-            chestAnim = target.gameObject.GetComponent<Animator>();
-            chestAnim.SetBool("found", true);
-            target.gameObject.tag = "ChestFound";
+    //        chestAnim = target.gameObject.GetComponent<Animator>();
+    //        chestAnim.SetBool("found", true);
+    //        target.gameObject.tag = "ChestFound";
 
-            string path = "historico.txt";
-            using (var tw = new StreamWriter(path, true))
-            {
-                tw.WriteLine(Time.time + " segundos: Baú encontrado. (" + PlayerInfo.EMOTIONS[chestFoundNumber].name + ")");
-            }
+    //        string path = "historico.txt";
+    //        using (var tw = new StreamWriter(path, true))
+    //        {
+    //            tw.WriteLine(Time.time + " segundos: Baú encontrado. (" + PlayerInfo.EMOTIONS[chestFoundNumber].name + ")");
+    //        }
 
-            StartCoroutine(ShowChestInfo());
-        }
-    }
+    //        StartCoroutine(ShowChestInfo());
+    //    }
+    //}
 
     IEnumerator ShowChestInfo()
     {

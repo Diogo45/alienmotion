@@ -96,7 +96,7 @@ public class LoginManager : Singleton<LoginManager>
         if (_teenData.Password == _loginContainer.Password)
         {
 
-            if (_teenData.Date == System.DateTime.MinValue)
+            if (_teenData.Week == 0)
             {
                 _teenData.ECTAnswers01 = new List<Answer>();
                 _teenData.ECTAnswers02 = new List<Answer>();
@@ -110,6 +110,8 @@ public class LoginManager : Singleton<LoginManager>
 
                 FirestoreManager.instance.WriteGameTeenData(_teenData);
 
+                PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
+                _loginState = LoginState.Successful;
             }
             else
             {

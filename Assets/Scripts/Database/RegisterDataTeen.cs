@@ -40,7 +40,11 @@ public class RegisterDataTeen : RegisterData
     public List<Answer> ECTAnswers02;
     public List<Answer> ECTAnswers03;
 
-    
+    public List<Answer> EDAEAnswers01;
+    public List<Answer> EDAEAnswers02;
+    public List<Answer> EDAEAnswers03;
+
+
     public void ResetTeen()
     {
         Reset();

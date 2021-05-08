@@ -84,7 +84,7 @@ public class EDAETask : MonoBehaviour
 
         for (int i = 0; i < _questionText.Length; i++)
         {
-            Debug.Log(_questionIndex);
+            // Debug.Log(_questionIndex);
             if (_questionIndex + i > _questions.Count - 1)
             {
                 _questionUI[i].SetActive(false);
@@ -99,12 +99,7 @@ public class EDAETask : MonoBehaviour
         _pageUI.text = (_pageIndex + 1) + "/" + (Mathf.FloorToInt(_pageCount) + 1);
     }
 
-    public void End()
-    {
-        _questionsScreen.SetActive(false);
-        _endScreen.SetActive(true);
-    }
-
+  
     public void Begin()
     {
         _beginScreen.SetActive(false);

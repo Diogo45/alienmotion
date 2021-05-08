@@ -31,6 +31,7 @@ public class EmotionCategorizationTask : MonoBehaviour
 
     [SerializeField] private Image _imageField;
     private List<Sprite> _emotionList;
+    [SerializeField] private Sprite _testImage;
 
     [SerializeField] private List<Sprite> _emotionList01;
     [SerializeField] private List<Sprite> _emotionList02;
@@ -81,7 +82,7 @@ public class EmotionCategorizationTask : MonoBehaviour
         _emotionChoiceShow.SetActive(false);
 
         _trialCompleteScreen.SetActive(true);
-
+        _imageField.sprite = _emotionList[_currentImageIndex];
         _nextButton.onClick.RemoveAllListeners();
         _nextButton.onClick.AddListener(Next);
 
@@ -96,6 +97,7 @@ public class EmotionCategorizationTask : MonoBehaviour
     public void StartTrial()
     {
         _expScreen.SetActive(false);
+        _imageField.sprite = _testImage;
         StartCoroutine(RunImage());
     }
 

@@ -16,32 +16,32 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (PlayerInfo.chestBeingPlayed == -1)
-        {
-            var x = Input.GetAxis("Horizontal") * Time.deltaTime * 30.0f;
-            var z = Input.GetAxis("Vertical") * Time.deltaTime * 30.0f;
+        //if (PlayerInfo.chestBeingPlayed == -1)
+        //{
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 30.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 30.0f;
 
-            if (x != 0 || z != 0)
+        if (x != 0 || z != 0)
+        {
+            if (x < 0)
             {
-                if (x < 0)
-                {
-                    sprite.flipX = true;
-                }
-                else
-                {
-                    sprite.flipX = false;
-                }
-                anim.SetBool("walking", true);
-                controller.Move(new Vector3(x, 0, z));
+                sprite.flipX = true;
             }
             else
             {
-                anim.SetBool("walking", false);
+                sprite.flipX = false;
             }
+            anim.SetBool("walking", true);
+            controller.Move(new Vector3(x, 0, z));
         }
         else
         {
             anim.SetBool("walking", false);
         }
+        //}
+        //else
+        //{
+        //anim.SetBool("walking", false);
+        //}
     }
 }
