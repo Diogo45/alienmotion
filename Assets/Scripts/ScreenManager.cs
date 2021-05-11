@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using UnityEngine.Events;
 
 namespace Questionnaire
 {
@@ -18,12 +18,16 @@ namespace Questionnaire
         [SerializeField]
         private TMP_Text _pageCounter;
 
+        public UnityEvent OnEndScreens; 
+        
         void Start()
         {
             _currentScreen = 0;
             // -2 for the Next and Previous buttons
             _screenQuantity = transform.childCount - 2;
-            _pageCounter.text = _currentScreen + "/" + _screenQuantity;
+
+            if(_pageCounter)
+                _pageCounter.text = _currentScreen + "/" + _screenQuantity;
         }
 
         public void Next()
@@ -37,10 +41,11 @@ namespace Questionnaire
             {
                 transform.GetChild(_currentScreen).gameObject.SetActive(false);
                 transform.GetChild(0).gameObject.SetActive(true);
-                QuestionnaireUI.instance.SDData_Final();
+                OnEndScreens.Invoke();
             }
 
-            _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
+            if (_pageCounter)
+                _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
 
         }
 
@@ -53,7 +58,8 @@ namespace Questionnaire
                 transform.GetChild(--_currentScreen).gameObject.SetActive(true);
             }
 
-            _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
+            if (_pageCounter)
+                _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
         }
 
 
