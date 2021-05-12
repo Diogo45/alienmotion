@@ -32,7 +32,7 @@ public class DragAndDropGameManager : MonoBehaviour
     [SerializeField] private List<SpriteAnswer> _trial02;
     [SerializeField] private List<SpriteAnswer> _trial03;
 
-    
+
 
     private int _currentSprite;
     private int _currentSnapPoint;
@@ -41,13 +41,22 @@ public class DragAndDropGameManager : MonoBehaviour
     [SerializeField] private Sprite _defaultSprite;
 
     public int _currentTrial;
+    public int[] _imgsPerTrial = { 4, 6, 8 };
 
     private void Awake()
     {
-        for (int i = 0; i < _draggables.Count; i++)
+        for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
+        {
+            _draggables[i].SetActive(true);
+
+        }
+
+        for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
         {
             _draggables[i].GetComponent<Image>().sprite = _trial01[i].Sprite;
         }
+
+
 
         _previousButton.gameObject.SetActive(false);
         _nextButton.onClick.RemoveAllListeners();
@@ -62,6 +71,20 @@ public class DragAndDropGameManager : MonoBehaviour
     {
         if (_currentSprite == -1)
         {
+            if (_dropPoints[id].GetComponent<Image>().sprite != _defaultSprite)
+            {
+                if (id < _dropPoints.Count / 2f)
+                {
+                    _emotion01.RemoveAll(x => x.Sprite.name == _dropPoints[id].GetComponent<Image>().sprite.name);
+                }
+                else
+                {
+                    _emotion02.RemoveAll(x => x.Sprite.name == _dropPoints[id].GetComponent<Image>().sprite.name);
+                }
+            }
+
+
+            _dropPoints[id].GetComponent<Image>().sprite = _defaultSprite;
             return;
         }
 
@@ -69,7 +92,19 @@ public class DragAndDropGameManager : MonoBehaviour
         {
             if (_dropPoints[i].GetComponent<Image>().sprite.name == _draggables[_currentSprite].GetComponent<Image>().sprite.name)
             {
+
+                if (i < _dropPoints.Count / 2f)
+                {
+                    _emotion01.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
+                }
+                else
+                {
+                    _emotion02.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
+                }
+
                 _dropPoints[i].GetComponent<Image>().sprite = _defaultSprite;
+
+                
             }
 
         }
@@ -77,7 +112,7 @@ public class DragAndDropGameManager : MonoBehaviour
         _currentSnapPoint = id;
         _dropPoints[id].GetComponent<Image>().sprite = _draggables[_currentSprite].GetComponent<Image>().sprite;
 
-        if(id < _dropPoints.Count / 2f)
+        if (id < _dropPoints.Count / 2f)
         {
             switch (_currentTrial)
             {
@@ -112,16 +147,24 @@ public class DragAndDropGameManager : MonoBehaviour
 
     }
 
-  
+
 
     private bool CheckAnswer()
     {
-        if (_emotion01.Count < _dropPoints.Count / 2f || _emotion02.Count < _dropPoints.Count / 2f)
+        if (_emotion01.Count < _imgsPerTrial[_currentTrial] / 2f)
             return false;
+
+
+        if (_emotion02.Count < _imgsPerTrial[_currentTrial] / 2f)
+            return false;
+
+
+
+
 
         foreach (var item in _emotion01)
         {
-            if(item.emotion != 0)
+            if (item.emotion != 0)
             {
                 return false;
             }
@@ -156,13 +199,13 @@ public class DragAndDropGameManager : MonoBehaviour
             {
 
                 case 1:
-                    for (int i = 0; i < _draggables.Count; i++)
+                    for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _draggables[i].GetComponent<Image>().sprite = _trial02[i].Sprite;
                     }
                     break;
                 case 2:
-                    for (int i = 0; i < _draggables.Count; i++)
+                    for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _draggables[i].GetComponent<Image>().sprite = _trial03[i].Sprite;
                     }
@@ -221,7 +264,7 @@ public class DragAndDropGameManager : MonoBehaviour
     {
         if (CheckAnswer())
         {
-           // _minigameScreen.SetActive(false);
+            // _minigameScreen.SetActive(false);
             _rightScreen.SetActive(true);
 
             _nextButton.onClick.RemoveAllListeners();
@@ -232,9 +275,9 @@ public class DragAndDropGameManager : MonoBehaviour
         {
             _errorCount++;
 
-            if(_errorCount >= 3)
+            if (_errorCount >= 3)
             {
-               // _minigameScreen.SetActive(false);
+                // _minigameScreen.SetActive(false);
                 _wrongThriceScreen.SetActive(true);
 
                 _nextButton.onClick.RemoveAllListeners();
@@ -245,7 +288,7 @@ public class DragAndDropGameManager : MonoBehaviour
             }
             else
             {
-               // _minigameScreen.SetActive(false);
+                // _minigameScreen.SetActive(false);
                 _wrongOnceScreen.SetActive(true);
 
                 _nextButton.onClick.RemoveAllListeners();
@@ -263,17 +306,24 @@ public class DragAndDropGameManager : MonoBehaviour
 
         if (_currentTrial < 3)
         {
+
+            for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
+            {
+                _draggables[i].SetActive(true);
+
+            }
+
             switch (_currentTrial)
             {
 
                 case 1:
-                    for (int i = 0; i < _draggables.Count; i++)
+                    for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _draggables[i].GetComponent<Image>().sprite = _trial02[i].Sprite;
                     }
                     break;
                 case 2:
-                    for (int i = 0; i < _draggables.Count; i++)
+                    for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _draggables[i].GetComponent<Image>().sprite = _trial03[i].Sprite;
                     }
@@ -285,7 +335,7 @@ public class DragAndDropGameManager : MonoBehaviour
         }
         else
         {
-          
+
 
             //_minigameScreen.SetActive(false);
             _finalScreen.SetActive(true);

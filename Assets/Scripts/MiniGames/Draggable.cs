@@ -12,6 +12,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public UnityEvent<int> OnSpriteDrag;
 
+    [SerializeField] public GridLayoutGroup _layout;
+
     [SerializeField]
     private int _id;
 
@@ -23,13 +25,15 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
-        
+        _layout.enabled = false;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.localPosition = _startPosition;
         GetComponent<Image>().raycastTarget = true;
+        _layout.enabled = true;
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
