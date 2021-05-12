@@ -27,8 +27,6 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
     [SerializeField] private GameObject _miniGameIntervention;
 
-
-    [SerializeField] private AudioSource _voiceOverAudio;
     [SerializeField] private AudioSource _musicAudio;
 
     public int Week { get; private set; }
@@ -48,7 +46,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _EDAETask.SetActive(false);
 
         Debug.Log("WEEK IS HARDCODED TO ONE");
-        Week = 1;
+        Week = 2;
 
         if (Week == 1)
         {
@@ -73,6 +71,12 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         // StartCoroutine(GetTeenData());
     }
 
+
+    public void StartGame()
+    {
+        _playerMovement.enabled = true;
+        _playerCharacterController.enabled = true;
+    }
 
     public void End()
     {

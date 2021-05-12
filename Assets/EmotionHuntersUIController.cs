@@ -18,6 +18,8 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     public void IntroAlfredToGame()
     {
 
+        IntroAlfred.SetActive(false);
+        EmotionHuntersController.instance.StartGame();
     }
 
 
