@@ -28,7 +28,7 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     {
 
         IntroAlfred.SetActive(false);
-        EmotionHuntersController.instance.StartGame();
+        EmotionHuntersController.instance.EnableMovement();
     }
 
     public void SadToMinigame()
@@ -36,21 +36,50 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
         Sadness.SetActive(false);
         SadnessMinigame.SetActive(true);
     }
+
+    public void SadMinigameToGame()
+    {
+        SadnessMinigame.SetActive(false);
+        EmotionHuntersController.instance.EnableMovement();
+    }
+
+
+
     public void AngerToMinigame()
     {
         Anger.SetActive(false);
         AngerMinigame.SetActive(true);
     }
+
+    public void AngerMinigameToGame()
+    {
+        AngerMinigame.SetActive(false);
+        EmotionHuntersController.instance.EnableMovement();
+    }
+
     public void FearToMinigame()
     {
         Fear.SetActive(false);
         FearMinigame.SetActive(true);
     }
+
+    public void FearMinigameToGame()
+    {
+        FearMinigame.SetActive(false);
+        EmotionHuntersController.instance.EnableMovement();
+    }
+
     public void NeutralToMinigame()
     {
         Neutral.SetActive(false);
         NeutralMinigame.SetActive(true);
     }
 
+
+    public void NeutralMinigameToGame()
+    {
+        NeutralMinigame.SetActive(false);
+        EmotionHuntersController.instance.EnableMovement();
+    }
 
 }

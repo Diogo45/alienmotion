@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DragAndDropGameManager : MonoBehaviour
@@ -39,6 +40,8 @@ public class DragAndDropGameManager : MonoBehaviour
     private int _errorCount = 0;
 
     [SerializeField] private Sprite _defaultSprite;
+
+    [SerializeField] private UnityEvent OnEndMiniGame;
 
     public int _currentTrial;
     public int[] _imgsPerTrial = { 4, 6, 8 };
@@ -93,14 +96,7 @@ public class DragAndDropGameManager : MonoBehaviour
             if (_dropPoints[i].GetComponent<Image>().sprite.name == _draggables[_currentSprite].GetComponent<Image>().sprite.name)
             {
 
-                if (i < _dropPoints.Count / 2f)
-                {
-                    _emotion01.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
-                }
-                else
-                {
-                    _emotion02.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
-                }
+
 
                 _dropPoints[i].GetComponent<Image>().sprite = _defaultSprite;
 
@@ -242,7 +238,6 @@ public class DragAndDropGameManager : MonoBehaviour
 
     public void Right()
     {
-        Debug.Log("Right");
 
         _rightScreen.SetActive(false);
 
@@ -255,8 +250,8 @@ public class DragAndDropGameManager : MonoBehaviour
 
     public void Final()
     {
-        Debug.Log("Final");
         _finalScreen.SetActive(false);
+        OnEndMiniGame.Invoke();
     }
 
 

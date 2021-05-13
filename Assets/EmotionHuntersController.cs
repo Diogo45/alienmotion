@@ -72,10 +72,16 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     }
 
 
-    public void StartGame()
+    public void EnableMovement()
     {
         _playerMovement.enabled = true;
         _playerCharacterController.enabled = true;
+    }
+
+    public void DisableMovement()
+    {
+        _playerMovement.enabled = false;
+        _playerCharacterController.enabled = false;
     }
 
     public void End()
