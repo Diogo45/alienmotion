@@ -61,8 +61,6 @@ public class DragAndDropGameManager : MonoBehaviour
             _draggables[i].GetComponent<Image>().sprite = _trial01[i].Sprite;
         }
 
-
-
         _previousButton.gameObject.SetActive(false);
         _nextButton.onClick.RemoveAllListeners();
 

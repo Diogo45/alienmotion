@@ -1,0 +1,957 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.1f1 (77a89f25062f) revision 7841951'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.985; Version 2004; 64bit' Language: 'en' Physical Memory: 24506 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+F:\Progam Files\UnityHub\2020.3.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+G:/UnityProjects/alienmotion
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+51821
+Successfully changed project path to: G:/UnityProjects/alienmotion
+G:/UnityProjects/alienmotion
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 33.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.1f1 (77a89f25062f)
+[Subsystems] Discovering subsystems at path F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/UnityProjects/alienmotion/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Vendor:   
+    VRAM:     8079 MB
+    Driver:   27.21.14.6627
+Initialize mono
+Mono path[0] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Managed'
+Mono path[1] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001075 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 28.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in 13.670 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.656 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1210 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.3 MB.
+System memory in use after: 68.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1666.
+Total: 1.316300 ms (FindLiveObjects: 0.117100 ms CreateObjectMapping: 0.033100 ms MarkObjects: 1.104900 ms  DeleteObjects: 0.059800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Fonts/Letters for Learners SDF.asset
+  artifactKey: Guid(47771e97883e2264caeb0ecaf2c4611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Letters for Learners SDF.asset using Guid(47771e97883e2264caeb0ecaf2c4611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60a09a03d9676dc09744593d481e1675') in 0.409079 seconds
+  Import took 0.419814 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000596 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.695 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1192 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.4 MB.
+System memory in use after: 70.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1711.
+Total: 1.297600 ms (FindLiveObjects: 0.121500 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.121000 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 14223.468971 seconds.
+  path: Assets/ImagensMiniJogos
+  artifactKey: Guid(702a1ca1bfa8b1843a0bc990a92845dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos using Guid(702a1ca1bfa8b1843a0bc990a92845dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16099949392fcc38e20f02b900cb612e') in 0.007956 seconds
+  Import took 0.011938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 934.490645 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza
+  artifactKey: Guid(74a5a3c22c10b6049827d409f8f84d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza using Guid(74a5a3c22c10b6049827d409f8f84d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0fcc5a1bb7e6d125c49cabb8dd297de') in 0.006215 seconds
+  Import took 0.008677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.770762 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza
+  artifactKey: Guid(ad8f5554282b6734d84674748934e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza using Guid(ad8f5554282b6734d84674748934e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e1ab005e5bd02ac4f48072e827b31a') in 0.005610 seconds
+  Import took 0.007284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070413 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg
+  artifactKey: Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg using Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e04deb5afca0ee552b2d261a22facf9') in 0.264760 seconds
+  Import took 0.266761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg
+  artifactKey: Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg using Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc2d8e4910c8d0760ea8320cff8e462') in 0.014362 seconds
+  Import took 0.016127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG
+  artifactKey: Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG using Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b3b2568bda5e9fe12ef3f249ba0358') in 0.015548 seconds
+  Import took 0.017796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG
+  artifactKey: Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG using Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d2c6a531239ca6a3565a6cf2977828') in 0.013628 seconds
+  Import took 0.015592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.034713 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo
+  artifactKey: Guid(4e437e91ba45f624798b7e12f4e16aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo using Guid(4e437e91ba45f624798b7e12f4e16aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c194419587b040fe23cbef3501cd7442') in 0.007946 seconds
+  Import took 0.010432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.174723 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza
+  artifactKey: Guid(deec97e7a5a5fba419e034d873160681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza using Guid(deec97e7a5a5fba419e034d873160681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14fe0520c56552379d5f73e69297efa') in 0.006113 seconds
+  Import took 0.007839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.919681 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg
+  artifactKey: Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg using Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02be68d432fd48e0de2fd5143dd49821') in 0.012153 seconds
+  Import took 0.013904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg
+  artifactKey: Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg using Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc000480f6c0cb7ae91a2b17335f521') in 0.020168 seconds
+  Import took 0.022101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg
+  artifactKey: Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg using Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e795c00d38fab07742d0378ebe09db8') in 0.018576 seconds
+  Import took 0.020748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg
+  artifactKey: Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg using Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ce073c19594f012746a00a9c88b7c3') in 0.009857 seconds
+  Import took 0.011468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg
+  artifactKey: Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg using Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d9d4d1059e1705f941e38aa82b85f5') in 0.008014 seconds
+  Import took 0.009608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg
+  artifactKey: Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg using Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba7fef7425c8343f7067921d3f76e71d') in 0.009414 seconds
+  Import took 0.011309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg
+  artifactKey: Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg using Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8be02935f496d670b0b0d30595dfdbc') in 0.008972 seconds
+  Import took 0.010901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg
+  artifactKey: Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg using Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca5621b74059a36b31c5b9290716a54') in 0.008337 seconds
+  Import took 0.010601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg
+  artifactKey: Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg using Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d932df07393c13862b141dfd09e543f') in 0.007276 seconds
+  Import took 0.008957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg
+  artifactKey: Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg using Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b6ded95f74cf737c80b46f0419a3ce') in 0.009552 seconds
+  Import took 0.011142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg
+  artifactKey: Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg using Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '126954e06d22de1b6b6db6f3097f3b73') in 0.007748 seconds
+  Import took 0.009747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg
+  artifactKey: Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg using Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74bd0ecffaf79186191e2d4dfa647a72') in 0.007980 seconds
+  Import took 0.010000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg
+  artifactKey: Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg using Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7129487746a3684806afe6aa576c546') in 0.008918 seconds
+  Import took 0.011215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg
+  artifactKey: Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg using Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd59d9c190c8a6fd6d1aeadc85f7d4d9c') in 0.009444 seconds
+  Import took 0.011104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.448353 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg
+  artifactKey: Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg using Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94cc81bf6250b7f51dce75901c1f315c') in 0.037533 seconds
+  Import took 0.039572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.058376 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg
+  artifactKey: Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg using Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b068280bf0fdd033e60a1a14ebca2d') in 0.012718 seconds
+  Import took 0.016751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg
+  artifactKey: Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg using Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d97eea39c64ef7e350a5e5fd0dfda4') in 0.015306 seconds
+  Import took 0.017371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg
+  artifactKey: Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg using Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72fa574df747c888e18d74f5d9a6d2fb') in 0.014386 seconds
+  Import took 0.016654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg
+  artifactKey: Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg using Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '298a141339307677eac17e996cc35ab1') in 0.014706 seconds
+  Import took 0.016429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg
+  artifactKey: Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg using Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c171e4b7a5307a2c67b9b7f88950651') in 0.012341 seconds
+  Import took 0.014070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg
+  artifactKey: Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg using Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c48b915a5bf9ab254089352b1377b5') in 0.014846 seconds
+  Import took 0.016468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg
+  artifactKey: Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg using Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203726a1c8ff4eb78710653f8ef06af5') in 0.021454 seconds
+  Import took 0.023379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg
+  artifactKey: Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg using Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1176b2613dfdd82c4d4f902523ecb3') in 0.018612 seconds
+  Import took 0.021344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG
+  artifactKey: Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG using Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76171858cf5f31c1c20fc82f5eb52870') in 0.010604 seconds
+  Import took 0.012214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg
+  artifactKey: Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg using Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469e24154fba7b1c65f81a3e25ab7931') in 0.015542 seconds
+  Import took 0.017506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg
+  artifactKey: Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg using Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31948a11d2b67338880fc3708a77d569') in 0.015330 seconds
+  Import took 0.017301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG
+  artifactKey: Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG using Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4f6447e8b2f0971124469c395b01ca') in 0.012147 seconds
+  Import took 0.013772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg
+  artifactKey: Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg using Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61e782585f749752a0d05db70ace7830') in 0.016255 seconds
+  Import took 0.018101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg
+  artifactKey: Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg using Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155e57eb1ea5add95358922433e9bba3') in 0.017741 seconds
+  Import took 0.019808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg
+  artifactKey: Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg using Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6731b5ff02489ac2f2d6e653fe171b0') in 0.016964 seconds
+  Import took 0.018987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg
+  artifactKey: Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg using Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc91ca0a004f4cbd8debacf781f2452') in 0.016245 seconds
+  Import took 0.018371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg
+  artifactKey: Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg using Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8e880e7777ceb92a8bcff24c209e25') in 0.016963 seconds
+  Import took 0.018965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.685835 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva
+  artifactKey: Guid(c637e7ef6e8665e42be8216e3a7677a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva using Guid(c637e7ef6e8665e42be8216e3a7677a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5633fa93dacd4549de4f37bbea338515') in 0.005815 seconds
+  Import took 0.007683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.232949 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG
+  artifactKey: Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG using Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2878818260520a1438f377a83e78ce04') in 0.009846 seconds
+  Import took 0.011650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG
+  artifactKey: Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG using Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203479c3aaf1de5d305997a12df0f735') in 0.008068 seconds
+  Import took 0.009942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg
+  artifactKey: Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg using Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8deefd6c76fcd78cd9806a2dcbd8e1fc') in 0.007556 seconds
+  Import took 0.009222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg
+  artifactKey: Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg using Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '216edeb3f6336eb1d3aaf466d18434bd') in 0.008698 seconds
+  Import took 0.010320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg
+  artifactKey: Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg using Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694be64857c3c37cb8c088f22dbcb419') in 0.009010 seconds
+  Import took 0.010594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg
+  artifactKey: Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg using Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '220bccf282d536e7a27a97625de25f51') in 0.008646 seconds
+  Import took 0.010740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg
+  artifactKey: Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg using Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fed6c537874d1cb69f6a793612ca436a') in 0.009239 seconds
+  Import took 0.011212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg
+  artifactKey: Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg using Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '676e1c9d534e23ad99255f92724c8694') in 0.009217 seconds
+  Import took 0.010907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg
+  artifactKey: Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg using Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732334f64c32f697dbcb673e31e48007') in 0.007297 seconds
+  Import took 0.008871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG
+  artifactKey: Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG using Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c878717ce183d15b3c3f7bd4e1d381b7') in 0.009087 seconds
+  Import took 0.010764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg
+  artifactKey: Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg using Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd5dc8c9c53347d271527d3f7872722') in 0.009278 seconds
+  Import took 0.011291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG
+  artifactKey: Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG using Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4586c7d29163b30e26e6a7a951d49967') in 0.007665 seconds
+  Import took 0.009279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG
+  artifactKey: Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG using Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b58d5ce606388cdf48d26ac292c0d4') in 0.009900 seconds
+  Import took 0.011649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg
+  artifactKey: Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg using Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9284ae7ae6ec828958de280d47eb21') in 0.010586 seconds
+  Import took 0.012936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg
+  artifactKey: Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg using Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '837f97e896fe0d35ba34523a6ce9b772') in 0.008160 seconds
+  Import took 0.010190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg
+  artifactKey: Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg using Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f88018915fb9fb323f41e100fddf41b8') in 0.007360 seconds
+  Import took 0.008977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG
+  artifactKey: Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG using Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c812619f1260d73f8c26b904a765d19') in 0.008415 seconds
+  Import took 0.010369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg
+  artifactKey: Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg using Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71a2df0ff349f9ad9140578aa6f3d4f4') in 0.007736 seconds
+  Import took 0.009795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg
+  artifactKey: Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg using Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b59838c16086d73076d6f995fd9267') in 0.007712 seconds
+  Import took 0.009836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg
+  artifactKey: Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg using Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e7544137e3ae1374a52a911d1485b7') in 0.008230 seconds
+  Import took 0.009989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg
+  artifactKey: Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg using Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2dd47368e58c83bdd7335a4feb1036b') in 0.009592 seconds
+  Import took 0.011246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg
+  artifactKey: Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg using Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3980eb4b0cd621b58e5c9c5225ca8cd8') in 0.008173 seconds
+  Import took 0.009807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG
+  artifactKey: Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG using Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58502f54a5307be8060da4f2a8bfaf93') in 0.007750 seconds
+  Import took 0.009565 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg
+  artifactKey: Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg using Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0792adc30ef5d0fd8c9ad238a95dfed') in 0.007881 seconds
+  Import took 0.009832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg
+  artifactKey: Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg using Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '049de4cb84c0dc8e4ef7df1393cb92c7') in 0.009562 seconds
+  Import took 0.011185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg
+  artifactKey: Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg using Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8657e5925075a4ef21d03cbc3a4239e8') in 0.008897 seconds
+  Import took 0.012937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg
+  artifactKey: Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg using Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffe5855622364efae2208074dd8fcc66') in 0.010570 seconds
+  Import took 0.012566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg
+  artifactKey: Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg using Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db58ded7639f0f704a9f88466562a557') in 0.010971 seconds
+  Import took 0.012909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg
+  artifactKey: Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg using Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57a82c4f85bd5ef856ba2be4b6c0def') in 0.009312 seconds
+  Import took 0.011153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg
+  artifactKey: Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg using Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f398e2c785c6b810fcfd8475e13850b5') in 0.007768 seconds
+  Import took 0.009560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg
+  artifactKey: Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg using Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d4950896b852f2293f2bbfc31bf44d') in 0.007996 seconds
+  Import took 0.009670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.087234 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg
+  artifactKey: Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg using Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc63d04c93ce10d03b34373d033ef8f1') in 0.029318 seconds
+  Import took 0.085217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029321 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG
+  artifactKey: Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG using Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413362863f7eff0b3d7e0b071c3d0404') in 0.011612 seconds
+  Import took 0.017972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG
+  artifactKey: Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG using Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859e26442d9c40488f386da320d29130') in 0.010764 seconds
+  Import took 0.014893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg
+  artifactKey: Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg using Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '905ae584aa77e6bfbc490837e26a47e6') in 0.015360 seconds
+  Import took 0.016871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg
+  artifactKey: Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg using Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e009300e999c9e19c10e2651614901cd') in 0.010783 seconds
+  Import took 0.012322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg
+  artifactKey: Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg using Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a586fb9fcd524beaf0a9a7499f9755fe') in 0.015050 seconds
+  Import took 0.016701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg
+  artifactKey: Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg using Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aef3a85c0db16ea09483bcfd53b7e5f8') in 0.014456 seconds
+  Import took 0.016236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg
+  artifactKey: Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg using Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cadb40d515f13bea0cb16d2ab60939e') in 0.014910 seconds
+  Import took 0.016827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg
+  artifactKey: Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg using Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9efb9c543c36990d8af3009e50bc4d3') in 0.014227 seconds
+  Import took 0.015824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg
+  artifactKey: Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg using Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f358c162d426ed7fe826cacb1e48d095') in 0.014300 seconds
+  Import took 0.015867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG
+  artifactKey: Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG using Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd05bbaba559d9c41d549f56ffdd90954') in 0.012746 seconds
+  Import took 0.014342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg
+  artifactKey: Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg using Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8720480f0470c09c107e14c704dc439a') in 0.010166 seconds
+  Import took 0.011794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG
+  artifactKey: Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG using Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea046018ca3d4d2cbc495e9e9953e75') in 0.011523 seconds
+  Import took 0.013315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG
+  artifactKey: Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG using Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41e4ef5f71357c73ec79e16ec720c50') in 0.012364 seconds
+  Import took 0.014234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg
+  artifactKey: Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg using Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74b1d48cd2818af8cd05de875bd2be8') in 0.012284 seconds
+  Import took 0.013988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg
+  artifactKey: Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg using Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8377eb9926eb31178a07bd1110e5b1b3') in 0.013437 seconds
+  Import took 0.015734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg
+  artifactKey: Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg using Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '933fd0c6a1f6f5ab0d1029f47f34aaaa') in 0.013879 seconds
+  Import took 0.016907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG
+  artifactKey: Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG using Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a359b5ff62c0890185842b64096f9f27') in 0.012338 seconds
+  Import took 0.014548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg
+  artifactKey: Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg using Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a63d9dd16c6db65086f2aa57eea960') in 0.011739 seconds
+  Import took 0.013712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg
+  artifactKey: Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg using Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bba26297d3c62b34b2e369c6f42710') in 0.017251 seconds
+  Import took 0.019374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg
+  artifactKey: Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg using Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7040898ff2dab8bd051e8c9c3003f1') in 0.015057 seconds
+  Import took 0.017057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg
+  artifactKey: Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg using Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ccd6cdcfc3595aaa6884072e537e97') in 0.016832 seconds
+  Import took 0.018534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG
+  artifactKey: Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG using Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '345a4c668e304428d5a03de5e9c74316') in 0.010844 seconds
+  Import took 0.012491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg
+  artifactKey: Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg using Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9187adf3d66d9eee4310f25be16cf2d2') in 0.013804 seconds
+  Import took 0.015484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg
+  artifactKey: Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg using Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84c555a12109032410aeffd340fb18d') in 0.013163 seconds
+  Import took 0.015168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg
+  artifactKey: Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg using Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf1da5729bcc0ad99c57fd6a1f0c31b9') in 0.013701 seconds
+  Import took 0.015251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg
+  artifactKey: Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg using Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c98584036a24f883b5ef4ce5f6b92b') in 0.015104 seconds
+  Import took 0.016625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg
+  artifactKey: Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg using Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb47bef4f6f799d225c77af8f2ccb3dd') in 0.016066 seconds
+  Import took 0.017633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg
+  artifactKey: Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg using Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37823ac9ee107fb646c067311bacdd5') in 0.014392 seconds
+  Import took 0.015980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg
+  artifactKey: Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg using Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf3ce9e3f9cc8f92d45fbceb6e1429cd') in 0.015456 seconds
+  Import took 0.016990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg
+  artifactKey: Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg using Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252e14f2baad6e7385282c36505b9aba') in 0.014050 seconds
+  Import took 0.015593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 152.139420 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva
+  artifactKey: Guid(f9945bd9ec7db4a43a1278cf710ca7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva using Guid(f9945bd9ec7db4a43a1278cf710ca7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c552e155a8d1747a0fdbc9ff88f9db75') in 0.005045 seconds
+  Import took 0.009262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 350.034263 seconds.
+  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade
+  artifactKey: Guid(74b8eb4227c32eb4f830d61159699588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade using Guid(74b8eb4227c32eb4f830d61159699588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f94c583c0533ddd4560b9c4e6240e594') in 0.004964 seconds
+  Import took 0.007220 seconds .
+
