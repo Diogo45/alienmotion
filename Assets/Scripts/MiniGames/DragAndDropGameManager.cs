@@ -154,13 +154,9 @@ public class DragAndDropGameManager : MonoBehaviour
         if (_emotion02.Count < _imgsPerTrial[_currentTrial] / 2f)
             return false;
 
-
-
-
-
         foreach (var item in _emotion01)
         {
-            if (item.emotion != 0)
+            if (item.emotion != 1)
             {
                 return false;
             }
@@ -168,7 +164,7 @@ public class DragAndDropGameManager : MonoBehaviour
 
         foreach (var item in _emotion02)
         {
-            if (item.emotion != 1)
+            if (item.emotion != 0)
             {
                 return false;
             }
@@ -230,7 +226,7 @@ public class DragAndDropGameManager : MonoBehaviour
 
     public void ErrorOnce()
     {
-        Debug.Log("WrongOnce");
+        //Debug.Log("WrongOnce");
 
         Reset();
 

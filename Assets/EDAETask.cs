@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,6 +64,12 @@ public class EDAETask : MonoBehaviour
 
 
         _pageUI.text = "1/" + Mathf.FloorToInt(_pageCount);
+    }
+
+    private void OnDisable()
+    {
+        //Debug.Log("DISABLED ECT");
+        EmotionHuntersController.instance.WriteEADEData(_answers.ToList());
     }
 
 

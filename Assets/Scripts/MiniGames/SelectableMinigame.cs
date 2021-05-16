@@ -26,7 +26,8 @@ public class SelectableMinigame : MonoBehaviour
     [SerializeField] private UnityEvent OnEndMiniGame;
     private int _currentTrial = 0;
     private int[] _imgsPerTrial = { 4, 6, 6 };
-
+    [SerializeField]
+    private string emotion;
 
     private void Start()
     {
@@ -187,7 +188,7 @@ public class SelectableMinigame : MonoBehaviour
             switch (_currentTrial)
             {
                 case 1:
-                    _descriptionText.text = "Selecione apenas três as expressões faciais de neutralidade.";
+                    _descriptionText.text = "Selecione apenas as três expressões faciais de " + emotion;
                     for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _selectables[i]._image.sprite = _trial02[i].Sprite;

@@ -3324,3 +3324,43 @@ Idade escolhida: Criança
 135.8894 segundos: Errou a resposta. (Nojo)
 137.1075 segundos: Começou desafio número 21. (Nojo)
 148.5026 segundos: Errou a resposta. (Nojo)
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança

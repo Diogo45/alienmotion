@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,6 +51,13 @@ public class RMETask : MonoBehaviour
         _answer = "";
     }
 
+    private void OnDisable()
+    {
+        //Debug.Log("DISABLED ECT");
+        EmotionHuntersController.instance.WriteRMETData(_RMETAnswers.ToList());
+    }
+
+
     public void StartTrial()
     {
         _beginScreen.SetActive(false);
@@ -65,9 +73,6 @@ public class RMETask : MonoBehaviour
         {
             _imageScreen.SetActive(false);
             _trialCorrect.SetActive(true);
-
-            
-            
 
         }
         else

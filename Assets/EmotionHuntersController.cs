@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct Answer
@@ -29,6 +31,8 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
     [SerializeField] private AudioSource _musicAudio;
 
+    public int _miniGamesCompleted = 0;
+
     public int Week { get; private set; }
     private bool _receivedTeenData = false;
 
@@ -46,29 +50,27 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _EDAETask.SetActive(false);
 
         Debug.Log("WEEK IS HARDCODED TO ONE");
-        Week = 2;
 
-        if (Week == 1)
+        StartCoroutine(GetTeenData());
+
+
+        StartCoroutine(SetWeek());
+
+
+      
+    }
+
+
+    public void CompleteMiniGame()
+    {
+        _miniGamesCompleted++;
+
+        if(_miniGamesCompleted >= 4)
         {
             ToECT();
-            _playerMovement.enabled = false;
-            _playerCharacterController.enabled = false;
-        }
-        else if (Week == 2)
-        {
-            // Alfred Mini Games
-
-        }
-        else if (Week == 3)
-        {
-
+            DisableMovement(); 
         }
 
-
-
-
-
-        // StartCoroutine(GetTeenData());
     }
 
 
@@ -100,11 +102,51 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _EDAETask.SetActive(false);
     }
 
+    public void WriteECTData(List<Answer> answers)
+    {
+        if (Week == 1)
+        {
+            _teenData.ECTAnswers01 = answers;
+        }
+        else if (Week == 2)
+        {
+            _teenData.ECTAnswers02 = answers;
+        }
+        else
+        {
+            _teenData.ECTAnswers03 = answers;
+
+        }
+
+        FirestoreManager.instance.WriteGameTeenData(_teenData);
+    }
+
+
+
     public void ToRMET()
     {
         _emotionCategorizationTask.SetActive(false);
         _RMETask.SetActive(true);
         _EDAETask.SetActive(false);
+    }
+
+    public void WriteRMETData(List<Answer> answers)
+    {
+        if (Week == 1)
+        {
+            _teenData.RMETAnswers01 = answers;
+        }
+        else if (Week == 2)
+        {
+            _teenData.RMETAnswers02 = answers;
+        }
+        else
+        {
+            _teenData.RMETAnswers03 = answers;
+
+        }
+
+        FirestoreManager.instance.WriteGameTeenData(_teenData);
     }
 
     public void ToEDAE()
@@ -114,12 +156,32 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _EDAETask.SetActive(true);
     }
 
+    public void WriteEADEData(List<Answer> answers)
+    {
+        if (Week == 1)
+        {
+            _teenData.EDAEAnswers01 = answers;
+        }
+        else if (Week == 2)
+        {
+            _teenData.EDAEAnswers02 = answers;
+        }
+        else
+        {
+            _teenData.EDAEAnswers03 = answers;
+
+        }
+
+        FirestoreManager.instance.WriteGameTeenData(_teenData);
+    }
+
 
     public void OnEndAllTasks()
     {
         _teenData.Date = DateTime.Now;
         _teenData.Week += 1;
         FirestoreManager.instance.WriteTeenUpdate(_teenData);
+        SceneManager.LoadScene(0); 
     }
 
     private IEnumerator GetTeenData()
@@ -134,6 +196,35 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
         _receivedTeenData = true;
+    }
+
+    private IEnumerator SetWeek()
+    {
+        yield return new WaitWhile(() => _receivedTeenData == false);
+
+        Week = _teenData.Week;
+
+        if (Week == 1)
+        {
+            ToECT();
+            _playerMovement.enabled = false;
+            _playerCharacterController.enabled = false;
+        }
+        else if (Week == 2)
+        {
+            // Alfred Mini Games
+            EmotionHuntersUIController.instance.ToIntroAlfred();
+
+        }
+        else if (Week == 3)
+        {
+            ToECT();
+            _playerMovement.enabled = false;
+            _playerCharacterController.enabled = false;
+        }
+
+
+
     }
 
     //private IEnumerator ECT()

@@ -27,7 +27,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
     
     public void WriteTeenUpdate(RegisterDataTeen data)
     {
-        RestClient.Put(_firebaseURL + data.CPF + ".json", data);
+        RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
     }
 
     public IEnumerator WriteRegisterTeenData()
@@ -39,21 +39,21 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (_response.CPF == _errorData.CPF)
         {
-            RestClient.Put(_firebaseURL + _teenData.CPF + ".json", _teenData);
+            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
 
         }
         else
         {
             _teenData.ParentCPF = ((RegisterDataTeen)_response).ParentCPF;
             _teenData.ParentEmail = ((RegisterDataTeen)_response).ParentEmail;
-            RestClient.Put(_firebaseURL + _teenData.CPF + ".json", _teenData);
+            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
 
         }
     }
 
     public void WriteGameTeenData(RegisterDataTeen _data)
     {
-        RestClient.Put(_firebaseURL + _data.CPF + ".json", _data);
+        RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data);
     }
 
 
@@ -62,7 +62,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         _parentQuestions.WriteAnswers();
 
-        RestClient.Put(_firebaseURL + _parentData.CPF + ".json", _parentData);
+        RestClient.Put(_firebaseURL + _parentData.CPF.ToString() + ".json", _parentData);
 
         GetData<RegisterData>(_teenData.CPF);
 
@@ -70,13 +70,13 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (_response.CPF == _errorData.CPF)
         {
-            RestClient.Put(_firebaseURL + _teenData.CPF + ".json", _teenData);
+            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
 
         }
         else
         {
             _teenData.Password = _response.Password;
-            RestClient.Put(_firebaseURL + _teenData.CPF + ".json", _teenData);
+            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
 
         }
 
@@ -87,24 +87,25 @@ public class FirestoreManager : Singleton<FirestoreManager>
     public void GetData<T>(string cpf) where T : RegisterData
     {
         _response = null;
+        //Debug.Log("Getting register data for " + cpf);
 
-        if(cpf == "")
+        if (cpf == "")
         {
             _response = _errorData;
             return;
         }
 
+        //Debug.Log("2Getting register data for " + cpf);
 
-        //Debug.Log("Getting register data for " + cpf);
         RestClient.Get(_firebaseURL + cpf + ".json").Then(response =>
         {
-            // Debug.Log(response.Text);
+            //Debug.Log(response.Text);
             try
             {
                 T resp = ScriptableObject.CreateInstance<T>();
                 JsonUtility.FromJsonOverwrite(response.Text, resp);
                 _response = resp;
-                //Debug.Log(_response.CPF);
+                //Debug.Log(_response);
             }
             catch (Exception e)
             {

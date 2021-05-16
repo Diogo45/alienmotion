@@ -10,11 +10,11 @@ public class RegisterDataTeen : RegisterData
     public string ParentCPF;
     public string ParentEmail;
 
-    
+
     //public DateTime Week = DateTime.MinValue;
 
     [SerializeField]
-    private string _week = DateTime.MinValue.ToBinary().ToString();
+    private string _week;
     public DateTime Date
     {
         get

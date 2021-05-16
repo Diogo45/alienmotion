@@ -107,7 +107,6 @@ public class LoginManager : Singleton<LoginManager>
                 _teenData.RMETAnswers03 = new List<Answer>();
 
                 _teenData.Week = 1;
-
                 FirestoreManager.instance.WriteGameTeenData(_teenData);
 
                 PlayerPrefs.SetString("TeenCPF", _teenData.CPF);

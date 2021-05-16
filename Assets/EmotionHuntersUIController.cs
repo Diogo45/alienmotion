@@ -24,6 +24,13 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     [SerializeField] private GameObject NeutralMinigame;
 
 
+    public void ToIntroAlfred()
+    {
+
+        IntroAlfred.SetActive(true);
+        EmotionHuntersController.instance.DisableMovement();
+    }
+
     public void IntroAlfredToGame()
     {
 
@@ -41,6 +48,13 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     {
         SadnessMinigame.SetActive(false);
         EmotionHuntersController.instance.EnableMovement();
+        EmotionHuntersController.instance.CompleteMiniGame();
+    }
+
+    public void SadMinigame()
+    {
+        Sadness.SetActive(true);
+        EmotionHuntersController.instance.DisableMovement();
     }
 
 
@@ -55,6 +69,14 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     {
         AngerMinigame.SetActive(false);
         EmotionHuntersController.instance.EnableMovement();
+        EmotionHuntersController.instance.CompleteMiniGame();
+
+    }
+
+    public void ToAngerMinigame()
+    {
+        Anger.SetActive(true);
+        EmotionHuntersController.instance.DisableMovement();
     }
 
     public void FearToMinigame()
@@ -67,6 +89,14 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     {
         FearMinigame.SetActive(false);
         EmotionHuntersController.instance.EnableMovement();
+        EmotionHuntersController.instance.CompleteMiniGame();
+
+    }
+
+    public void ToFearMinigame()
+    {
+        Fear.SetActive(true);
+        EmotionHuntersController.instance.DisableMovement();
     }
 
     public void NeutralToMinigame()
@@ -80,6 +110,14 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     {
         NeutralMinigame.SetActive(false);
         EmotionHuntersController.instance.EnableMovement();
+        EmotionHuntersController.instance.CompleteMiniGame();
+ 
+    }
+
+    public void ToNeutralMinigame()
+    {
+        Neutral.SetActive(true);
+        EmotionHuntersController.instance.DisableMovement();
     }
 
 }

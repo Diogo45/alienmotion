@@ -68,7 +68,11 @@ public class EmotionCategorizationTask : MonoBehaviour
         _emotionAnswer = "";
     }
 
-    
+    private void OnDisable()
+    {
+        //Debug.Log("DISABLED ECT");
+        EmotionHuntersController.instance.WriteECTData(_emotionAnswers.ToList());
+    }
 
 
     public void NextTrial()
