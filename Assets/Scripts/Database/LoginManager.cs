@@ -48,6 +48,8 @@ public class LoginManager : Singleton<LoginManager>
 
     public void InputCPF(string cpf)
     {
+        cpf = InputUtils.CPFINput(cpf);
+
         _loginContainer.CPF = cpf;
         _fieldsFilled |= 1;
     }
@@ -77,7 +79,7 @@ public class LoginManager : Singleton<LoginManager>
 
         _parentData = FirestoreManager.instance._response as RegisterDataParent;
 
-        if (_parentData.CPF == FirestoreManager.instance._errorData.CPF)
+        if (!_parentData || _parentData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             _loginState = LoginState.NotAuthorized;
             _warningMessage.SetActive(true);
@@ -85,7 +87,7 @@ public class LoginManager : Singleton<LoginManager>
             yield return null;
         }
 
-        if (_teenData.CPF == FirestoreManager.instance._errorData.CPF)
+        if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
             _loginState = LoginState.MissingFromDataBase;
