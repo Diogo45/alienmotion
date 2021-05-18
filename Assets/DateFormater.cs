@@ -51,7 +51,7 @@ public class DateFormater : MonoBehaviour
 
     public void OnValueChanged(string str)
     {
-        print("String:" + str);
+       // print("String:" + str);
 
         //_inputField.DeactivateInputField();
 

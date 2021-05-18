@@ -107,6 +107,13 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.TALE.SetActive(false);
         }
 
+        public void TALE_Info()
+        {
+            QuestionnaireManager.instance.UI.TALE.SetActive(false);
+            QuestionnaireManager.instance.UI.Info.SetActive(true);
+        }
+
+
         public void RegisterParent_SDData()
         {
             QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);

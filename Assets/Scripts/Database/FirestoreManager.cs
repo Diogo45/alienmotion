@@ -32,6 +32,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     public IEnumerator WriteRegisterTeenData()
     {
+        //Debug.Log(_teenData.Password);
 
         GetData<RegisterDataTeen>(_teenData.CPF);
 

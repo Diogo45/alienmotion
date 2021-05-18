@@ -22,9 +22,13 @@ public class RegisterData : ScriptableObject
         {
             using (SHA256 SHA256 = SHA256.Create())
             {
+               //Debug.Log(value);
+
                 byte[] hashPassword = SHA256.ComputeHash(Encoding.UTF8.GetBytes(value));
 
                 _password = BitConverter.ToString(hashPassword);
+
+                //Debug.Log(_password);
 
                 SHA256.Dispose();
             }

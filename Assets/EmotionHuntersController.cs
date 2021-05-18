@@ -52,7 +52,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _RMETask.SetActive(false);
         _EDAETask.SetActive(false);
 
-        Debug.Log("WEEK IS HARDCODED TO ONE");
+        //Debug.Log("WEEK IS HARDCODED TO ONE");
 
         StartCoroutine(GetTeenData());
 
@@ -67,7 +67,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     public void CompleteMiniGame()
     {
         _miniGamesCompleted++;
-
+        Debug.Log(_miniGamesCompleted);
         if(_miniGamesCompleted >= 4)
         {
             ToEndMiniGames();
