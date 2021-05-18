@@ -95,6 +95,17 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.Register.SetActive(false);
             QuestionnaireManager.instance.UI.TCLE.SetActive(true);
         }
+        public void RegisterType_TALE()
+        {
+            QuestionnaireManager.instance.UI.Register.SetActive(false);
+            QuestionnaireManager.instance.UI.TALE.SetActive(true);
+        }
+
+        public void TALE_RegisterTeen()
+        {
+            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.TALE.SetActive(false);
+        }
 
         public void RegisterParent_SDData()
         {

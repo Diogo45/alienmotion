@@ -21,6 +21,7 @@ namespace Questionnaire
             public GameObject Register;
             public GameObject RegisterParent;
             public GameObject TCLE;
+            public GameObject TALE;
             public GameObject SDData;
             public GameObject RegisterTeen;
             public GameObject RegisterFinalScreen;
