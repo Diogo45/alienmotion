@@ -24,6 +24,7 @@ public class EmotionHuntersUIController : Singleton<EmotionHuntersUIController>
     [SerializeField] private GameObject NeutralMinigame;
 
 
+
     public void ToIntroAlfred()
     {
 

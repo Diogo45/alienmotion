@@ -24,7 +24,10 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     [SerializeField] private GameObject _RMETask;
     [SerializeField] private GameObject _EDAETask;
 
+    [SerializeField] private GameObject _miniGameEndScreen;
+
     [SerializeField] private GameObject _endScreen;
+
 
 
     [SerializeField] private GameObject _miniGameIntervention;
@@ -67,7 +70,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
         if(_miniGamesCompleted >= 4)
         {
-            ToECT();
+            ToEndMiniGames();
             DisableMovement(); 
         }
 
@@ -94,6 +97,18 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _endScreen.SetActive(true);
     }
 
+
+    public void ToEndMiniGames()
+    {
+        _miniGameEndScreen.SetActive(true);
+    }
+
+    public void MiniGamesEndToTask()
+    {
+        _miniGameEndScreen.SetActive(false);
+        ToECT();
+
+    }
 
     public void ToECT()
     {
