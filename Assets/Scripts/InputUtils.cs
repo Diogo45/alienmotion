@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class InputUtils 
 {
-    public static string CPFINput(string cpf)
+    public static string OnlyNumbers(string cpf)
     {
         return Regex.Replace(cpf, "[^0-9]", "");
     }

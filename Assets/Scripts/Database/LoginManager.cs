@@ -48,7 +48,7 @@ public class LoginManager : Singleton<LoginManager>
 
     public void InputCPF(string cpf)
     {
-        cpf = InputUtils.CPFINput(cpf);
+        cpf = InputUtils.OnlyNumbers(cpf);
 
         _loginContainer.CPF = cpf;
         _fieldsFilled |= 1;

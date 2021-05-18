@@ -58,7 +58,7 @@ public class RegisterManager : MonoBehaviour
 
     public void InputCPF(string cpf)
     {
-        cpf = InputUtils.CPFINput(cpf);
+        cpf = InputUtils.OnlyNumbers(cpf);
         _registerData.CPF = cpf;
         _fieldsFilled |= 1;
     }

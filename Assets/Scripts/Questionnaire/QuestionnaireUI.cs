@@ -103,7 +103,7 @@ namespace Questionnaire
 
         public void TALE_RegisterTeen()
         {
-            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(true);
             QuestionnaireManager.instance.UI.TALE.SetActive(false);
         }
 

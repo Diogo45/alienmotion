@@ -36,7 +36,7 @@ public class ResgisterParentManager : RegisterManager
 
     private void TeenInputCPF(string arg0)
     {
-        arg0 = InputUtils.CPFINput(arg0);
+        arg0 = InputUtils.OnlyNumbers(arg0);
 
         ((RegisterDataParent)_registerData).TeenCPF.Add(arg0);
 
