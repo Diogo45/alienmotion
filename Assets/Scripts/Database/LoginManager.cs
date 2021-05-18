@@ -7,7 +7,7 @@ public class LoginManager : Singleton<LoginManager>
 
     public enum LoginState
     {
-        None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, WeekLimit , Successful
+        None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, WeekLimit, Successful
     }
 
     [SerializeField] private RegisterData _loginContainer;
@@ -73,6 +73,17 @@ public class LoginManager : Singleton<LoginManager>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
+        if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
+        {
+            //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
+            _loginState = LoginState.MissingFromDataBase;
+            _warningMessage.SetActive(true);
+            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _notRegistered.Text;
+            yield break;
+
+        }
+
+
         FirestoreManager.instance.GetData<RegisterDataParent>(_teenData.ParentCPF);
 
         yield return new WaitWhile(() => FirestoreManager.instance._response == null);
@@ -84,17 +95,10 @@ public class LoginManager : Singleton<LoginManager>
             _loginState = LoginState.NotAuthorized;
             _warningMessage.SetActive(true);
             _warningMessage.GetComponent<TMPro.TMP_Text>().text = _teenNotAuthorized.Text;
-            yield return null;
+            yield break;
         }
-
-        if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
-        {
-            //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
-            _loginState = LoginState.MissingFromDataBase;
-            _warningMessage.SetActive(true);
-            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _notRegistered.Text;
-        }
-        else
+              
+        
         if (_teenData.Password == _loginContainer.Password)
         {
 
@@ -121,7 +125,7 @@ public class LoginManager : Singleton<LoginManager>
                     _warningMessage.SetActive(true);
                     _warningMessage.GetComponent<TMPro.TMP_Text>().text = _weekLimit.Text;
                     _loginState = LoginState.WeekLimit;
-                    
+
                 }
                 else
                 {

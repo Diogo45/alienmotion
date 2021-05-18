@@ -48,12 +48,12 @@ namespace Questionnaire
         public IEnumerator Login_Game()
         {
 
-            Debug.Log("QUI Waiting " + LoginManager.instance._loginState);
+            //Debug.Log("QUI Waiting " + LoginManager.instance._loginState);
             StartCoroutine(LoginManager.instance.Login());
 
             yield return new WaitWhile(() => LoginManager.instance._loginState == LoginManager.LoginState.None);
 
-            Debug.Log("QUI Finised Waiting" + LoginManager.instance._loginState);
+            //Debug.Log("QUI Finised Waiting" + LoginManager.instance._loginState);
 
             if (LoginManager.instance._loginState == LoginManager.LoginState.Successful)
             {
