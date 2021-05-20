@@ -111,6 +111,7 @@ namespace Questionnaire
         {
             QuestionnaireManager.instance.UI.TALE.SetActive(false);
             QuestionnaireManager.instance.UI.Info.SetActive(true);
+            QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
 
