@@ -24,15 +24,28 @@ public class FirestoreManager : Singleton<FirestoreManager>
         base.Awake();
     }
 
-    
+
     public void WriteTeenUpdate(RegisterDataTeen data)
     {
-        RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
+
+        if (InputUtils.IsOnlyNumbers(data.CPF) && data.CPF != "")
+        {
+            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
+
+        }
+        else
+        {
+            Debug.LogError("CPF EMPTY ON WRITE");
+        }
+
     }
 
     public IEnumerator WriteRegisterTeenData()
     {
         //Debug.Log(_teenData.Password);
+
+       
+
 
         GetData<RegisterDataTeen>(_teenData.CPF);
 
@@ -40,21 +53,49 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (_response.CPF == _errorData.CPF)
         {
-            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+            if(InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
+            {
+                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+            }
+            else
+            {
+                Debug.LogError("CPF EMPTY ON WRITE");
+
+            }
+
 
         }
         else
         {
             _teenData.ParentCPF = ((RegisterDataTeen)_response).ParentCPF;
             _teenData.ParentEmail = ((RegisterDataTeen)_response).ParentEmail;
-            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+
+            if (InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
+            {
+                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+            }
+            else
+            {
+                Debug.LogError("CPF EMPTY ON WRITE");
+
+            }
+
+            
 
         }
     }
 
     public void WriteGameTeenData(RegisterDataTeen _data)
     {
-        RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data);
+        if(InputUtils.IsOnlyNumbers(_data.CPF) && _data.CPF != "")
+        {
+            RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data);
+
+        }
+        else
+        {
+            Debug.LogError("CPF EMPTY ON WRITE");
+        }
     }
 
 
@@ -63,7 +104,17 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         _parentQuestions.WriteAnswers();
 
-        RestClient.Put(_firebaseURL + _parentData.CPF.ToString() + ".json", _parentData);
+        if (InputUtils.IsOnlyNumbers(_parentData.CPF) && _parentData.CPF != "")
+        {
+
+            RestClient.Put(_firebaseURL + _parentData.CPF.ToString() + ".json", _parentData);
+        }
+        else
+        {
+            Debug.LogError("CPF EMPTY ON WRITE");
+
+        }
+
 
         GetData<RegisterData>(_teenData.CPF);
 
@@ -116,29 +167,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
         });
     }
 
-    //public void GetLoginData(RegisterData _loginData)
-    //{
-    //    Debug.Log("Getting register data for " + _loginData.CPF);
-    //    RestClient.Get(_firebaseURL + _loginData.CPF + ".json").Then(response =>
-    //    {
-    //        Debug.Log(response.Text);
-    //        try
-    //        {
-    //            var resp = ScriptableObject.CreateInstance<RegisterDataParent>();
-    //            JsonUtility.FromJsonOverwrite(response.Text, resp);
-    //            _responseParent = resp;
-    //            Debug.Log(_responseParent.CPF);
-    //        }
-    //        catch (Exception e)
-    //        {
-    //            Debug.LogError(e);
-    //        }
-            
-    //    });
-
-
-
-    //}
+    
 
 
 }

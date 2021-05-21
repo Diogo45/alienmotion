@@ -130,11 +130,21 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
-        public void RegisterTeen_Info()
+        public void FinalRegisterTeen_Info()
         {
-            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.RegisterTeenFinalScreen.SetActive(false);
             QuestionnaireManager.instance.UI.Info.SetActive(true);
             QuestionnaireManager.instance.UI.Title.SetActive(true);
+            // StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
+
+        }
+
+
+        public void RegisterTeen_FinalRegister()
+        {
+            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+            QuestionnaireManager.instance.UI.RegisterTeenFinalScreen.SetActive(true);
+            
             StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
 
         }

@@ -34,16 +34,38 @@ public class ResgisterParentManager : RegisterManager
 
  
 
-    private void TeenInputCPF(string arg0)
+    private void TeenInputCPF(string cpf)
     {
-        arg0 = InputUtils.OnlyNumbers(arg0);
+        if (InputUtils.IsOnlyNumbers(cpf))
+        {
+            ((RegisterDataParent)_registerData).TeenCPF.Add(cpf);
 
-        ((RegisterDataParent)_registerData).TeenCPF.Add(arg0);
+            _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
+            _teenData.CPF = ((RegisterDataParent)_registerData).TeenCPF[_teenListIndex];
 
-        _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
-        _teenData.CPF = ((RegisterDataParent)_registerData).TeenCPF[_teenListIndex];
+            _fieldsFilled |= 32;
+        }
+        else
+        {
+            cpf = InputUtils.OnlyNumbers(cpf);
 
-        _fieldsFilled |= 32;
+            if (cpf != "")
+            {
+                ((RegisterDataParent)_registerData).TeenCPF.Add(cpf);
+
+                _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
+                _teenData.CPF = ((RegisterDataParent)_registerData).TeenCPF[_teenListIndex];
+
+                _fieldsFilled |= 32;
+            }
+            else
+            {
+                Debug.LogError("Bleh");
+            }
+
+        }
+
+        
     }
 
     private void TeenInputBirthDate(string arg0)

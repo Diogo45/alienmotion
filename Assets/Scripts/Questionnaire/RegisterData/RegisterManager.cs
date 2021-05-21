@@ -58,9 +58,27 @@ public class RegisterManager : MonoBehaviour
 
     public void InputCPF(string cpf)
     {
-        cpf = InputUtils.OnlyNumbers(cpf);
-        _registerData.CPF = cpf;
-        _fieldsFilled |= 1;
+        if (InputUtils.IsOnlyNumbers(cpf))
+        {
+            _registerData.CPF = cpf;
+            _fieldsFilled |= 1;
+        }
+        else
+        {
+            cpf = InputUtils.OnlyNumbers(cpf);
+
+            if (cpf != "")
+            {
+                _registerData.CPF = cpf;
+                _fieldsFilled |= 1;
+            }
+            else
+            {
+                Debug.LogError("CPF empty");
+            }
+
+        }
+        
     }
 
     public void InputBirthDate(string birthDate)

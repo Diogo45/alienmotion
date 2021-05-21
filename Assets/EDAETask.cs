@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,6 +76,9 @@ public class EDAETask : MonoBehaviour
 
     public void Next()
     {
+
+        Reset();
+        
         if (_pageIndex + 1 < _pageCount)
         {
             _pageIndex += 1;
@@ -106,7 +110,16 @@ public class EDAETask : MonoBehaviour
         _pageUI.text = (_pageIndex + 1) + "/" + (Mathf.FloorToInt(_pageCount) + 1);
     }
 
-  
+    private void Reset()
+    {
+
+        foreach (var item in _questionDropdown)
+        {
+            item.value = 0;
+        }
+        
+    }
+
     public void Begin()
     {
         _beginScreen.SetActive(false);

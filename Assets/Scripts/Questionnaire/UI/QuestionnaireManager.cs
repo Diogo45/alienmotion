@@ -25,6 +25,7 @@ namespace Questionnaire
             public GameObject SDData;
             public GameObject RegisterTeen;
             public GameObject RegisterFinalScreen;
+            public GameObject RegisterTeenFinalScreen;
         }
 
         public struct QuestionnaireTextAssets

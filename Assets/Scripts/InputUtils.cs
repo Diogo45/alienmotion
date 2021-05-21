@@ -9,4 +9,10 @@ public static class InputUtils
     {
         return Regex.Replace(cpf, "[^0-9]", "");
     }
+
+    public static bool IsOnlyNumbers(string cpf)
+    {
+        return Regex.IsMatch(cpf, "[0-9]");
+    }
+
 }

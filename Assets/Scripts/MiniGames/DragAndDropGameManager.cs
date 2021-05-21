@@ -84,8 +84,14 @@ public class DragAndDropGameManager : MonoBehaviour
                 {
                     _emotion02.RemoveAll(x => x.Sprite.name == _dropPoints[id].GetComponent<Image>().sprite.name);
                 }
+
+                GameObject draggable = _draggables.Find(x => x.GetComponent<Image>().sprite.name == _dropPoints[id].GetComponent<Image>().sprite.name);
+
+                draggable.SetActive(true);
+
             }
 
+           
 
             _dropPoints[id].GetComponent<Image>().sprite = _defaultSprite;
             return;
@@ -96,11 +102,21 @@ public class DragAndDropGameManager : MonoBehaviour
             if (_dropPoints[i].GetComponent<Image>().sprite.name == _draggables[_currentSprite].GetComponent<Image>().sprite.name)
             {
 
-
+                if (i < _dropPoints.Count / 2f)
+                {
+                    _emotion01.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
+                }
+                else
+                {
+                    _emotion02.RemoveAll(x => x.Sprite.name == _dropPoints[i].GetComponent<Image>().sprite.name);
+                }
 
                 _dropPoints[i].GetComponent<Image>().sprite = _defaultSprite;
 
                 
+
+
+
             }
 
         }
@@ -138,6 +154,9 @@ public class DragAndDropGameManager : MonoBehaviour
                     break;
             }
         }
+
+        _draggables[_currentSprite].SetActive(false);
+
 
         _currentSprite = -1;
 
@@ -359,8 +378,8 @@ public class DragAndDropGameManager : MonoBehaviour
             item.GetComponent<Image>().sprite = _defaultSprite;
         }
 
-        _emotion01.Clear();
-        _emotion02.Clear();
+        _emotion01 = new List<SpriteAnswer>();
+        _emotion02 = new List<SpriteAnswer>();
     }
 
     public void Drag(int sprite)

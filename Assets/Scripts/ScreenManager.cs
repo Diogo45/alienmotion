@@ -27,7 +27,7 @@ namespace Questionnaire
             _screenQuantity = transform.childCount - 2;
 
             if(_pageCounter)
-                _pageCounter.text = _currentScreen + "/" + _screenQuantity;
+                _pageCounter.text = (_currentScreen + 1) + "/" + _screenQuantity;
         }
 
         public void Next()
