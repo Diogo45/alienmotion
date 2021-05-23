@@ -11,9 +11,6 @@ public class SubquestionnaireManager : MonoBehaviour
 
     private List<InputValue> _inputList;
     
-
-
-
     public void Awake()
     {
         _inputList = new List<InputValue>(GetComponentsInChildren<InputValue>(true));
@@ -30,6 +27,7 @@ public class SubquestionnaireManager : MonoBehaviour
         WriteAnswers();
 
     }
+
     public void WriteAnswers()
     {
         foreach (var item in _inputList)
