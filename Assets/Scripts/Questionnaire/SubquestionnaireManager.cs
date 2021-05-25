@@ -9,11 +9,13 @@ public class SubquestionnaireManager : MonoBehaviour
 
     [SerializeField] private RegisterDataParent _registerDataParent;
 
-    private List<InputValue> _inputList;
+    [SerializeField] private List<InputValue> _inputList;
     
-    public void Awake()
+    private void Awake()
     {
         _inputList = new List<InputValue>(GetComponentsInChildren<InputValue>(true));
+
+
 
         for (int i = 0; i < _inputList.Count; i++)
         {

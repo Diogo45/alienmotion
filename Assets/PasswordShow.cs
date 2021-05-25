@@ -19,7 +19,7 @@ public class PasswordShow : MonoBehaviour
     {
         if (toggle)
         {
-            _textPasswordField.contentType = TMPro.TMP_InputField.ContentType.IntegerNumber;
+            _textPasswordField.contentType = TMPro.TMP_InputField.ContentType.Alphanumeric;
             _textPasswordField.enabled = false;
             _textPasswordField.enabled = true;
         }

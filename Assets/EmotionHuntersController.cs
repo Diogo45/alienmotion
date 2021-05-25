@@ -26,9 +26,9 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
     [SerializeField] private GameObject _miniGameEndScreen;
 
-    [SerializeField] private GameObject _endScreen;
-
-
+    [SerializeField] private GameObject _endScreen01;
+    [SerializeField] private GameObject _endScreen02;
+    [SerializeField] private GameObject _endScreen03;
 
     [SerializeField] private GameObject _miniGameIntervention;
 
@@ -60,7 +60,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         StartCoroutine(SetWeek());
 
 
-      
+
     }
 
 
@@ -68,10 +68,10 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     {
         _miniGamesCompleted++;
         Debug.Log(_miniGamesCompleted);
-        if(_miniGamesCompleted >= 4)
+        if (_miniGamesCompleted >= 4)
         {
             ToEndMiniGames();
-            DisableMovement(); 
+            DisableMovement();
         }
 
     }
@@ -94,7 +94,13 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _emotionCategorizationTask.SetActive(false);
         _RMETask.SetActive(false);
         _EDAETask.SetActive(false);
-        _endScreen.SetActive(true);
+
+        if (Week == 1)
+            _endScreen01.SetActive(true);
+        else if (Week == 2)
+            _endScreen02.SetActive(true);
+        else if (Week == 3)
+            _endScreen03.SetActive(true);
     }
 
 
@@ -196,7 +202,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _teenData.Date = DateTime.Now;
         _teenData.Week += 1;
         FirestoreManager.instance.WriteTeenUpdate(_teenData);
-        SceneManager.LoadScene(0); 
+        SceneManager.LoadScene(0);
     }
 
     private IEnumerator GetTeenData()
