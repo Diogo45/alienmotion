@@ -6,16 +6,16 @@ public class RegisterManager : MonoBehaviour
 {
 
 
-    [SerializeField] private TMPro.TMP_InputField _cpfInput;
+    [SerializeField] protected TMPro.TMP_InputField _cpfInput;
 
-    [SerializeField] private TMPro.TMP_InputField _bithDateInput;
+    [SerializeField] protected TMPro.TMP_InputField _bithDateInput;
         
-    [SerializeField] private TMPro.TMP_InputField _emailInput;
+    [SerializeField] protected TMPro.TMP_InputField _emailInput;
 
-    [SerializeField] private TMPro.TMP_InputField _passwordInput;
-    [SerializeField] private TMPro.TMP_InputField _confirmPasswordInput;
-    [SerializeField] private GameObject _passwordWarning;
-    [SerializeField] private TMPro.TMP_Text _passwordWarningText;
+    [SerializeField] protected TMPro.TMP_InputField _passwordInput;
+    [SerializeField] protected TMPro.TMP_InputField _confirmPasswordInput;
+    [SerializeField] protected GameObject _passwordWarning;
+    [SerializeField] protected TMPro.TMP_Text _passwordWarningText;
 
 
     [SerializeField] protected RegisterData _registerData;
@@ -88,7 +88,7 @@ public class RegisterManager : MonoBehaviour
 
     }
 
-    public void InputEmail(string email)
+    public virtual void InputEmail(string email)
     {
         _registerData.Email = email;
         _fieldsFilled |= 4;
@@ -108,6 +108,7 @@ public class RegisterManager : MonoBehaviour
 
     private bool DoesPasswordMeetRequirements()
     {
+        //(?=.*[a-z])(?=.*[A-Z])
         return (Regex.IsMatch(_passwordInput.text, @"^(?=.*\d)[a-zA-Z\d]{6,}$"));
 
     }
