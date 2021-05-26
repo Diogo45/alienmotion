@@ -108,7 +108,7 @@ public class RegisterManager : MonoBehaviour
 
     private bool DoesPasswordMeetRequirements()
     {
-        return (Regex.IsMatch(_passwordInput.text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$"));
+        return (Regex.IsMatch(_passwordInput.text, @"^(?=.*\d)[a-zA-Z\d]{6,}$"));
 
     }
 
