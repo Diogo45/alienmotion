@@ -14,7 +14,7 @@ public class RegisterDataTeen : RegisterData
     //public DateTime Week = DateTime.MinValue;
 
     [SerializeField]
-    private string _week;
+    public string _week;
     public DateTime Date
     {
         get

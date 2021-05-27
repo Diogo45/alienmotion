@@ -100,7 +100,7 @@ public class ResgisterParentManager : RegisterManager
         }
 
         ((RegisterDataParent)_registerData).TeenEmail.Add(arg0);
-        _teenData.Email = ((RegisterDataParent)_registerData).TeenEmail[_teenListIndex];
+        //_teenData.Email = ((RegisterDataParent)_registerData).TeenEmail[_teenListIndex];
 
         _teenData.ParentEmail = ((RegisterDataParent)_registerData).Email;
 

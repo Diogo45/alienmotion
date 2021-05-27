@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LoginManager : Singleton<LoginManager>
 {
-
     public enum LoginState
     {
         None, PasswordDoesNotMatch, MissingFromDataBase, NotAuthorized, WeekLimit, Successful
@@ -24,13 +23,10 @@ public class LoginManager : Singleton<LoginManager>
     [SerializeField] private TextAsset _notRegistered;
     [SerializeField] private TextAsset _weekLimit;
 
-
-
     protected byte _fieldsFilled = 0;
     [SerializeField] private byte _fieldsFilledTotal;
 
     public LoginState _loginState { get; private set; }
-
 
     private void Awake()
     {
@@ -59,9 +55,6 @@ public class LoginManager : Singleton<LoginManager>
         _loginContainer.Password = password;
         _fieldsFilled |= 2;
     }
-
-
-
 
     public IEnumerator Login()
     {
@@ -97,12 +90,12 @@ public class LoginManager : Singleton<LoginManager>
             _warningMessage.GetComponent<TMPro.TMP_Text>().text = _teenNotAuthorized.Text;
             yield break;
         }
-              
-        
+
+
         if (_teenData.Password == _loginContainer.Password)
         {
 
-            if (_teenData.Week == 0)
+            if (_teenData._week == "")
             {
                 _teenData.ECTAnswers01 = new List<Answer>();
                 _teenData.ECTAnswers02 = new List<Answer>();
@@ -113,6 +106,7 @@ public class LoginManager : Singleton<LoginManager>
                 _teenData.RMETAnswers03 = new List<Answer>();
 
                 _teenData.Week = 1;
+
                 FirestoreManager.instance.WriteGameTeenData(_teenData);
 
                 PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
@@ -133,6 +127,8 @@ public class LoginManager : Singleton<LoginManager>
                     PlayerPrefs.SetString("TeenCPF", _teenData.CPF);
 
                 }
+
+
             }
 
         }

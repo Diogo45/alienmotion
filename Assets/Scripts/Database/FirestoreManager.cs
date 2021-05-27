@@ -40,6 +40,21 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     }
 
+    public void WriteUpdate(RegisterData data)
+    {
+
+        if (InputUtils.IsOnlyNumbers(data.CPF) && data.CPF != "")
+        {
+            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
+
+        }
+        else
+        {
+            Debug.LogError("CPF EMPTY ON WRITE");
+        }
+
+    }
+
     public IEnumerator WriteRegisterTeenData()
     {
         //Debug.Log(_teenData.Password);

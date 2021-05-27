@@ -39,6 +39,18 @@ namespace Questionnaire
             QuestionnaireManager.instance.UI.Title.SetActive(true);
         }
 
+        public void Login_ForgotPassword()
+        {
+            QuestionnaireManager.instance.UI.Login.SetActive(false);
+            QuestionnaireManager.instance.UI.ForgotPassword.SetActive(true);
+        }
+
+        public void ForgotPassword_Login()
+        {
+            QuestionnaireManager.instance.UI.ForgotPassword.SetActive(false);
+            QuestionnaireManager.instance.UI.Login.SetActive(true);
+        }
+
         public void LoginWrapper()
         {
             StartCoroutine(Login_Game());

@@ -15,11 +15,11 @@ G:/UnityProjects/alienmotion
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59795
+24590
 Successfully changed project path to: G:/UnityProjects/alienmotion
 G:/UnityProjects/alienmotion
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 36.94 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.69 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,1446 +35,1381 @@ Initialize mono
 Mono path[0] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001785 seconds.
+Registered in 0.001018 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 26.03 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 22.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.996 seconds
+- Completed reload, in  0.926 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000445 seconds.
+Registered in 0.000891 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+DisplayProgressbar: Restoring NuGet Packages
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.949 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1221 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.9 MB.
+System memory in use after: 68.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1680.
+Total: 1.705100 ms (FindLiveObjects: 0.190800 ms CreateObjectMapping: 0.163700 ms MarkObjects: 1.287700 ms  DeleteObjects: 0.058800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea3ca2bef665972caa58ab84a38ab505') in 0.041431 seconds
+  Import took 0.045650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.434107 seconds.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96e9a96687b0638e238aded1a8480b6a') in 0.002004 seconds
+  Import took 0.003628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.421217 seconds.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc15b03aac17f3efeaf45b92ca13a878') in 0.001617 seconds
+  Import took 0.003822 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000894 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.730 seconds
+- Completed reload, in  0.934 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1215 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 67.4 MB.
-System memory in use after: 67.5 MB.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.7 MB.
+System memory in use after: 66.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1671.
-Total: 1.448700 ms (FindLiveObjects: 0.177700 ms CreateObjectMapping: 0.056000 ms MarkObjects: 1.148900 ms  DeleteObjects: 0.064900 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1683.
+Total: 1.250900 ms (FindLiveObjects: 0.123900 ms CreateObjectMapping: 0.034100 ms MarkObjects: 1.079000 ms  DeleteObjects: 0.013100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/SimpleDragAndDrop/Prefabs
-  artifactKey: Guid(933fe39eca0110540b231f06e75c38be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleDragAndDrop/Prefabs using Guid(933fe39eca0110540b231f06e75c38be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '704f52da86251094b20150a3b8a0f673') in 0.064946 seconds
-  Import took 0.069598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.300866 seconds.
-  path: Assets/SimpleDragAndDrop/Sprites/Cells
-  artifactKey: Guid(4a75a6c40de1a7b4bb3124c5ac4e69ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleDragAndDrop/Sprites/Cells using Guid(4a75a6c40de1a7b4bb3124c5ac4e69ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44eee66a3f968e65763a22fb002f7374') in 0.005626 seconds
-  Import took 0.007650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.510836 seconds.
-  path: Assets/SimpleDragAndDrop/Sprites/For demo
-  artifactKey: Guid(30e615e5096c14b4e891c9dbd1cffb8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleDragAndDrop/Sprites/For demo using Guid(30e615e5096c14b4e891c9dbd1cffb8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfcda06e01db276ca61dcc946b971be6') in 0.005247 seconds
-  Import took 0.007708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.410145 seconds.
-  path: Assets/SimpleDragAndDrop/Sprites/Items
-  artifactKey: Guid(23ed8c56f80cfbe44919091b9084d337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleDragAndDrop/Sprites/Items using Guid(23ed8c56f80cfbe44919091b9084d337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeaa171b183ae70127a6cd021fab9e2f') in 0.005369 seconds
-  Import took 0.008293 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.015548 seconds.
-  path: Assets/SimpleDragAndDrop
-  artifactKey: Guid(a5cb5ed75160583459f67ced6972ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleDragAndDrop using Guid(a5cb5ed75160583459f67ced6972ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985519ad876b0a948ae38d19cb0f7ffc') in 0.004423 seconds
-  Import took 0.007049 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 108.246438 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS
-  artifactKey: Guid(148b9e525e0913a4cbf4f26a4e314914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS using Guid(148b9e525e0913a4cbf4f26a4e314914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf9823d94181debc659c21dc601a86f') in 0.004695 seconds
-  Import took 0.008038 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.491460 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/1_DARTH_ RAIVA_M_EXTRA11 (1).jpg
-  artifactKey: Guid(6a80af04dd666354d86221a65ee9c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/1_DARTH_ RAIVA_M_EXTRA11 (1).jpg using Guid(6a80af04dd666354d86221a65ee9c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626d7f8d1168d116ea75de3a36398d61') in 0.127145 seconds
-  Import took 0.130384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/3_DARTH_ RAIVA_M_EXTRA11 (5).jpg
-  artifactKey: Guid(695eb75325d0c724694257597f561925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/3_DARTH_ RAIVA_M_EXTRA11 (5).jpg using Guid(695eb75325d0c724694257597f561925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced21ffb09deedbed0a64979d01e06d2') in 0.011807 seconds
-  Import took 0.014163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/2_Medo_NIHM (18).jpg
-  artifactKey: Guid(5cd5999184f46e543afaf934f274c273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/2_Medo_NIHM (18).jpg using Guid(5cd5999184f46e543afaf934f274c273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6615f95690653fc9c4265b839e67b4db') in 0.018101 seconds
-  Import took 0.020619 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/4_DARTH_MEDO_M_EXTRA11 (3).jpg
-  artifactKey: Guid(50e0a324fc1dee2449682aea3995807a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/4_DARTH_MEDO_M_EXTRA11 (3).jpg using Guid(50e0a324fc1dee2449682aea3995807a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef2eef3498357dba25074688b9bccaeb') in 0.010190 seconds
-  Import took 0.012207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/5_Tristeza_NIHM (41).jpg
-  artifactKey: Guid(188697b54f6ac6e489f847afce1df33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/5_Tristeza_NIHM (41).jpg using Guid(188697b54f6ac6e489f847afce1df33f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72708197e9b702710b785ab669892102') in 0.011418 seconds
-  Import took 0.014108 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/4_Tristeza_NIHM (51).jpg
-  artifactKey: Guid(6507359aec28b434180013346e7036b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/4_Tristeza_NIHM (51).jpg using Guid(6507359aec28b434180013346e7036b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a7b4d9555e4e9376dde1cebd580a161') in 0.012358 seconds
-  Import took 0.014592 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/1_Medo_NIHM (40).jpg
-  artifactKey: Guid(776588cf93a1c3042894fc1c9bb2e899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/1_Medo_NIHM (40).jpg using Guid(776588cf93a1c3042894fc1c9bb2e899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb8a2ac136d014c9f06abb3dc6b48da') in 0.009425 seconds
-  Import took 0.011423 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/3_DARTH_TRISTEZA_F (10).JPG
-  artifactKey: Guid(15fd2c843e3ff83498ff4d7c53741f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/3_DARTH_TRISTEZA_F (10).JPG using Guid(15fd2c843e3ff83498ff4d7c53741f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1cce6893f4c7c3b767d8e5205a37c8') in 0.014990 seconds
-  Import took 0.017272 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000125 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/2_DARTH_TRISTEZA_F (7).JPG
-  artifactKey: Guid(a4fe5e0e403688b4eb83afa857091082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/2_DARTH_TRISTEZA_F (7).JPG using Guid(a4fe5e0e403688b4eb83afa857091082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd4b4c69d5042dc80d655aabf108004') in 0.010301 seconds
-  Import took 0.012341 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/5_Neutro NIHM (41).jpg
-  artifactKey: Guid(c98b756fadd5650439687d98d14b4b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/5_Neutro NIHM (41).jpg using Guid(c98b756fadd5650439687d98d14b4b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb6e247d05386cd7a0b61bbc788ac5cd') in 0.008974 seconds
-  Import took 0.010683 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/5_Raiva_NIHM (44).jpg
-  artifactKey: Guid(1612f53388e7dcc458d31957150741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/5_Raiva_NIHM (44).jpg using Guid(1612f53388e7dcc458d31957150741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49e642a870b79601d7b8822d14b26f57') in 0.010913 seconds
-  Import took 0.013153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/3_DARTH_RAIVA_F (9).JPG
-  artifactKey: Guid(38645f620d2d8534887c60ec1a720940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/3_DARTH_RAIVA_F (9).JPG using Guid(38645f620d2d8534887c60ec1a720940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7640ea98d8a830be9ea01126ae368577') in 0.010427 seconds
-  Import took 0.012716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/2_Tristeza_NIHM (10).jpg
-  artifactKey: Guid(f89685da6cf837b479f096c778a3bd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/2_Tristeza_NIHM (10).jpg using Guid(f89685da6cf837b479f096c778a3bd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7921324a0e284a921dff368de30107ea') in 0.010654 seconds
-  Import took 0.012542 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/5_Tristeza_NIHM (35).jpg
-  artifactKey: Guid(5047eaba663c6a349adc69c6b1f75660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/5_Tristeza_NIHM (35).jpg using Guid(5047eaba663c6a349adc69c6b1f75660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc5959dfafa7ac844a6fccf1d10e6312') in 0.011309 seconds
-  Import took 0.013287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/3_Tristeza_NIHM (39).jpg
-  artifactKey: Guid(cdc6614bb2571374b8b402199d0d61a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/3_Tristeza_NIHM (39).jpg using Guid(cdc6614bb2571374b8b402199d0d61a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7a9c8ce471429529ebaae786a1de9a') in 0.009863 seconds
-  Import took 0.011977 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/3_Tristeza_NIHM (2).jpg
-  artifactKey: Guid(428ee1139ac8f21488c7ed78a91b8c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/3_Tristeza_NIHM (2).jpg using Guid(428ee1139ac8f21488c7ed78a91b8c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ca482a51389fc1c8e4f3046b647b56') in 0.009285 seconds
-  Import took 0.010836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/2_DARTH_ NEUTRO_M_EXTRA (1).JPG
-  artifactKey: Guid(83642ca3b83f4394ca582a132abc51aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/2_DARTH_ NEUTRO_M_EXTRA (1).JPG using Guid(83642ca3b83f4394ca582a132abc51aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39ce13112edcdb59a3c1b90e1b1c963') in 0.011086 seconds
-  Import took 0.013177 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/4_Tristeza_NIHM (14).jpg
-  artifactKey: Guid(660cc265b2a19e9458611fbb057dd36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/4_Tristeza_NIHM (14).jpg using Guid(660cc265b2a19e9458611fbb057dd36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62bb435778e24d337a906d8e0946d4b1') in 0.012240 seconds
-  Import took 0.014150 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/1_Neutro NIHM (51).jpg
-  artifactKey: Guid(64e333ca8426b2e4a9c9168902649524) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/1_Neutro NIHM (51).jpg using Guid(64e333ca8426b2e4a9c9168902649524) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ce3f89638e0f7248ac288e25afb55db') in 0.013059 seconds
-  Import took 0.014585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/5_Raiva_NIHM (28).jpg
-  artifactKey: Guid(7d19652caa514ba42bc8d07642d9401d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/5_Raiva_NIHM (28).jpg using Guid(7d19652caa514ba42bc8d07642d9401d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ded25e9260ebc36f6a3b85a915597b5') in 0.010655 seconds
-  Import took 0.013010 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/1_DARTH_MEDO_F (10).JPG
-  artifactKey: Guid(251d511f657062f4591b8ff0b4db91ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/1_DARTH_MEDO_F (10).JPG using Guid(251d511f657062f4591b8ff0b4db91ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f395076869d19fdf3c3623a75256e3') in 0.010698 seconds
-  Import took 0.012884 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000118 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/2_DARTH_NEUTRO_F (11).JPG
-  artifactKey: Guid(ad74a8692617e9f4aa072e8068a80ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/2_DARTH_NEUTRO_F (11).JPG using Guid(ad74a8692617e9f4aa072e8068a80ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f38eb3fd143315f90b407c2d3988bf40') in 0.009525 seconds
-  Import took 0.011475 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/1_Tristeza_NIHM (36).jpg
-  artifactKey: Guid(95e04a8bb44d9c04d997d3b5f79d0c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/1_Tristeza_NIHM (36).jpg using Guid(95e04a8bb44d9c04d997d3b5f79d0c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7907b35a32a6a1f13d08ba9c358c856') in 0.008657 seconds
-  Import took 0.010701 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/1_Medo_NIHM (49).jpg
-  artifactKey: Guid(3b9eb48d011c0fa499f5f9168e960cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/1_Medo_NIHM (49).jpg using Guid(3b9eb48d011c0fa499f5f9168e960cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f6e93fe4d6365556fcf0546cb7d162') in 0.010038 seconds
-  Import took 0.012404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/3_DARTH_MEDO_M_EXTRA11 (4).jpg
-  artifactKey: Guid(2366d09b08585d040a6ef527986c3223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/3_DARTH_MEDO_M_EXTRA11 (4).jpg using Guid(2366d09b08585d040a6ef527986c3223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb788de84accfd64aa003a6def4a4fad') in 0.011689 seconds
-  Import took 0.013628 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/4_DARTH_MEDO_F (5).JPG
-  artifactKey: Guid(ba94755f8cfde664c8895f5e4109095b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/4_DARTH_MEDO_F (5).JPG using Guid(ba94755f8cfde664c8895f5e4109095b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04ac29c23a60daa447f2c094a21ffa1') in 0.012116 seconds
-  Import took 0.013641 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000124 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/4_Tristeza_NIHM (21).jpg
-  artifactKey: Guid(08acf1300db12684ea773e930b3c5a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/4_Tristeza_NIHM (21).jpg using Guid(08acf1300db12684ea773e930b3c5a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09eea67002c21f9e1e6add8b8a46298b') in 0.008934 seconds
-  Import took 0.010507 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/4_DARTH_MEDO_F (3).JPG
-  artifactKey: Guid(948268fdd65b9ce4a8c24bd606c6b4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/4_DARTH_MEDO_F (3).JPG using Guid(948268fdd65b9ce4a8c24bd606c6b4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db435835a732f5cb791fee12487f98a0') in 0.010152 seconds
-  Import took 0.012409 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/6_DARTH_ TRISTEZA_M_EXTRA11 (2).jpg
-  artifactKey: Guid(cbdf8c053e1cce3468706ebd24ffa1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/6_DARTH_ TRISTEZA_M_EXTRA11 (2).jpg using Guid(cbdf8c053e1cce3468706ebd24ffa1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba01a7c61818e2e286a662a422a718c') in 0.011198 seconds
-  Import took 0.012875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/5_DARTH_ TRISTEZA_M (1).jpg
-  artifactKey: Guid(d3db5ee0bf7ec5f48a0dbea999e3ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/5_DARTH_ TRISTEZA_M (1).jpg using Guid(d3db5ee0bf7ec5f48a0dbea999e3ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda991390c1b1e8ae3a7449956cdae7c') in 0.010860 seconds
-  Import took 0.012405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/2_DARTH_MEDO_F (4).JPG
-  artifactKey: Guid(882341beffbfc584497cbe1c71df7b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/2_DARTH_MEDO_F (4).JPG using Guid(882341beffbfc584497cbe1c71df7b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f199e167f070623f0258a6ac1aa6f10') in 0.012752 seconds
-  Import took 0.014915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.861653 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/6_DARTH_MEDO_M (1).jpg
-  artifactKey: Guid(b25282a1ff69ecb4190fffd363e4e195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/6_DARTH_MEDO_M (1).jpg using Guid(b25282a1ff69ecb4190fffd363e4e195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77059d915f8c3a2ca150e71da703e089') in 0.011585 seconds
-  Import took 0.013816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/6_Medo_NIHM (52).jpg
-  artifactKey: Guid(93fd7be8a7229a844b28683ebe5e0b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/6_Medo_NIHM (52).jpg using Guid(93fd7be8a7229a844b28683ebe5e0b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baef24049a5b2310bf9899b8856cc0fc') in 0.034666 seconds
-  Import took 0.036496 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/6_Raiva_NIHM (16).jpg
-  artifactKey: Guid(a7d9cbabb90b1c64b91cfad8f218376f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/6_Raiva_NIHM (16).jpg using Guid(a7d9cbabb90b1c64b91cfad8f218376f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63dd1ac9dca1926f978ba73f4d6796fd') in 0.009039 seconds
-  Import took 0.011160 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/6_DARTH_MEDO_M (5).jpg
-  artifactKey: Guid(41cf35e7f2f88754287bc88912f7f7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/6_DARTH_MEDO_M (5).jpg using Guid(41cf35e7f2f88754287bc88912f7f7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765c7ec90c6d1580bea96a7b79610b5b') in 0.012149 seconds
-  Import took 0.013765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/7_DARTH_NEUTRO_F (6).JPG
-  artifactKey: Guid(5e4c886d5a301084dad5a809b25cb621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/7_DARTH_NEUTRO_F (6).JPG using Guid(5e4c886d5a301084dad5a809b25cb621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd615b5a29fc3d062e251717b9b1296be') in 0.012220 seconds
-  Import took 0.014201 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000120 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/7_DARTH_ TRISTEZA_M (2).jpg
-  artifactKey: Guid(bc07e842a350ca94384cdadc68c8985d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/7_DARTH_ TRISTEZA_M (2).jpg using Guid(bc07e842a350ca94384cdadc68c8985d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3100a392102a5fb721fe2c8187c114') in 0.011211 seconds
-  Import took 0.013088 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/6_DARTH_RAIVA_F (3).JPG
-  artifactKey: Guid(13fdce00850f95342aa3655e7da3d27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/6_DARTH_RAIVA_F (3).JPG using Guid(13fdce00850f95342aa3655e7da3d27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f61eff5600984c8db8e0f0952359fa17') in 0.014786 seconds
-  Import took 0.017184 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/7_Medo_NIHM (50).jpg
-  artifactKey: Guid(3c32b2b03de08664a9d4f730acadc135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/7_Medo_NIHM (50).jpg using Guid(3c32b2b03de08664a9d4f730acadc135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4c782f9f96be8dc26cd905f10ef141b') in 0.008850 seconds
-  Import took 0.010800 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000124 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/7_Raiva_NIHM (37).jpg
-  artifactKey: Guid(56a93e216196f2d46adb707dca26fe5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/7_Raiva_NIHM (37).jpg using Guid(56a93e216196f2d46adb707dca26fe5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf67f07b788eaadf61b87698e34c9645') in 0.009143 seconds
-  Import took 0.011040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000122 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/7_Neutro NIHM (12).jpg
-  artifactKey: Guid(8acd77b612946d842b3671dec373fed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/7_Neutro NIHM (12).jpg using Guid(8acd77b612946d842b3671dec373fed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f3c7bde84bb3f873bfe2b6651ca93b') in 0.009338 seconds
-  Import took 0.011662 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/8_DARTH_MEDO_M_EXTRA11 (5).jpg
-  artifactKey: Guid(71c248421661fae478cc70491f5cfcb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/8_DARTH_MEDO_M_EXTRA11 (5).jpg using Guid(71c248421661fae478cc70491f5cfcb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57b703f64b52029af09421220adbfc1') in 0.011760 seconds
-  Import took 0.013774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/7_Neutro NIHM (59).jpg
-  artifactKey: Guid(d01286e8f0e0b074f8237250ec7d45dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/7_Neutro NIHM (59).jpg using Guid(d01286e8f0e0b074f8237250ec7d45dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cdae2c3a6d04ba9c26f4efc522c54b') in 0.009584 seconds
-  Import took 0.011644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.263748 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/8_DARTH_NEUTRO_F (10).JPG
-  artifactKey: Guid(d29b9b5a75aaff146b2613a08bca6494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/8_DARTH_NEUTRO_F (10).JPG using Guid(d29b9b5a75aaff146b2613a08bca6494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61e422f24ec8350634a32f965fe6fad') in 0.011536 seconds
-  Import took 0.013616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000120 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/8_Medo_NIHM (11).jpg
-  artifactKey: Guid(ccb8cde9734f1d94c8bbcd51b17d46cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/8_Medo_NIHM (11).jpg using Guid(ccb8cde9734f1d94c8bbcd51b17d46cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88a0f5cfd5a1db8a72e3a1e240b5231') in 0.011360 seconds
-  Import took 0.013579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/8_Neutro NIHM (48).jpg
-  artifactKey: Guid(636e5bae9d296a94880dc6bd2cb47b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/8_Neutro NIHM (48).jpg using Guid(636e5bae9d296a94880dc6bd2cb47b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4414e0abde6f71749229705bee8ec239') in 0.012174 seconds
-  Import took 0.017298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/9_DARHT_NEUTRO_M (2).JPG
-  artifactKey: Guid(b440e30c84d186643ba6f5221eed4fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/9_DARHT_NEUTRO_M (2).JPG using Guid(b440e30c84d186643ba6f5221eed4fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0ddfd4c24da0d65b639517d9b60cfaa') in 0.011796 seconds
-  Import took 0.013956 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/8_Raiva_NIHM (19).jpg
-  artifactKey: Guid(41489b86859af374a91efcf99e4f0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/8_Raiva_NIHM (19).jpg using Guid(41489b86859af374a91efcf99e4f0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbee1cbef407aa0f18237d95708a4c3') in 0.010148 seconds
-  Import took 0.013055 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000123 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/9_Medo_NIHM (4).jpg
-  artifactKey: Guid(39c20d80d88b4fb48abfabe2ac327882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/9_Medo_NIHM (4).jpg using Guid(39c20d80d88b4fb48abfabe2ac327882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e11696f2e996ebf1c9874453ca473158') in 0.009427 seconds
-  Import took 0.011417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/10_DARTH_ NEUTRO_M_EXTRA (5).JPG
-  artifactKey: Guid(1cf67bac23817034a9d01d707acdf103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/10_DARTH_ NEUTRO_M_EXTRA (5).JPG using Guid(1cf67bac23817034a9d01d707acdf103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defb5a979c2904407b66d1395080143f') in 0.009427 seconds
-  Import took 0.011442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/9_Tristeza_NIHM (48).jpg
-  artifactKey: Guid(5ab4cc74acafd234685a570c5dcc4528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/9_Tristeza_NIHM (48).jpg using Guid(5ab4cc74acafd234685a570c5dcc4528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66061558a5567fa0b6dc51b48e065691') in 0.010652 seconds
-  Import took 0.012340 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/9_Neutro NIHM (30).jpg
-  artifactKey: Guid(1e6a025f9e3da3b46ad29589c0d2cb68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/9_Neutro NIHM (30).jpg using Guid(1e6a025f9e3da3b46ad29589c0d2cb68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fed08b6688efcb7b1460f4690fd7af6d') in 0.009367 seconds
-  Import took 0.011021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000123 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/11_DARTH_RAIVA_F (7).JPG
-  artifactKey: Guid(05ea89a7b72410546a80411f16da4628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/11_DARTH_RAIVA_F (7).JPG using Guid(05ea89a7b72410546a80411f16da4628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c497d9dc70f87958fb8c4b8aea2cd63') in 0.009949 seconds
-  Import took 0.011811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/11_DARTH_RAIVA_M (4).jpg
-  artifactKey: Guid(9e8f4073ef171c447a99610b7f3a8337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/11_DARTH_RAIVA_M (4).jpg using Guid(9e8f4073ef171c447a99610b7f3a8337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea02c3bd495d073bae0ebef003a8ff5') in 0.011332 seconds
-  Import took 0.013198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/10_Raiva_NIHM (41).jpg
-  artifactKey: Guid(764ec04850b82844ca6ded3182532036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/10_Raiva_NIHM (41).jpg using Guid(764ec04850b82844ca6ded3182532036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db4530212334a539432f74d01074f9df') in 0.010110 seconds
-  Import took 0.011796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000126 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/10_Raiva_NIHM (49).jpg
-  artifactKey: Guid(b50368c29f8778749a69d51894605ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/10_Raiva_NIHM (49).jpg using Guid(b50368c29f8778749a69d51894605ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29b58b88efa8958fa2aac28d828340d') in 0.010833 seconds
-  Import took 0.014716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000859 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/11_DARTH_ TRISTEZA_M (4).jpg
-  artifactKey: Guid(acd1e4ad25ef29440b4e67e215052313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/11_DARTH_ TRISTEZA_M (4).jpg using Guid(acd1e4ad25ef29440b4e67e215052313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587bfd836df991f28efaf28ceff4ec11') in 0.014077 seconds
-  Import took 0.016972 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/11_Raiva_NIHM (43).jpg
-  artifactKey: Guid(1cb927e53b084d1478ac170145c659e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/11_Raiva_NIHM (43).jpg using Guid(1cb927e53b084d1478ac170145c659e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b37a6bc0f55847d96f1e18ac1cbf041') in 0.017732 seconds
-  Import took 0.019844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000119 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/10_DARTH_RAIVA_F (6).JPG
-  artifactKey: Guid(6a59c9163ce2b43459619830a077efcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/10_DARTH_RAIVA_F (6).JPG using Guid(6a59c9163ce2b43459619830a077efcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b28b9068bab5b8837dac603e0db424e3') in 0.015645 seconds
-  Import took 0.018005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/11_DARTH_ NEUTRO_M_EXTRA (4).JPG
-  artifactKey: Guid(383901a0366457c428ec8931df98e8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/11_DARTH_ NEUTRO_M_EXTRA (4).JPG using Guid(383901a0366457c428ec8931df98e8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045d0f265adc1c9e20e5ad0955a37608') in 0.012261 seconds
-  Import took 0.014179 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/9_DARTH_TRISTEZA_F (11).JPG
-  artifactKey: Guid(00ee044a019ea904aae8de845cbf8af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/9_DARTH_TRISTEZA_F (11).JPG using Guid(00ee044a019ea904aae8de845cbf8af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf91e441fc58f69af622c6803f09c04') in 0.012675 seconds
-  Import took 0.014608 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/8_Raiva_NIHM (31).jpg
-  artifactKey: Guid(ec232b6ce44b4ee489de53f232b1bc25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/8_Raiva_NIHM (31).jpg using Guid(ec232b6ce44b4ee489de53f232b1bc25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82109a1ddcfb1a6cc1e11faf8324c3c9') in 0.010027 seconds
-  Import took 0.011900 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/10_DARTH_MEDO_M (2).jpg
-  artifactKey: Guid(f25c8ba3b2db9bc4e866135278f7cdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/10_DARTH_MEDO_M (2).jpg using Guid(f25c8ba3b2db9bc4e866135278f7cdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f0041e5df02ffce4539e150109b72f6') in 0.011589 seconds
-  Import took 0.013569 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/9_Neutro NIHM (25).jpg
-  artifactKey: Guid(8d33da210104d9949ad913d475fadaa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/9_Neutro NIHM (25).jpg using Guid(8d33da210104d9949ad913d475fadaa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04eb2696b2703156e830f795575da755') in 0.010190 seconds
-  Import took 0.012271 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000446 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/11_DARTH_RAIVA_M (1).jpg
-  artifactKey: Guid(694d112760a621d46b2524af6ef1e4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/11_DARTH_RAIVA_M (1).jpg using Guid(694d112760a621d46b2524af6ef1e4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '839675f63f7ca94fd582d2950ce15e71') in 0.009444 seconds
-  Import took 0.013764 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/12_DARTH_MEDO_F (9).JPG
-  artifactKey: Guid(dd0ec7ad3b4d1b740b4e3113efd98ae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/12_DARTH_MEDO_F (9).JPG using Guid(dd0ec7ad3b4d1b740b4e3113efd98ae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ae14bb8fc0b320f94ae1956b12a729') in 0.014237 seconds
-  Import took 0.018065 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/10_Neutro NIHM (44).jpg
-  artifactKey: Guid(731c59acbb565394991d3e40a5102fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/10_Neutro NIHM (44).jpg using Guid(731c59acbb565394991d3e40a5102fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79478901be2602f4240067c5c4b4864d') in 0.010251 seconds
-  Import took 0.012268 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.715394 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/12_DARTH_NEUTRO_F (1).JPG
-  artifactKey: Guid(ead052584c30d8b4b9bf688196dfb180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/12_DARTH_NEUTRO_F (1).JPG using Guid(ead052584c30d8b4b9bf688196dfb180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158e8573888559113b9d54fc735593e5') in 0.011396 seconds
-  Import took 0.013394 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/12_Neutro NIHM (56).jpg
-  artifactKey: Guid(2561e24dff17aa4438319db049691e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/12_Neutro NIHM (56).jpg using Guid(2561e24dff17aa4438319db049691e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8596d2e6c0dc604efbe67eb1f21d94f2') in 0.011203 seconds
-  Import took 0.013097 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/12_DARTH_TRISTEZA_F (3).JPG
-  artifactKey: Guid(ae64d4cb6db4de648a5de29853d88023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/12_DARTH_TRISTEZA_F (3).JPG using Guid(ae64d4cb6db4de648a5de29853d88023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4286f47e4e98c02a9e5f2205825302c') in 0.009820 seconds
-  Import took 0.012569 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/12_Raiva_NIHM (14).jpg
-  artifactKey: Guid(a77571031df47dd4ea74be95c1d25696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/12_Raiva_NIHM (14).jpg using Guid(a77571031df47dd4ea74be95c1d25696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bc43ba444ef5df3bc90c7c0c54202c') in 0.010550 seconds
-  Import took 0.013540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000122 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/12_Medo_NIHM (42).jpg
-  artifactKey: Guid(566ef60fdab7ea646a80005da88b069b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/12_Medo_NIHM (42).jpg using Guid(566ef60fdab7ea646a80005da88b069b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ccde338dfc9d1091018d59d2f27c997') in 0.010496 seconds
-  Import took 0.013142 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/12_DARTH_NEUTRO_F (1).JPG
-  artifactKey: Guid(ead052584c30d8b4b9bf688196dfb180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/12_DARTH_NEUTRO_F (1).JPG using Guid(ead052584c30d8b4b9bf688196dfb180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158e8573888559113b9d54fc735593e5') in 0.010206 seconds
-  Import took 0.011986 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/13_DARTH_NEUTRO_F (2).JPG
-  artifactKey: Guid(35f019d48e61fea49896adacb0fe6a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/13_DARTH_NEUTRO_F (2).JPG using Guid(35f019d48e61fea49896adacb0fe6a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8102c5e3da703d8c20dedba81eb48e9c') in 0.009655 seconds
-  Import took 0.011605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/14_Raiva_NIHM (10).jpg
-  artifactKey: Guid(c6c84572bb681394ea891b13709b4ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/14_Raiva_NIHM (10).jpg using Guid(c6c84572bb681394ea891b13709b4ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8eda9cd039c7b554abc44f0e55c8ce3') in 0.008829 seconds
-  Import took 0.012069 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/14_DARTH_ RAIVA_M_EXTRA11 (6).jpg
-  artifactKey: Guid(47a1cb65dbe84864bb7b119d2df5ecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/14_DARTH_ RAIVA_M_EXTRA11 (6).jpg using Guid(47a1cb65dbe84864bb7b119d2df5ecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f397cf3ead72a7b8a1d60ec1ec7a1b') in 0.012307 seconds
-  Import took 0.014616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/14_DARTH_ TRISTEZA_M (5).jpg
-  artifactKey: Guid(7c48ccfe3432284448f69f834a2e0dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/14_DARTH_ TRISTEZA_M (5).jpg using Guid(7c48ccfe3432284448f69f834a2e0dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f910b6b831a1b09d09ca5ca3223cf52c') in 0.010045 seconds
-  Import took 0.011654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/15_DARTH_RAIVA_F (2).JPG
-  artifactKey: Guid(b1b71666806019a478171f80af6a9b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/15_DARTH_RAIVA_F (2).JPG using Guid(b1b71666806019a478171f80af6a9b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e548464735a5d300ef381db4c036f50a') in 0.013092 seconds
-  Import took 0.014904 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/13_DARTH_NEUTRO_M (5).JPG
-  artifactKey: Guid(fde90de0e83c6cc4580d1240efb20c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/13_DARTH_NEUTRO_M (5).JPG using Guid(fde90de0e83c6cc4580d1240efb20c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f506f473602f9e52277eef587d5878') in 0.013337 seconds
-  Import took 0.015727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/13_DARTH_RAIVA_M (3).jpg
-  artifactKey: Guid(f7de0852923433341bc7a7bdb6acebc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/13_DARTH_RAIVA_M (3).jpg using Guid(f7de0852923433341bc7a7bdb6acebc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd494296ade1ebd525c3e8fb52a6a9507') in 0.012488 seconds
-  Import took 0.014146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000124 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/13_DARTH_MEDO_F (6).JPG
-  artifactKey: Guid(4633a9eb11cdd1340835fe95d8314ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/13_DARTH_MEDO_F (6).JPG using Guid(4633a9eb11cdd1340835fe95d8314ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f0c85b9d0d8445e1db018aa8a8cf3f7') in 0.014039 seconds
-  Import took 0.016441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/14_Neutro NIHM (1).jpg
-  artifactKey: Guid(3713e39557409fd4680546c8f47c09f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/14_Neutro NIHM (1).jpg using Guid(3713e39557409fd4680546c8f47c09f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fba57e97ec3e51c707b0185f192acbb') in 0.011163 seconds
-  Import took 0.013256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/13_Neutro NIHM (2).jpg
-  artifactKey: Guid(fa7c8e0fba588034cb02cc0397b250fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/13_Neutro NIHM (2).jpg using Guid(fa7c8e0fba588034cb02cc0397b250fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '853a2bd89fe735335bb1cb44d63ac3a8') in 0.010997 seconds
-  Import took 0.013096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/15_DARTH_RAIVA_F (11).JPG
-  artifactKey: Guid(674f87fcf81107b4c8c6aa4208b6128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/15_DARTH_RAIVA_F (11).JPG using Guid(674f87fcf81107b4c8c6aa4208b6128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4812c775c808e81305286d79f7fc98') in 0.009458 seconds
-  Import took 0.011049 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000120 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/16_DARTH_ TRISTEZA_M_EXTRA11 (4).jpg
-  artifactKey: Guid(63ecc1036eb69d941bb2c9d3ac23fc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/16_DARTH_ TRISTEZA_M_EXTRA11 (4).jpg using Guid(63ecc1036eb69d941bb2c9d3ac23fc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e49e7ab81db57c1ae1ea8c9c1638be') in 0.010442 seconds
-  Import took 0.012590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/15_DARTH_TRISTEZA_F (9).JPG
-  artifactKey: Guid(097226e75c2091c4299f70854a3c5260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/15_DARTH_TRISTEZA_F (9).JPG using Guid(097226e75c2091c4299f70854a3c5260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e16413afe8070faca9a1a6f5e1d08e2') in 0.012128 seconds
-  Import took 0.014114 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/15_DARTH_NEUTRO_F (9).JPG
-  artifactKey: Guid(8c5db94ee5b1e5645b0c90209c2419aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/15_DARTH_NEUTRO_F (9).JPG using Guid(8c5db94ee5b1e5645b0c90209c2419aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d3cdab05b4dc85024f56c72ab194e4') in 0.009635 seconds
-  Import took 0.011765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/13_DARH_NEUTRO_M (4).JPG
-  artifactKey: Guid(7c8beafbc056ad445b6335a14901f1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/13_DARH_NEUTRO_M (4).JPG using Guid(7c8beafbc056ad445b6335a14901f1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c4976104937e0af4e6ff6925662952') in 0.014818 seconds
-  Import took 0.016695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/14_Neutro NIHM (14).jpg
-  artifactKey: Guid(7831a975b6a5f4c4388eb1277d7e1954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/14_Neutro NIHM (14).jpg using Guid(7831a975b6a5f4c4388eb1277d7e1954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75874d559f02904c2a507dab599d8e4') in 0.010209 seconds
-  Import took 0.012651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/15_Medo_NIHM (5).jpg
-  artifactKey: Guid(b3073eefb5be6ce488c7c72c0baa2b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/15_Medo_NIHM (5).jpg using Guid(b3073eefb5be6ce488c7c72c0baa2b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91aead81b810cc4c5414839ebd7084f9') in 0.012486 seconds
-  Import took 0.014671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/14_Medo_NIHM (44).jpg
-  artifactKey: Guid(190f96d585ee4184ebbe7640891719ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/14_Medo_NIHM (44).jpg using Guid(190f96d585ee4184ebbe7640891719ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1301e0bbd9673c7d543dccfe3bf4158d') in 0.010240 seconds
-  Import took 0.012280 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/15_Tristeza_NIHM (9).jpg
-  artifactKey: Guid(e980c45f95e33444a837a503931a1a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_200MS/15_Tristeza_NIHM (9).jpg using Guid(e980c45f95e33444a837a503931a1a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb76c574e2b27f5969d45411122adf6') in 0.009965 seconds
-  Import took 0.012287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.384911 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/16_DARTH_TRISTEZA_F (8).JPG
-  artifactKey: Guid(1fd7ecdb6f976254d9a2d3e3ef61eb1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_200MS/16_DARTH_TRISTEZA_F (8).JPG using Guid(1fd7ecdb6f976254d9a2d3e3ef61eb1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cccfd7bb8ebb6dd964db4ac1d83eb64c') in 0.011798 seconds
-  Import took 0.013443 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/16_Medo_NIHM (21).jpg
-  artifactKey: Guid(b1d2fa23f7dbb4f47b7c75c764fcd20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_200MS/16_Medo_NIHM (21).jpg using Guid(b1d2fa23f7dbb4f47b7c75c764fcd20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08f16d494e262ec532c2f91aea513c6') in 0.013852 seconds
-  Import took 0.021424 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/16_Raiva_NIHM (35).jpg
-  artifactKey: Guid(d1ac13762dff4b849b83ae685745d005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_1_500MS/16_Raiva_NIHM (35).jpg using Guid(d1ac13762dff4b849b83ae685745d005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7815b1ef6962939177bcf4807e008db8') in 0.010487 seconds
-  Import took 0.012509 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/16_Medo_NIHM (17).jpg
-  artifactKey: Guid(06c53b3699776ef43b2781d7b21dca43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_2_500MS/16_Medo_NIHM (17).jpg using Guid(06c53b3699776ef43b2781d7b21dca43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa5310074ad28a4e6c31e060a4dc15cd') in 0.009517 seconds
-  Import took 0.011461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/DARTH_RAIVA_F(8).JPG
-  artifactKey: Guid(e995ba909045c8e4398c134ad62844cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/DARTH_RAIVA_F(8).JPG using Guid(e995ba909045c8e4398c134ad62844cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d97377d28b8b5063130c407cfb836c') in 0.009974 seconds
-  Import took 0.011714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/16_Tristeza_NIHM (24).jpg
-  artifactKey: Guid(fe9d61900995bcd45bbd6f0c37e7d6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IMAGENS COLETAS - RANDOMIZADAS E ORGANIZADAS/COLETA_3_500MS/16_Tristeza_NIHM (24).jpg using Guid(fe9d61900995bcd45bbd6f0c37e7d6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d8c4a58ca642a6f1ce19c9fa15e0d8') in 0.010932 seconds
-  Import took 0.012610 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.043536 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg
-  artifactKey: Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg using Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288100f06eecde19d6e7b6982b84b4ec') in 0.010776 seconds
-  Import took 0.012956 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000768 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg
-  artifactKey: Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M_EXTRA11 (5).jpg using Guid(4e3c160e4dbeed448bb84195a31c3576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288100f06eecde19d6e7b6982b84b4ec') in 0.010615 seconds
-  Import took 0.012449 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.054403 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg
-  artifactKey: Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (42).jpg using Guid(870bef9aaff31dd4488021b62db36bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a705f09db92f81071d90fd2bebc075e') in 0.011448 seconds
-  Import took 0.013345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (34).jpg
-  artifactKey: Guid(8cc71b734c917bb4090afb45b366e021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (34).jpg using Guid(8cc71b734c917bb4090afb45b366e021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8cd32172b0f57dc3f04fdafc3fb9077') in 0.014489 seconds
-  Import took 0.016467 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (46).jpg
-  artifactKey: Guid(a7668cf4b5539ba4287ba3b706b04784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (46).jpg using Guid(a7668cf4b5539ba4287ba3b706b04784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffd3dae6a8caa4c15b5004b7c5ad2a3c') in 0.011192 seconds
-  Import took 0.013772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Tristeza_NIHM (34).jpg
-  artifactKey: Guid(b9c5a55a8e719994885e9cdd92258bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Tristeza_NIHM (34).jpg using Guid(b9c5a55a8e719994885e9cdd92258bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7493c766532cea6df4db4359877196b') in 0.017491 seconds
-  Import took 0.019159 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (49).jpg
-  artifactKey: Guid(a63a4d46cdc9c7c4090862ce58511f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (49).jpg using Guid(a63a4d46cdc9c7c4090862ce58511f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031b5ca39f6efe300596f6a36118fbf3') in 0.012340 seconds
-  Import took 0.015599 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Tristeza_NIHM (31).jpg
-  artifactKey: Guid(228b4189c3e70624ebb3a60035290004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Tristeza_NIHM (31).jpg using Guid(228b4189c3e70624ebb3a60035290004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd65f29b471c80d6446a5fd24293ed3c') in 0.009631 seconds
-  Import took 0.011658 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (54).jpg
-  artifactKey: Guid(9da17e7c8b92cc34088269fabb7f9d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (54).jpg using Guid(9da17e7c8b92cc34088269fabb7f9d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b3f60c05e978f2a4d1af9d2c248670') in 0.010951 seconds
-  Import took 0.013118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg
-  artifactKey: Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (26).jpg using Guid(23cde7d0f84d51346be97e069750f8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baabd90d5b9088b6d0166caa4118164d') in 0.009677 seconds
-  Import took 0.011270 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg
-  artifactKey: Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (37).jpg using Guid(cd6061eb8e36f9f43b3c5d79bdcc974e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e07086e2bd9de06c3b6b55198780ae') in 0.009636 seconds
-  Import took 0.011669 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (52).jpg
-  artifactKey: Guid(5d5119ab0e32e61438794320cd2a21f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (52).jpg using Guid(5d5119ab0e32e61438794320cd2a21f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f04ca46d7f957a7c44b76e01bc5ba4') in 0.008620 seconds
-  Import took 0.010131 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000125 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Raiva_NIHM (23).jpg
-  artifactKey: Guid(76e4148cd85be9c4fb807c1bb70bee77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Raiva_NIHM (23).jpg using Guid(76e4148cd85be9c4fb807c1bb70bee77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f712c0ddafb317341b001ee613aab28') in 0.012506 seconds
-  Import took 0.014049 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Raiva_NIHM (27).jpg
-  artifactKey: Guid(d5a03b487df62ce41b4521d155b6c0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Raiva_NIHM (27).jpg using Guid(d5a03b487df62ce41b4521d155b6c0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ba2cf6a8c529426d7d4320ae7c435b') in 0.009896 seconds
-  Import took 0.012048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg
-  artifactKey: Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (47).jpg using Guid(c3b80a5b7e29d854e975a7d6db7e521a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fce8169fb4313cd18ff7305da5bed13f') in 0.012669 seconds
-  Import took 0.014823 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg
-  artifactKey: Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (44).jpg using Guid(6fe182e3365bc3641b61932174265e37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23bc0aa1c6da0c5b4090e6eb4725913a') in 0.011928 seconds
-  Import took 0.016330 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg
-  artifactKey: Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (43).jpg using Guid(558da1ea1b7d1944897c98f584233fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad93c274ddd3cc9b1ed0fa852918e13a') in 0.011182 seconds
-  Import took 0.021471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (8).jpg
-  artifactKey: Guid(b1fe63a38d702d5429df568c38fdd34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (8).jpg using Guid(b1fe63a38d702d5429df568c38fdd34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2007953c07ddf317b018a1fe98c1631') in 0.010799 seconds
-  Import took 0.012987 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg
-  artifactKey: Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (3).jpg using Guid(62be0643691f0ed4d947570b2e5f147e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152964b35fa5411de888210ccad46eb2') in 0.009470 seconds
-  Import took 0.011335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg
-  artifactKey: Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (29).jpg using Guid(b2436bf015b24ef4b90aa304035fcabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d2be90c4d384cca9b979b8a548c9b5') in 0.009418 seconds
-  Import took 0.012028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg
-  artifactKey: Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Tristeza_NIHM (27).jpg using Guid(d054eb459fa2d6648a54f854d872b4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc246d326f31ae7203e509afe1b73b4') in 0.010527 seconds
-  Import took 0.013128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Tristeza_NIHM (43).jpg
-  artifactKey: Guid(f3421880d6f87c045887bc22bbb996ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Tristeza_NIHM (43).jpg using Guid(f3421880d6f87c045887bc22bbb996ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f65eddac3b7b4bd0fbcf3a654876ab') in 0.010411 seconds
-  Import took 0.012480 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Tristeza_NIHM (18).jpg
-  artifactKey: Guid(68fe9d40cde3acc47acdfe73786fe93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Tristeza_NIHM (18).jpg using Guid(68fe9d40cde3acc47acdfe73786fe93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf4810a8f25c5d154a6309d1d31b717') in 0.015554 seconds
-  Import took 0.017427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg
-  artifactKey: Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Tristeza_NIHM (30).jpg using Guid(5fab50c2ae38bec45883d06837f00bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f1e6faeef269f978df9c9787620fe38') in 0.012355 seconds
-  Import took 0.014882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (13).jpg
-  artifactKey: Guid(9fcc7ca62fbff5c44a0044c650a4b927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (13).jpg using Guid(9fcc7ca62fbff5c44a0044c650a4b927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7b67543a1a8a1c1a85e99e9b1c424c') in 0.013255 seconds
-  Import took 0.015267 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (45).jpg
-  artifactKey: Guid(c51ad5636458ccd408389a794cd40d6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Raiva_NIHM (45).jpg using Guid(c51ad5636458ccd408389a794cd40d6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ac7667709f86302a5087d3955ad7d8') in 0.010913 seconds
-  Import took 0.013867 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (4).jpg
-  artifactKey: Guid(1e2319d7175782e489abe83e16e5f73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Raiva_NIHM (4).jpg using Guid(1e2319d7175782e489abe83e16e5f73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4905063dfb11e923bc34a39919efc8d') in 0.014930 seconds
-  Import took 0.016745 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Tristeza_NIHM (38).jpg
-  artifactKey: Guid(a3c6ef8a0e66acb46a1832ed0a093517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Tristeza_NIHM (38).jpg using Guid(a3c6ef8a0e66acb46a1832ed0a093517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f789cceb1e16a796fd1ebe9ae5ced721') in 0.009500 seconds
-  Import took 0.011156 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.596151 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg
-  artifactKey: Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (24).jpg using Guid(415042a159ee53b4d845753ca7af6af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53ee7f794dde4325d8bc520f5e9456b3') in 0.011516 seconds
-  Import took 0.013723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Neutro NIHM (29).jpg
-  artifactKey: Guid(dde80a61d515ee74ab7cffbe666fe137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_2_Raiva/Neutro NIHM (29).jpg using Guid(dde80a61d515ee74ab7cffbe666fe137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c69e46156deb5e1a0cb7c771874dc9') in 0.012087 seconds
-  Import took 0.014045 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg
-  artifactKey: Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (28).jpg using Guid(7c3b7cbfb21526b4eb121eec14906439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55d0c89a39983a1cff492d32dd36479c') in 0.011013 seconds
-  Import took 0.013088 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg
-  artifactKey: Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (23).jpg using Guid(9777abbd5f202a84bb5eef43664385c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d1107f02c16ccb04bc1e462d2a2fa9') in 0.008936 seconds
-  Import took 0.011030 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (26).jpg
-  artifactKey: Guid(d453bc5e436bfb144b39278cc48548b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (26).jpg using Guid(d453bc5e436bfb144b39278cc48548b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3fefb2dc41422fc95ad0074278b920f') in 0.013946 seconds
-  Import took 0.016118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg
-  artifactKey: Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_2_Tristeza/Neutro NIHM (27).jpg using Guid(891fd35618e0c7b4fa2dbe4bb8917d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5312376c19594ec7c6a44ad8fb63f50b') in 0.011302 seconds
-  Import took 0.013021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg
-  artifactKey: Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (20).jpg using Guid(c8342837796f41847ba3bfc1efc2f759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af0208bd79f0d61eb0822815e72859f8') in 0.013705 seconds
-  Import took 0.015636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (35).jpg
-  artifactKey: Guid(16fdff85894c530439b3613169fea88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_3_Neutralidade/Neutro NIHM (35).jpg using Guid(16fdff85894c530439b3613169fea88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee7b8432883c0b2d4c9e29b5313e4dd4') in 0.011022 seconds
-  Import took 0.012598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg
-  artifactKey: Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (19).jpg using Guid(c3bae2144599ed142bdbbd56a5bac726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83cf427340bf9a60053a42446d2d87d5') in 0.011230 seconds
-  Import took 0.013218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg
-  artifactKey: Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (8).jpg using Guid(ee94667b3772b3c4d9b967a205ee79f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc6abff0ea606b53172c7f586551f016') in 0.009060 seconds
-  Import took 0.010556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg
-  artifactKey: Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Medo_NIHM (46).jpg using Guid(1879e0dc0e1598644ba462b3252e3a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a4dd9ac1d72c2c8e086ec8c8d971fc') in 0.010285 seconds
-  Import took 0.012384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg
-  artifactKey: Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (5).jpg using Guid(29e3e1ef685c07f46987118fe46d7afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd41235bbbe31b0a121a218125f3bf28d') in 0.011397 seconds
-  Import took 0.013173 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg
-  artifactKey: Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Neutro NIHM (9).jpg using Guid(5df6602622f6e8d428009d0a3041db8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a1bf491b2b3e52ce4c2d774734a9fe') in 0.009178 seconds
-  Import took 0.011338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg
-  artifactKey: Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Neutro NIHM (18).jpg using Guid(348e79d38c29e484aa662747a7397037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e725fdc7f7ea73111411b920d4779d') in 0.014427 seconds
-  Import took 0.015990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg
-  artifactKey: Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_3_Raiva/Neutro NIHM (15).jpg using Guid(8aee8b530844648448f4e048238dcb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9945d1267e130a377ca63cf3dd330dd') in 0.009432 seconds
-  Import took 0.011373 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg
-  artifactKey: Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (21).jpg using Guid(5688aad762aaeae4fab6b704858cc5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c79a2e3716245ba28a77c2e58d1bfdf') in 0.009208 seconds
-  Import took 0.011209 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg
-  artifactKey: Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_3_Tristeza/Neutro NIHM (6).jpg using Guid(6471d9979b389df499c692a1dc99ba98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf874379b0c1a1ce8d50d93ab9d745b9') in 0.015103 seconds
-  Import took 0.017094 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg
-  artifactKey: Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Neutro NIHM (7).jpg using Guid(3d15a11d6d6164443a21a66ef1c8b917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f710d5b2c1248b1bb84d56bb31b7178e') in 0.010928 seconds
-  Import took 0.012817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.137471 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg
-  artifactKey: Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (31).jpg using Guid(8afbc4968cd153d498301253b8402c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6aed50e8fbe738a1cbdbf7276c1da6f') in 0.011406 seconds
-  Import took 0.013642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg
-  artifactKey: Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (35).jpg using Guid(c107fa30aea1e234a8a177c3de8e9560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f74f381e396c50ba04ae5a419a3c0cd') in 0.013751 seconds
-  Import took 0.016031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg
-  artifactKey: Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (37).jpg using Guid(7339fbc550186a44da31cc6070e42eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d4722be2aa1d1d32a1d122ab3873bef') in 0.010150 seconds
-  Import took 0.012156 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg
-  artifactKey: Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (41).jpg using Guid(782eb236d285f3f418a2703d9cb4fc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd3d8782473d22895c2bbf2878d6eb6c') in 0.010745 seconds
-  Import took 0.012401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG
-  artifactKey: Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_F (5).JPG using Guid(03db48abf5de88e45a2df5987aafe304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3aa36fceb5188d4f6360d68f885d515') in 0.013687 seconds
-  Import took 0.017959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000771 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG
-  artifactKey: Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_TRISTEZA_F (6).JPG using Guid(2010dfe5e63e99b459c9e9256adf94b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be59ec9701c218544351b92391312819') in 0.011805 seconds
-  Import took 0.014495 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg
-  artifactKey: Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_RAIVA_M (5).jpg using Guid(401a166278e0b984688df295b226ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ecda8b019372676bc43fc52d54df027') in 0.012369 seconds
-  Import took 0.014133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG
-  artifactKey: Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (6).JPG using Guid(b0c610d2abf3c9444b2d1e184bf9e5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4585682fada8accec220d19eda703a') in 0.010791 seconds
-  Import took 0.012639 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg
-  artifactKey: Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_2_Neutralidade/Medo_NIHM (26).jpg using Guid(508d69c6d189265439accb7744fd8440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8da4622bfeb0263257be7a79c6d550') in 0.010293 seconds
-  Import took 0.012396 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG
-  artifactKey: Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_NEUTRO_F (5).JPG using Guid(e0cfc259efe57804f87382d1f2f6f627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7433ed9eb563d71e6ae2b4f6b6c0aaea') in 0.012771 seconds
-  Import took 0.014680 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG
-  artifactKey: Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_NEUTRO_M (1).JPG using Guid(acd9720b24ac2d54a8a6904188bc884b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2b048ba6a7031782cf6f9435492ad4') in 0.010195 seconds
-  Import took 0.011763 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg
-  artifactKey: Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (2).jpg using Guid(cdee73144891d5048b99811917bb6ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b688a590911e3589d3509329c4bee5') in 0.015968 seconds
-  Import took 0.018438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg
-  artifactKey: Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ RAIVA_M_EXTRA11 (4).jpg using Guid(c606c620ae265aa4a9099196b249e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be662b96f3f34181ee1b17d2d333904b') in 0.013173 seconds
-  Import took 0.014963 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg
-  artifactKey: Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_1_Medo/DARTH_MEDO_M_EXTRA11 (1).jpg using Guid(f7b462aba1c46fe4896f9511e17a02ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e0a567c20bdacc090f1d240eee9578d') in 0.020502 seconds
-  Import took 0.022487 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG
-  artifactKey: Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (4).JPG using Guid(512621314fc599545a0a3fa2a592ba58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260321ece507cc225bfc43665ca9696d') in 0.010419 seconds
-  Import took 0.011973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg
-  artifactKey: Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (8).jpg using Guid(4a9d9e79a4077db41b9f1179f57fb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bcba0002bab0305dcad6af907cde75b') in 0.010290 seconds
-  Import took 0.012812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG
-  artifactKey: Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Raiva/Jogo_1_Raiva/DARTH_MEDO_F (1).JPG using Guid(bf0cb7d1e5913834099b527090f1153f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc79a8cc0eb16570916337edf6d2d01e') in 0.011627 seconds
-  Import took 0.013319 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg
-  artifactKey: Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_MEDO_M (4).jpg using Guid(6c23b289454054e419b546a5a756d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfaf5cfe19618b52be17c0fb5d4d319f') in 0.011571 seconds
-  Import took 0.013701 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG
-  artifactKey: Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_NEUTRO_F (3).JPG using Guid(ccd2087c84329654daefc8aa4df84d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd577f444c09281ff1d684b8de555cfd7') in 0.014764 seconds
-  Import took 0.016978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG
-  artifactKey: Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Neutralidade/Jogo_1_Neutralidade/DARTH_ NEUTRO_M_EXTRA (6).JPG using Guid(21b8aa397351a6148b5735998b9a50d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e43cbfe6a01aa3e0aca46b8fe6203f') in 0.010226 seconds
-  Import took 0.011853 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg
-  artifactKey: Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_3_Medo/Medo_NIHM (39).jpg using Guid(79520f043ec9a3d4e89d19706a8aa1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5158ff8332b32fa405b09f64e6d69d9') in 0.010908 seconds
-  Import took 0.012995 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg
-  artifactKey: Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Tristeza/Jogo_1_Tristeza/DARTH_ TRISTEZA_M (3).jpg using Guid(71570de9b25af784eadc0683c6ddaa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb238714f81154f2752d056a552cff1') in 0.010947 seconds
-  Import took 0.012727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg
-  artifactKey: Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImagensMiniJogos/Jogo_Medo/Jogo_2_Medo/Medo_NIHM (33).jpg using Guid(42c839d5fcd057c48ad9e80d8997e9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9b55eb98689bd0f16fe21a2c87fbdf') in 0.009137 seconds
-  Import took 0.011009 seconds .
+  Time since last request: 42.336533 seconds.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1559cfbf5f7d7ca911b133d55c0c41f5') in 0.011500 seconds
+  Import took 0.013416 seconds .
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Registering precompiled user dll's ...
+Registered in 0.000891 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 46.3 MB.
-System memory in use after: 46.4 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.962 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.7 MB.
+System memory in use after: 66.8 MB.
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1679.
-Total: 1.601600 ms (FindLiveObjects: 0.153700 ms CreateObjectMapping: 0.047000 ms MarkObjects: 1.388600 ms  DeleteObjects: 0.010900 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1686.
+Total: 1.180600 ms (FindLiveObjects: 0.113300 ms CreateObjectMapping: 0.029100 ms MarkObjects: 1.024300 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000897 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.910 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1689.
+Total: 1.506300 ms (FindLiveObjects: 0.142200 ms CreateObjectMapping: 0.040900 ms MarkObjects: 1.307200 ms  DeleteObjects: 0.015000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000897 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1692.
+Total: 1.193100 ms (FindLiveObjects: 0.111100 ms CreateObjectMapping: 0.032100 ms MarkObjects: 1.036800 ms  DeleteObjects: 0.012300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 58779.677041 seconds.
-  path: Assets/Prefabs/QuestionnaireCanvas.prefab
-  artifactKey: Guid(73d6a294bf21de64ca7b9858bb986472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/QuestionnaireCanvas.prefab using Guid(73d6a294bf21de64ca7b9858bb986472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87edec0ef84a7ea2b7ce03094ca47378') in 0.159876 seconds
-  Import took 0.165760 seconds .
+  Time since last request: 91.365119 seconds.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9161fe3dd042f4726da3df39e2642690') in 0.010871 seconds
+  Import took 0.013200 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000903 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1695.
+Total: 1.189300 ms (FindLiveObjects: 0.110300 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.035100 ms  DeleteObjects: 0.012500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 784.512235 seconds.
+  path: Assets/TextAssets/ForgotPassword/WrongEmail.asset
+  artifactKey: Guid(0386c0b24e2226a469c3b54ac221c22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/WrongEmail.asset using Guid(0386c0b24e2226a469c3b54ac221c22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215f2c83e338e183cb5bf5956cd5d0b5') in 0.014583 seconds
+  Import took 0.018430 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001003 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.911 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1698.
+Total: 1.200100 ms (FindLiveObjects: 0.113500 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.043100 ms  DeleteObjects: 0.012200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000922 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1701.
+Total: 1.328700 ms (FindLiveObjects: 0.135500 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.140000 ms  DeleteObjects: 0.012800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000871 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.921 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1704.
+Total: 1.196500 ms (FindLiveObjects: 0.113800 ms CreateObjectMapping: 0.031900 ms MarkObjects: 1.037600 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000863 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.920 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1707.
+Total: 1.232700 ms (FindLiveObjects: 0.118800 ms CreateObjectMapping: 0.034900 ms MarkObjects: 1.064100 ms  DeleteObjects: 0.014100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000910 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1710.
+Total: 1.227100 ms (FindLiveObjects: 0.116900 ms CreateObjectMapping: 0.030200 ms MarkObjects: 1.067200 ms  DeleteObjects: 0.011900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000963 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.948 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1713.
+Total: 1.487700 ms (FindLiveObjects: 0.181100 ms CreateObjectMapping: 0.091300 ms MarkObjects: 1.199400 ms  DeleteObjects: 0.014800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000870 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.902 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.8 MB.
+System memory in use after: 66.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1716.
+Total: 1.142600 ms (FindLiveObjects: 0.109600 ms CreateObjectMapping: 0.029800 ms MarkObjects: 0.991500 ms  DeleteObjects: 0.011000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000855 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.9 MB.
+System memory in use after: 67.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1719.
+Total: 1.263400 ms (FindLiveObjects: 0.124000 ms CreateObjectMapping: 0.034400 ms MarkObjects: 1.090400 ms  DeleteObjects: 0.013500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000905 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.892 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.9 MB.
+System memory in use after: 67.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1722.
+Total: 1.315900 ms (FindLiveObjects: 0.118500 ms CreateObjectMapping: 0.037800 ms MarkObjects: 1.147700 ms  DeleteObjects: 0.011100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000886 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.924 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.9 MB.
+System memory in use after: 67.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1725.
+Total: 1.331700 ms (FindLiveObjects: 0.152300 ms CreateObjectMapping: 0.054500 ms MarkObjects: 1.110200 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000873 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.907 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1728.
+Total: 1.175400 ms (FindLiveObjects: 0.114500 ms CreateObjectMapping: 0.031800 ms MarkObjects: 1.016700 ms  DeleteObjects: 0.011600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000945 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1731.
+Total: 1.471000 ms (FindLiveObjects: 0.146700 ms CreateObjectMapping: 0.038200 ms MarkObjects: 1.269100 ms  DeleteObjects: 0.015700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000935 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.082 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1734.
+Total: 1.502700 ms (FindLiveObjects: 0.234200 ms CreateObjectMapping: 0.074800 ms MarkObjects: 1.177000 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 43.4 MB.
+System memory in use after: 43.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1734.
+Total: 1.368900 ms (FindLiveObjects: 0.138800 ms CreateObjectMapping: 0.036500 ms MarkObjects: 1.182200 ms  DeleteObjects: 0.010400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000848 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.892 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1737.
+Total: 1.197900 ms (FindLiveObjects: 0.127300 ms CreateObjectMapping: 0.029200 ms MarkObjects: 1.029300 ms  DeleteObjects: 0.011100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.970 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1740.
+Total: 1.553900 ms (FindLiveObjects: 0.230200 ms CreateObjectMapping: 0.057300 ms MarkObjects: 1.250500 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000843 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.896 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1743.
+Total: 1.234100 ms (FindLiveObjects: 0.117100 ms CreateObjectMapping: 0.030800 ms MarkObjects: 1.072800 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000957 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.999 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1746.
+Total: 1.508200 ms (FindLiveObjects: 0.155700 ms CreateObjectMapping: 0.067600 ms MarkObjects: 1.267700 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000871 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.951 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1749.
+Total: 1.422000 ms (FindLiveObjects: 0.230000 ms CreateObjectMapping: 0.048100 ms MarkObjects: 1.129700 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000961 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1752.
+Total: 1.392400 ms (FindLiveObjects: 0.161500 ms CreateObjectMapping: 0.048600 ms MarkObjects: 1.166600 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001110 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1755.
+Total: 1.295100 ms (FindLiveObjects: 0.124800 ms CreateObjectMapping: 0.034500 ms MarkObjects: 1.122500 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000868 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.902 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1758.
+Total: 1.397400 ms (FindLiveObjects: 0.136900 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.207200 ms  DeleteObjects: 0.016500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000891 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.903 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1761.
+Total: 1.240900 ms (FindLiveObjects: 0.115500 ms CreateObjectMapping: 0.029200 ms MarkObjects: 1.082800 ms  DeleteObjects: 0.012400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.910 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1764.
+Total: 1.367100 ms (FindLiveObjects: 0.155000 ms CreateObjectMapping: 0.041400 ms MarkObjects: 1.155600 ms  DeleteObjects: 0.014300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001017 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.956 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1767.
+Total: 1.477500 ms (FindLiveObjects: 0.182800 ms CreateObjectMapping: 0.062900 ms MarkObjects: 1.215200 ms  DeleteObjects: 0.015300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.0 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1770.
+Total: 1.442600 ms (FindLiveObjects: 0.182300 ms CreateObjectMapping: 0.039900 ms MarkObjects: 1.206400 ms  DeleteObjects: 0.012900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2085.611482 seconds.
+  path: Assets/TextAssets/ForgotPassword/EmailContent.asset
+  artifactKey: Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAssets/ForgotPassword/EmailContent.asset using Guid(ef9ded7a17ef5864688c8d4929e63dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a793803003eb3358896b25a1b835804b') in 0.011562 seconds
+  Import took 0.013955 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000888 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.949 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1773.
+Total: 1.182100 ms (FindLiveObjects: 0.120300 ms CreateObjectMapping: 0.031000 ms MarkObjects: 1.017600 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000853 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1776.
+Total: 1.489900 ms (FindLiveObjects: 0.153300 ms CreateObjectMapping: 0.072300 ms MarkObjects: 1.250200 ms  DeleteObjects: 0.013100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000936 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.989 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1779.
+Total: 1.314200 ms (FindLiveObjects: 0.126200 ms CreateObjectMapping: 0.032400 ms MarkObjects: 1.142100 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000872 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.897 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1782.
+Total: 1.292500 ms (FindLiveObjects: 0.123600 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.120100 ms  DeleteObjects: 0.013000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001028 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.982 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1785.
+Total: 1.653200 ms (FindLiveObjects: 0.321500 ms CreateObjectMapping: 0.053700 ms MarkObjects: 1.258200 ms  DeleteObjects: 0.018300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000868 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.900 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1788.
+Total: 1.264200 ms (FindLiveObjects: 0.122300 ms CreateObjectMapping: 0.035400 ms MarkObjects: 1.092800 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000936 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1791.
+Total: 1.392800 ms (FindLiveObjects: 0.124600 ms CreateObjectMapping: 0.036400 ms MarkObjects: 1.218200 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000900 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1794.
+Total: 1.291400 ms (FindLiveObjects: 0.128700 ms CreateObjectMapping: 0.035700 ms MarkObjects: 1.113700 ms  DeleteObjects: 0.012200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000916 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1797.
+Total: 1.384800 ms (FindLiveObjects: 0.137500 ms CreateObjectMapping: 0.036900 ms MarkObjects: 1.194400 ms  DeleteObjects: 0.014900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000881 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.899 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1800.
+Total: 1.278400 ms (FindLiveObjects: 0.122600 ms CreateObjectMapping: 0.034500 ms MarkObjects: 1.107800 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001000 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.962 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1803.
+Total: 1.444900 ms (FindLiveObjects: 0.181200 ms CreateObjectMapping: 0.050800 ms MarkObjects: 1.198500 ms  DeleteObjects: 0.013000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000899 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1806.
+Total: 1.399700 ms (FindLiveObjects: 0.167400 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.158000 ms  DeleteObjects: 0.016300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001004 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.948 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1809.
+Total: 1.317500 ms (FindLiveObjects: 0.130400 ms CreateObjectMapping: 0.034800 ms MarkObjects: 1.135900 ms  DeleteObjects: 0.015200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000883 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.897 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1812.
+Total: 1.332900 ms (FindLiveObjects: 0.150100 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.134000 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000877 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1815.
+Total: 1.357300 ms (FindLiveObjects: 0.125000 ms CreateObjectMapping: 0.032600 ms MarkObjects: 1.186000 ms  DeleteObjects: 0.012800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001038 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 67.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1818.
+Total: 1.373600 ms (FindLiveObjects: 0.133400 ms CreateObjectMapping: 0.036200 ms MarkObjects: 1.188400 ms  DeleteObjects: 0.014300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000869 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1821.
+Total: 1.244900 ms (FindLiveObjects: 0.121400 ms CreateObjectMapping: 0.033400 ms MarkObjects: 1.076700 ms  DeleteObjects: 0.011500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000988 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.972 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1824.
+Total: 1.515900 ms (FindLiveObjects: 0.155700 ms CreateObjectMapping: 0.046800 ms MarkObjects: 1.299400 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 43.6 MB.
+System memory in use after: 43.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1824.
+Total: 1.253400 ms (FindLiveObjects: 0.133300 ms CreateObjectMapping: 0.034500 ms MarkObjects: 1.075200 ms  DeleteObjects: 0.009600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001087 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.930 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1827.
+Total: 1.391800 ms (FindLiveObjects: 0.135000 ms CreateObjectMapping: 0.036800 ms MarkObjects: 1.203800 ms  DeleteObjects: 0.015000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000891 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.902 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1830.
+Total: 1.202900 ms (FindLiveObjects: 0.120100 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.040800 ms  DeleteObjects: 0.010800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001009 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.995 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1833.
+Total: 1.642500 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.041900 ms MarkObjects: 1.432200 ms  DeleteObjects: 0.013700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001105 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1203 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.2 MB.
+System memory in use after: 67.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 1.509100 ms (FindLiveObjects: 0.123200 ms CreateObjectMapping: 0.031500 ms MarkObjects: 1.337200 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 43.6 MB.
+System memory in use after: 43.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 1.305900 ms (FindLiveObjects: 0.130800 ms CreateObjectMapping: 0.035700 ms MarkObjects: 1.128600 ms  DeleteObjects: 0.010000 ms)
 
