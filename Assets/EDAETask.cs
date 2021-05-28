@@ -130,18 +130,19 @@ public class EDAETask : MonoBehaviour
     {
         _answers[_questionIndex] = new Answer
         {
-            file = _questionText[_questionIndex].text,
-            emotion = _questionDropdown[_questionIndex].options[_questionDropdown[_questionIndex].value].text
+            file = _questionText[0].text,
+            emotion = _questionDropdown[0].options[value].text
         };
 
     }
 
     public void Dropdown02(int value)
     {
+        //Debug.Log(_questionIndex + 1);
         _answers[_questionIndex + 1] = new Answer
         {
-            file = _questionText[_questionIndex + 1].text,
-            emotion = _questionDropdown[_questionIndex + 1].options[_questionDropdown[_questionIndex + 1].value].text
+            file = _questionText[1].text,
+            emotion = _questionDropdown[1].options[value].text
         };
 
     }
@@ -150,8 +151,8 @@ public class EDAETask : MonoBehaviour
     {
         _answers[_questionIndex + 2] = new Answer
         {
-            file = _questionText[_questionIndex + 2].text,
-            emotion = _questionDropdown[_questionIndex + 2].options[_questionDropdown[_questionIndex + 2].value].text
+            file = _questionText[2].text,
+            emotion = _questionDropdown[2].options[value].text
         };
 
     }
@@ -160,8 +161,8 @@ public class EDAETask : MonoBehaviour
     {
         _answers[_questionIndex + 3] = new Answer
         {
-            file = _questionText[_questionIndex + 3].text,
-            emotion = _questionDropdown[_questionIndex + 3].options[_questionDropdown[_questionIndex + 3].value].text
+            file = _questionText[3].text,
+            emotion = _questionDropdown[3].options[value].text
         };
 
     }
@@ -170,8 +171,8 @@ public class EDAETask : MonoBehaviour
     {
         _answers[_questionIndex + 4] = new Answer
         {
-            file = _questionText[_questionIndex + 4].text,
-            emotion = _questionDropdown[_questionIndex + 4].options[_questionDropdown[_questionIndex + 4].value].text
+            file = _questionText[4].text,
+            emotion = _questionDropdown[4].options[value].text
         };
 
     }
@@ -179,8 +180,8 @@ public class EDAETask : MonoBehaviour
     {
         _answers[_questionIndex + 5] = new Answer
         {
-            file = _questionText[_questionIndex + 5].text,
-            emotion = _questionDropdown[_questionIndex + 5].options[_questionDropdown[_questionIndex + 5].value].text
+            file = _questionText[5].text,
+            emotion = _questionDropdown[5].options[value].text
         };
 
     }
