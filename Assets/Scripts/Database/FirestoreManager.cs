@@ -59,7 +59,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
     {
         //Debug.Log(_teenData.Password);
 
-       
+
 
 
         GetData<RegisterDataTeen>(_teenData.CPF);
@@ -68,7 +68,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (_response.CPF == _errorData.CPF)
         {
-            if(InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
+            if (InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
             {
                 RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
             }
@@ -95,14 +95,14 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
             }
 
-            
+
 
         }
     }
 
     public void WriteGameTeenData(RegisterDataTeen _data)
     {
-        if(InputUtils.IsOnlyNumbers(_data.CPF) && _data.CPF != "")
+        if (InputUtils.IsOnlyNumbers(_data.CPF) && _data.CPF != "")
         {
             RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data);
 
@@ -156,7 +156,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
         _response = null;
         //Debug.Log("Getting register data for " + cpf);
 
-        if (cpf == "")
+        if (cpf == "" || cpf == null)
         {
             _response = _errorData;
             return;

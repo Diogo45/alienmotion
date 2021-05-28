@@ -66,6 +66,9 @@ public class LoginManager : Singleton<LoginManager>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
+        Debug.Log(_teenData.CPF);
+
+
         if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
         {
             //Debug.LogError("The " + _loginContainer.CPF + " does not exist on the database");
@@ -76,6 +79,7 @@ public class LoginManager : Singleton<LoginManager>
 
         }
 
+        Debug.Log(_teenData.ParentCPF);
 
         FirestoreManager.instance.GetData<RegisterDataParent>(_teenData.ParentCPF);
 
