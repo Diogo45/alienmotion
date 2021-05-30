@@ -129,10 +129,37 @@ namespace Questionnaire
 
         public void RegisterParent_SDData()
         {
-            QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);
-            QuestionnaireManager.instance.UI.SDData.SetActive(true);
+
+            StartCoroutine(RegisterParent_SDDataRoutine());
+
+           
+
+        }
+
+
+        private IEnumerator RegisterParent_SDDataRoutine()
+        {
+
+            StartCoroutine(FirestoreManager.instance.CheckRegisterParentData());
+
+            yield return new WaitWhile(() => FirestoreManager.instance._state == DataBaseState.None);
+
+            if(FirestoreManager.instance._state != DataBaseState.Ok)
+            {
+                Debug.LogError("PARENT ALREADY EXISTS IN DATABASE");
+
+            }
+            else
+            {
+                QuestionnaireManager.instance.UI.RegisterParent.SetActive(false);
+                QuestionnaireManager.instance.UI.SDData.SetActive(true);
+            }
+
+
+            
 
             //FirestoreManager.instance.WriteRegisterData();
+
         }
 
         public void RegisterParent_Info()
@@ -154,12 +181,38 @@ namespace Questionnaire
 
         public void RegisterTeen_FinalRegister()
         {
-            QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
-            QuestionnaireManager.instance.UI.RegisterTeenFinalScreen.SetActive(true);
+
+            StartCoroutine(RegisterTeen_FinalRegisterRoutine());
+
             
-            StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
+        }
+
+        private IEnumerator RegisterTeen_FinalRegisterRoutine()
+        {
+
+            StartCoroutine(FirestoreManager.instance.CheckRegisterTeenData());
+
+            yield return new WaitWhile(() => FirestoreManager.instance._state == DataBaseState.None);
+
+            if (FirestoreManager.instance._state != DataBaseState.Ok)
+            {
+                Debug.LogError("Teen ALREADY EXISTS IN DATABASE");
+
+            }
+            else
+            {
+                QuestionnaireManager.instance.UI.RegisterTeen.SetActive(false);
+                QuestionnaireManager.instance.UI.RegisterTeenFinalScreen.SetActive(true);
+
+                StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
+            }
+
+
+
+           
 
         }
+
 
         public void BackRegisterTeen_Info()
         {

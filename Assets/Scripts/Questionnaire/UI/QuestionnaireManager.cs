@@ -58,12 +58,16 @@ namespace Questionnaire
 
         [field: SerializeField] public QuestionnaireObj UI { get; private set; }
 
-
+        [SerializeField] public RegisterDataParent _parentData;
+        [SerializeField] public RegisterDataTeen _teenData;
+        [SerializeField] public RegisterData _loginData;
 
         public void Awake()
         {
             base.Awake();
-        
+            _parentData.ResetParent();
+            _teenData.ResetTeen();
+            _loginData.Reset();
         }
 
 

@@ -4,6 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DataBaseState
+{
+    None, Ok, AlreadyExists, WrongType
+}
+
 public class FirestoreManager : Singleton<FirestoreManager>
 {
 
@@ -15,6 +20,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     public RegisterData _response { get; private set; }
     [field: SerializeField] public RegisterData _errorData { get; private set; }
+    public DataBaseState _state { get; private set; }
 
 
     private string _firebaseURL = @"https://emotionhunters-29694-default-rtdb.firebaseio.com/";
@@ -22,6 +28,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
     public void Awake()
     {
         base.Awake();
+        _state = DataBaseState.None;
     }
 
 
@@ -58,9 +65,6 @@ public class FirestoreManager : Singleton<FirestoreManager>
     public IEnumerator WriteRegisterTeenData()
     {
         //Debug.Log(_teenData.Password);
-
-
-
 
         GetData<RegisterDataTeen>(_teenData.CPF);
 
@@ -113,9 +117,76 @@ public class FirestoreManager : Singleton<FirestoreManager>
         }
     }
 
+ 
+    public IEnumerator CheckRegisterParentData()
+    {
+        _state = DataBaseState.None;
+
+        GetData<RegisterData>(_parentData.CPF);
+
+        yield return new WaitWhile(() => _response == null);
+
+        if (_response.CPF != _errorData.CPF)
+        {
+
+            _state = DataBaseState.AlreadyExists;
+
+            yield break;
+        }
+        else
+        {
+            _state = DataBaseState.Ok;
+
+        }
+
+
+    }
+
+    public IEnumerator CheckRegisterTeenData()
+    {
+        _state = DataBaseState.None;
+
+        GetData<RegisterData>(_teenData.CPF);
+
+        yield return new WaitWhile(() => _response == null);
+
+        if (_response.CPF != _errorData.CPF)
+        {
+
+            try
+            {
+                if(((RegisterDataTeen)_response).ParentCPF != "")
+                {
+                    _state = DataBaseState.Ok;
+                }
+                else
+                {
+
+                    _state = DataBaseState.AlreadyExists;
+
+                    yield break;
+                }
+            }
+            catch(Exception e)
+            {
+                Debug.LogError(e);
+
+                _state = DataBaseState.WrongType;
+
+                yield break;
+            }
+
+            
+        }
+
+        _state = DataBaseState.Ok;
+
+
+    }
 
     public IEnumerator WriteRegisterParentData()
     {
+
 
         _parentQuestions.WriteAnswers();
 
@@ -129,7 +200,6 @@ public class FirestoreManager : Singleton<FirestoreManager>
             Debug.LogError("CPF EMPTY ON WRITE");
 
         }
-
 
         GetData<RegisterData>(_teenData.CPF);
 

@@ -48,8 +48,8 @@ public class RegisterDataTeen : RegisterData
     public void ResetTeen()
     {
         Reset();
-        ParentCPF = "";
-        ParentEmail = "";
+        ParentCPF = null;
+        ParentEmail = null;
     }
 
 }

@@ -58,6 +58,8 @@ public class RegisterManager : MonoBehaviour
 
     public void InputCPF(string cpf)
     {
+
+        
         if (InputUtils.IsOnlyNumbers(cpf))
         {
             _registerData.CPF = cpf;

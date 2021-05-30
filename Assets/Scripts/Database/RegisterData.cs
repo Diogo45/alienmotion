@@ -14,7 +14,6 @@ public class RegisterData : ScriptableObject
     [SerializeField]
     protected string _password;
 
-
     public string Password
     {
         get { return _password; }
