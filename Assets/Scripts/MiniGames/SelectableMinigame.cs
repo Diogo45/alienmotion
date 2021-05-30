@@ -188,7 +188,7 @@ public class SelectableMinigame : MonoBehaviour
             switch (_currentTrial)
             {
                 case 1:
-                    _descriptionText.text = "Selecione apenas as três expressões faciais de " + emotion;
+                    _descriptionText.text = "Selecione apenas as expressões faciais de " + emotion;
                     for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {
                         _selectables[i]._image.sprite = _trial02[i].Sprite;

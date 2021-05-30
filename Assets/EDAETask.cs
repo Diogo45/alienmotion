@@ -64,7 +64,7 @@ public class EDAETask : MonoBehaviour
         }
 
 
-        _pageUI.text = "1/" + Mathf.FloorToInt(_pageCount);
+        _pageUI.text = "1/" + (Mathf.FloorToInt(_pageCount) + 1);
     }
 
     private void OnDisable()

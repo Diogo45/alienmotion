@@ -249,6 +249,13 @@ public class DragAndDropGameManager : MonoBehaviour
 
         Reset();
 
+
+        for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
+        {
+            _draggables[i].SetActive(true);
+
+        }
+
         _wrongOnceScreen.SetActive(false);
 
         _minigameScreen.SetActive(true);

@@ -34,8 +34,11 @@ public class EmotionCategorizationTask : MonoBehaviour
     [SerializeField] private Sprite _testImage;
 
     [SerializeField] private List<Sprite> _emotionList01;
+    [SerializeField] private List<Sprite> _emotionList01_1000ms;
     [SerializeField] private List<Sprite> _emotionList02;
+    [SerializeField] private List<Sprite> _emotionList02_1000ms;
     [SerializeField] private List<Sprite> _emotionList03;
+    [SerializeField] private List<Sprite> _emotionList03_1000ms;
 
     [SerializeField] private Answer[] _emotionAnswers;
     private string _emotionAnswer;
@@ -64,7 +67,7 @@ public class EmotionCategorizationTask : MonoBehaviour
 
         _emotionList = _emotionList.OrderBy(a => Guid.NewGuid()).ToList();
         _imageField.sprite = _emotionList[0];
-        _emotionAnswers = new Answer[_emotionList.Count];
+        _emotionAnswers = new Answer[_emotionList.Count * 2];
         _emotionAnswer = "";
     }
 
@@ -82,6 +85,12 @@ public class EmotionCategorizationTask : MonoBehaviour
             _nextButton.interactable = false;
             return;
         }
+
+
+        //foreach (var item in _toggleList)
+        //{
+        //    item.isOn = false;
+        //}
 
         _emotionChoiceShow.SetActive(false);
 
@@ -115,9 +124,26 @@ public class EmotionCategorizationTask : MonoBehaviour
 
     public void Next()
     {
-        if (_currentImageIndex >= _emotionList.Count / 2 && !_halfPoint)
+        if (_currentImageIndex + 1 >= _emotionList.Count && !_halfPoint)
         {
             _showImageForSeconds = 1f;
+            _currentImageIndex = 0;
+            switch (EmotionHuntersController.instance.Week)
+            {
+                case 1:
+                    _emotionList = _emotionList01_1000ms;
+                    break;
+                case 2:
+                    _emotionList = _emotionList02_1000ms;
+                    break;
+                case 3:
+                    _emotionList = _emotionList03_1000ms;
+                    break;
+            }
+
+            _emotionList = _emotionList.OrderBy(a => Guid.NewGuid()).ToList();
+
+
             _halfPointScreen.SetActive(true);
             _halfPoint = true;
             return;
@@ -134,7 +160,10 @@ public class EmotionCategorizationTask : MonoBehaviour
             _nextButton.interactable = true;
         }
 
-        _emotionAnswers[_currentImageIndex] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
+        if(!_halfPoint)
+            _emotionAnswers[_currentImageIndex] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
+        else
+            _emotionAnswers[_currentImageIndex + _emotionList.Count] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
 
         if (_currentImageIndex + 1 < _emotionList.Count)
             _currentImageIndex++;

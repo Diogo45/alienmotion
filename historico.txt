@@ -3392,3 +3392,7 @@ Idade escolhida: Criança
 
 Começo de jogo!
 Idade escolhida: Criança
+
+
+Começo de jogo!
+Idade escolhida: Criança
