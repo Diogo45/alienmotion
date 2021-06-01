@@ -21,6 +21,7 @@ public class ChangePasswordManager : Singleton<ChangePasswordManager>
 
 
     [SerializeField] private TextAsset _passwordMismatch;
+    [SerializeField] private TextAsset _passwordChanged;
 
     public ChangePassState _loginState { get; private set; }
 
@@ -105,13 +106,16 @@ public class ChangePasswordManager : Singleton<ChangePasswordManager>
             _newTeenData.Week = _teenData.Week;
             _newTeenData._week = _teenData._week;
 
+            _passwordInput.text = "";
+            _newPasswordInput.text = "";
 
             FirestoreManager.instance.WriteTeenUpdate(_newTeenData);
-
+            _warningMessage.SetActive(true);
+            _warningMessage.GetComponent<TMPro.TMP_Text>().text = _passwordChanged.Text;
         }
         else
         {
-            Debug.LogError("CHANGE PASSWORD -> The " + _newTeenData.Password + " " + _teenData.Password);
+            //Debug.LogError("CHANGE PASSWORD -> The " + _newTeenData.Password + " " + _teenData.Password);
             _loginState = ChangePassState.PasswordDoesNotMatch;
             _warningMessage.SetActive(true);
             _warningMessage.GetComponent<TMPro.TMP_Text>().text = _passwordMismatch.Text;

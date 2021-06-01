@@ -1,27 +1,31 @@
 using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OpenMenu : MonoBehaviour
 {
-  Transform windowCloseGame;
-  public void Start()
-  {
-    windowCloseGame = GameObject.Find("MenuCanvas").transform.Find("Window");
-  }
-  public void Update()
-  {
-    if (Input.GetKeyDown(KeyCode.Escape))
+
+    [SerializeField] private GameObject _optionsMenu;
+
+
+    private bool _on = false;
+
+    public void OpenClose()
     {
-      if (windowCloseGame.gameObject.activeInHierarchy)
-      {
-        windowCloseGame.gameObject.SetActive(false);
-      }
-      else
-      {
-        windowCloseGame.gameObject.SetActive(true);
-      }
+        if (_on)
+            _optionsMenu.SetActive(false);
+        else
+            _optionsMenu.SetActive(true);
+
+        _on = !_on;
     }
-  }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OpenClose();
+        }
+    }
 }
