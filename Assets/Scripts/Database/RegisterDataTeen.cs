@@ -15,6 +15,11 @@ public class RegisterDataTeen : RegisterData
 
     [SerializeField]
     public string _week;
+
+    public string _coleta01;
+    public string _coleta02;
+    public string _coleta03;
+
     public DateTime Date
     {
         get
@@ -25,6 +30,21 @@ public class RegisterDataTeen : RegisterData
         }
         set
         {
+            switch (Week)
+            {
+                case 1:
+                    _coleta01 = value.ToString();
+                    break;
+                case 2:
+                    _coleta02 = value.ToString();
+                    break;
+                case 3:
+                    _coleta03 = value.ToString();
+                    break;
+
+            }
+
+
             _week = value.ToBinary().ToString();
         }
 

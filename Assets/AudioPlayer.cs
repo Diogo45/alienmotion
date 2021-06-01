@@ -19,6 +19,23 @@ public class AudioPlayer : Singleton<AudioPlayer>
         base.Awake();
     }
 
+    private void Update()
+    {
+        if (EmotionHuntersController.instance && EmotionHuntersController.instance.IsIntervention)
+        {
+            _musicAudioSource.Stop();
+            return;
+        }
+
+        if (!_musicAudioSource.isPlaying)
+        {
+            _musicAudioSource.Stop();
+            _musicAudioSource.clip = _music.Play();
+            _musicAudioSource.Play();
+        }
+
+    }
+
     // Update is called once per frame
     public void ButtonClickSound()
     {

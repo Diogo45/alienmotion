@@ -39,6 +39,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     public int Week { get; private set; }
     private bool _receivedTeenData = false;
 
+    public bool IsIntervention { get; private set; } = false;
 
     private void Awake()
     {
@@ -59,8 +60,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
         StartCoroutine(SetWeek());
 
-
-
+        
     }
 
 
@@ -111,6 +111,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
     public void MiniGamesEndToTask()
     {
+        IsIntervention = true;
         _miniGameEndScreen.SetActive(false);
         ToECT();
 
@@ -227,6 +228,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
         if (Week == 1)
         {
+            IsIntervention = true;
             ToECT();
             _playerMovement.enabled = false;
             _playerCharacterController.enabled = false;
@@ -239,6 +241,8 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         }
         else if (Week == 3)
         {
+            IsIntervention = true;
+
             ToECT();
             _playerMovement.enabled = false;
             _playerCharacterController.enabled = false;

@@ -132,7 +132,7 @@ public class SelectableMinigame : MonoBehaviour
             switch (_currentTrial)
             {
                 case 1:
-                    _descriptionText.text = "Selecione apenas três as expressões faciais de neutralidade.";
+                    _descriptionText.text = "Selecione apenas as expressões faciais de " + emotion;
 
                     for (int i = 0; i < _imgsPerTrial[_currentTrial]; i++)
                     {

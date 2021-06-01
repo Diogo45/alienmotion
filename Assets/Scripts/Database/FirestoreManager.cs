@@ -146,7 +146,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
     {
         _state = DataBaseState.None;
 
-        GetData<RegisterData>(_teenData.CPF);
+        GetData<RegisterDataTeen>(_teenData.CPF);
 
         yield return new WaitWhile(() => _response == null);
 
@@ -155,15 +155,12 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
             try
             {
-                if(((RegisterDataTeen)_response).ParentCPF != "")
+                if( ((RegisterDataTeen)_response).ParentCPF != "" && _response.Password != "")
                 {
                     _state = DataBaseState.AlreadyExists;
-
-                    
                 }
                 else
                 {
-
                     _state = DataBaseState.Ok;
 
                     yield break;

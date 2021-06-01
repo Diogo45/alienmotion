@@ -43,6 +43,18 @@ public class RegisterManager : MonoBehaviour
         _confirmPasswordInput.onEndEdit.AddListener(InputConfirmationPassword);    
     }
 
+    private void OnEnable()
+    {
+        ((RegisterDataTeen)_registerData).ResetTeen();
+
+        _cpfInput.SetTextWithoutNotify("");
+        _bithDateInput.SetTextWithoutNotify("");
+        _emailInput.SetTextWithoutNotify("");
+        _passwordInput.SetTextWithoutNotify("");
+        _confirmPasswordInput.SetTextWithoutNotify("");
+        _fieldsFilled = 0;
+    }
+
     protected void Update()
     {
         if(_fieldsFilled == _fieldsFilledTotal) 

@@ -31,6 +31,24 @@ public class ResgisterParentManager : RegisterManager
 
     }
 
+    private void OnEnable()
+    {
+        _teenData.ResetTeen();
+        ((RegisterDataParent)_registerData).ResetParent();
+
+        _cpfInput.SetTextWithoutNotify("");
+        _bithDateInput.SetTextWithoutNotify("");
+        _emailInput.SetTextWithoutNotify("");
+        _passwordInput.SetTextWithoutNotify("");
+        _confirmPasswordInput.SetTextWithoutNotify("");
+
+        _teenCpfInput.SetTextWithoutNotify("");
+        _teenBirthDateInput.SetTextWithoutNotify("");
+        _teenEmailInput.SetTextWithoutNotify("");
+
+        _fieldsFilled = 0;
+    }
+
     public override void InputEmail(string email)
     {
         if (email == _teenData.Email)

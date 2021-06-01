@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VolumeController : Singleton<VolumeController>
+public class VolumeController : MonoBehaviour
 {
     [SerializeField] private Slider _globalVolumeSlider;
     [SerializeField] private Slider _SFXVolumeSlider;
@@ -15,21 +15,41 @@ public class VolumeController : Singleton<VolumeController>
 
     void Awake()
     {
-        base.Awake();
+        //base.Awake();
 
         globalMixer.SetFloat("GlobalVolume", Mathf.Log10(PlayerPrefs.GetFloat("GlobalVolume")) * 20f);
         globalMixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume")) * 20f);
 
-        _globalVolumeSlider.value = PlayerPrefs.GetFloat("GlobalVolume");
-        _SFXVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
-        _musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
-        _narrationVolumeSlider.value = PlayerPrefs.GetFloat("NarrationVolume");
+
+
+        
 
         _globalVolumeSlider.onValueChanged.AddListener(SetGlobalLevel);
         _SFXVolumeSlider.onValueChanged.AddListener(SetSFXLevel);
         _musicVolumeSlider.onValueChanged.AddListener(SetMusicLevel);
         _narrationVolumeSlider.onValueChanged.AddListener(SetNarrationLevel);
 
+
+
+    }
+
+    private void Start()
+    {
+        PlayerPrefs.DeleteAll();
+        if (PlayerPrefs.GetFloat("GlobalVolume") == 0f)
+        {
+            _globalVolumeSlider.value = 1f;
+            _SFXVolumeSlider.value = 1f;
+            _musicVolumeSlider.value = 0.2f;
+            _narrationVolumeSlider.value = 1f;
+        }
+        else
+        {
+            _globalVolumeSlider.value = PlayerPrefs.GetFloat("GlobalVolume");
+            _SFXVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+            _musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+            _narrationVolumeSlider.value = PlayerPrefs.GetFloat("NarrationVolume");
+        }
     }
 
     public void SetGlobalLevel(float sliderValue)

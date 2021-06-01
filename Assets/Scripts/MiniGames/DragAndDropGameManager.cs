@@ -240,15 +240,22 @@ public class DragAndDropGameManager : MonoBehaviour
 
             _errorCount = 0;
 
+            _nextButton.onClick.RemoveAllListeners();
+            _nextButton.onClick.AddListener(Next);
+
         }
         else
         {
             _minigameScreen.SetActive(false);
             _finalScreen.SetActive(true);
+
+
+            _nextButton.onClick.RemoveAllListeners();
+            _nextButton.onClick.AddListener(Final);
+
         }
 
-        _nextButton.onClick.RemoveAllListeners();
-        _nextButton.onClick.AddListener(Next);
+     
 
     }
 

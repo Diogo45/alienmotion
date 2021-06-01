@@ -15,6 +15,9 @@ public class RegisterDataParent : RegisterData
 
     public void ResetParent()
     {
+
+        base.Reset();
+
         TeenCPF = new List<string>();
         TeenBirthDate = new List<string>();
         TeenEmail = new List<string>();
