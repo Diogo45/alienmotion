@@ -17,8 +17,6 @@ public class VolumeController : Singleton<VolumeController>
     {
         base.Awake();
 
-
-
         globalMixer.SetFloat("GlobalVolume", Mathf.Log10(PlayerPrefs.GetFloat("GlobalVolume")) * 20f);
         globalMixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume")) * 20f);
 

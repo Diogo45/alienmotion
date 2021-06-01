@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class AudioAsset : ScriptableObject
 {
     [SerializeField] private List<AudioClip> _clips;
