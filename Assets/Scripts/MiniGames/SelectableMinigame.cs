@@ -53,6 +53,8 @@ public class SelectableMinigame : MonoBehaviour
     {
         var selected = Array.FindAll(_selectables.ToArray(), x => x.Selected == true);
 
+        Debug.Log(_currentTrial);
+
         if(selected.Length < _imgsPerTrial[_currentTrial] / 2)
         {
             return false;
@@ -149,15 +151,21 @@ public class SelectableMinigame : MonoBehaviour
 
             _errorCount = 0;
 
+
+            _nextButton.onClick.RemoveAllListeners();
+            _nextButton.onClick.AddListener(Next);
+
         }
         else
         {
             _minigameScreen.SetActive(false);
             _finalScreen.SetActive(true);
+
+            _nextButton.onClick.RemoveAllListeners();
+            _nextButton.onClick.AddListener(Final);
+
         }
 
-        _nextButton.onClick.RemoveAllListeners();
-        _nextButton.onClick.AddListener(Next);
 
     }
 

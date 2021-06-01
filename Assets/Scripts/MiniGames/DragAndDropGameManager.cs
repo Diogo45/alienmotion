@@ -72,6 +72,9 @@ public class DragAndDropGameManager : MonoBehaviour
 
     public void Drop(int id)
     {
+
+        
+
         if (_currentSprite == -1)
         {
             if (_dropPoints[id].GetComponent<Image>().sprite != _defaultSprite)
@@ -91,9 +94,15 @@ public class DragAndDropGameManager : MonoBehaviour
 
             }
 
-           
-
             _dropPoints[id].GetComponent<Image>().sprite = _defaultSprite;
+            return;
+        }
+
+
+        if (_dropPoints[id].GetComponent<Image>().sprite != _defaultSprite)
+        {
+            _currentSprite = -1;
+
             return;
         }
 

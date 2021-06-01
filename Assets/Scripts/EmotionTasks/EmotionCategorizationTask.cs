@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class EmotionCategorizationTask : MonoBehaviour
 {
-    
+
 
     [SerializeField] private ToggleGroup toggleGroup;
     //For some reason unity's toggleGroup.SetAllOff does not work
@@ -124,8 +124,29 @@ public class EmotionCategorizationTask : MonoBehaviour
 
     public void Next()
     {
+        
+
+
+        if (_emotionAnswer == "")
+        {
+            _nextButton.interactable = false;
+            return;
+        }
+        else
+        {
+            _nextButton.interactable = true;
+        }
+
+        if (!_halfPoint)
+            _emotionAnswers[_currentImageIndex] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
+        else
+            _emotionAnswers[_currentImageIndex + _emotionList.Count] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
+
+
+        // Debug.Log(_currentImageIndex + 1 + " " + _emotionList.Count);
         if (_currentImageIndex + 1 >= _emotionList.Count && !_halfPoint)
         {
+
             _showImageForSeconds = 1f;
             _currentImageIndex = 0;
             switch (EmotionHuntersController.instance.Week)
@@ -150,27 +171,15 @@ public class EmotionCategorizationTask : MonoBehaviour
         }
 
 
-        if (_emotionAnswer == "")
-        {
-            _nextButton.interactable = false;
-            return;
-        }
-        else
-        {
-            _nextButton.interactable = true;
-        }
-
-        if(!_halfPoint)
-            _emotionAnswers[_currentImageIndex] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
-        else
-            _emotionAnswers[_currentImageIndex + _emotionList.Count] = new Answer { file = _emotionList[_currentImageIndex].name, emotion = _emotionAnswer };
-
         if (_currentImageIndex + 1 < _emotionList.Count)
             _currentImageIndex++;
         else
         {
+
             _endScreen.SetActive(true);
             return;
+
+
         }
 
         _imageField.sprite = _emotionList[_currentImageIndex];

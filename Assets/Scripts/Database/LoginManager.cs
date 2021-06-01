@@ -66,7 +66,7 @@ public class LoginManager : Singleton<LoginManager>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
-        Debug.Log(_teenData.CPF);
+        //Debug.Log(_teenData.CPF);
 
 
         if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
@@ -79,7 +79,7 @@ public class LoginManager : Singleton<LoginManager>
 
         }
 
-        Debug.Log(_teenData.ParentCPF);
+        //Debug.Log(_teenData.ParentCPF);
 
         FirestoreManager.instance.GetData<RegisterDataParent>(_teenData.ParentCPF);
 
@@ -138,7 +138,7 @@ public class LoginManager : Singleton<LoginManager>
         }
         else
         {
-            //Debug.LogError("The passwords don't match");
+            Debug.LogError(_loginContainer.Password + " " + _teenData.Password);
             _loginState = LoginState.PasswordDoesNotMatch;
             _warningMessage.SetActive(true);
             _warningMessage.GetComponent<TMPro.TMP_Text>().text = _passwordMismatch.Text;

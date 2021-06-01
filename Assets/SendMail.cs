@@ -10,6 +10,10 @@ using UnityEngine;
 using System.Text;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+#if UNITY_WEBGL
+using UE.Email;
+#endif
+
 
 public class SendMail : Singleton<SendMail>
 {
@@ -66,7 +70,6 @@ public class SendMail : Singleton<SendMail>
 
 
     //}
-
     public void Send(string mailTo, string subject, string content)
     {
         //StartCoroutine(SendTo(mailTo, subject, content));
@@ -83,7 +86,7 @@ public class SendMail : Singleton<SendMail>
         smtp.UseDefaultCredentials = false;
 
         credentials.UserName = "emotion.hunters.firebase@gmail.com";
-        credentials.Password = "XrgrQTtp8rF7C4s";
+        credentials.Password = "nSf3x2xbmsJkF45";
 
         smtp.Credentials = credentials;
 
@@ -101,6 +104,12 @@ public class SendMail : Singleton<SendMail>
 
         smtp.Send(msg);
     }
+
+
+    //public void Send(string mailTo, string subject, string content)
+    //{
+    //    Email.SendEmail("emotion.hunters.firebase@gmail.com", mailTo, subject, content, "smtp.gmail.com", "emotion.hunters.firebase@gmail.com", "XrgrQTtp8rF7C4s");
+    //}
 
     private void Awake()
     {

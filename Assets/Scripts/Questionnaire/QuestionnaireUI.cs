@@ -42,17 +42,35 @@ namespace Questionnaire
         public void Login_ForgotPassword()
         {
             QuestionnaireManager.instance.UI.Login.SetActive(false);
+#if !UNITY_WEBGL
             QuestionnaireManager.instance.UI.ForgotPassword.SetActive(true);
+#endif
+#if UNITY_WEBGL
+            QuestionnaireManager.instance.UI.ForgotPasswordWebGL.SetActive(true);
+#endif
         }
 
         public void ForgotPassword_Login()
         {
+#if !UNITY_WEBGL
             QuestionnaireManager.instance.UI.ForgotPassword.SetActive(false);
+#endif
+#if UNITY_WEBGL
+            QuestionnaireManager.instance.UI.ForgotPasswordWebGL.SetActive(false);
+#endif
+
             QuestionnaireManager.instance.UI.Login.SetActive(true);
         }
 
+        private bool _loginRunning = false;
+
         public void LoginWrapper()
         {
+            if (_loginRunning)
+                return;
+
+            _loginRunning = true;
+
             StartCoroutine(Login_Game());
         }
 
@@ -87,7 +105,7 @@ namespace Questionnaire
             }
 
 
-
+            _loginRunning = false;
         }
 
         public void RegisterType_RegisterTeen()
@@ -127,8 +145,13 @@ namespace Questionnaire
         }
 
 
+        private bool _registerParentRunning = false;
+
         public void RegisterParent_SDData()
         {
+
+            if (_registerParentRunning)
+                return;
 
             StartCoroutine(RegisterParent_SDDataRoutine());
 
@@ -156,7 +179,7 @@ namespace Questionnaire
             }
 
 
-            
+            _registerParentRunning = false;
 
             //FirestoreManager.instance.WriteRegisterData();
 
@@ -178,9 +201,15 @@ namespace Questionnaire
 
         }
 
+        private bool _registerTeenRunning = false;
 
         public void RegisterTeen_FinalRegister()
         {
+
+            if (_registerTeenRunning)
+                return;
+
+            _registerTeenRunning = true;
 
             StartCoroutine(RegisterTeen_FinalRegisterRoutine());
 
@@ -205,11 +234,14 @@ namespace Questionnaire
                 QuestionnaireManager.instance.UI.RegisterTeenFinalScreen.SetActive(true);
 
                 StartCoroutine(FirestoreManager.instance.WriteRegisterTeenData());
+
+                yield return new WaitForSeconds(1);
+
             }
 
+            _registerTeenRunning = false;
 
 
-           
 
         }
 

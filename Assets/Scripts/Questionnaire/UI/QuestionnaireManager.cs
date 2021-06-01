@@ -19,6 +19,7 @@ namespace Questionnaire
             public GameObject Info;
             public GameObject Login;
             public GameObject ForgotPassword;
+            public GameObject ForgotPasswordWebGL;
             public GameObject Register;
             public GameObject RegisterParent;
             public GameObject TCLE;

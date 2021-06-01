@@ -157,12 +157,14 @@ public class FirestoreManager : Singleton<FirestoreManager>
             {
                 if(((RegisterDataTeen)_response).ParentCPF != "")
                 {
-                    _state = DataBaseState.Ok;
+                    _state = DataBaseState.AlreadyExists;
+
+                    
                 }
                 else
                 {
 
-                    _state = DataBaseState.AlreadyExists;
+                    _state = DataBaseState.Ok;
 
                     yield break;
                 }
@@ -201,7 +203,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         }
 
-        GetData<RegisterData>(_teenData.CPF);
+        GetData<RegisterDataTeen>(_teenData.CPF);
 
         yield return new WaitWhile(() => _response == null);
 
@@ -212,8 +214,12 @@ public class FirestoreManager : Singleton<FirestoreManager>
         }
         else
         {
-            _teenData.Password = _response.Password;
-            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+
+            ((RegisterDataTeen)_response).ParentCPF = _parentData.CPF;
+            ((RegisterDataTeen)_response).ParentEmail = _parentData.Email;
+
+
+            RestClient.Put(_firebaseURL + _response.CPF.ToString() + ".json", _response);
 
         }
 

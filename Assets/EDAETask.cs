@@ -41,7 +41,7 @@ public class EDAETask : MonoBehaviour
 
         for (int i = 0; i < _answers.Length; i++)
         {
-            _answers[i] = new Answer { file = _questions[i], emotion = "0" };
+            _answers[i] = new Answer { file = _questions[i], emotion = "Não aconteceu comigo esta semana" };
         }
 
 
