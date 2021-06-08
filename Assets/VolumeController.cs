@@ -35,12 +35,17 @@ public class VolumeController : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("GlobalVolume");
+        PlayerPrefs.DeleteKey("SFXVolume");
+        PlayerPrefs.DeleteKey("MusicVolume");
+        PlayerPrefs.DeleteKey("NarrationVolume");
+
+
         if (PlayerPrefs.GetFloat("GlobalVolume") == 0f)
         {
             _globalVolumeSlider.value = 1f;
             _SFXVolumeSlider.value = 1f;
-            _musicVolumeSlider.value = 0.2f;
+            _musicVolumeSlider.value = 0.05f;
             _narrationVolumeSlider.value = 1f;
         }
         else

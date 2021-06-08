@@ -71,7 +71,7 @@ public class ChangePasswordManager : Singleton<ChangePasswordManager>
 
         _teenData = FirestoreManager.instance._response as RegisterDataTeen;
 
-        Debug.Log(_teenData.CPF);
+        //Debug.Log(_teenData.CPF);
 
         if (!_teenData || _teenData.CPF == FirestoreManager.instance._errorData.CPF)
         {

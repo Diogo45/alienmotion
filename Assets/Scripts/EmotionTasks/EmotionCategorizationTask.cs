@@ -164,7 +164,7 @@ public class EmotionCategorizationTask : MonoBehaviour
 
             _emotionList = _emotionList.OrderBy(a => Guid.NewGuid()).ToList();
 
-
+            _imageField.sprite = _emotionList[_currentImageIndex];
             _halfPointScreen.SetActive(true);
             _halfPoint = true;
             return;

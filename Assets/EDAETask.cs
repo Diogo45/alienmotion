@@ -78,7 +78,7 @@ public class EDAETask : MonoBehaviour
     {
 
         Reset();
-        
+
         if (_pageIndex + 1 < _pageCount)
         {
             _pageIndex += 1;
@@ -115,9 +115,9 @@ public class EDAETask : MonoBehaviour
 
         foreach (var item in _questionDropdown)
         {
-            item.value = 0;
+            item.SetValueWithoutNotify(0);
         }
-        
+
     }
 
     public void Begin()
