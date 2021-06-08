@@ -23,7 +23,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
     public DataBaseState _state { get; private set; }
 
 
-    private string _firebaseURL = @"https://emotionhunters-29694-default-rtdb.firebaseio.com/";
+    private string _firebaseURL = @"https://emotionhunterscontrol-default-rtdb.firebaseio.com/";
 
     public void Awake()
     {
