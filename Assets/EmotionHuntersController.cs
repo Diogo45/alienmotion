@@ -24,6 +24,8 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
     [SerializeField] private GameObject _RMETask;
     [SerializeField] private GameObject _EDAETask;
 
+    [SerializeField] private GameObject _videoScreen;
+
     [SerializeField] private GameObject _miniGameEndScreen;
 
     [SerializeField] private GameObject _endScreen01;
@@ -60,7 +62,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
         StartCoroutine(SetWeek());
 
-        
+
     }
 
 
@@ -236,7 +238,12 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         else if (Week == 2)
         {
             // Alfred Mini Games
-            EmotionHuntersUIController.instance.ToIntroAlfred();
+            IsIntervention = true;
+
+            ToVideo();
+            DisableMovement();
+
+            // EmotionHuntersUIController.instance.ToIntroAlfred();
 
         }
         else if (Week == 3)
@@ -250,6 +257,17 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
 
 
 
+    }
+
+    private void ToVideo()
+    {
+        _videoScreen.SetActive(true);
+    }
+
+    private void FromVideoToECT()
+    {
+        _videoScreen.SetActive(false);
+        ToECT();
     }
 
     //private IEnumerator ECT()
