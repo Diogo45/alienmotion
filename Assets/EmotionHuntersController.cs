@@ -264,7 +264,7 @@ public class EmotionHuntersController : Singleton<EmotionHuntersController>
         _videoScreen.SetActive(true);
     }
 
-    private void FromVideoToECT()
+    public void FromVideoToECT()
     {
         _videoScreen.SetActive(false);
         ToECT();
