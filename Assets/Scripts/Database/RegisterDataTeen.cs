@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using System.Linq;
 
 [CreateAssetMenu, System.Serializable]
 public class RegisterDataTeen : RegisterData
@@ -64,6 +64,150 @@ public class RegisterDataTeen : RegisterData
     public List<Answer> EDAEAnswers02;
     public List<Answer> EDAEAnswers03;
 
+
+    public bool Different(RegisterDataTeen compare)
+    {
+
+        if (CPF != compare.CPF)
+        {
+            Debug.LogError(CPF + " " + compare.CPF);
+            return true;
+        }
+
+        if (BirthDate != compare.BirthDate)
+        {
+            Debug.LogError(BirthDate + " " + compare.BirthDate);
+
+            return true;
+        }
+
+        if (Email != compare.Email)
+        {
+            Debug.LogError(Email + " " + compare.Email);
+
+            return true;
+        }
+
+        if (_password != compare._password)
+        {
+            Debug.LogError(_password + " " + compare._password);
+
+            return true;
+        }
+
+        if (ParentCPF != compare.ParentCPF)
+        {
+            Debug.LogError(ParentCPF + " " + compare.ParentCPF);
+
+            return true;
+        }
+
+        if (ParentEmail != compare.ParentEmail)
+        {
+            Debug.LogError(ParentEmail + " " + compare.ParentEmail);
+
+            return true;
+        }
+
+        if (_week != compare._week)
+        {
+            Debug.LogError(_week + " " + compare._week);
+
+            return true;
+        }
+
+        if (_coleta01 != compare._coleta01)
+        {
+            Debug.LogError(_coleta01 + " " + compare._coleta01);
+
+            return true;
+        }
+
+        if (_coleta02 != compare._coleta02)
+        {
+            Debug.LogError(_coleta02 + " " + compare._coleta02);
+
+            return true;
+        }
+
+        if (_coleta03 != compare._coleta03)
+        {
+            Debug.LogError(_coleta03 + " " + compare._coleta03);
+
+            return true;
+        }
+
+        if (Week != compare.Week)
+        {
+            Debug.LogError(Week + " " + compare.Week);
+
+            return true;
+        }
+
+        if (RMETAnswers01.Except(compare.RMETAnswers01).ToList().Count > 0)
+        {
+            Debug.LogError(RMETAnswers01.Except(compare.RMETAnswers01).ToList());
+            return true;
+
+        }
+        if (RMETAnswers02.Except(compare.RMETAnswers02).ToList().Count > 0)
+        {
+            Debug.LogError(RMETAnswers02.Except(compare.RMETAnswers02).ToList());
+            return true;
+
+        }
+        if (RMETAnswers03.Except(compare.RMETAnswers03).ToList().Count > 0)
+        {
+            Debug.LogError(RMETAnswers03.Except(compare.RMETAnswers03).ToList());
+            return true;
+        }
+
+        if (ECTAnswers01.Except(compare.ECTAnswers01).ToList().Count > 0)
+        {
+            Debug.LogError(ECTAnswers01.Except(compare.ECTAnswers01).ToList());
+
+            return true;
+        }
+
+        if (ECTAnswers02.Except(compare.ECTAnswers02).ToList().Count > 0)
+        {
+            Debug.LogError(ECTAnswers02.Except(compare.ECTAnswers02).ToList());
+
+            return true;
+        }
+
+        if (ECTAnswers03.Except(compare.ECTAnswers03).ToList().Count > 0)
+        {
+            Debug.LogError(ECTAnswers03.Except(compare.ECTAnswers03).ToList());
+
+            return true;
+        }
+
+        if (EDAEAnswers01.Except(compare.EDAEAnswers01).ToList().Count > 0)
+        {
+            Debug.LogError(EDAEAnswers01.Except(compare.EDAEAnswers01).ToList());
+
+
+            return true;
+        }
+
+        if (EDAEAnswers02.Except(compare.EDAEAnswers02).ToList().Count > 0)
+        {
+
+            Debug.LogError(EDAEAnswers02.Except(compare.EDAEAnswers02).ToList());
+
+            return true;
+        }
+
+        if (EDAEAnswers03.Except(compare.EDAEAnswers03).ToList().Count > 0)
+        {
+            Debug.LogError(EDAEAnswers03.Except(compare.EDAEAnswers03).ToList());
+
+            return true;
+        }
+
+        return false;
+    }
 
     public void ResetTeen()
     {

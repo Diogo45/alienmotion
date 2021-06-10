@@ -71,6 +71,8 @@ public class ResgisterParentManager : RegisterManager
     {
         if (InputUtils.IsOnlyNumbers(cpf))
         {
+            ((RegisterDataParent)_registerData).TeenCPF.Clear();
+
             ((RegisterDataParent)_registerData).TeenCPF.Add(cpf);
 
             _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
@@ -84,6 +86,8 @@ public class ResgisterParentManager : RegisterManager
 
             if (cpf != "")
             {
+                ((RegisterDataParent)_registerData).TeenCPF.Clear();
+
                 ((RegisterDataParent)_registerData).TeenCPF.Add(cpf);
 
                 _teenData.ParentCPF = ((RegisterDataParent)_registerData).CPF;
@@ -109,6 +113,7 @@ public class ResgisterParentManager : RegisterManager
 
     private void TeenInputBirthDate(string arg0)
     {
+        ((RegisterDataParent)_registerData).TeenBirthDate.Clear();
         ((RegisterDataParent)_registerData).TeenBirthDate.Add(arg0);
         _teenData.BirthDate = ((RegisterDataParent)_registerData).TeenBirthDate[_teenListIndex];
         _fieldsFilled |= 64;
@@ -125,6 +130,7 @@ public class ResgisterParentManager : RegisterManager
             return;
         }
 
+        ((RegisterDataParent)_registerData).TeenEmail.Clear();
         ((RegisterDataParent)_registerData).TeenEmail.Add(arg0);
         //_teenData.Email = ((RegisterDataParent)_registerData).TeenEmail[_teenListIndex];
 
