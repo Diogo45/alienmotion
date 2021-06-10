@@ -37,7 +37,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (InputUtils.IsOnlyNumbers(data.CPF) && data.CPF != "")
         {
-            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
+            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = data.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(data);
+
+            });
 
         }
         else
@@ -52,7 +65,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (InputUtils.IsOnlyNumbers(data.CPF) && data.CPF != "")
         {
-            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data);
+            RestClient.Put(_firebaseURL + data.CPF.ToString() + ".json", data).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = data.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(data);
+
+            });
 
         }
         else
@@ -74,7 +100,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
         {
             if (InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
             {
-                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData).Catch(response =>
+                {
+
+                    Debug.LogError(response);
+
+                    Message msg = ScriptableObject.CreateInstance<Message>();
+
+                    msg.Id = _teenData.CPF.ToString() + "ERROR";
+
+                    msg.httpResponse = response.ToString();
+
+                    msg.message = JsonUtility.ToJson(_teenData);
+
+                });
             }
             else
             {
@@ -91,7 +130,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
             if (InputUtils.IsOnlyNumbers(_teenData.CPF) && _teenData.CPF != "")
             {
-                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+                RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData).Catch(response =>
+                {
+
+                    Debug.LogError(response);
+
+                    Message msg = ScriptableObject.CreateInstance<Message>();
+
+                    msg.Id = _teenData.CPF.ToString() + "ERROR";
+
+                    msg.httpResponse = response.ToString();
+
+                    msg.message = JsonUtility.ToJson(_teenData);
+
+                });
             }
             else
             {
@@ -108,7 +160,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
     {
         if (InputUtils.IsOnlyNumbers(_data.CPF) && _data.CPF != "")
         {
-            RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data);
+            RestClient.Put(_firebaseURL + _data.CPF.ToString() + ".json", _data).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = _data.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(_data);
+
+            });
 
         }
         else
@@ -192,7 +257,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
         if (InputUtils.IsOnlyNumbers(_parentData.CPF) && _parentData.CPF != "")
         {
 
-            RestClient.Put(_firebaseURL + _parentData.CPF.ToString() + ".json", _parentData);
+            RestClient.Put(_firebaseURL + _parentData.CPF.ToString() + ".json", _parentData).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = _parentData.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(_parentData);
+
+            });
         }
         else
         {
@@ -206,7 +284,22 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
         if (_response.CPF == _errorData.CPF)
         {
-            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData);
+            RestClient.Put(_firebaseURL + _teenData.CPF.ToString() + ".json", _teenData).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = _teenData.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(_teenData);
+
+            });
+
+
 
         }
         else
@@ -216,7 +309,20 @@ public class FirestoreManager : Singleton<FirestoreManager>
             ((RegisterDataTeen)_response).ParentEmail = _parentData.Email;
 
 
-            RestClient.Put(_firebaseURL + _response.CPF.ToString() + ".json", _response);
+            RestClient.Put(_firebaseURL + _response.CPF.ToString() + ".json", _response).Catch(response =>
+            {
+
+                Debug.LogError(response);
+
+                Message msg = ScriptableObject.CreateInstance<Message>();
+
+                msg.Id = _response.CPF.ToString() + "ERROR";
+
+                msg.httpResponse = response.ToString();
+
+                msg.message = JsonUtility.ToJson(_response);
+
+            });
 
         }
 
