@@ -28,7 +28,7 @@ public class ResgisterParentManager : RegisterManager
         _teenCpfInput.onEndEdit.AddListener(TeenInputCPF);
         _teenBirthDateInput.onEndEdit.AddListener(TeenInputBirthDate);
         _teenEmailInput.onEndEdit.AddListener(TeenInputEmail);
-
+        
     }
 
     private void OnEnable()
@@ -45,8 +45,10 @@ public class ResgisterParentManager : RegisterManager
         _teenCpfInput.SetTextWithoutNotify("");
         _teenBirthDateInput.SetTextWithoutNotify("");
         _teenEmailInput.SetTextWithoutNotify("");
-
+       
         _fieldsFilled = 0;
+
+        InputPassword("");
     }
 
     public override void InputEmail(string email)
@@ -98,6 +100,12 @@ public class ResgisterParentManager : RegisterManager
 
 
     }
+
+    public override void InputPassword(string password)
+    {
+        _fieldsFilled |= 24;
+    }
+
 
     private void TeenInputBirthDate(string arg0)
     {

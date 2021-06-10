@@ -147,7 +147,7 @@ public class EmotionCategorizationTask : MonoBehaviour
         if (_currentImageIndex + 1 >= _emotionList.Count && !_halfPoint)
         {
 
-            _showImageForSeconds = 1f;
+            //_showImageForSeconds = 1f;
             _currentImageIndex = 0;
             switch (EmotionHuntersController.instance.Week)
             {
