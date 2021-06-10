@@ -34,6 +34,9 @@ public class RegisterData : ScriptableObject
         }
     }
 
+
+   
+
     public void Reset()
     {
         CPF = "";

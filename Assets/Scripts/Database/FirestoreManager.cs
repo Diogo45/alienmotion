@@ -25,6 +25,9 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
     private string _firebaseURL = @"https://emotionhunters-29694-default-rtdb.firebaseio.com/";
 
+
+    private int _postTrials = 0;
+
     public void Awake()
     {
         base.Awake();
@@ -51,6 +54,8 @@ public class FirestoreManager : Singleton<FirestoreManager>
                 msg.message = JsonUtility.ToJson(data);
 
             });
+
+            StartCoroutine(CheckPostTeen(data, WriteTeenUpdate));
 
         }
         else
@@ -114,6 +119,9 @@ public class FirestoreManager : Singleton<FirestoreManager>
                     msg.message = JsonUtility.ToJson(_teenData);
 
                 });
+
+                //StartCoroutine(CheckPostTeen(_teenData, WriteRegisterTeenData));
+
             }
             else
             {
@@ -175,6 +183,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
             });
 
+            StartCoroutine(CheckPostTeen(_data, WriteGameTeenData));
         }
         else
         {
@@ -182,7 +191,65 @@ public class FirestoreManager : Singleton<FirestoreManager>
         }
     }
 
- 
+    public IEnumerator CheckPostTeen(RegisterDataTeen _data, Action<RegisterDataTeen> onDiff)
+    {
+        yield return new WaitForSeconds(1);
+
+        GetData<RegisterDataTeen>(_data.CPF);
+
+        yield return new WaitWhile(() => _response == null);
+
+        RegisterDataTeen _databaseTeen = _response as RegisterDataTeen;
+
+        if (_response.CPF != _errorData.CPF)
+        {
+
+            if(_data.Different(_databaseTeen))
+            {
+                if (_postTrials < 10)
+                {
+                    Debug.LogError(_postTrials + " IS DIFFERENT, TRY POST AGAIN");
+
+                    _postTrials++;
+
+                    onDiff.Invoke(_data);
+                }
+                else
+                {
+                    _postTrials = 0;
+                    Debug.LogError("ERROR IN GET, RUN OUT OF TRIALS");
+                }
+            }
+            else
+            {
+                Debug.LogError(_postTrials + " IS EQUAL, FINE");
+            }
+        }
+        else
+        {
+
+            if(_postTrials < 10)
+            {
+                _postTrials++;
+                Debug.LogError("ERROR IN GET, IS NOT ON DATABASE OR WRONG TYPE, TRY AGAIN");
+
+                yield return new WaitForSeconds(1);
+
+                StartCoroutine(CheckPostTeen(_data, onDiff));
+            }
+            else
+            {
+                _postTrials = 0;
+                Debug.LogError("ERROR IN GET, RUN OUT OF TRIALS");
+            }
+
+        } 
+
+
+
+    }
+
+
     public IEnumerator CheckRegisterParentData()
     {
         _state = DataBaseState.None;
@@ -220,7 +287,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
 
             try
             {
-                if( ((RegisterDataTeen)_response).ParentCPF != "" && _response.Password != "")
+                if (((RegisterDataTeen)_response).ParentCPF != "" && _response.Password != "")
                 {
                     _state = DataBaseState.AlreadyExists;
                 }
@@ -231,7 +298,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
                     yield break;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.LogError(e);
 
@@ -240,7 +307,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
                 yield break;
             }
 
-            
+
         }
 
         _state = DataBaseState.Ok;
@@ -361,7 +428,7 @@ public class FirestoreManager : Singleton<FirestoreManager>
         });
     }
 
-    
+
 
 
 }
