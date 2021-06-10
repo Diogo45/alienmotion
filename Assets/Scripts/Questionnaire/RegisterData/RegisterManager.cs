@@ -29,7 +29,7 @@ public class RegisterManager : MonoBehaviour
 
     //  128 64 32   16          8           4       2      1
     // [ 0  0  0 password confirmPassword email birthDate CPF].sum = 31
-    protected byte _fieldsFilled = 0;
+    [SerializeField] protected byte _fieldsFilled = 0;
     [SerializeField]
     private byte _fieldsFilledTotal;
 
@@ -127,7 +127,7 @@ public class RegisterManager : MonoBehaviour
 
     }
 
-    public void InputConfirmationPassword(string password)
+    public virtual void InputConfirmationPassword(string password)
     {
         bool mismatch, requirements;
 
@@ -168,7 +168,7 @@ public class RegisterManager : MonoBehaviour
 
     }
 
-    public void InputPassword(string password)
+    public virtual void InputPassword(string password)
     {
         bool mismatch, requirements;
 
