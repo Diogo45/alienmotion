@@ -15,11 +15,11 @@ G:/UnityProjects/alienmotion
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-45334
+5582
 Successfully changed project path to: G:/UnityProjects/alienmotion
 G:/UnityProjects/alienmotion
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 46.68 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 24.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,24 +35,24 @@ Initialize mono
 Mono path[0] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/Progam Files/UnityHub/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001140 seconds.
+Registered in 0.001077 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 23.50 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.940 seconds
+- Completed reload, in  0.913 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000885 seconds.
+Registered in 0.000942 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -63,24 +63,48 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.982 seconds
+- Completed reload, in  0.961 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1233 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.3 MB.
-System memory in use after: 68.4 MB.
+System memory in use before: 68.0 MB.
+System memory in use after: 68.1 MB.
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1690.
-Total: 1.473100 ms (FindLiveObjects: 0.138400 ms CreateObjectMapping: 0.039600 ms MarkObjects: 1.224800 ms  DeleteObjects: 0.069500 ms)
+Total: 1.505200 ms (FindLiveObjects: 0.169600 ms CreateObjectMapping: 0.156700 ms MarkObjects: 1.117500 ms  DeleteObjects: 0.060200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Audio.cs
-  artifactKey: Guid(03add9e7e7bb9cc46a50617a60b9671b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Audio.cs using Guid(03add9e7e7bb9cc46a50617a60b9671b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11532b75255877a51feeda930220f81f') in 0.123839 seconds
-  Import took 0.128582 seconds .
+  path: Assets/Prefabs/OptionsInGame Variant.prefab
+  artifactKey: Guid(e390f7c1c71c7304090c43b8c41047e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/OptionsInGame Variant.prefab using Guid(e390f7c1c71c7304090c43b8c41047e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4389c5fa8f3fc6650d54fab962f6d5ff') in 0.161193 seconds
+  Import took 0.209787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Prefabs/Options.prefab
+  artifactKey: Guid(285652575df90d5459982e4549628929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Options.prefab using Guid(285652575df90d5459982e4549628929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f68becd31e4c1f2715e72ea961c34ec') in 0.009587 seconds
+  Import took 0.013459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Prefabs/MenuCanvas.prefab
+  artifactKey: Guid(0f691955257c47948871d300ca52397d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MenuCanvas.prefab using Guid(0f691955257c47948871d300ca52397d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8baf28d8fba88837ff5d81d8bfea3dc') in 0.012233 seconds
+  Import took 0.014856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Prefabs/QuestionnaireCanvas.prefab
+  artifactKey: Guid(73d6a294bf21de64ca7b9858bb986472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/QuestionnaireCanvas.prefab using Guid(73d6a294bf21de64ca7b9858bb986472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7545fb6c1c868b462f237cd608a8e06e') in 0.116918 seconds
+  Import took 0.122871 seconds .
 
