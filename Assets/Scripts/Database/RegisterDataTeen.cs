@@ -146,46 +146,46 @@ public class RegisterDataTeen : RegisterData
 
         if (RMETAnswers01.Except(compare.RMETAnswers01).ToList().Count > 0)
         {
-            Debug.LogError(RMETAnswers01.Except(compare.RMETAnswers01).ToList()[0]);
+            Debug.LogError(RMETAnswers01.Except(compare.RMETAnswers01).ToList()[0].file);
             return true;
 
         }
         if (RMETAnswers02.Except(compare.RMETAnswers02).ToList().Count > 0)
         {
-            Debug.LogError(RMETAnswers02.Except(compare.RMETAnswers02).ToList()[0]);
+            Debug.LogError(RMETAnswers02.Except(compare.RMETAnswers02).ToList()[0].file);
             return true;
 
         }
         if (RMETAnswers03.Except(compare.RMETAnswers03).ToList().Count > 0)
         {
-            Debug.LogError(RMETAnswers03.Except(compare.RMETAnswers03).ToList()[0]);
+            Debug.LogError(RMETAnswers03.Except(compare.RMETAnswers03).ToList()[0].file);
             return true;
         }
 
         if (ECTAnswers01.Except(compare.ECTAnswers01).ToList().Count > 0)
         {
-            Debug.LogError(ECTAnswers01.Except(compare.ECTAnswers01).ToList()[0]);
+            Debug.LogError(ECTAnswers01.Except(compare.ECTAnswers01).ToList()[0].file);
 
             return true;
         }
 
         if (ECTAnswers02.Except(compare.ECTAnswers02).ToList().Count > 0)
         {
-            Debug.LogError(ECTAnswers02.Except(compare.ECTAnswers02).ToList()[0]);
+            Debug.LogError(ECTAnswers02.Except(compare.ECTAnswers02).ToList()[0].file);
 
             return true;
         }
 
         if (ECTAnswers03.Except(compare.ECTAnswers03).ToList().Count > 0)
         {
-            Debug.LogError(ECTAnswers03.Except(compare.ECTAnswers03).ToList()[0]);
+            Debug.LogError(ECTAnswers03.Except(compare.ECTAnswers03).ToList()[0].file);
 
             return true;
         }
 
         if (EDAEAnswers01.Except(compare.EDAEAnswers01).ToList().Count > 0)
         {
-            Debug.LogError(EDAEAnswers01.Except(compare.EDAEAnswers01).ToList()[0]);
+            Debug.LogError(EDAEAnswers01.Except(compare.EDAEAnswers01).ToList()[0].file);
 
 
             return true;
@@ -194,14 +194,14 @@ public class RegisterDataTeen : RegisterData
         if (EDAEAnswers02.Except(compare.EDAEAnswers02).ToList().Count > 0)
         {
 
-            Debug.LogError(EDAEAnswers02.Except(compare.EDAEAnswers02).ToList()[0]);
+            Debug.LogError(EDAEAnswers02.Except(compare.EDAEAnswers02).ToList()[0].file);
 
             return true;
         }
 
         if (EDAEAnswers03.Except(compare.EDAEAnswers03).ToList().Count > 0)
         {
-            Debug.LogError(EDAEAnswers03.Except(compare.EDAEAnswers03).ToList()[0]);
+            Debug.LogError(EDAEAnswers03.Except(compare.EDAEAnswers03).ToList()[0].file);
 
             return true;
         }
