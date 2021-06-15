@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class VideoManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button _nextButton;
+    [SerializeField] private VideoPlayer _videoPlayer;
+
+    private void Start()
     {
-        
+        _nextButton.gameObject.SetActive(false);
+        //
+        StartCoroutine(WaitForVideoEnd());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator WaitForVideoEnd()
     {
-        
+        yield return new WaitForSeconds(1f);
+
+        var time = _videoPlayer.frameCount / _videoPlayer.frameRate;
+
+        Debug.Log("Video time is: " + time);
+
+        yield return new WaitForSeconds(time);
+
+        EmotionHuntersController.instance.ToECT();
+
     }
+
+
 }
