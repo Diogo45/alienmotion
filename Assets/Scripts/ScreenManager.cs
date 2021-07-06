@@ -9,7 +9,7 @@ namespace Questionnaire
 {
     public class ScreenManager : MonoBehaviour
     {
-
+ 
         [field: SerializeField]
         public int _currentScreen { get; private set; }
 
@@ -41,6 +41,7 @@ namespace Questionnaire
             {
                 transform.GetChild(_currentScreen).gameObject.SetActive(false);
                 transform.GetChild(0).gameObject.SetActive(true);
+                Debug.Log("VLHE");
                 OnEndScreens.Invoke();
             }
 

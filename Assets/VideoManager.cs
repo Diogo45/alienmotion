@@ -11,26 +11,53 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private GameObject _videoScreen;
     [SerializeField] private GameObject _expScreen;
 
+    private bool isPlaying = false;
+    private float time;
+
     private void Start()
     {
-           
         
+        //_nextButton.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (_videoPlayer.isPrepared && !isPlaying)
+        {
+            _nextButton.gameObject.SetActive(false);
+            //StartCoroutine(WaitForVideoEnd());
+
+            time = _videoPlayer.frameCount / _videoPlayer.frameRate;
+
+            isPlaying = true;
+        }
+
+        if (isPlaying)
+        {
+            time -= Time.unscaledDeltaTime;
+            //Debug.LogWarning("VIDEO TIME: " + time);
+
+            if(time <= 0)
+            {
+                EmotionHuntersController.instance.ToECT();
+
+                gameObject.SetActive(false);
+
+            }
+
+        }
+
     }
 
     private IEnumerator WaitForVideoEnd()
     {
-        yield return new WaitUntil(() =>_videoPlayer.isPrepared);
-
-        var time = _videoPlayer.frameCount / _videoPlayer.frameRate;
+        
 
         Debug.Log("Video time is: " + time);
 
-        yield return new WaitForSeconds(time - 5f);
+        yield return new WaitForSecondsRealtime(time);
 
-        EmotionHuntersController.instance.ToECT();
-
-        gameObject.SetActive(false);
-
+      
     }
 
     public void ToVideo()
