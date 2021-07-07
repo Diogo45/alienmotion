@@ -86,7 +86,7 @@ public class SendMail : Singleton<SendMail>
         smtp.UseDefaultCredentials = false;
 
         credentials.UserName = "emotion.hunters.firebase@gmail.com";
-        credentials.Password = "nSf3x2xbmsJkF45";
+        credentials.Password = "zvvywyvxwcoaeijj";
 
         smtp.Credentials = credentials;
 
